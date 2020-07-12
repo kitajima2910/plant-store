@@ -1,3 +1,9 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
 
 <head>
@@ -28,16 +34,45 @@
     <link href="{{ asset('public/backend/css/font-awesome.css') }}" rel="stylesheet">
     <!-- //font-awesome icons -->
     <script src="{{ asset('public/backend/js/jquery2.0.3.min.js') }}"></script>
+
+    <style>
+        input[type="submit"] {
+            margin: 15px auto 5px !important;
+        }
+
+        input.ggg {
+            margin: 14px 0px 0px;
+        }
+
+        form > label.text-danger, label.text-danger {
+            font-style: italic;
+            font-weight: normal;
+        }
+
+        form > p {
+            margin: 20px 0px 0px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="log-w3">
         <div class="w3layouts-main">
             <h2>ĐĂNG NHẬP</h2>
-            <form method="post">
-                <input type="email" class="ggg" name="Email" placeholder="Nhập địa chỉ email">
-                <input type="password" class="ggg" name="Password" placeholder="Nhập mật khẩu">
-                <span><input type="checkbox" /> Nhớ mật khẩu</span>
+            @error('errorLogin')
+                <label class="text-danger">{{ $message }}</label>
+            @enderror
+            <form action="{{ route('admin.login') }}" method="post">
+                @csrf
+                <input type="text" class="ggg" name="email" placeholder="Nhập địa chỉ email" value="{{ old('email') }}">
+                @error('email')
+                    <label class="text-danger">{{ $message }}</label>
+                @enderror
+                <input type="password" class="ggg" name="password" placeholder="Nhập mật khẩu">
+                @error('password')
+                    <label class="text-danger">{{ $message }}</label>
+                @enderror
+                <p><input type="checkbox" name="remember" /> Nhớ mật khẩu</p>
                 <div class="clearfix"></div>
                 <input type="submit" value="Đăng nhập" name="login">
             </form>
