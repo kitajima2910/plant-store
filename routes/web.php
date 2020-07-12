@@ -20,15 +20,18 @@ Route::get('/', ['as' => 'guest.index', 'uses' => 'HomeController@guestIndex']);
 Route::group(['prefix' => 'admin'], function () {
 
     Route::group(['middleware' => ['guest']], function () {
-        // login
+        // admin/login
         Route::get('/', ['as' => 'admin.index', 'uses' => 'LoginController@adminIndex']);
-        Route::get('login', ['as' => 'admin.index', 'uses' => 'LoginController@adminIndex']);
         Route::post('/', ['as' => 'admin.login', 'uses' => 'LoginController@adminLogin']);
+        // admin/
+        Route::get('login', ['as' => 'admin.index', 'uses' => 'LoginController@adminIndex']);
         Route::post('login', ['as' => 'admin.login', 'uses' => 'LoginController@adminLogin']);
     });
 
     Route::group(['middleware' => ['auth']], function () {
+        // admin/dashboard
         Route::get('dashboard', ['as' => 'admin.dashboard', 'uses' => 'HomeController@adminIndex']);
+        // admin/logout
         Route::get('logout', ['as' => 'admin.logout', 'uses' => 'LoginController@adminLogout']);
     });
 
