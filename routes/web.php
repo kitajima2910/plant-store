@@ -17,17 +17,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', ['as' => 'guest.index', 'uses' => 'HomeController@guestIndex']);
 
 // backend
-Route::prefix('admin')->group(function() {
+Route::group(['prefix' => 'admin'], function () {
 
-    Route::group(['middleware' => 'guest'], function () {
+    Route::group(['middleware' => ['guest']], function () {
         // login
-        Route::match(['get', 'post'], '/', ['as' => 'admin.login', 'uses' => 'LoginController@adminLogin']);
-        Route::match(['get', 'post'], 'login', ['as' => 'admin.login', 'uses' => 'LoginController@adminLogin']);
+        Route::get('/', ['as' => 'admin.index', 'uses' => 'LoginController@adminIndex']);
+        Route::get('login', ['as' => 'admin.index', 'uses' => 'LoginController@adminIndex']);
+        Route::post('/', ['as' => 'admin.login', 'uses' => 'LoginController@adminLogin']);
+        Route::post('login', ['as' => 'admin.login', 'uses' => 'LoginController@adminLogin']);
     });
 
-    Route::group(['middleware' => 'auth'], function () {
-        
+    Route::group(['middleware' => ['auth']], function () {
+        Route::get('dashboard', ['as' => 'admin.dashboard', 'uses' => 'HomeController@adminIndex']);
+        Route::get('logout', ['as' => 'admin.logout', 'uses' => 'LoginController@adminLogout']);
     });
 
 });
+
+
 
