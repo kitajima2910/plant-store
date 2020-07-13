@@ -1,5 +1,5 @@
 @extends('layouts.admin.master')
-@section('title', 'Danh Mục')
+@section('title', 'Setting')
 @section('content')
 <h1>Setting  Index</h1>
 @endsection

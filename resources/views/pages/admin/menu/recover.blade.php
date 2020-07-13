@@ -1,5 +1,5 @@
 @extends('layouts.admin.master')
-@section('title', 'Danh Mục')
+@section('title', 'Menu Web')
 @section('content')
 <h1>Menu Recover</h1>
 @endsection
