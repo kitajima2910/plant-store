@@ -11,7 +11,7 @@
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;"  class="{{ str_contains(Request::path(), 'categories') ? 'active' : '' }}">
-                        <i class="fa fa-book"></i>
+                        <i class="fa fa-pencil-square"></i>
                         <span>Danh mục sản phẩm</span>
                     </a>
                     <ul class="sub">
@@ -33,7 +33,7 @@
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;"  class="{{ str_contains(Request::path(), 'products') ? 'active' : '' }}">
-                        <i class="fa fa-book"></i>
+                        <i class="fa fa-shopping-cart"></i>
                         <span>Sản phẩm</span>
                     </a>
                     <ul class="sub">
@@ -44,7 +44,7 @@
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;"  class="{{ str_contains(Request::path(), 'users') ? 'active' : '' }}">
-                        <i class="fa fa-book"></i>
+                        <i class="fa fa-users"></i>
                         <span>Tài khoản</span>
                     </a>
                     <ul class="sub">
@@ -55,7 +55,7 @@
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;"  class="{{ str_contains(Request::path(), 'settings') ? 'active' : '' }}">
-                        <i class="fa fa-book"></i>
+                        <i class="fa fa-cog"></i>
                         <span>Setting</span>
                     </a>
                     <ul class="sub">
@@ -66,7 +66,7 @@
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;"  class="{{ str_contains(Request::path(), 'sliders') ? 'active' : '' }}">
-                        <i class="fa fa-book"></i>
+                        <i class="fa fa-sliders"></i>
                         <span>Slider</span>
                     </a>
                     <ul class="sub">
@@ -77,7 +77,7 @@
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:;"  class="{{ str_contains(Request::path(), 'customers') ? 'active' : '' }}">
-                        <i class="fa fa-book"></i>
+                        <i class="fa fa-user"></i>
                         <span>Khách hàng</span>
                     </a>
                     <ul class="sub">
