@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 // frontend
 Route::get('/', ['as' => 'guest.index', 'uses' => 'HomeController@guestIndex']);
+Route::get('/', ['as' => 'guest.index', 'uses' => 'ProductsController@index']);
 
 // backend
 Route::group(['prefix' => 'admin'], function () {
