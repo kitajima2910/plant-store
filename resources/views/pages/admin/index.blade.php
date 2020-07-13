@@ -2,7 +2,7 @@
 @section('title', 'Trang Chủ')
 @section('content')
     
-<section class="wrapper">
+
     <!-- //market-->
     <div class="market-updates">
         <div class="col-md-3 market-update-gd">
@@ -60,6 +60,6 @@
         <div class="clearfix"> </div>
     </div>
     <!-- //market-->
-</section>
+
 
 @endsection
