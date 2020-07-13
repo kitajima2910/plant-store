@@ -40,6 +40,7 @@ Route::group(['prefix' => 'admin'], function () {
             Route::get('/index',['as'  => 'admin.categories.index','uses'=> 'CategoryController@adminIndex']);
             Route::get('/add',['as'  => 'admin.categories.add','uses'=> 'CategoryController@adminAdd']);
             Route::get('/recover',['as'  => 'admin.categories.recover','uses'=> 'CategoryController@adminRecover']);
+            Route::post('store', ['as'  => 'admin.products.store', 'uses' => 'CategoryController@adminStore']);
         });
         Route::group(['prefix' => 'menu'], function () {
             //admin/menu/list

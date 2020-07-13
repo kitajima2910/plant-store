@@ -15,19 +15,34 @@ class CategorySeeder extends Seeder
     {
         DB::table('categories')->insert([
             [
-                'name' => 'Name 001',
-                'parent_id' => 1,
-                'slug' => 'name-001',
+                'name' => 'CÂY NỘI THẤT',
+                'parent_id' => 0,
+                'slug' => 'cay-noi-that',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
-                'name' => 'Name 002',
+                'name' => 'CÂY ĐỂ BÀN - KỆ',
                 'parent_id' => 1,
-                'slug' => 'name-001',
+                'slug' => 'cay-de-ban-ke',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
+            [
+                'name' => 'CÂY ĐỂ SÀN',
+                'parent_id' => 1,
+                'slug' => 'cay-de-san',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'CÂY TERRARIUM',
+                'parent_id' => 1,
+                'slug' => 'cay-terrarium',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            
         ]);
     }
 }
