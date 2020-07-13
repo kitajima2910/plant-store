@@ -34,6 +34,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('dashboard', ['as' => 'admin.dashboard', 'uses' => 'HomeController@adminIndex']);
         // admin/logout
         Route::get('logout', ['as' => 'admin.logout', 'uses' => 'LoginController@adminLogout']);
+        // admin/categories
     });
 
 });

@@ -1,11 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 
-
-class ProductsSeeder extends Seeder
+class ProductSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -20,18 +19,18 @@ class ProductsSeeder extends Seeder
                 'price' => '500000',
                 'feature_image' => 'https://via.placeholder.com/150',
                 'content' => 'Make by abc',
-                'user_id' => '001',
-                'category_id' => '001',
+                'user_id' => '1',
+                'category_id' => '1',
                 'created_at' => Carbon::now(),
-                'updated_at' => carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
             [   'id' => '2',
                 'name' => 'Product2',
                 'price' => '150000',
                 'feature_image' => 'https://via.placeholder.com/150',
                 'content' => 'Make by abc',
-                'user_id' => '001',
-                'category_id' => '002',
+                'user_id' => '1',
+                'category_id' => '2',
                 'created_at' => Carbon::now(),
                 'updated_at' => carbon::now(),
             ],
@@ -40,40 +39,40 @@ class ProductsSeeder extends Seeder
                 'price' => '160000',
                 'feature_image' => 'https://via.placeholder.com/150',
                 'content' => 'Make by abc',
-                'user_id' => '001',
-                '   ' => '002',
+                'user_id' => '1',
+                'category_id' => '2',
                 'created_at' => Carbon::now(),
-                'updated_at' => carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
             [   'id' => '4',
                 'name' => 'Product4',
                 'price' => '260000',
                 'feature_image' => 'https://via.placeholder.com/150',
                 'content' => 'Make by abc',
-                'user_id' => '002',
-                'category_id' => '002',
+                'user_id' => '2',
+                'category_id' => '2',
                 'created_at' => Carbon::now(),
-                'updated_at' => carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
             [   'id' => '5',
                 'name' => 'Product5',
                 'price' => '80000',
                 'feature_image' => 'https://via.placeholder.com/150',
                 'content' => 'Make by abc',
-                'user_id' => '001',
-                'category_id' => '001',
+                'user_id' => '1',
+                'category_id' => '1',
                 'created_at' => Carbon::now(),
-                'updated_at' => carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
             [   'id' => '6',
                 'name' => 'Product6',
                 'price' => '100000',
                 'feature_image' => 'https://via.placeholder.com/150',
                 'content' => 'Make by abc',
-                'user_id' => '001',
-                'category_id' => '001',
+                'user_id' => '1',
+                'category_id' => '1',
                 'created_at' => Carbon::now(),
-                'updated_at' => carbon::now(),
+                'updated_at' => Carbon::now(),
             ],
         ]);
     }

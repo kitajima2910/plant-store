@@ -16,10 +16,10 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name')->index();
-            $table->integer('parent-id')->index();
+            $table->integer('parent_id');
             $table->string('slug');
             $table->softDeletes()->index();
-            $table->timestamps();       
+            $table->timestamps();
         });
     }
 
