@@ -51,11 +51,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             bottom: 0;
             width: 100%;
         }
+
+       .sub a.active{
+            background-color: #635151 !important;
+        }
     </style>
 </head>
 
 <body>
     <section id="container">
+        
+  
         <!--header start-->
         @include('includes.admin.header')
         <!--header end-->
@@ -64,13 +70,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!--sidebar end-->
         <!--main content start-->
         <section id="main-content">
-            @yield('content')
+            <section class="wrapper">
+                @yield('content')
+            </section>
             <!-- footer -->
             @include('includes.admin.footer')
             <!-- / footer -->
         </section>
         <!--main content end-->
     </section>
+    
     <script src="{{ asset('public/backend/js/bootstrap.js') }}"></script>
     <script src="{{ asset('public/backend/js/jquery.dcjqaccordion.2.7.js') }}"></script>
     <script src="{{ asset('public/backend/js/scripts.js') }}"></script>
