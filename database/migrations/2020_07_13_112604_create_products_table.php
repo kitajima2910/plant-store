@@ -13,23 +13,29 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
-        $this->down();
-
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name')->index();
             $table->integer('price')->index();
             $table->string('feature_image'); // Demo: https://via.placeholder.com/150 có size 150x150
             $table->text('content');
-            $table->integer('user_id');
-            $table->integer('category_id')->index();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('category_id');
             $table->softDeletes()->index();
-            $table->timestamps();       
+            $table->timestamps();
+
+            $table->foreign('user_id')
+            ->references('id')->on('users')
+            ->onDelete('cascade')->onUpdate('cascade');
+
+            $table->foreign('category_id')
+            ->references('id')->on('categories')
+            ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
     /**
-     * Reverse the migrations.  
+     * Reverse the migrations.
      *
      * @return void
      */
