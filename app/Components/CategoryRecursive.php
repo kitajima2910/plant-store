@@ -23,7 +23,7 @@ class CategoryRecursive {
         }
 
         return $this->htmlOptions;
-
+        
     }
 
 }

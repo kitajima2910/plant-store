@@ -27,6 +27,7 @@
         href="{{ asset('public/frontend/images/ico/apple-touch-icon-72-precomposed.png') }}">
     <link rel="apple-touch-icon-precomposed"
         href="{{ asset('public/frontend/images/ico/apple-touch-icon-57-precomposed.png') }}">
+    @yield('stylde')
 </head>
 <!--/head-->
 
@@ -53,6 +54,7 @@
     <script src="{{ asset('public/frontend/js/price-range.js') }}"></script>
     <script src="{{ asset('public/frontend/js/jquery.prettyPhoto.js') }}"></script>
     <script src="{{ asset('public/frontend/js/main.js') }}"></script>
+    @yield('script')
 </body>
 
 </html>

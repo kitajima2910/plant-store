@@ -42,6 +42,8 @@ Route::group(['prefix' => 'admin'], function () {
             Route::get('/add',['as'  => 'admin.categories.add','uses'=> 'CategoryController@adminAdd']);
             Route::get('/recover',['as'  => 'admin.categories.recover','uses'=> 'CategoryController@adminRecover']);
             Route::post('store', ['as'  => 'admin.products.store', 'uses' => 'CategoryController@adminStore']);
+            // admin/categories/destroy
+            Route::get('destroy/{id}', ['as'  => 'admin.categories.destroy', 'uses' => 'CategoryController@adminDestroy']);
         });
         
         Route::group(['prefix' => 'menu'], function () {
