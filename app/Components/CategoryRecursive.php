@@ -8,20 +8,33 @@ class CategoryRecursive {
 
     private $htmlOptions;
     private $arrayDeleteID;
+    private $data;
 
     public function __construct()
     {
         $this->htmlOptions = '';
         $this->arrayDeleteID = [];
+        $this->data = Category::all();
     }
     
-    public function getCategories($parent_id = 0, $subMark = '') {
+    public function getCategories($parentId = 0, $subMark = '', $select = 0) {
 
-        $categories = Category::where('parent_id', '=', $parent_id)->get();
+        foreach($this->data as $value) {
 
-        foreach($categories as $category) {
-            $this->htmlOptions .= '<option value="' . $category->id . '">' . $subMark . ' ' . $category->name . '</option>';
-            $this->getCategories($category->id, $subMark . '--');
+            $id = $value->id;
+            $name = $value->name;
+
+            if($value->parent_id  == $parentId) {
+
+                if($select != 0 && $id == $select) {
+                    $this->htmlOptions .= '<option selected value="' . $id . '">' . $subMark . ' ' . $name . '</option>';
+                } else {
+                    $this->htmlOptions .= '<option value="' . $id . '">' . $subMark . ' ' . $name . '</option>';
+                }
+                
+                $this->getCategories($id, $subMark . '--');
+            }
+
         }
 
         return $this->htmlOptions;

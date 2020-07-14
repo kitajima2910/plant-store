@@ -4,7 +4,7 @@
 
 <div class="form-w3layouts">
     <!-- page start-->
-    {{-- <div class="row">
+    <div class="row">
         <div class="col-lg-12">
             <section class="panel">
                 <header class="panel-heading">
@@ -17,9 +17,12 @@
                             <div class="form-group">
                                 <label>Tên danh mục</label>
                                 <input type="text" class="form-control" name="name" value="{{ $category->name }}">
+                                @error('name')
+                                    <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div class="form-group">
-                                <select class="form-control m-bot15" name="parent_id" value="{{ $category->name }}">
+                                <select class="form-control m-bot15" name="parent_id">
                                     <option value="0">HÃY CHỌN DANH MỤC CHA</option>
                                     {{!! $htmlOptions !!}}
                                 </select>
@@ -30,7 +33,7 @@
                 </div>
             </section>
         </div>
-    </div> --}}
+    </div>
     <!-- page end-->
 </div>
 

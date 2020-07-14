@@ -56,7 +56,28 @@ class CategoryController extends Controller
 
     public function adminEdit($id) {
         $category = Category::find($id);
-        // return view('pages.admin.categories.edit', compact('category'));
-        return view('pages.admin.categories.edit');
+        $htmlOptions = $this->categoryRecursive->getCategories(0, '', $category->parent_id);
+        return view('pages.admin.categories.edit', compact('category', 'htmlOptions'));
     }
+
+    public function adminUpdate(AdminFromCategory $request, $id) {
+
+        $category = Category::find($id);
+        $category->name = $request->get('name');
+        $category->parent_id = $request->get('parent_id');
+        $category->slug = Str::of($request->get('name'))->slug('-');
+        $category->save();
+
+        return redirect()->route('admin.categories.index');
+
+    }
+
+    public function adminEnable($id) {
+
+        DB::table('categories')->where('id', '=', $id)->update(['deleted_at' => null]);
+
+        return redirect()->route('admin.categories.index');
+
+    }
+
 }
