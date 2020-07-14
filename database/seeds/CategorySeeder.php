@@ -42,6 +42,34 @@ class CategorySeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
+            [
+                'name' => 'TIỂU CẢNH TERRARIUM',
+                'parent_id' => 0,
+                'slug' => 'cay-terrarium',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'CHẬU-LỌ',
+                'parent_id' => 0,
+                'slug' => 'cay-terrarium',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'BÌNH THỦY TINH',
+                'parent_id' => 6,
+                'slug' => 'cay-terrarium',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'name' => 'PHỤ KIỆN TERRARIUM',
+                'parent_id' => 0,
+                'slug' => 'cay-terrarium',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
             
         ]);
     }

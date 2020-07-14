@@ -40,6 +40,19 @@ class UserSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
+            [
+                'full_name' => 'Huy Phạm Quang',
+                'email' => 'toilahuy@gmail.com',
+                'password' => bcrypt('123456'),
+                'address' => 'Bình Thạnh',
+                'phone' => '',
+                'date_of_birth' => Carbon::createFromFormat('d/m/Y', '04/04/1998'),
+                'gender' => 0,
+                'avatar' => 'https://via.placeholder.com/150',
+                'level' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
         ]);
     }
 }
