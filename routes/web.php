@@ -34,6 +34,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('dashboard', ['as' => 'admin.dashboard', 'uses' => 'HomeController@adminIndex']);
         // admin/logout
         Route::get('logout', ['as' => 'admin.logout', 'uses' => 'LoginController@adminLogout']);
+
         // admin/categories
         Route::group(['prefix' => 'categories'], function () {
             //admin/categories/list
@@ -42,6 +43,7 @@ Route::group(['prefix' => 'admin'], function () {
             Route::get('/recover',['as'  => 'admin.categories.recover','uses'=> 'CategoryController@adminRecover']);
             Route::post('store', ['as'  => 'admin.products.store', 'uses' => 'CategoryController@adminStore']);
         });
+        
         Route::group(['prefix' => 'menu'], function () {
             //admin/menu/list
             Route::get('/index',['as'  => 'admin.menu.index','uses'=> 'MenuController@adminIndex']);
