@@ -24,7 +24,7 @@
                             <td>{{ $category->name }}</td>
                             <td>{{ $category->slug }}</td>
                             <td>
-                                <a class="btn btn-success" href="" role="button">Kích hoạt</a>
+                                <a class="btn btn-success" href="{{ route('admin.categories.enable', ['id' => $category->id]) }}" role="button">Kích hoạt</a>
                             </td>
                         </tr>
                     @endforeach

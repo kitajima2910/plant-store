@@ -49,6 +49,10 @@ Route::group(['prefix' => 'admin'], function () {
             Route::get('destroy/{id}', ['as'  => 'admin.categories.destroy', 'uses' => 'CategoryController@adminDestroy']);
             // admin/categories/edit/{id}
             Route::get('edit/{id}', ['as'  => 'admin.categories.edit', 'uses' => 'CategoryController@adminEdit']);
+            // admin/categories/update/{id}
+            Route::post('update/{id}', ['as'  => 'admin.categories.update', 'uses' => 'CategoryController@adminUpdate']);
+            // admin/categories/enable/{id}
+            Route::get('enable/{id}', ['as'  => 'admin.categories.enable', 'uses' => 'CategoryController@adminEnable']);
         });
         
         // admin/menu
