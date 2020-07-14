@@ -1,5 +1,5 @@
 @extends('layouts.admin.master')
-@section('title', 'Setting')
+@section('title', 'Sản phẩm')
 @section('content')
-<h1>Setting Add</h1>
+<h1>Products  Create</h1>
 @endsection

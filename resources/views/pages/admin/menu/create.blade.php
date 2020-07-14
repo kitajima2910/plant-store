@@ -1,5 +1,5 @@
 @extends('layouts.admin.master')
-@section('title', 'Slider')
+@section('title', 'Menu Web')
 @section('content')
-<h1>Sliders Add</h1>
+<h1>Menu  Create</h1>
 @endsection
