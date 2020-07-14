@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class CategorySeeder extends Seeder
 {
@@ -17,56 +18,56 @@ class CategorySeeder extends Seeder
             [
                 'name' => 'CÂY NỘI THẤT',
                 'parent_id' => 0,
-                'slug' => 'cay-noi-that',
+                'slug' => Str::of('CÂY NỘI THẤT')->slug('-'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'CÂY ĐỂ BÀN - KỆ',
                 'parent_id' => 1,
-                'slug' => 'cay-de-ban-ke',
+                'slug' => Str::of('CÂY ĐỂ BÀN - KỆ')->slug('-'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'CÂY ĐỂ SÀN',
                 'parent_id' => 1,
-                'slug' => 'cay-de-san',
+                'slug' =>  Str::of('CÂY ĐỂ SÀN')->slug('-'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'CÂY TERRARIUM',
                 'parent_id' => 1,
-                'slug' => 'cay-terrarium',
+                'slug' =>  Str::of('CÂY TERRARIUM')->slug('-'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'TIỂU CẢNH TERRARIUM',
                 'parent_id' => 0,
-                'slug' => 'cay-terrarium',
+                'slug' =>  Str::of('TIỂU CẢNH TERRARIUM')->slug('-'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'CHẬU-LỌ',
                 'parent_id' => 0,
-                'slug' => 'cay-terrarium',
+                'slug' =>  Str::of('CHẬU-LỌ')->slug('-'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'BÌNH THỦY TINH',
                 'parent_id' => 6,
-                'slug' => 'cay-terrarium',
+                'slug' =>  Str::of('BÌNH THỦY TINH')->slug('-'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
             [
                 'name' => 'PHỤ KIỆN TERRARIUM',
                 'parent_id' => 0,
-                'slug' => 'cay-terrarium',
+                'slug' =>  Str::of('PHỤ KIỆN TERRARIUM')->slug('-'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
