@@ -17,7 +17,8 @@ class CategoryController extends Controller
     }
 
     public function adminIndex(){
-        return view('pages.admin.categories.index');
+        $categories = Category::orderBy('id', 'desc')->paginate('5');
+        return view('pages.admin.categories.index', compact('categories'));
     }
 
     public function adminCreate(){
@@ -37,5 +38,17 @@ class CategoryController extends Controller
 
     public function adminRecover(){
         return view('pages.admin.categories.recover');
+    }
+
+    public function adminDestroy($id) {
+        $category = Category::find($id);
+        $categories = Category::all();
+        foreach($categories as $item) {
+            if($category->id === $item->parent_id) {
+                $item->delete();
+            }
+        }
+        $category->delete();
+        return redirect()->route('admin.categories.index')->with('success', $category->name . ' đã được xoá khỏi danh sách');
     }
 }
