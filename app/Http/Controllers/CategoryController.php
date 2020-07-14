@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Components\CategoryRecursive;
+use App\Http\Requests\AdminFromCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class CategoryController extends Controller
@@ -16,17 +18,17 @@ class CategoryController extends Controller
         $this->categoryRecursive = $categoryRecursive;
     }
 
-    public function adminIndex(){
+    public function adminIndex() {
         $categories = Category::orderBy('id', 'desc')->paginate('5');
         return view('pages.admin.categories.index', compact('categories'));
     }
 
-    public function adminCreate(){
+    public function adminCreate() {
         $htmlOptions = $this->categoryRecursive->getCategories();
         return view('pages.admin.categories.create', compact('htmlOptions'));
     }
 
-    public function adminStore(Request $request) {
+    public function adminStore(AdminFromCategory $request) {
         $category = new Category([
             'name' => $request->get('name'),
             'parent_id' => $request->get('parent_id'),
@@ -36,19 +38,25 @@ class CategoryController extends Controller
         return redirect()->route('admin.categories.index');
     }
 
-    public function adminRecover(){
-        return view('pages.admin.categories.recover');
+    public function adminRecover() {
+        $categories = DB::table('categories')->whereNotNull('deleted_at')->orderBy('id', 'desc')->paginate('5');
+        return view('pages.admin.categories.recover', compact('categories'));
     }
 
     public function adminDestroy($id) {
         $category = Category::find($id);
-        $categories = Category::all();
-        foreach($categories as $item) {
-            if($category->id === $item->parent_id) {
-                $item->delete();
-            }
+        $arrCategoryID = $this->categoryRecursive->deleteCategories($category->id);
+
+        foreach($arrCategoryID as $itemID) {
+            Category::find($itemID)->delete();
         }
         $category->delete();
-        return redirect()->route('admin.categories.index')->with('success', $category->name . ' đã được xoá khỏi danh sách');
+        return redirect()->route('admin.categories.index');
+    }
+
+    public function adminEdit($id) {
+        $category = Category::find($id);
+        // return view('pages.admin.categories.edit', compact('category'));
+        return view('pages.admin.categories.edit');
     }
 }

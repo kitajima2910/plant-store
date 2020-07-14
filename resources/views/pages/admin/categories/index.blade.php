@@ -1,11 +1,7 @@
 @extends('layouts.admin.master')
 @section('title', 'Danh Mục')
-@section('style')
-<link rel="stylesheet" href="{{ asset('public/vendor/alertify/alertify.core.css') }}">
-<link rel="stylesheet" href="{{ asset('public/vendor/alertify/alertify.default.css') }}"
-    id="toggleCSS">
-@endsection
 @section('content')
+
 <div class="table-agile-info">
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -28,7 +24,7 @@
                             <td>{{ $category->name }}</td>
                             <td>{{ $category->slug }}</td>
                             <td>
-                                <a class="btn btn-primary" href="" role="button">Sửa</a>
+                                <a class="btn btn-primary" href="{{ route('admin.categories.edit', ['id' => $category->id]) }}" role="button">Sửa</a>
                                 <a class="btn btn-danger" href="{{ route('admin.categories.destroy', ['id' => $category->id]) }}" role="button">Xoá</a>
                             </td>
                         </tr>
@@ -39,6 +35,5 @@
         </div>
     </div>
 </div>
-@endsection
-@section('script')
+
 @endsection
