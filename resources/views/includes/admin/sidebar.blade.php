@@ -56,7 +56,7 @@
                 <li class="sub-menu">
                     <a href="javascript:;"  class="{{ str_contains(Request::path(), 'settings') ? 'active' : '' }}">
                         <i class="fa fa-cog"></i>
-                        <span>Setting</span>
+                        <span>Cài đặt</span>
                     </a>
                     <ul class="sub">
                         <li><a href="{{ route('admin.settings.index') }}" class="{{ str_contains(Request::path(), 'settings/index') ? 'active' : '' }}">Danh sách</a></li>

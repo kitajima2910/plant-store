@@ -19,7 +19,7 @@ class CreateCategoriesTable extends Migration
             $table->id();
             $table->string('name')->index();
             $table->integer('parent_id');
-            $table->string('slug');
+            $table->string('slug')->index();
             $table->softDeletes()->index();
             $table->timestamps();
         });
