@@ -12,7 +12,7 @@
                 </header>
                 <div class="panel-body">
                     <div class="position-center">
-                        <form role="form" action="{{ route('admin.products.store') }}" method="POST">
+                        <form role="form" action="{{ route('admin.categories.store') }}" method="POST">
                             @csrf
                             <div class="form-group">
                                 <label>Tên danh mục</label>

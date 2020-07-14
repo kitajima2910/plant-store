@@ -35,8 +35,8 @@ class ProductController extends Controller
     public function adminIndex(){
         return view('pages.admin.products.index');
     }
-    public function adminAdd(){
-        return view('pages.admin.products.add');
+    public function adminCreate(){
+        return view('pages.admin.products.create');
     }
     public function adminRecover(){
         return view('pages.admin.products.recover');

@@ -16,7 +16,7 @@
                     </a>
                     <ul class="sub">
                         <li><a href="{{ route('admin.categories.index') }}" class="{{ str_contains(Request::path(), 'categories/index') ? 'active' : '' }}">Danh sách</a></li>
-                        <li><a href="{{ route('admin.categories.add') }}" class="{{ str_contains(Request::path(), 'categories/add') ? 'active' : '' }}">Thêm danh mục</a></li>
+                        <li><a href="{{ route('admin.categories.create') }}" class="{{ str_contains(Request::path(), 'categories/create') ? 'active' : '' }}">Thêm danh mục</a></li>
                         <li><a href="{{ route('admin.categories.recover') }}" class="{{ str_contains(Request::path(), 'categories/recover') ? 'active' : '' }}">Khôi phục</a></li>
                     </ul>
                 </li>
@@ -27,7 +27,7 @@
                     </a>
                     <ul class="sub">
                         <li><a href="{{ route('admin.menu.index') }}" class="{{ str_contains(Request::path(), 'menu/index') ? 'active' : '' }}">Danh sách</a></li>
-                        <li><a href="{{ route('admin.menu.add') }}" class="{{ str_contains(Request::path(), 'menu/add') ? 'active' : '' }}">Thêm danh mục</a></li>
+                        <li><a href="{{ route('admin.menu.create') }}" class="{{ str_contains(Request::path(), 'menu/create') ? 'active' : '' }}">Thêm danh mục</a></li>
                         <li><a href="{{ route('admin.menu.recover') }}" class="{{ str_contains(Request::path(), 'menu/recover') ? 'active' : '' }}">Khôi phục</a></li>
                     </ul>
                 </li>
@@ -38,7 +38,7 @@
                     </a>
                     <ul class="sub">
                         <li><a href="{{ route('admin.products.index') }}" class="{{ str_contains(Request::path(), 'products/index') ? 'active' : '' }}">Danh sách</a></li>
-                        <li><a href="{{ route('admin.products.add') }}" class="{{ str_contains(Request::path(), 'products/add') ? 'active' : '' }}">Thêm danh mục</a></li>
+                        <li><a href="{{ route('admin.products.create') }}" class="{{ str_contains(Request::path(), 'products/create') ? 'active' : '' }}">Thêm danh mục</a></li>
                         <li><a href="{{ route('admin.products.recover') }}" class="{{ str_contains(Request::path(), 'products/recover') ? 'active' : '' }}">Khôi phục</a></li>
                     </ul>
                 </li>
@@ -49,7 +49,7 @@
                     </a>
                     <ul class="sub">
                         <li><a href="{{ route('admin.users.index') }}" class="{{ str_contains(Request::path(), 'users/index') ? 'active' : '' }}">Danh sách</a></li>
-                        <li><a href="{{ route('admin.users.add') }}" class="{{ str_contains(Request::path(), 'users/add') ? 'active' : '' }}">Thêm danh mục</a></li>
+                        <li><a href="{{ route('admin.users.create') }}" class="{{ str_contains(Request::path(), 'users/create') ? 'active' : '' }}">Thêm danh mục</a></li>
                         <li><a href="{{ route('admin.users.recover') }}" class="{{ str_contains(Request::path(), 'users/recover') ? 'active' : '' }}">Khôi phục</a></li>
                     </ul>
                 </li>
@@ -60,7 +60,7 @@
                     </a>
                     <ul class="sub">
                         <li><a href="{{ route('admin.settings.index') }}" class="{{ str_contains(Request::path(), 'settings/index') ? 'active' : '' }}">Danh sách</a></li>
-                        <li><a href="{{ route('admin.settings.add') }}" class="{{ str_contains(Request::path(), 'settings/add') ? 'active' : '' }}">Thêm danh mục</a></li>
+                        <li><a href="{{ route('admin.settings.create') }}" class="{{ str_contains(Request::path(), 'settings/create') ? 'active' : '' }}">Thêm danh mục</a></li>
                         <li><a href="{{ route('admin.settings.recover') }}" class="{{ str_contains(Request::path(), 'settings/recover') ? 'active' : '' }}">Khôi phục</a></li>
                     </ul>
                 </li>
@@ -71,7 +71,7 @@
                     </a>
                     <ul class="sub">
                         <li><a href="{{ route('admin.sliders.index') }}" class="{{ str_contains(Request::path(), 'sliders/index') ? 'active' : '' }}">Danh sách</a></li>
-                        <li><a href="{{ route('admin.sliders.add') }}" class="{{ str_contains(Request::path(), 'sliders/add') ? 'active' : '' }}">Thêm danh mục</a></li>
+                        <li><a href="{{ route('admin.sliders.create') }}" class="{{ str_contains(Request::path(), 'sliders/create') ? 'active' : '' }}">Thêm danh mục</a></li>
                         <li><a href="{{ route('admin.sliders.recover') }}" class="{{ str_contains(Request::path(), 'sliders/recover') ? 'active' : '' }}">Khôi phục</a></li>
                     </ul>
                 </li>

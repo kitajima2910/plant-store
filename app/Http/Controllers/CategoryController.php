@@ -21,9 +21,9 @@ class CategoryController extends Controller
         return view('pages.admin.categories.index', compact('categories'));
     }
 
-    public function adminAdd(){
+    public function adminCreate(){
         $htmlOptions = $this->categoryRecursive->getCategories();
-        return view('pages.admin.categories.add', compact('htmlOptions'));
+        return view('pages.admin.categories.create', compact('htmlOptions'));
     }
 
     public function adminStore(Request $request) {
