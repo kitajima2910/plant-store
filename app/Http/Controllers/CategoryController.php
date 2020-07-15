@@ -20,7 +20,7 @@ class CategoryController extends Controller
     }
 
     public function adminIndex() {
-        $categories = Category::orderBy('id', 'desc')->paginate('5');
+        $categories = Category::all();
         return view('pages.admin.categories.index', compact('categories'));
     }
 
@@ -44,7 +44,7 @@ class CategoryController extends Controller
     }
 
     public function adminRecover() {
-        $categories = DB::table('categories')->whereNotNull('deleted_at')->orderBy('id', 'desc')->paginate('5');
+        $categories = DB::table('categories')->whereNotNull('deleted_at')->get();
         return view('pages.admin.categories.recover', compact('categories'));
     }
 

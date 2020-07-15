@@ -1,11 +1,11 @@
-<ul data-role="treeview">
+<ul>
     @foreach($childs as $child)
         <li>
             <a href="{{ $child->slug }}">
                 {{ $child->name }}
             </a>
             @if(count($child->childs))
-                @include('includes.guest.manage-child', ['childs' => $menu->childs])
+                @include('includes.guest.manage-child', ['childs' => $child->childs])
             @endif
         </li>
     @endforeach

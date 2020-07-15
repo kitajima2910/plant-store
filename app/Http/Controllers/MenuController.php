@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Components\DataTree;
 use App\Components\MenuRecursive;
 use App\Http\Requests\AdminFormMenu;
 use App\Menu;
@@ -18,17 +20,20 @@ class MenuController extends Controller
     }
 
     public function adminIndex(){
-        $menus = Menu::orderBy('id', 'desc')->paginate('5');
+        $menus = Menu::all();
         return view('pages.admin.menu.index', compact('menus'));
     }
 
     public function adminCreate(){
-        $htmlOptions = $this->menuRecursive->getMenu();
-        return view('pages.admin.menu.create', compact('htmlOptions'));
+
+        $data = Menu::get()->toArray();
+        $options = DataTree::getData($data);
+
+        return view('pages.admin.menu.create', compact('options'));
     }
 
     public function adminRecover(){
-        $menus = DB::table('menus')->whereNotNull('deleted_at')->orderBy('id', 'desc')->paginate('5');
+        $menus = DB::table('menus')->whereNotNull('deleted_at')->get();
         return view('pages.admin.menu.recover', compact('menus'));
     }
 
@@ -40,12 +45,13 @@ class MenuController extends Controller
             Menu::find($itemID)->delete();
         }
         $menu->delete();
+        
         return redirect()->route('admin.menu.index');
     }
 
     public function adminEnable($id) {
 
-        DB  ::table('menus')->where('id', '=', $id)->update(['deleted_at' => null]);
+        DB::table('menus')->where('id', '=', $id)->update(['deleted_at' => null]);
 
         return redirect()->route('admin.menu.index');
 
@@ -62,9 +68,13 @@ class MenuController extends Controller
     }
 
     public function adminEdit($id) {
+
         $menu = Menu::find($id);
-        $htmlOptions = $this->menuRecursive->getMenu(0, '', $menu->parent_id);
-        return view('pages.admin.menu.edit', compact('menu', 'htmlOptions'));
+        $data = Menu::get()->toArray();
+        $options = DataTree::getData($data, 0, 0, $menu->parent_id);
+
+        return view('pages.admin.menu.edit', compact('menu', 'options'));
+
     }
 
     public function adminUpdate(AdminFormMenu $request, $id) {

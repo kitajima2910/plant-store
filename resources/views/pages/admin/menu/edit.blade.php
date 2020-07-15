@@ -24,7 +24,9 @@
                             <div class="form-group">
                                 <select class="form-control m-bot15" name="parent_id">
                                     <option value="0">HÃY CHỌN MENU CHA</option>
-                                    {{!! $htmlOptions !!}}
+                                    @foreach ($options as $item )
+                                        <option value="{{ $item['id'] }}" {{ !empty($item['select']) ? 'selected' : '' }}>{{ str_repeat('---', $item['level']) . $item['name'] }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-info">Cập nhật</button>

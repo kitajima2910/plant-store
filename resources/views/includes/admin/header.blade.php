@@ -2,7 +2,7 @@
     <!--logo start-->
     <div class="brand">
         <a href="{{ route('admin.dashboard') }}" class="logo">
-            Quản Trị
+            Plant *,..,*
         </a>
         <div class="sidebar-toggle-box">
             <div class="fa fa-bars"></div>
