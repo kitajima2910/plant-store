@@ -59,10 +59,20 @@ Route::group(['prefix' => 'admin'], function () {
         Route::group(['prefix' => 'menu'], function () {
             //admin/menu/list
             Route::get('index', ['as'  => 'admin.menu.index','uses'=> 'MenuController@adminIndex']);
-            // admin/categories/create
+            // admin/menu/create
             Route::get('create', ['as'  => 'admin.menu.create','uses'=> 'MenuController@adminCreate']);
-            // admin/categories/recover
+            // admin/menu/recover
             Route::get('recover', ['as'  => 'admin.menu.recover','uses'=> 'MenuController@adminRecover']);
+             // admin/menu/destroy/{id}
+             Route::get('destroy/{id}', ['as'  => 'admin.menu.destroy', 'uses' => 'MenuController@adminDestroy']);
+             // admin/menu/edit/{id}
+            Route::get('edit/{id}', ['as'  => 'admin.menu.edit', 'uses' => 'MenuController@adminEdit']);
+             // admin/menu/store
+             Route::post('store', ['as'  => 'admin.menu.store', 'uses' => 'MenuController@adminStore']);
+             // admin/menu/update/{id}
+            Route::post('update/{id}', ['as'  => 'admin.menu.update', 'uses' => 'MenuController@adminUpdate']);
+             // admin/menu/enable/{id}
+            Route::get('enable/{id}', ['as'  => 'admin.menu.enable', 'uses' => 'MenuController@adminEnable']);
         });
 
         // admin/products
