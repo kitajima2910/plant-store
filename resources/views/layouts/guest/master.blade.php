@@ -14,10 +14,7 @@
     <link href="{{ asset('public/frontend/css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('public/frontend/css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('public/frontend/css/responsive.css') }}" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="{{ asset('js/html5shiv.js') }}"></script>
-    <script src="{{ asset('js/respond.min.js') }}"></script>
-    <![endif]-->
+    <link href="{{ asset('public/vendors/metro4/metro-all.min.css') }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{ asset('public/frontend/images/ico/favicon.ico') }}">
     <link rel="apple-touch-icon-precomposed" sizes="144x144"
         href="{{ asset('public/frontend/images/ico/apple-touch-icon-144-precomposed.png') }}">
@@ -53,6 +50,8 @@
     <script src="{{ asset('public/frontend/js/jquery.scrollUp.min.js') }}"></script>
     <script src="{{ asset('public/frontend/js/price-range.js') }}"></script>
     <script src="{{ asset('public/frontend/js/jquery.prettyPhoto.js') }}"></script>
+    <script src="{{ asset('public/frontend/js/jquery.prettyPhoto.js') }}"></script>
+    <script src="{{ asset('public/vendors/metro4/metro.min.js') }}"></script>
     <script src="{{ asset('public/frontend/js/main.js') }}"></script>
     @yield('script')
 </body>
