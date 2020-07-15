@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Components\CategoryRecursive;
+use App\Components\DataTree;
 use App\Http\Requests\AdminFromCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -24,8 +25,12 @@ class CategoryController extends Controller
     }
 
     public function adminCreate() {
-        $htmlOptions = $this->categoryRecursive->getCategories();
-        return view('pages.admin.categories.create', compact('htmlOptions'));
+
+        $data = Category::get()->toArray();
+        $options = DataTree::getData($data);
+
+        return view('pages.admin.categories.create', compact('options'));
+
     }
 
     public function adminStore(AdminFromCategory $request) {
@@ -44,6 +49,7 @@ class CategoryController extends Controller
     }
 
     public function adminDestroy($id) {
+
         $category = Category::find($id);
         $arrCategoryID = $this->categoryRecursive->deleteCategories($category->id);
 
@@ -51,13 +57,19 @@ class CategoryController extends Controller
             Category::find($itemID)->delete();
         }
         $category->delete();
+
         return redirect()->route('admin.categories.index');
+        
     }
 
     public function adminEdit($id) {
+
         $category = Category::find($id);
-        $htmlOptions = $this->categoryRecursive->getCategories(0, '', $category->parent_id);
-        return view('pages.admin.categories.edit', compact('category', 'htmlOptions'));
+        $data = Category::get()->toArray();
+        $options = DataTree::getData($data, 0, 0, $category->parent_id);
+
+        return view('pages.admin.categories.edit', compact('category', 'options'));
+
     }
 
     public function adminUpdate(AdminFromCategory $request, $id) {

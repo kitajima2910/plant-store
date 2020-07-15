@@ -1,5 +1,7 @@
 <?php
 
+use App\Category;
+use App\Components\DataTree;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 // frontend
 Route::get('/', ['as' => 'guest.index', 'uses' => 'HomeController@guestIndex']);
-Route::get('/', ['as' => 'guest.index', 'uses' => 'ProductController@index']);
+// Route::get('/', ['as' => 'guest.index', 'uses' => 'ProductController@index']);
 
 // backend
 Route::group(['prefix' => 'admin'], function () {
@@ -113,6 +115,3 @@ Route::group(['prefix' => 'admin'], function () {
     });
 
 });
-
-
-
