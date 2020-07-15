@@ -8,15 +8,15 @@
         <div class="col-lg-12">
             <section class="panel">
                 <header class="panel-heading">
-                    THÊM MENU
+                    CHỈNH SỮA MENU WEB
                 </header>
                 <div class="panel-body">
                     <div class="position-center">
-                        <form role="form" action="{{ route('admin.menu.store') }}" method="POST">
+                        <form role="form" action="{{ route('admin.menu.update', ['id' => $menu->id]) }}" method="POST">
                             @csrf
                             <div class="form-group">
-                                <label>Tên menu</label>
-                                <input type="text" class="form-control" name="name" value="{{ old('name') }}">
+                                <label>Tên MENU</label>
+                                <input type="text" class="form-control" name="name" value="{{ $menu->name }}">
                                 @error('name')
                                     <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
                                 @enderror
@@ -27,7 +27,7 @@
                                     {{!! $htmlOptions !!}}
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-info">Thêm mới</button>
+                            <button type="submit" class="btn btn-info">Cập nhật</button>
                         </form>
                     </div>
                 </div>
