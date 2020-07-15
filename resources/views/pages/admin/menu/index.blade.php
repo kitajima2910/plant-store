@@ -2,6 +2,12 @@
 @section('title', 'Menu Web')
 @section('style')
 <link rel="stylesheet" href="{{ asset('public/vendors/metro4/datatables.css') }}">
+<style>
+    #tableMenus thead tr th,
+    #tableMenus tbody tr td {
+        color: #3c763d;
+    }
+</style>
 @endsection
 @section('content')
 

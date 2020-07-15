@@ -2,6 +2,12 @@
 @section('title', 'Danh Mục')
 @section('style')
 <link rel="stylesheet" href="{{ asset('public/vendors/metro4/datatables.css') }}">
+<style>
+    #tableCategories thead tr th,
+    #tableCategories tbody tr td {
+        color: #3c763d;
+    }
+</style>
 @endsection
 @section('content')
 
