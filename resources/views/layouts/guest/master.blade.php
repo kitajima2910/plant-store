@@ -13,6 +13,7 @@
     <link href="{{ asset('public/frontend/css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('public/frontend/css/responsive.css') }}" rel="stylesheet">
     <link href="{{ asset('public/vendors/metro4/metro-all.min.css') }}" rel="stylesheet">
+    <script src="{{ asset('public/backend/js/jquery-3.5.1.min.js') }}"></script>
     <style>
         .left-sidebar .treeview a {
             color: #696763;
@@ -44,17 +45,13 @@
     @include('includes.guest.footer')
     <!--/Footer-->
 
-    <script src="{{ asset('public/frontend/js/jquery.js') }}"></script>
-    <script src="{{ asset('public/frontend/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('public/vendors/metro4/bootstrap.min.js') }}"></script>
     <script src="{{ asset('public/frontend/js/jquery.scrollUp.min.js') }}"></script>
     <script src="{{ asset('public/frontend/js/price-range.js') }}"></script>
     <script src="{{ asset('public/frontend/js/jquery.prettyPhoto.js') }}"></script>
     <script src="{{ asset('public/frontend/js/jquery.prettyPhoto.js') }}"></script>
     <script src="{{ asset('public/vendors/metro4/metro.min.js') }}"></script>
     <script src="{{ asset('public/frontend/js/main.js') }}"></script>
-    <script>
-        
-    </script>
     @yield('script')
 </body>
 
