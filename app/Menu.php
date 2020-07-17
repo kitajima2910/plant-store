@@ -12,4 +12,8 @@ class Menu extends Model
     protected $fillable = [
         'name', 'parent_id', 'slug', 'deleted_at'
     ];
+
+    public function childs() {
+        return $this->hasMany(Menu::class, 'parent_id', 'id') ;
+    }
 }
