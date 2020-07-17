@@ -23,6 +23,22 @@
             text-transform: uppercase;
             font-weight: 500;
         }
+
+        .menuSet{
+            justify-content: space-between;
+            display: flex;
+        }
+
+        .mainmenu .treeview .child{
+        
+        }
+      
+
+            /* .mainmenu ul li {
+    padding-right: 35px;
+    padding-left: 15px;
+        } */
+        
     </style>
     @yield('stylde')
 </head>
@@ -35,7 +51,7 @@
 
     @include('includes.guest.slider')
     <!--/slider-->
-
+   
     <section>
         <div class="container">
             @yield('content')
@@ -54,5 +70,5 @@
     <script src="{{ asset('public/frontend/js/main.js') }}"></script>
     @yield('script')
 </body>
-
+    
 </html>
