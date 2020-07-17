@@ -27,6 +27,10 @@ class AdminController extends Controller
 
     }
 
+    public function filemanager() {
+        return view('pages.admin.filemanager');
+    }
+
     public function logout() {
         Auth::logout();
         return redirect()->route('admin.login');

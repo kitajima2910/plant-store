@@ -25,12 +25,12 @@ class CreateProductsTable extends Migration
             $table->text('content');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id');
+            $table->tinyInteger('status')->define(1);
             $table->timestamps();
 
             $table->foreign('user_id')
             ->references('id')->on('users')
             ->onDelete('cascade')->onUpdate('cascade');
-
             $table->foreign('category_id')
             ->references('id')->on('categories')
             ->onDelete('cascade')->onUpdate('cascade');

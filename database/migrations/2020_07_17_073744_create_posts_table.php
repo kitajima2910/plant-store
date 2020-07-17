@@ -13,11 +13,15 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
+        $this->down();
+
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->unique();
+            $table->string('name')->unique();
             $table->string('slug')->unique();
             $table->string('image');
+            $table->text('content');
+            $table->tinyInteger('status')->define(1);
             $table->timestamps();
         });
     }
