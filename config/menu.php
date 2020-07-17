@@ -41,4 +41,10 @@ return [
             ],
         ]
     ],
+    [
+        'name' => 'Quản Lý Tệp',
+        'icon' => 'fa fa-picture-o',
+        'route' => 'admin.filemanager',
+        'active' => 'filemanager'
+    ],
 ];

@@ -15,7 +15,7 @@
             <!-- user login dropdown start-->
             <li class="dropdown">
                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                    <span class="username">&nbsp; Admin: {{ Auth::user()->full_name }}</span>
+                    <span class="username">&nbsp; Admin: {{ Auth::user()->name }}</span>
                     <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu extended logout">

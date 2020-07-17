@@ -33,6 +33,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::get('dashboard', 'HomeController@index')->name('admin.dashboard');
         // admin/logout
         Route::get('logout', 'AdminController@logout')->name('admin.logout');
+        // admin/filemanager
+        Route::get('filemanager', 'AdminController@filemanager')->name('admin.filemanager');
         // admin/categories
         Route::resource('categories', 'CategoryController');
         // admin/menus
