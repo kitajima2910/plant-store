@@ -1,4 +1,4 @@
-<ul class="child" style="display: none !important">
+<ul class="child" >
   @foreach($childs as $child)
       <li>
           <a href="{{ $child->slug }}">
