@@ -8,15 +8,15 @@
         <div class="col-lg-12">
             <section class="panel">
                 <header class="panel-heading">
-                    CHỈNH SỮA MENU WEB
+                    THÊM MENU
                 </header>
                 <div class="panel-body">
                     <div class="position-center">
-                        <form role="form" action="{{ route('admin.menu.update', ['id' => $menu->id]) }}" method="POST">
+                        <form role="form" action="{{ route('menus.store') }}" method="POST">
                             @csrf
                             <div class="form-group">
-                                <label>Tên MENU</label>
-                                <input type="text" class="form-control" name="name" value="{{ $menu->name }}">
+                                <label>Tên menu</label>
+                                <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                                 @error('name')
                                     <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
                                 @enderror
@@ -29,7 +29,20 @@
                                     @endforeach
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-info">Cập nhật</button>
+                            <div class="form-group">
+                                <label>Trạng thái</label>
+                                <div class="form-check form-check-inline">
+                                    <span class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="status" value="1" checked> Hoạt động
+                                    </span>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <span class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="status" value="0"> Không hoạt
+                                        động
+                                    </span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-info">Thêm mới</button>
                         </form>
                     </div>
                 </div>

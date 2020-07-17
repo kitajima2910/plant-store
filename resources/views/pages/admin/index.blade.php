@@ -1,8 +1,7 @@
 @extends('layouts.admin.master')
-@section('title', 'Trang Chủ')
+@section('title', 'Bảng Điều Khiển')
 @section('content')
     
-
     <!-- //market-->
     <div class="market-updates">
         <div class="col-md-3 market-update-gd">
@@ -60,6 +59,5 @@
         <div class="clearfix"> </div>
     </div>
     <!-- //market-->
-
 
 @endsection

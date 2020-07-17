@@ -17,13 +17,14 @@ class CreateProductsTable extends Migration
 
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->index();
-            $table->integer('price')->index();
+            $table->string('name')->unique();
+            $table->string('slug')->unique();
             $table->string('feature_image'); // Demo: https://via.placeholder.com/150 có size 150x150
+            $table->integer('price');
+            $table->integer('sale_price')->default(0);
             $table->text('content');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id');
-            $table->softDeletes()->index();
             $table->timestamps();
 
             $table->foreign('user_id')
