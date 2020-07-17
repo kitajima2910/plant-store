@@ -21,7 +21,9 @@
                 <tr>
                     <th data-breakpoints="xs">ID</th>
                     <th>Tên Danh Mục</th>
-                    <th>Đường Dẫn Thân Thiên</th>
+                    <th>Đường Dẫn</th>
+                    <th>Trạng thái</th>
+                    <th>Ngày tạo</th>
                     <th>Hành Động</th>
                 </tr>
             </thead>
@@ -31,13 +33,17 @@
                         <td>{{ $category->id }}</td>
                         <td>{{ $category->name }}</td>
                         <td>{{ $category->slug }}</td>
+                        <td>{{ $category->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}</td>
+                        <td>{{ $category->updated_at }}</td>
                         <td>
-                            <a class="btn btn-primary"
-                                href="{{ route('admin.categories.edit', ['id' => $category->id]) }}"
+                            <form action="{{ route('categories.destroy', $category->id) }}" method="post">
+                                <a class="btn btn-primary"
+                                href="{{ route('categories.edit', $category->id) }}"
                                 role="button">Sửa</a>
-                            <a class="btn btn-danger"
-                                href="{{ route('admin.categories.destroy', ['id' => $category->id]) }}"
-                                role="button">Xoá</a>
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger" role="button">Xoá</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach

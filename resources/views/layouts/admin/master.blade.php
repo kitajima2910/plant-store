@@ -4,13 +4,16 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php $menus = config('menu'); ?>
 <!DOCTYPE html>
 
 <head>
     <title>@yield('title') | Admin Panel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
+    <!-- start: Favicon -->
+    <link rel="shortcut icon" href="{{ asset('public/vendors/favicon.ico') }}">
+    <!-- end: Favicon -->
     <script type="application/x-javascript">
         addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
@@ -19,7 +22,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         function hideURLbar() {
             window.scrollTo(0, 1);
         }
-
     </script>
 
     <!-- bootstrap-css -->
@@ -56,9 +58,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         }
     </style>
     @yield('style')
+
 </head>
 
 <body>
+
     <section id="container">
         
         <!--header start-->
@@ -74,6 +78,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </section>
         </section>
         <!--main content end-->
+
     </section>
     
     <script src="{{ asset('public/backend/js/bootstrap.js') }}"></script>
@@ -83,6 +88,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="{{ asset('public/backend/js/jquery.nicescroll.js') }}"></script>
     <script src="{{ asset('public/backend/js/jquery.scrollTo.js') }}"></script>
     @yield('script')
+
 </body>
 
 </html>

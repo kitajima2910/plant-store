@@ -21,7 +21,9 @@
                 <tr>
                     <th data-breakpoints="xs">ID</th>
                     <th>Tên Danh Mục</th>
-                    <th>Đường Dẫn Thân Thiên</th>
+                    <th>Đường Dẫn</th>
+                    <th>Trạng thái</th>
+                    <th>Ngày tạo</th>
                     <th>Hành Động</th>
                 </tr>
             </thead>
@@ -30,10 +32,18 @@
                         <tr data-expanded="true">
                             <td>{{ $menu->id }}</td>
                             <td>{{ $menu->name }}</td>
+                            <td>{{ $menu->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}</td>
+                            <td>{{ $menu->updated_at }}</td>
                             <td>{{ $menu->slug }}</td>
                             <td>
-                                <a class="btn btn-primary" href="{{ route('admin.menu.edit', ['id' => $menu->id]) }}" role="button">Sửa</a>
-                                <a class="btn btn-danger" href="{{ route('admin.menu.destroy', ['id' => $menu->id]) }}" role="button">Xoá</a>
+                                <form action="{{ route('menus.destroy', $menu->id) }}" method="post">
+                                    <a class="btn btn-primary"
+                                    href="{{ route('menus.edit', $menu->id) }}"
+                                    role="button">Sửa</a>
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger" role="button">Xoá</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach

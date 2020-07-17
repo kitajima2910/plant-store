@@ -10,7 +10,6 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use Notifiable;
-    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -18,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'full_name', 'email', 'password', 'address', 'phone', 'date_of_birth', 'gender', 'avatar', 'level'
+        'full_name', 'email', 'password', 'level'
     ];
 
     /**

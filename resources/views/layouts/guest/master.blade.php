@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title') | Plant Store</title>
+    <!-- start: Favicon -->
+    <link rel="shortcut icon" href="{{ asset('public/vendors/favicon.ico') }}">
+    <!-- end: Favicon -->
     <link href="{{ asset('public/frontend/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('public/frontend/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('public/frontend/css/prettyPhoto.css') }}" rel="stylesheet">
