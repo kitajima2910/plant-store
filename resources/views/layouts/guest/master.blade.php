@@ -32,13 +32,24 @@
         .mainmenu .treeview .child{
         
         }
-      
+        .child{
+            display: none !important;
+        }
 
-            /* .mainmenu ul li {
+        .expanded:hover .child{
+            display: block !important;
+        }
+
+        .mainmenu .node-toggle{
+            display: none !important;
+        }
+
+            .mainmenu ul li {
     padding-right: 35px;
-    padding-left: 15px;
-        } */
+    padding-left: 0px;
+        }
         
+
     </style>
     @yield('stylde')
 </head>
@@ -68,6 +79,19 @@
     <script src="{{ asset('public/frontend/js/jquery.prettyPhoto.js') }}"></script>
     <script src="{{ asset('public/vendors/metro4/metro.min.js') }}"></script>
     <script src="{{ asset('public/frontend/js/main.js') }}"></script>
+    <script>
+         $(document).ready(function () {
+    $(".tree-node").hover(
+        function () {
+          $(this).addClass("expanded");
+        },
+        function () {
+          $(this).removeClass("expanded");
+        }
+      );
+    });
+  </script>
+
     @yield('script')
 </body>
     
