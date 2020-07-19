@@ -26,7 +26,7 @@ class AdminFormUser extends FormRequest
         return [
             'name' => 'required',
             'email' => 'required|regex:/^[\w]{2,}@[\w]{2,}(\.[\w]{2,}){1,2}$/|'. Rule::unique('users')->ignore($this->id),
-            'password' => 'required'
+            'password' => 'required|' . Rule::unique('users')->ignore($this->id)
         ];
     }
 

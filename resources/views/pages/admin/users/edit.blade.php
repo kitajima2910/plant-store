@@ -27,7 +27,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Mật khẩu</label>
-                                    <input type="password" class="form-control" name="password" value="{{ $user->password }}">
+                                    <input type="password" class="form-control" name="password" value="{{ $user->password }}" readonly>
                                     @error('password')
                                         <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
                                     @enderror

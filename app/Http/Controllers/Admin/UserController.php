@@ -42,20 +42,17 @@ class UserController extends Controller
     }
 
 
-    public function update(Request $request,$id)
+    public function update(AdminFormUser $request, $id)
     {
-        $request->validate([
-            'name'=>'required',
-            'password' => 'required'
-        ]);
- 
+
         $user = User::find($id);
         $user->name = $request->get('name');
-        $user->password = bcrypt($request->get('password'));
+        $user->password =   $request->get('password');
         $user->level = $request->get('level');
         $user->status = $request->get('status');
         $user->save();
         return redirect()->route('users.index');
+        
     }
 
     public function destroy(User $user) {

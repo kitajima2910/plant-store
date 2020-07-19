@@ -19,7 +19,7 @@ class AdminController extends Controller
         $password = $request->get('password');
         $remember = $request->has('remember');
 
-        if(Auth::attempt(['email' => $email, 'password' => $password, 'level' => 1], $remember)) {
+        if(Auth::attempt(['email' => $email, 'password' => $password, 'level' => 1, 'status' => 1], $remember)) {
             return redirect()->intended('admin/dashboard');
         } else {
             return redirect()->back()->withInput()->withErrors(['errorLogin' => 'Email hoặc mật khẩu không đúng *,..,*']);
