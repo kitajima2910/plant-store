@@ -3,8 +3,8 @@
 @section('style')
 <link rel="stylesheet" href="{{ asset('public/vendors/metro4/datatables.css') }}">
 <style>
-    #tableMenus thead tr th,
-    #tableMenus tbody tr td {
+    #tableUsers thead tr th,
+    #tableUsers tbody tr td {
         color: #3c763d;
     }
 </style>
@@ -16,7 +16,7 @@
         Danh Sách Thành Viên
     </div>
     <div>
-        <table id="tableMenus" class="table striped table-border">
+        <table id="tableUsers" class="table striped table-border">
             <thead>
                 <tr>
                     <th data-breakpoints="xs">ID</th>
@@ -37,16 +37,10 @@
                             <td>{{ $user->level == 1 ? 'Quản trị' : 'Thành viên' }}</td>
                             <td>{{ $user->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}</td>
                             <td>{{ $user->updated_at }}</td>
-                            <td>
-                                <form action="{{ route('users.destroy', $user->id) }}" method="post">
-                                    <a class="btn btn-primary"
-                                    href="{{ route('users.edit', $user->id) }}"
-                                    role="button">Sửa</a>
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger" role="button">Xoá</button>
-                                </form>
-                            </>
+                            <td>     
+                                <a class="btn btn-xs btn-primary" href="{{ route('users.edit', $user->id) }}" role="button"><i class="fa fa-edit"></i> Sửa</a>
+                                <a href="#" data-toggle="modal" data-id="{{ $user->id }}" data-target="#deleteModal" class="btn btn-xs btn-danger delete"><i class="fa fa-trash"></i> Xoá</a>
+                            </td>
                         </tr>
                     @endforeach
             </tbody>
@@ -54,10 +48,12 @@
     </div>
 </div>
 
+<x-confirm-delete>users.destroy</x-confirm-delete>
+
 @endsection
 @section('script')
 <script src="{{ asset('public/vendors/metro4/jquery.dataTables.min.js') }}"></script>
 <script>
-    $('#tableMenus').dataTable();
+    $('#tableUsers').dataTable();
 </script>
 @endsection

@@ -14,21 +14,21 @@
                             @csrf
                             <div class="form-group">
                                 <label>Tên</label>
-                                <input type="text" class="form-control" name="name">
+                                <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                                 @error('name')
                                     <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label>Email</label>
-                                <input type="text" class="form-control" name="email">
+                                <input type="text" class="form-control" name="email" value="{{ old('email') }}">
                                 @error('email')
                                     <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
-                                <input type="password" class="form-control" name="password" >
+                                <input type="password" class="form-control" name="password" value="{{ old('password') }}">
                                 @error('password')
                                     <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
                                 @enderror
