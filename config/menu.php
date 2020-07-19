@@ -42,6 +42,23 @@ return [
         ]
     ],
     [
+        'name' => 'User',
+        'icon' => 'fa fa-users',
+        'active' => 'users',
+        'items' => [
+            [
+                'name' => 'Danh sách thành viên',
+                'route' => 'users.index',
+                'active' => 'users'
+            ],
+            [
+                'name' => 'Thêm thành viên',
+                'route' => 'users.create',
+                'active' => 'users/create'
+            ],
+        ]
+    ],
+    [
         'name' => 'Quản Lý Tệp',
         'icon' => 'fa fa-picture-o',
         'route' => 'admin.filemanager',

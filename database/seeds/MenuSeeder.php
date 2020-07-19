@@ -121,7 +121,7 @@ class MenuSeeder extends Seeder
             ],
             [
                 'name' => 'PLANT WIKI',
-                'parent_id' => 14,
+                'parent_id' => 13,
                 'slug' => Str::of('PLANT WIKI')->slug('-'),
                 'status' => 1,
                 'created_at' => Carbon::now(),
@@ -137,7 +137,7 @@ class MenuSeeder extends Seeder
             ],
             [
                 'name' => 'OUR STORY',
-                'parent_id' => 16,
+                'parent_id' => 15,
                 'slug' => Str::of('ABOUT STORY')->slug('-'),
                 'status' => 1,
                 'created_at' => Carbon::now(),
@@ -145,7 +145,7 @@ class MenuSeeder extends Seeder
             ],
             [
                 'name' => 'LIÊN HỆ',
-                'parent_id' => 16,
+                'parent_id' => 15,
                 'slug' => Str::of('LIÊN HỆ')->slug('-'),
                 'status' => 1,
                 'created_at' => Carbon::now(),
@@ -153,7 +153,7 @@ class MenuSeeder extends Seeder
             ],
             [
                 'name' => 'ĐỊA CHỈ',
-                'parent_id' => 16,
+                'parent_id' => 15,
                 'slug' => Str::of('ĐỊA CHỈ')->slug('-'),
                 'status' => 1,
                 'created_at' => Carbon::now(),
@@ -161,7 +161,7 @@ class MenuSeeder extends Seeder
             ],
             [
                 'name' => 'FAQ',
-                'parent_id' => 16,
+                'parent_id' => 15,
                 'slug' => Str::of('FAQ')->slug('-'),
                 'status' => 1,
                 'created_at' => Carbon::now(),
