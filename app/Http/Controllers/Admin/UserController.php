@@ -5,12 +5,17 @@ use App\User;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminFormUser;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
    
     public function index() {
-        $users = User::all();
+        // $users = User::all();
+        $emails =Auth::user()->email ;
+        $users = DB::select('select * from users where email not in (?)', [$emails]);
+        // $users = DB::table('users')->where('email','Auth::user()->email')->get();
         return view('pages.admin.users.index', compact('users'));
     }
 
