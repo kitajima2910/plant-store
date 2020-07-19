@@ -1,5 +1,5 @@
 @extends('layouts.admin.master')
-@section('title', 'User')
+@section('title', 'Tài Khoản')
 @section('style')
 <link rel="stylesheet" href="{{ asset('public/vendors/metro4/datatables.css') }}">
 <style>
@@ -13,16 +13,16 @@
 
 <div class="table-agile-info">
     <div class="panel-heading">
-        Danh Sách Thành Viên
+        Danh Sách Tài Khoản
     </div>
     <div>
         <table id="tableUsers" class="table striped table-border">
             <thead>
                 <tr>
                     <th data-breakpoints="xs">ID</th>
-                    <th>Tên User</th>
-                    <th>Email</th>
-                    <th>Level</th>
+                    <th>Họ và tên</th>
+                    <th>Địa chỉ email</th>
+                    <th>Vai trò</th>
                     <th>Trạng thái</th>
                     <th>Ngày tạo</th>
                     <th>Hành Động</th>

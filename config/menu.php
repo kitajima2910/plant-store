@@ -42,17 +42,17 @@ return [
         ]
     ],
     [
-        'name' => 'User',
+        'name' => 'Tài Khoản',
         'icon' => 'fa fa-users',
         'active' => 'users',
         'items' => [
             [
-                'name' => 'Danh sách thành viên',
+                'name' => 'Danh sách tài khoản',
                 'route' => 'users.index',
                 'active' => 'users'
             ],
             [
-                'name' => 'Thêm thành viên',
+                'name' => 'Thêm tài khoản',
                 'route' => 'users.create',
                 'active' => 'users/create'
             ],

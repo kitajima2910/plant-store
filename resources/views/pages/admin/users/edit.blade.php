@@ -1,5 +1,5 @@
 @extends('layouts.admin.master')
-@section('title', 'User')
+@section('title', 'Tài khoản')
 @section('content')
 
 <div class="form-w3layouts">
@@ -7,29 +7,34 @@
     <div class="row">
         <div class="col-lg-12">
             <section class="panel">
-                <header class="panel-heading">CHỈNH SỮA USER</header>
+                <header class="panel-heading">CHỈNH SỬA TÀI KHOẢN</header>
                 <div class="panel-body">
                     <div class="position-center">
                         <form action="{{route('users.update',$user->id)}}" method="POST">
                             @method('PATCH')   
                             @csrf
+                            <input type="hidden" name="id" value="{{ $user->id }}">
                                 <div class="form-group">
-                                    <label>HỌ VÀ TÊN</label>
+                                    <label>Họ và tên</label>
                                     <input type="text" class="form-control" name="name" value="{{ $user->name }}">
                                     @error('name')
                                         <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label>PASSWORD</label>
+                                    <label>Địa chỉ email</label>
+                                    <input type="text" class="form-control" name="email" value="{{ $user->email }}" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Mật khẩu</label>
                                     <input type="password" class="form-control" name="password" value="{{ $user->password }}">
                                     @error('password')
                                         <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label >Level</label>
-                                    <select name="level">
+                                    <label >Vài trò</label>
+                                    <select class="form-control" name="level">
                                         @if($user->level == 0)
                                         <span>
                                         <option value="0" >Thành Viên</option>
