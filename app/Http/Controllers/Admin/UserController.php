@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\User;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminFormUser;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -35,15 +36,21 @@ class UserController extends Controller
         return view('pages.admin.users.edit',compact('user'));
     }
 
-    public function update(AdminFormUser $request, $id) {
+
+    public function update(Request $request,$id)
+    {
+        $request->validate([
+            'name'=>'required',
+            'password' => 'required'
+        ]);
+ 
         $user = User::find($id);
         $user->name = $request->get('name');
-        $user->email = $request->get('email');
+        $user->password = bcrypt($request->get('password'));
         $user->level = $request->get('level');
         $user->status = $request->get('status');
         $user->save();
         return redirect()->route('users.index');
-        
     }
 
     public function destroy(User $user) {
