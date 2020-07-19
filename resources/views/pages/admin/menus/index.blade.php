@@ -36,14 +36,6 @@
                             <td>{{ $menu->updated_at }}</td>
                             <td>{{ $menu->slug }}</td>
                             <td>
-                                {{-- <form action="{{ route('menus.destroy', $menu->id) }}" method="post">
-                                    <a class="btn btn-primary"
-                                    href="{{ route('menus.edit', $menu->id) }}"
-                                    role="button">Sửa</a>
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger" role="button">Xoá</button>
-                                </form> --}}
                                 <a class="btn btn-xs btn-primary" href="{{ route('menus.edit', $menu->id) }}" role="button"><i class="fa fa-edit"></i> Sửa</a>
                                 <a href="#" data-toggle="modal" data-id="{{ $menu->id }}" data-target="#deleteModal" class="btn btn-xs btn-danger delete"><i class="fa fa-trash"></i> Xoá</a>
                             </td>
