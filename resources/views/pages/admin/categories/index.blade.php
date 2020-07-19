@@ -7,6 +7,7 @@
     #tableCategories tbody tr td {
         color: #3c763d;
     }
+
 </style>
 @endsection
 @section('content')
@@ -33,17 +34,12 @@
                         <td>{{ $category->id }}</td>
                         <td>{{ $category->name }}</td>
                         <td>{{ $category->slug }}</td>
-                        <td>{{ $category->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}</td>
+                        <td>{{ $category->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}
+                        </td>
                         <td>{{ $category->updated_at }}</td>
                         <td>
-                            <form action="{{ route('categories.destroy', $category->id) }}" method="post">
-                                <a class="btn btn-primary"
-                                href="{{ route('categories.edit', $category->id) }}"
-                                role="button">Sửa</a>
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger" role="button">Xoá</button>
-                            </form>
+                            <a class="btn btn-xs btn-primary" href="{{ route('categories.edit', $category->id) }}" role="button"><i class="fa fa-edit"></i> Sửa</a>
+                            <a href="#" data-toggle="modal" data-id="{{ $category->id }}" data-target="#deleteModal" class="btn btn-xs btn-danger delete"><i class="fa fa-trash"></i> Xoá</a>
                         </td>
                     </tr>
                 @endforeach
@@ -51,6 +47,8 @@
         </table>
     </div>
 </div>
+
+<x-confirm-delete>categories.destroy</x-confirm-delete>
 
 @endsection
 @section('script')
