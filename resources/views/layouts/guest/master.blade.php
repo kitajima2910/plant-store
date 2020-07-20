@@ -16,7 +16,12 @@
     <link href="{{ asset('public/frontend/css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('public/frontend/css/responsive.css') }}" rel="stylesheet">
     <link href="{{ asset('public/vendors/metro4/metro-all.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/frontend/css/themify-icons.css') }}"  rel="stylesheet" type="text/css">
+    <link href="{{ asset('public/frontend/css/elegant-icons.css') }}"  rel="stylesheet" type="text/css">
+    <link href="{{ asset('public/frontend/css/owl.carousel.min.css') }}"  rel="stylesheet" type="text/css">
+    <link href="{{ asset('public/frontend/css/style.css') }}"  rel="stylesheet">
     <script src="{{ asset('public/backend/js/jquery-3.5.1.min.js') }}"></script>
+    
     <style>
         .left-sidebar .treeview a {
             color: #696763;
@@ -51,10 +56,14 @@
     padding-right: 35px;
     padding-left: 0px;
         }
+
+        .inner-header .col-lg-3{
+            margin-left: 600px;
+        }
         
 
     </style>
-    @yield('stylde')
+    @yield('style')
 </head>
 <!--/head-->
 
@@ -66,13 +75,11 @@
     @include('includes.guest.slider')
     <!--/slider-->
    
-    <section>
-        <div class="container">
+    <section>     
             @yield('content')
-        </div>
     </section>
 
-    @include('includes.guest.footer')
+    {{-- @include('includes.guest.footer') --}}
     <!--/Footer-->
 
     <script src="{{ asset('public/vendors/metro4/bootstrap.min.js') }}"></script>
@@ -82,6 +89,8 @@
     <script src="{{ asset('public/frontend/js/jquery.prettyPhoto.js') }}"></script>
     <script src="{{ asset('public/vendors/metro4/metro.min.js') }}"></script>
     <script src="{{ asset('public/frontend/js/main.js') }}"></script>
+    
+
     <script>
          $(document).ready(function () {
     $(".tree-node").hover(
@@ -95,7 +104,7 @@
     });
   </script>
 
-    @yield('script')
+@yield('script')
 </body>
     
 </html>
