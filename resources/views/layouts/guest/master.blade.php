@@ -60,6 +60,10 @@
         .inner-header .col-lg-3{
             margin-left: 600px;
         }
+
+        .header-bottom {
+    padding-bottom: 30px;
+    padding-top: 3px;}
         
 
     </style>
