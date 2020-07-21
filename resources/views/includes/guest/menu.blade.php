@@ -1,4 +1,6 @@
-<div class="mainmenu" >
+<div class="nav-item">
+    <div class="container">
+        <nav class="nav-menu mobile-menu">
     <ul data-role="treeview" class="menuSet">
         @foreach($menuMain as $menu)
             <li>
@@ -11,6 +13,10 @@
             </li>
         @endforeach
     </ul>
+</div>
+</nav>
+<div id="mobile-menu-wrap"></div>
+</div>
 </div>
 
 
