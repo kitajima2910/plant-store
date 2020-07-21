@@ -41,6 +41,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::resource('menus', 'MenuController');
         // admin/users
         Route::resource('users', 'UserController');
+        // admin/products
+        Route::resource('products', 'ProductController');
     });
 
 });

@@ -1,7 +1,7 @@
 @extends('layouts.admin.master')
 @section('title', 'Menu Web')
 @section('style')
-<link rel="stylesheet" href="{{ asset('public/vendors/metro4/datatables.css') }}">
+<link rel="stylesheet" href="{{ asset('public/vendors/metro4/datatables/css/datatables.css') }}">
 <style>
     #tableMenus thead tr th,
     #tableMenus tbody tr td {
@@ -32,9 +32,11 @@
                         <tr data-expanded="true">
                             <td>{{ $menu->id }}</td>
                             <td>{{ $menu->name }}</td>
-                            <td>{{ $menu->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}</td>
-                            <td>{{ $menu->updated_at }}</td>
                             <td>{{ $menu->slug }}</td>
+                            <td>
+                                <label class="{{ $menu->status == 1 ? 'label label-info' : 'label label-default'}}">{{ $menu->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}</label>
+                            </td>
+                            <td>{{ $menu->updated_at }}</td>
                             <td>
                                 <a class="btn btn-xs btn-primary" href="{{ route('menus.edit', $menu->id) }}" role="button"><i class="fa fa-edit"></i> Sửa</a>
                                 <a href="#" data-toggle="modal" data-id="{{ $menu->id }}" data-target="#deleteModal" class="btn btn-xs btn-danger delete"><i class="fa fa-trash"></i> Xoá</a>
@@ -50,7 +52,7 @@
 
 @endsection
 @section('script')
-<script src="{{ asset('public/vendors/metro4/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('public/vendors/metro4/datatables/js/jquery.dataTables.min.js') }}"></script>
 <script>
     $('#tableMenus').dataTable();
 </script>

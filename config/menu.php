@@ -9,11 +9,11 @@ return [
     ],
     [
         'name' => 'Danh mục sản phẩm',
-        'icon' => 'fa fa-pencil-square',
+        'icon' => 'fa fa-list',
         'active' => 'categories',
         'items' => [
             [
-                'name' => 'Danh sách',
+                'name' => 'Danh sách danh mục',
                 'route' => 'categories.index',
                 'active' => 'categories'
             ],
@@ -30,7 +30,7 @@ return [
         'active' => 'menus',
         'items' => [
             [
-                'name' => 'Danh sách',
+                'name' => 'Danh sách menu',
                 'route' => 'menus.index',
                 'active' => 'menus'
             ],
@@ -38,6 +38,23 @@ return [
                 'name' => 'Thêm menu',
                 'route' => 'menus.create',
                 'active' => 'menus/create'
+            ],
+        ]
+    ],
+    [
+        'name' => 'Sản Phẩm',
+        'icon' => 'fa fa-product-hunt',
+        'active' => 'products',
+        'items' => [
+            [
+                'name' => 'Danh sách sản phẩm',
+                'route' => 'products.index',
+                'active' => 'products'
+            ],
+            [
+                'name' => 'Thêm sản phẩm',
+                'route' => 'products.create',
+                'active' => 'products/create'
             ],
         ]
     ],
