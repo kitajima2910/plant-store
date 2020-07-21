@@ -82,9 +82,9 @@ class MenuSeeder extends Seeder
                 'updated_at' => Carbon::now(),
             ],
             [
-                'name' => 'BLOG',
+                'name' => 'BÀI VIẾT',
                 'parent_id' => 0,
-                'slug' => Str::of('BLOG')->slug('-'),
+                'slug' => Str::of('BÀI VIẾT')->slug('-'),
                 'status' => 1,
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
