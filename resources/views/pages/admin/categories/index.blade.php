@@ -1,7 +1,7 @@
 @extends('layouts.admin.master')
 @section('title', 'Danh Mục')
 @section('style')
-<link rel="stylesheet" href="{{ asset('public/vendors/metro4/datatables.css') }}">
+<link rel="stylesheet" href="{{ asset('public/vendors/metro4/datatables/css/datatables.css') }}">
 <style>
     #tableCategories thead tr th,
     #tableCategories tbody tr td {
@@ -34,7 +34,8 @@
                         <td>{{ $category->id }}</td>
                         <td>{{ $category->name }}</td>
                         <td>{{ $category->slug }}</td>
-                        <td>{{ $category->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}
+                        <td>
+                            <label class="{{ $category->status == 1 ? 'label label-info' : 'label label-default'}}">{{ $category->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}</label>
                         </td>
                         <td>{{ $category->updated_at }}</td>
                         <td>
@@ -52,7 +53,7 @@
 
 @endsection
 @section('script')
-<script src="{{ asset('public/vendors/metro4/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('public/vendors/metro4/datatables/js/jquery.dataTables.min.js') }}"></script>
 <script>
     $('#tableCategories').dataTable();
 </script>

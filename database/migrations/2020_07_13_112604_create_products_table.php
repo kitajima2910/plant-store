@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('slug')->unique();
-            $table->string('feature_image'); // Demo: https://via.placeholder.com/150 có size 150x150
+            $table->string('feature_image')->nullable(); // Demo: https://via.placeholder.com/150 có size 150x150
             $table->integer('price');
             $table->integer('sale_price')->default(0);
             $table->text('content');

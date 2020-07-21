@@ -1,7 +1,7 @@
 @extends('layouts.admin.master')
 @section('title', 'Tài Khoản')
 @section('style')
-<link rel="stylesheet" href="{{ asset('public/vendors/metro4/datatables.css') }}">
+<link rel="stylesheet" href="{{ asset('public/vendors/metro4/datatables/css/datatables.css') }}">
 <style>
     #tableUsers thead tr th,
     #tableUsers tbody tr td {
@@ -34,8 +34,12 @@
                             <td>{{ $user->id }}</td>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
-                            <td>{{ $user->level == 1 ? 'Quản trị' : 'Thành viên' }}</td>
-                            <td>{{ $user->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}</td>
+                            <td>
+                                <label class="{{ $user->level == 1 ? 'label label-danger' : 'label label-success'}}">{{ $user->level == 1 ? 'Quản trị' : 'Thành viên' }}</label>
+                            </td>
+                            <td>
+                                <label class="{{ $user->status == 1 ? 'label label-info' : 'label label-default'}}">{{ $user->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}</label>
+                            </td>
                             <td>{{ $user->updated_at }}</td>
                             <td>     
                                 <a class="btn btn-xs btn-primary" href="{{ route('users.edit', $user->id) }}" role="button"><i class="fa fa-edit"></i> Sửa</a>
@@ -52,7 +56,7 @@
 
 @endsection
 @section('script')
-<script src="{{ asset('public/vendors/metro4/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('public/vendors/metro4/datatables/js/jquery.dataTables.min.js') }}"></script>
 <script>
     $('#tableUsers').dataTable();
 </script>
