@@ -413,7 +413,7 @@ ol {
 }
 
 .inner-header {
-	padding: 39px 0;
+	padding: 30px 0;
 }
 
 .inner-header .logo {
@@ -491,6 +491,8 @@ ol {
 
 .inner-header .nav-right {
 	padding: 10px 0;
+	/* float: right  !important; */
+	/* margin-left: 600px; */
 }
 
 .inner-header .nav-right li {
@@ -498,6 +500,7 @@ ol {
 	display: inline-block;
 	font-size: 20px;
 	margin-left: 15px;
+	
 }
 
 .inner-header .nav-right li.heart-icon a {
@@ -809,6 +812,10 @@ ol {
 
 .slicknav_menu {
 	display: none;
+}
+
+.slicknav_btn {
+	margin-top: -22px !important;
 }
 
 /*---------------------
@@ -4120,6 +4127,7 @@ ol {
 		margin-top: -48px;
 	}
 	.slicknav_nav {
+		border-radius: 11px;
 		background: #333;
 	}
 	.slicknav_nav ul {

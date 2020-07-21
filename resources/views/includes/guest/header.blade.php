@@ -27,44 +27,7 @@
     </div> --}}
     <!--/header-middle-->
 
-    <div class="header-bottom">
-        <!--header-bottom-->
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    {{-- <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse"
-                            data-target=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div> --}}
 
-                    
-                    {{-- <div class="mainmenu pull-left">
-                        <ul class="nav navbar-nav collapse navbar-collapse">
-                            <li><a href="index.html" class="active">Home</a></li>
-                            <li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
-                                <ul role="menu" class="sub-menu">
-                                    <li><a href="shop.html">Products</a></li>
-                                    <li><a href="product-details.html">Product Details</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="cart.html">Cart</a></li>
-                                    <li><a href="login.html">Login</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
-                                <ul role="menu" class="sub-menu">
-                                    <li><a href="blog.html">Blog List</a></li>
-                                    <li><a href="blog-single.html">Blog Single</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="404.html">404</a></li>
-                            <li><a href="contact-us.html">Contact</a></li>
-                        </ul>
-                    </div> --}}
                     <!-- Header Section Begin -->
 <header class="header-section">
     <div class="header-top">
@@ -114,7 +77,7 @@
                                 <i class="icon_bag_alt"></i>
                                 <span>3</span>
                             </a>
-                            <div class="cart-hover">
+                            <div class="cart-hover" >
                                 <div class="select-items">
                                     <table>
                                         <tbody>
@@ -162,31 +125,8 @@
         </div>
     </div>
 
-        {{-- <nav class="nav-menu mobile-menu">
-            <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./shop.html">Shop</a></li>
-                <li><a href="#">Collection</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Men's</a></li>
-                        <li><a href="#">Women's</a></li>
-                        <li><a href="#">Kid's</a></li>
-                    </ul>
-                </li>
-                <li><a href="./blog.html" >Blog</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="#">Pages</a>
-                    <ul class="dropdown">
-                        <li><a href="./blog-details.html">Blog Details</a></li>
-                        <li><a href="./shopping-cart.html">Shopping Cart</a></li>
-                        <li><a href="./check-out.html">Checkout</a></li>
-                        <li><a href="./faq.html">Faq</a></li>
-                        <li><a href="./register.html">Register</a></li>
-                        <li><a href="./login.html">Login</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav> --}}
+    
+        
         @include('includes.guest.menu')
     
 </header>
