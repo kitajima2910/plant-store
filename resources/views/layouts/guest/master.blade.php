@@ -16,12 +16,12 @@
     <link href="{{ asset('public/frontend/css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('public/frontend/css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('public/frontend/css/responsive.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/vendors/metro4/metro-all.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/vendors/metro4/datatables/css/metro-all.min.css') }}" rel="stylesheet">
     <link href="{{ asset('public/frontend/css/themify-icons.css') }}"  rel="stylesheet" type="text/css">
     <link href="{{ asset('public/frontend/css/elegant-icons.css') }}"  rel="stylesheet" type="text/css">
-    <link href="{{ asset('public/frontend/css/owl.carousel.min.css') }}"  rel="stylesheet" type="text/css">
     <link href="{{ asset('public/frontend/css/slicknav.min.css') }}"  rel="stylesheet">
     <script src="{{ asset('public/backend/js/jquery-3.5.1.min.js') }}"></script>
+
     
     <style>
         @media only screen and (max-width: 767px){
@@ -31,14 +31,13 @@
     text-align: center;
     margin-top: -48px;
 }
-
 .inner-header .col-lg-3{
             margin-left: 0px !important;
         }
-
-    .slicknav_btn {
-        background-color: #e7ab3c;
-    }
+        .slicknav_btn {
+	background-color: #e7ab3c;
+	margin-top: -3px !important;
+}
 
          .slicknav_nav a {
             padding-right: 300px;
@@ -73,6 +72,10 @@
        
         }
 
+        
+ .carousel-indicators{
+    margin-bottom: -30px !important;
+}
         .expanded:hover .child{
             display: block !important;
                  position: absolute;
@@ -126,14 +129,19 @@
     {{-- @include('includes.guest.footer') --}}
     <!--/Footer-->
     <script src="{{ asset('public/frontend/js/jquery.slicknav.js') }}"></script>
-    <script src="{{ asset('public/vendors/metro4/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('public/vendors/bootstrap.min.js') }}"></script>
     <script src="{{ asset('public/frontend/js/jquery.scrollUp.min.js') }}"></script>
     <script src="{{ asset('public/frontend/js/price-range.js') }}"></script>
     <script src="{{ asset('public/frontend/js/jquery.prettyPhoto.js') }}"></script>
     <script src="{{ asset('public/frontend/js/jquery.prettyPhoto.js') }}"></script>
-    <script src="{{ asset('public/vendors/metro4/metro.min.js') }}"></script>
-    <script src="{{ asset('public/frontend/js/main.js') }}"></script>
-    
+    <script src="{{ asset('public/vendors/metro4/datatables/js/metro.min.js') }}"></script>
+   
+    <script>
+          $(".mobile-menu").slicknav({
+        prependTo: '#mobile-menu-wrap',
+        allowParentLinks: true
+    });
+    </script>
     
 
     <script>
