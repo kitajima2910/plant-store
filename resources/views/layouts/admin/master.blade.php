@@ -42,6 +42,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- //font-awesome icons -->
     <script src="{{ asset('public/backend/js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('public/backend/js/raphael-min.js') }}"></script>
+
     <style>
         #main-content {
             height: 100vh;
@@ -88,7 +89,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="{{ asset('public/backend/js/jquery.nicescroll.js') }}"></script>
     <script src="{{ asset('public/backend/js/jquery.scrollTo.js') }}"></script>
     <script src="{{ asset('public/ckeditor/ckeditor.js') }}"></script>
-    <script src="{{ asset('public/ckfinder/ckfinder.js') }}"></script>
     @yield('script')
 
 </body>
