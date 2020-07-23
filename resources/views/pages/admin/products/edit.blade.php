@@ -63,10 +63,11 @@
                                     @error('feature_image_path')
                                         <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
                                     @enderror
-                                    <input type="file" class="form-control" name="feature_image_path" value="{{ $product->feature_image_path }}">
+                                    <input type="file" class="form-control" name="feature_image_path">
                                 </div>
                                 <div class="form-group">
-                                    <img src="{{ asset( $product->feature_image_path ) }}" class="thumbnail" width="200px" height="170px" id="anh_dai_dien" alt="ảnh đại diện">
+                                    {{-- <img src="{{ asset( $product->feature_image_path ) }}" class="thumbnail" width="200px" height="170px" id="anh_dai_dien" alt="ảnh đại diện"> --}}
+                                    <img src="{{ !empty($product->feature_image_path) ? asset($product->feature_image_path) : asset('public/uploads/200x170.png') }}" class="thumbnail" width="200px" height="170px" id="anh_dai_dien" alt="ảnh đại diện">
                                 </div>
                                 <div class="form-group">
                                     <label>Ảnh chi tiết</label>
@@ -158,9 +159,13 @@
                 _html += '<img src="' + URL.createObjectURL(tmp) + '" width="100px" height="90px">';
             _html += '</div>';
         }
-
-        $('#showHeight').css('height', '90px');
-        $("#showImages").fadeIn("fast").html(_html);
+        
+        if(_html !== '') {
+            $('#showHeight').css('height', '90px');
+            $("#showImages").fadeIn("fast").html(_html);
+        } else {
+            $('#showHeight').css('height', '0px');
+        }
     });
 
     CKEDITOR.replace('content', {

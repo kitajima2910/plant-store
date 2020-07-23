@@ -148,8 +148,12 @@
             _html += '</div>';
         }
 
-        $('#showHeight').css('height', '90px');
-        $("#showImages").fadeIn("fast").html(_html);
+        if(_html !== '') {
+            $('#showHeight').css('height', '90px');
+            $("#showImages").fadeIn("fast").html(_html);
+        } else {
+            $('#showHeight').css('height', '0px');
+        }
     });
 
     CKEDITOR.replace('content', {
