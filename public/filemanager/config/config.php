@@ -77,7 +77,7 @@ $config = array(
     |
     */
     // 'upload_dir' => 'http://localhost/learn-laravel/plant-store/public/uploads/',
-    'upload_dir' => '/project/plant-store/public/uploads/',
+    'upload_dir' => '/learn-laravel/plant-store/public/uploads/',
     /*
     |--------------------------------------------------------------------------
     | relative path from filemanager folder to upload folder
