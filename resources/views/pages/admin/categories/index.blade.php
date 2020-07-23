@@ -21,11 +21,11 @@
             <thead>
                 <tr>
                     <th data-breakpoints="xs">ID</th>
-                    <th>Tên Danh Mục</th>
-                    <th>Đường Dẫn</th>
+                    <th>Tên danh mục</th>
+                    <th>Đường dẫn</th>
                     <th>Trạng thái</th>
                     <th>Ngày tạo</th>
-                    <th>Hành Động</th>
+                    <th>Hành động</th>
                 </tr>
             </thead>
             <tbody>

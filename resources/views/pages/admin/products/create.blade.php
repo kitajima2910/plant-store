@@ -29,28 +29,46 @@
                                     <label>Giá sản phẩm</label>
                                     <input type="text" class="form-control" name="price"
                                         value="{{ old('price') }}">
+                                    @error('price')
+                                        <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
-                                    <label>Giảm giá</label>
-                                    <input type="text" class="form-control" name="sale_price"
-                                        value="{{ old('sale_price') }}">
+                                    <label>Giảm giá(%)</label>
+                                    <select class="form-control m-bot15" name="sale_price">
+                                        <option value="0">KHÔNG GIẢM GIÁ</option>
+                                        @for ($i = 5; $i <= 100; $i += 5)
+                                            <option value="{{ $i }}">{{ $i }}%</option>
+                                        @endfor
+                                    </select>
+                                    @error('sale_price')
+                                        <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label>Nhập nội dung</label>
-                                    <textarea class="form-control" name="content" rows="3"
-                                        value="{!! old('content') !!}"></textarea>
+                                    @error('content')
+                                        <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
+                                    @enderror
+                                    <textarea class="form-control" name="content" rows="3">{{ old('content') }}</textarea>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Ảnh đại diện</label>
+                                    @error('feature_image_path')
+                                        <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
+                                    @enderror
                                     <input type="file" class="form-control" name="feature_image_path">
                                 </div>
                                 <div class="form-group">
-                                    <img src="https://via.placeholder.com/200x170" class="thumbnail" width="200px" height="170px" id="anh_dai_dien" alt="ảnh đại diện">
+                                    <img src="{{ asset('public/uploads/200x170.png') }}" class="thumbnail" width="200px" height="170px" id="anh_dai_dien" alt="ảnh đại diện">
                                 </div>
                                 <div class="form-group">
                                     <label>Ảnh chi tiết</label>
+                                    @error('image_path')
+                                        <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
+                                    @enderror
                                     <input type="file" class="form-control" multiple id="image_paths" name="image_path[]">
                                 </div>
                                 <div class="form-group" style="overflow-x: auto;" id="showHeight">
@@ -66,10 +84,16 @@
                                             </option>
                                         @endforeach
                                     </select>
+                                    @error('category_id')
+                                        <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label>Nhập tags cho sản phẩm</label>
                                     <select class="form-control tags_selected" multiple name="tags_name[]"></select>
+                                    @error('tags_name')
+                                        <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label>Trạng thái</label>

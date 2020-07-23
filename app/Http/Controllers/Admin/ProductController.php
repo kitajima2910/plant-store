@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Category;
 use App\Components\DataTree;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AdminFromProduct;
 use App\Product;
 use App\ProductImage;
 use App\ProductTag;
@@ -42,7 +43,7 @@ class ProductController extends Controller
         return view('pages.admin.products.create', compact('options'));
     }
 
-    public function store(Request $request) {
+    public function store(AdminFromProduct $request) {
         
         // Thêm sản phẩm vào bản products
         $productInsert = [
