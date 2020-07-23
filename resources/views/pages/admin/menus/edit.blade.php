@@ -8,7 +8,7 @@
         <div class="col-lg-12">
             <section class="panel">
                 <header class="panel-heading">
-                    CHỈNH SỮA MENU WEB
+                    CHỈNH SỬA MENU WEB
                 </header>
                 <div class="panel-body">
                     <div class="position-center">

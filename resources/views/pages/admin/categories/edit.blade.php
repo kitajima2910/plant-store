@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-lg-12">
             <section class="panel">
-                <header class="panel-heading">CHỈNH SỮA DANH MỤC</header>
+                <header class="panel-heading">CHỈNH SỬA DANH MỤC</header>
                 <div class="panel-body">
                     <div class="position-center">
                         <form role="form" action="{{ route('categories.update', $category->id) }}" method="POST">
