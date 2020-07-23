@@ -13,7 +13,7 @@
 
 <div class="table-agile-info">
     <div class="panel-heading">
-        Danh Sách Menu
+        Danh Sách Sản Phẩm
     </div>
     <div>
         <table id="tableProducts" class="table striped table-border">
@@ -24,29 +24,33 @@
                     <th>Đường dẫn</th>
                     <th>Ảnh đại diện</th>
                     <th>Giá sản phẩm</th>
-                    <th>Giá giảm(%)</th>
-                    <th>Giá mới nhất</th>
+                    <th>Danh mục</th>
                     <th>Trạng thái</th>
                     <th>Ngày tạo</th>
                     <th>Hành Động</th>
                 </tr>
             </thead>
             <tbody>
-                {{-- @foreach($menus as $menu)
+                @foreach($products as $product)
                         <tr data-expanded="true">
-                            <td>{{ $menu->id }}</td>
-                            <td>{{ $menu->name }}</td>
-                            <td>{{ $menu->slug }}</td>
+                            <td>{{ $product->id }}</td>
+                            <td>{{ $product->name }}</td>
+                            <td>{{ $product->slug }}</td>
                             <td>
-                                <label class="{{ $menu->status == 1 ? 'label label-info' : 'label label-default'}}">{{ $menu->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}</label>
+                                <img src="{{ asset($product->feature_image_path) }}" class="img-fluid thumbnail" width="75px" height="75px">
                             </td>
-                            <td>{{ $menu->updated_at }}</td>
+                            <td>{{  number_format($product->price, 0, ',', '.') }} VNĐ</td>
+                            <td>{{ optional($product->category)->name }}</td>
                             <td>
-                                <a class="btn btn-xs btn-primary" href="{{ route('menus.edit', $menu->id) }}" role="button"><i class="fa fa-edit"></i> Sửa</a>
-                                <a href="#" data-toggle="modal" data-id="{{ $menu->id }}" data-target="#deleteModal" class="btn btn-xs btn-danger delete"><i class="fa fa-trash"></i> Xoá</a>
+                                <label class="{{ $product->status == 1 ? 'label label-info' : 'label label-default'}}">{{ $product->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}</label>
+                            </td>
+                            <td>{{ $product->updated_at }}</td>
+                            <td>
+                                <a class="btn btn-xs btn-primary" href="{{ route('products.edit', $product->id) }}" role="button"><i class="fa fa-edit"></i> Sửa</a>
+                                <a href="#" data-toggle="modal" data-id="" data-target="#deleteModal" class="btn btn-xs btn-danger delete"><i class="fa fa-trash"></i> Xoá</a>
                             </td>
                         </tr>
-                    @endforeach --}}
+                    @endforeach
             </tbody>
         </table>
     </div>
