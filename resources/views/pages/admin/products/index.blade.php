@@ -37,7 +37,8 @@
                             <td>{{ $product->name }}</td>
                             <td>{{ $product->slug }}</td>
                             <td>
-                                <img src="{{ asset($product->feature_image_path) }}" class="img-fluid thumbnail" width="75px" height="75px">
+                                {{-- <img src="{{ asset($product->feature_image_path) }}" class="img-fluid thumbnail" width="75px" height="75px"> --}}
+                                <img src="{{ !empty($product->feature_image_path) ? asset($product->feature_image_path) : asset('public/uploads/200x170.png') }}" class="img-fluid thumbnail" width="75px" height="75px">
                             </td>
                             <td>{{  number_format($product->price, 0, ',', '.') }} VNĐ</td>
                             <td>{{ optional($product->category)->name }}</td>
