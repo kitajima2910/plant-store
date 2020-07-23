@@ -17,7 +17,7 @@
                             @method('PATCH')
                             <input type="hidden" name="id" value="{{ $menu->id }}">
                             <div class="form-group">
-                                <label>Tên MENU</label>
+                                <label>Tên menu</label>
                                 <input type="text" class="form-control" name="name" value="{{ $menu->name }}">
                                 @error('name')
                                     <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
