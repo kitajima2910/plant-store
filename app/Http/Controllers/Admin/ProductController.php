@@ -108,6 +108,7 @@ class ProductController extends Controller
         } catch (\Throwable $th) {
             DB::rollBack();
             Log::error('Message: ' . $th->getMessage() . ' Line: ' . $th->getLine());
+            return redirect()->back();
         }
     }
 
