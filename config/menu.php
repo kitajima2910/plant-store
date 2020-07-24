@@ -59,6 +59,23 @@ return [
         ]
     ],
     [
+        'name' => 'Slider',
+        'icon' => 'fa fa-sliders',
+        'active' => 'sliders',
+        'items' => [
+            [
+                'name' => 'Danh sách sliders',
+                'route' => 'sliders.index',
+                'active' => 'sliders'
+            ],
+            [
+                'name' => 'Thêm sliders',
+                'route' => 'sliders.create',
+                'active' => 'sliders/create'
+            ],
+        ]
+    ],
+    [
         'name' => 'Tài Khoản',
         'icon' => 'fa fa-users',
         'active' => 'users',

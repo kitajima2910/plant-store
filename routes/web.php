@@ -43,6 +43,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::resource('users', 'UserController');
         // admin/products
         Route::resource('products', 'ProductController');
+        // admin/sliders
+        Route::resource('sliders', 'SliderController');
     });
 
 });
