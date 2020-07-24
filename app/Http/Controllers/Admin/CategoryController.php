@@ -6,7 +6,7 @@ use App\Category;
 use App\Components\CategoryRecursive;
 use App\Components\DataTree;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\AdminFromCategory;
+use App\Http\Requests\AdminFormCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -29,7 +29,7 @@ class CategoryController extends Controller
         return view('pages.admin.categories.create', compact('options'));
     }
 
-    public function store(AdminFromCategory $request) {
+    public function store(AdminFormCategory $request) {
         
         $category = new Category([
             'name' => Str::upper($request->get('name')),
@@ -49,7 +49,7 @@ class CategoryController extends Controller
         return view('pages.admin.categories.edit', compact('category', 'options'));
     }
 
-    public function update(AdminFromCategory $request, $id) {
+    public function update(AdminFormCategory $request, $id) {
 
         $category = Category::find($id);
         $category->name = Str::upper($request->get('name'));

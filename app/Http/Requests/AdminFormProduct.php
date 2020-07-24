@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class AdminFromProduct extends FormRequest
+class AdminFormProduct extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,9 +28,7 @@ class AdminFromProduct extends FormRequest
             'name' => 'required|' . Rule::unique('products')->ignore($this->id),
             'price' => 'required|numeric|min:1000',
             'content' => 'required',
-            // 'feature_image_path' => 'required|image|mimes:jpg,jpeg,png,bmp',
             'feature_image_path' => 'image|mimes:jpg,jpeg,png,bmp',
-            // 'image_path' => 'required',
             'category_id' => 'required',
             'tags_name' => 'required',
         ];
@@ -53,7 +51,6 @@ class AdminFromProduct extends FormRequest
             // 'feature_image_path.required' => 'Ảnh đại diện chưa được chọn',
             'feature_image_path.mimes' => 'Ảnh phải có đuôi jpg, jpeg, png, bmp',
             'feature_image_path.image' => 'Tệp này không phải ảnh',
-            'image_path.required' => 'Ảnh chi tiết chưa được chọn',
             'category_id.required' => 'Danh mục cha chưa được chọn',
             'tags_name.required' => 'Tags cho sản phẩm chưa được nhập',
         ];

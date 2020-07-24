@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Category;
 use App\Components\DataTree;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\AdminFromProduct;
+use App\Http\Requests\AdminFormProduct;
 use App\Product;
 use App\ProductImage;
 use App\ProductTag;
@@ -48,7 +48,7 @@ class ProductController extends Controller
         return view('pages.admin.products.create', compact('options'));
     }
 
-    public function store(AdminFromProduct $request)
+    public function store(AdminFormProduct $request)
     {
 
         try {
@@ -119,7 +119,7 @@ class ProductController extends Controller
         return view('pages.admin.products.edit', compact('product', 'options'));
     }
 
-    public function update(AdminFromProduct $request, $id)
+    public function update(AdminFormProduct $request, $id)
     {
 
         try {
