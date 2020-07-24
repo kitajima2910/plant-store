@@ -137,7 +137,7 @@ class ProductController extends Controller
                 'updated_at' => Carbon::now(),
             ];
 
-            $savePath1 = $this->product->find($id)->feature_image_path;
+            $savePathOld = $this->product->find($id)->feature_image_path;
 
             $data = $this->uploadTrait($request, 'feature_image_path', 'products');
 
@@ -148,7 +148,7 @@ class ProductController extends Controller
             
             $this->product->find($id)->update($productUpdate);
             $product =  $this->product->find($id);
-            $savePath2 = $this->product->find($id)->feature_image_path;
+            $savePathNew = $this->product->find($id)->feature_image_path;
 
             // Thêm sản phẩm vào bản product_images
             if ($request->hasFile('image_path')) {
@@ -197,10 +197,30 @@ class ProductController extends Controller
             return redirect()->back();
         }
 
-        if($savePath2 !== $savePath1) {
-            $this->unlinkImages($savePath1);
+        if($savePathNew !== $savePathOld) {
+            $this->unlinkImages($savePathOld);
         }
 
         return redirect()->route('products.index');
+    }
+
+    public function destroy($id) {
+        $product = $this->product->find($id);
+        $pathDelete[] = $product->feature_image_path;
+        $subPath = $product->productImages()->get('image_path');
+
+        foreach($subPath as $item) {
+            $pathDelete[] = $item->image_path;
+        }
+
+        // Xoá các file ảnh
+        if (!empty($pathDelete)) {
+            foreach ($pathDelete as $item) {
+                $this->unlinkImages($item);
+            }
+        }
+
+        $this->product->find($id)->delete();
+        return redirect()->back();
     }
 }
