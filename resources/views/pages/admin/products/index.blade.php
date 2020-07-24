@@ -48,7 +48,7 @@
                             <td>{{ $product->updated_at }}</td>
                             <td>
                                 <a class="btn btn-xs btn-primary" href="{{ route('products.edit', $product->id) }}" role="button"><i class="fa fa-edit"></i> Sửa</a>
-                                <a href="#" data-toggle="modal" data-id="" data-target="#deleteModal" class="btn btn-xs btn-danger delete"><i class="fa fa-trash"></i> Xoá</a>
+                                <a href="#" data-toggle="modal" data-id="{{ $product->id }}" data-target="#deleteModal" class="btn btn-xs btn-danger delete"><i class="fa fa-trash"></i> Xoá</a>
                             </td>
                         </tr>
                     @endforeach
@@ -57,7 +57,7 @@
     </div>
 </div>
 
-{{-- <x-confirm-delete>menus.destroy</x-confirm-delete> --}}
+<x-confirm-delete>products.destroy</x-confirm-delete>
 
 @endsection
 @section('script')
