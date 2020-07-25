@@ -52,16 +52,29 @@ class SliderController extends Controller
    }
 
 
-    public function destroy(Slider $slider) {
-        $slider->delete();
-        return redirect()->route('sliders.index');
+    public function destroy($id) {
+        // $slider->delete();
+        // return redirect()->route('sliders.index');
+
+        $slider = $this->slider->find($id);
+        $pathDelete[] = $slider->feature_image_path;
+    
+
+        if (!empty($pathDelete)) {
+            foreach ($pathDelete as $item) {
+                $this->unlinkImages($item);
+            }
+        }
+
+        $this->slider->find($id)->delete();
+        return redirect()->back();
     }
 
     public function edit(Slider $slider){
         return view('pages.admin.sliders.edit',compact('slider'));
     }
 
-    public function update(Request $request,$id){
+    public function update(AdminFormSlider $request,$id){
         $sliderUpdate = [
             // 'link' => $request->get('link'),
             'link' =>  Str::of($request->get('link'))->slug('-'),
