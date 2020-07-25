@@ -76,6 +76,23 @@ return [
         ]
     ],
     [
+        'name' => 'Cài đặt',
+        'icon' => 'fa fa-cog',
+        'active' => 'settings',
+        'items' => [
+            [
+                'name' => 'Danh sách cài đặt',
+                'route' => 'settings.index',
+                'active' => 'settings'
+            ],
+            [
+                'name' => 'Thêm cài đặt',
+                'route' => 'settings.create',
+                'active' => 'settings/create'
+            ],
+        ]
+    ],
+    [
         'name' => 'Tài Khoản',
         'icon' => 'fa fa-users',
         'active' => 'users',
