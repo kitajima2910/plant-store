@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class ProductSeeder extends Seeder
 {
@@ -12,67 +13,23 @@ class ProductSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
+    {   
         DB::table('products')->insert([
-            [   'id' => '1',
-                'name' => 'Product1',
-                'price' => '500000',
-                'feature_image' => 'https://via.placeholder.com/150',
-                'content' => 'Make by abc',
-                'user_id' => '1',
-                'category_id' => '1',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
-            [   'id' => '2',
-                'name' => 'Product2',
-                'price' => '150000',
-                'feature_image' => 'https://via.placeholder.com/150',
-                'content' => 'Make by abc',
-                'user_id' => '1',
-                'category_id' => '2',
-                'created_at' => Carbon::now(),
-                'updated_at' => carbon::now(),
-            ],
-            [   'id' => '3',
-                'name' => 'Product3',
-                'price' => '160000',
-                'feature_image' => 'https://via.placeholder.com/150',
-                'content' => 'Make by abc',
-                'user_id' => '1',
-                'category_id' => '2',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
-            [   'id' => '4',
-                'name' => 'Product4',
-                'price' => '260000',
-                'feature_image' => 'https://via.placeholder.com/150',
-                'content' => 'Make by abc',
-                'user_id' => '2',
-                'category_id' => '2',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
-            [   'id' => '5',
-                'name' => 'Product5',
-                'price' => '80000',
-                'feature_image' => 'https://via.placeholder.com/150',
-                'content' => 'Make by abc',
-                'user_id' => '1',
-                'category_id' => '1',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
-            ],
-            [   'id' => '6',
-                'name' => 'Product6',
-                'price' => '100000',
-                'feature_image' => 'https://via.placeholder.com/150',
-                'content' => 'Make by abc',
-                'user_id' => '1',
-                'category_id' => '1',
-                'created_at' => Carbon::now(),
-                'updated_at' => Carbon::now(),
+            [ 
+               'name' => 'Cây Bàng Singapore',
+               'slug' => Str::of('Cây Bàng Singapore')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/7cZlHinrAzxM3r9apxpFFWeMMALyB58W.jpg',
+               'feature_image_name' => 'download.jpg',
+               'price' => '189000',
+               'sale_price' => '10',
+               'content' => '<p><img alt="" src="http://localhost/plant-store/public/uploads/products/3/download.jpg" style="height:205px; width:280px" /></p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/products/3/download1.jpg" style="height:348px; width:280px" /></p>',
+               'user_id' => '3',
+               'category_id' => '2',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
             ],
         ]);
     }

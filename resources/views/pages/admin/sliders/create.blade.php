@@ -58,11 +58,40 @@
     </div>
     <!-- page end-->
 </div>
+@section('script')
 <script>
-      $(document).on('change', 'input[name="feature_image_path"]', function(e) {
+
+    $(document).on('change', 'input[name="feature_image_path"]', function(e) {
         let tmppath = URL.createObjectURL(e.target.files[0]);
         $("#anh_slider").fadeIn("fast").attr('src', tmppath);
     });
+
+    $(document).on('change', '#image_paths', function(e) {
+
+        let tmppaths = e.target.files;
+        let _html = '';
+        for(let tmp of tmppaths) {
+            _html += '<div class="col-md-3 thumbnail">';
+                _html += '<img src="' + URL.createObjectURL(tmp) + '" width="100px" height="90px">';
+            _html += '</div>';
+        }
+
+        if(_html !== '') {
+            $('#showHeight').css('height', '90px');
+            $("#showImages").fadeIn("fast").html(_html);
+        } else {
+            $('#showHeight').css('height', '0px');
+        }
+    });
+
+    CKEDITOR.replace('content', {
+        filebrowserBrowseUrl: '{{ url('') }}/public/filemanager/dialog.php?akey=1GZGMGBWP7PH6QP8PVG64Z656USJ3&type=2&editor=ckeditor&fldr=',
+        filebrowserUploadUrl: '{{ url('') }}/public/filemanager/dialog.php?akey=1GZGMGBWP7PH6QP8PVG64Z656USJ3&type=2&editor=ckeditor&fldr=',
+        filebrowserImageBrowseUrl: '{{ url('') }}/public/filemanager/dialog.php?akey=1GZGMGBWP7PH6QP8PVG64Z656USJ3&type=1&editor=ckeditor&fldr='
+    });
+
 </script>
+@endsection
+
 
 @endsection
