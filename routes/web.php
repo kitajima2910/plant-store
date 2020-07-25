@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 // frontend
-Route::get('/', ['as' => 'guest.index', 'uses' => 'HomeController@guestIndex']);
+Route::get('/', 'HomeController@index');
+Route::get('/trang-chu.html', 'HomeController@index');
 
 // backend
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
@@ -45,6 +46,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::resource('products', 'ProductController');
         // admin/sliders
         Route::resource('sliders', 'SliderController');
+        // admin/settings
+        Route::resource('settings', 'SettingController');
     });
 
 });
