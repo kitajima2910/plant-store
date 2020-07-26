@@ -20,6 +20,31 @@ class TagSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(), 
             ],
+            [
+                'tags_name' => Str::of('Cây Để Sàn')->slug('-'),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],
+            [
+                'tags_name' => Str::of('Cây Terrarium')->slug('-'),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],
+            [
+                'tags_name' => Str::of('Tiểu Cảnh Terrarium')->slug('-'),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],
+            [
+                'tags_name' => Str::of('Chậu Lọ')->slug('-'),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],
+            [
+                'tags_name' => Str::of('Phụ  Kiện')->slug('-'),
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],
         ]);
     }
 }
