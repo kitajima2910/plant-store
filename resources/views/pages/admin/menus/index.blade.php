@@ -36,7 +36,7 @@
                             <td>
                                 <label class="{{ $menu->status == 1 ? 'label label-info' : 'label label-default'}}">{{ $menu->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}</label>
                             </td>
-                            <td>{{ $menu->updated_at }}</td>
+                            <td>{{ $menu->created_at }}</td>
                             <td>
                                 <a class="btn btn-xs btn-primary" href="{{ route('menus.edit', $menu->id) }}" role="button"><i class="fa fa-edit"></i> Sửa</a>
                                 <a href="#" data-toggle="modal" data-id="{{ $menu->id }}" data-target="#deleteModal" class="btn btn-xs btn-danger delete"><i class="fa fa-trash"></i> Xoá</a>

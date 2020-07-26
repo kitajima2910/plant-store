@@ -8,12 +8,10 @@
                     <div class="top-header-content d-flex align-items-center justify-content-between">
                         <!-- Top Header Content -->
                         <div class="top-header-meta">
-                            <a href="mail" data-toggle="tooltip" data-placement="bottom"
-                                title="infodeercreative@gmail.com"><i class="fa fa-envelope-o"
-                                    aria-hidden="true"></i> <span>Email: infodeercreative@gmail.com</span></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="+1 234 122 122"><i
-                                    class="fa fa-phone" aria-hidden="true"></i> <span>Call Us: +1 234 122
-                                    122</span></a>
+                            <a href="mailto:{!! !empty($settingsArr['key_email']) ? $settingsArr['key_email'] : '#' !!}" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                <span>Địa chỉ email: {!! !empty($settingsArr['key_email']) ? $settingsArr['key_email'] : '' !!}</span></a>
+                            <a href="tel:{!! !empty($settingsArr['key_phone']) ? $settingsArr['key_phone'] : '#' !!}" data-toggle="tooltip" data-placement="bottom"><i
+                                    class="fa fa-phone" aria-hidden="true"></i> <span>Điện thoại: {!! !empty($settingsArr['key_phone']) ? $settingsArr['key_phone'] : '' !!}</span></a>
                         </div>
 
                         <!-- Top Header Content -->
@@ -42,7 +40,9 @@
                 <nav class="classy-navbar justify-content-between" id="alazeaNav">
 
                     <!-- Nav Brand -->
-                    <a href="index.html" class="nav-brand"><img src="{{ asset('public/frontend/img/core-img/logo.png') }}"></a>
+                    <a href="index.html" class="nav-brand"><img
+                            src="{{ asset('public/frontend/img/core-img/logo.png') }}"
+                            width="100px"></a>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -107,8 +107,7 @@
                 <!-- Search Form -->
                 <div class="search-form">
                     <form action="#" method="get">
-                        <input type="search" name="search" id="search"
-                            placeholder="Type keywords &amp; press enter...">
+                        <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
                         <button type="submit" class="d-none"></button>
                     </form>
                     <!-- Close Icon -->

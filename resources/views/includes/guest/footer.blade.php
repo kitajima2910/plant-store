@@ -5,14 +5,14 @@
             <div class="row">
 
                 <!-- Single Footer Widget -->
-                <div class="col-12 col-sm-6 col-lg-3">
+                <div class="col-12 col-sm-6 col-lg-6">
                     <div class="single-footer-widget">
                         <div class="footer-logo mb-30">
-                            <a href="#"><img src="{{ asset('public/frontend/img/core-img/logo.png') }}"></a>
+                            <a href="#"><img src="{{ asset('public/frontend/img/core-img/logo.png') }}" width="100px"></a>
                         </div>
-                        <p>Lorem ipsum dolor sit samet, consectetur adipiscing elit. India situs atione mantor</p>
+                        <p>{!! !empty($settingsArr['key_footer_content']) ? $settingsArr['key_footer_content'] : '' !!}</p>
                         <div class="social-info">
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="{!! !empty($settingsArr['key_facebook']) ? $settingsArr['key_facebook'] : '#' !!}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                             <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                             <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
                             <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -25,30 +25,7 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="single-footer-widget">
                         <div class="widget-title">
-                            <h5>QUICK LINK</h5>
-                        </div>
-                        <nav class="widget-nav">
-                            <ul>
-                                <li><a href="#">Purchase</a></li>
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Payment</a></li>
-                                <li><a href="#">News</a></li>
-                                <li><a href="#">Return</a></li>
-                                <li><a href="#">Advertise</a></li>
-                                <li><a href="#">Shipping</a></li>
-                                <li><a href="#">Career</a></li>
-                                <li><a href="#">Orders</a></li>
-                                <li><a href="#">Policities</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-
-                <!-- Single Footer Widget -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-footer-widget">
-                        <div class="widget-title">
-                            <h5>BEST SELLER</h5>
+                            <h5>SẢN PHẨM MỚI</h5>
                         </div>
 
                         <!-- Single Best Seller Products -->
@@ -79,15 +56,15 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="single-footer-widget">
                         <div class="widget-title">
-                            <h5>CONTACT</h5>
+                            <h5>LIÊN HỆ</h5>
                         </div>
 
                         <div class="contact-information">
-                            <p><span>Address:</span> 505 Silk Rd, New York</p>
-                            <p><span>Phone:</span> +1 234 122 122</p>
-                            <p><span>Email:</span> info.deercreative@gmail.com</p>
-                            <p><span>Open hours:</span> Mon - Sun: 8 AM to 9 PM</p>
-                            <p><span>Happy hours:</span> Sat: 2 PM to 4 PM</p>
+                            <p><span>Địa chỉ:</span> {!! !empty($settingsArr['key_address']) ? $settingsArr['key_address'] : '' !!}</p>
+                            <p><span>Điện thoại:</span> {!! !empty($settingsArr['key_phone']) ? $settingsArr['key_phone'] : '' !!}</p>
+                            <p><span>Địa chỉ email:</span> {!! !empty($settingsArr['key_email']) ? $settingsArr['key_email'] : '' !!}</p>
+                            <p><span>Giờ mở cửa:</span> {!! !empty($settingsArr['key_open_hours']) ? $settingsArr['key_open_hours'] : '' !!}</p>
+                            <p><span>Giờ happy:</span> {!! !empty($settingsArr['key_happy_hours']) ? $settingsArr['key_happy_hours'] : '' !!}</p>
                         </div>
                     </div>
                 </div>
@@ -103,33 +80,9 @@
                     <div class="border-line"></div>
                 </div>
                 <!-- Copywrite Text -->
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-12">
                     <div class="copywrite-text">
-                        <p>&copy;
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>
-                                document.write(new Date().getFullYear());
-
-                            </script> All rights reserved | This template is made with <i class="fa fa-heart-o"
-                                aria-hidden="true"></i> by <a href="https://colorlib.com"
-                                target="_blank">Colorlib</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-                    </div>
-                </div>
-                <!-- Footer Nav -->
-                <div class="col-12 col-md-6">
-                    <div class="footer-nav">
-                        <nav>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Service</a></li>
-                                <li><a href="#">Portfolio</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </nav>
+                        <p>{!! !empty($settingsArr['key_copyright']) ? $settingsArr['key_copyright'] : '' !!}</p>
                     </div>
                 </div>
             </div>

@@ -48,7 +48,6 @@ class AdminFormProduct extends FormRequest
             'price.numeric' => 'Giá sản phẩm phải là chữ số',
             'price.min' => 'Giá sản phẩm phải lớn hơn 1.000 đồng',
             'content.required' => 'Nội dung chưa được nhập',
-            // 'feature_image_path.required' => 'Ảnh đại diện chưa được chọn',
             'feature_image_path.mimes' => 'Ảnh phải có đuôi jpg, jpeg, png, bmp',
             'feature_image_path.image' => 'Tệp này không phải ảnh',
             'category_id.required' => 'Danh mục cha chưa được chọn',
