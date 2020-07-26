@@ -66,7 +66,6 @@
                                     <input type="file" class="form-control" name="feature_image_path">
                                 </div>
                                 <div class="form-group">
-                                    {{-- <img src="{{ asset( $product->feature_image_path ) }}" class="thumbnail" width="200px" height="170px" id="anh_dai_dien" alt="ảnh đại diện"> --}}
                                     <img src="{{ !empty($product->feature_image_path) ? asset($product->feature_image_path) : asset('public/uploads/200x170.png') }}" class="thumbnail" width="200px" height="170px" id="anh_dai_dien" alt="ảnh đại diện">
                                 </div>
                                 <div class="form-group">

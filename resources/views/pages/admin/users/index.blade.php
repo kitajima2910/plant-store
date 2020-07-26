@@ -40,7 +40,7 @@
                             <td>
                                 <label class="{{ $user->status == 1 ? 'label label-info' : 'label label-default'}}">{{ $user->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}</label>
                             </td>
-                            <td>{{ $user->updated_at }}</td>
+                            <td>{{ $user->created_at }}</td>
                             <td>     
                                 <a class="btn btn-xs btn-primary" href="{{ route('users.edit', $user->id) }}" role="button"><i class="fa fa-edit"></i> Sửa</a>
                                 <a href="#" data-toggle="modal" data-id="{{ $user->id }}" data-target="#deleteModal" class="btn btn-xs btn-danger delete"><i class="fa fa-trash"></i> Xoá</a>

@@ -38,7 +38,7 @@
                             <td>
                                 <label class="{{ $slider->status == 1 ? 'label label-info' : 'label label-default'}}">{{ $slider->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}</label>
                             </td>
-                            <td>{{ $slider->updated_at }}</td>
+                            <td>{{ $slider->created_at }}</td>
                                  <td>     
                                     <a class="btn btn-xs btn-primary" href="{{ route('sliders.edit', $slider->id) }}" role="button"><i class="fa fa-edit"></i> Sửa</a>
                                     <a href="#" data-toggle="modal" data-id="{{ $slider->id }}" data-target="#deleteModal" class="btn btn-xs btn-danger delete"><i class="fa fa-trash"></i> Xoá</a>

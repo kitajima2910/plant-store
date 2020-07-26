@@ -45,7 +45,7 @@
                             <td>
                                 <label class="{{ $product->status == 1 ? 'label label-info' : 'label label-default'}}">{{ $product->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}</label>
                             </td>
-                            <td>{{ $product->updated_at }}</td>
+                            <td>{{ $product->created_at }}</td>
                             <td>
                                 <a class="btn btn-xs btn-primary" href="{{ route('products.edit', $product->id) }}" role="button"><i class="fa fa-edit"></i> Sửa</a>
                                 <a href="#" data-toggle="modal" data-id="{{ $product->id }}" data-target="#deleteModal" class="btn btn-xs btn-danger delete"><i class="fa fa-trash"></i> Xoá</a>
