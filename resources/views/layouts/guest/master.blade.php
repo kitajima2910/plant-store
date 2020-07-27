@@ -29,10 +29,6 @@
 
     @yield('content')
 
-    <!-- ##### Related Product Area Start ##### -->
-    @include('includes.guest.related-product')
-    <!-- ##### Related Product Area End ##### -->
-
     <!-- ##### Footer Area Start ##### -->
     @include('includes.guest.footer')
     <!-- ##### Footer Area End ##### -->

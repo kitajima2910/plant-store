@@ -23,6 +23,7 @@ class CreateProductsTable extends Migration
             $table->string('feature_image_name')->nullable();
             $table->integer('price');
             $table->integer('sale_price')->nullable();
+            $table->mediumText('content_short');
             $table->text('content');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id');
