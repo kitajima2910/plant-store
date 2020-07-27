@@ -50,6 +50,13 @@
                                     @enderror
                                 </div>
                                 <div class="form-group">
+                                    <label>Nhập nội dung ngắn</label>
+                                    @error('content_short')
+                                        <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
+                                    @enderror
+                                    <textarea class="form-control" name="content_short" rows="3">{{ old('content_short') }}</textarea>
+                                </div>
+                                <div class="form-group">
                                     <label>Nhập nội dung</label>
                                     @error('content')
                                         <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
@@ -166,7 +173,7 @@
             $('#showHeight').css('height', '0px');
         }
     });
-
+    
     CKEDITOR.replace('content', {
         filebrowserBrowseUrl: '{{ url('') }}/public/filemanager/dialog.php?akey=1GZGMGBWP7PH6QP8PVG64Z656USJ3&type=2&editor=ckeditor&fldr=',
         filebrowserUploadUrl: '{{ url('') }}/public/filemanager/dialog.php?akey=1GZGMGBWP7PH6QP8PVG64Z656USJ3&type=2&editor=ckeditor&fldr=',
