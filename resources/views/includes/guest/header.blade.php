@@ -22,8 +22,9 @@
                             </div>
                             <!-- Cart -->
                             <div class="cart">
-                                <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Cart <span
-                                            class="cart-quantity">(1)</span></span></a>
+                                <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 
+                                    <span>Giỏ hảng <span class="cart-quantity">({!! $cartQuantity !!})</span></span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -40,7 +41,7 @@
                 <nav class="classy-navbar justify-content-between" id="alazeaNav">
 
                     <!-- Nav Brand -->
-                    <a href="index.html" class="nav-brand"><img
+                    <a href="{!! route('guest.trangChu') !!}" class="nav-brand"><img
                             src="{{ asset('public/frontend/img/core-img/logo.png') }}"
                             width="100px"></a>
 

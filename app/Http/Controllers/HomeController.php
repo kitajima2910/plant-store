@@ -2,26 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use App\Setting;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    private $setting;
+    private $product;
 
-    public function __construct(Setting $setting)
+    public function __construct(Product $product)
     {
-        $this->setting = $setting;
+        $this->product = $product;
     }
 
     public function index() {
 
-        // Settings
-        $settings = $this->setting->where('status', 1)->get();
-        foreach($settings as $item) {
-            $settingsArr[$item->config_key] = $item->config_value;
-        }
+        // Products
+        $products = $this->product->where('status', 1)->take(4)->get();
 
-        return view('pages.guest.index', compact('settingsArr'));
+        return view('pages.guest.index', compact('products'));
     }
+
 }

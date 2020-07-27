@@ -12,197 +12,33 @@
 
         <div class="row">
 
-            <!-- Single Product Area -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="100ms">
-                    <!-- Product Image -->
-                    <div class="product-img">
-                        <a href="shop-details.html"><img src="{{ asset('public/frontend/img/bg-img/9.jpg') }}"></a>
-                        <!-- Product Tag -->
-                        <div class="product-tag">
-                            <a href="#">Hot</a>
+            @foreach ($products as $item)
+                <!-- Single Product Area -->
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="100ms">
+                        <!-- Product Image -->
+                        <div class="product-img">
+                            <a href="#"><img src="{{ asset($item->feature_image_path) }}"></a>
+                            <!-- Product Tag -->
+                            <div class="product-tag">
+                                {{-- <a href="#">Hot</a> --}}
+                            </div>
+                            <div class="product-meta d-flex">
+                                <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
+                                <a href="#" class="add-to-cart-btn cart-add" data-id="{!! $item->id !!}">Add to cart</a>
+                                <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
+                            </div>
                         </div>
-                        <div class="product-meta d-flex">
-                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                            <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
-                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
+                        <!-- Product Info -->
+                        <div class="product-info mt-15 text-center">
+                            <a href="{!! route('guest.viewProductDetails', $item->slug) !!}">
+                                <p>{!! $item->name !!}</p>
+                            </a>
+                            <h6>{!! number_format($item->price, 0, ',', '.') !!} VNĐ</h6>
                         </div>
-                    </div>
-                    <!-- Product Info -->
-                    <div class="product-info mt-15 text-center">
-                        <a href="shop-details.html">
-                            <p>Cactus Flower</p>
-                        </a>
-                        <h6>$10.99</h6>
                     </div>
                 </div>
-            </div>
-
-            <!-- Single Product Area -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="200ms">
-                    <!-- Product Image -->
-                    <div class="product-img">
-                        <a href="shop-details.html"><img src="{{ asset('public/frontend/img/bg-img/10.jpg') }}"></a>
-                        <div class="product-meta d-flex">
-                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                            <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
-                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                        </div>
-                    </div>
-                    <!-- Product Info -->
-                    <div class="product-info mt-15 text-center">
-                        <a href="shop-details.html">
-                            <p>Cactus Flower</p>
-                        </a>
-                        <h6>$10.99</h6>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Product Area -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="300ms">
-                    <!-- Product Image -->
-                    <div class="product-img">
-                        <a href="shop-details.html"><img src="{{ asset('public/frontend/img/bg-img/11.jpg') }}"></a>
-                        <div class="product-meta d-flex">
-                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                            <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
-                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                        </div>
-                    </div>
-                    <!-- Product Info -->
-                    <div class="product-info mt-15 text-center">
-                        <a href="shop-details.html">
-                            <p>Cactus Flower</p>
-                        </a>
-                        <h6>$10.99</h6>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Product Area -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="400ms">
-                    <!-- Product Image -->
-                    <div class="product-img">
-                        <a href="shop-details.html"><img src="{{ asset('public/frontend/img/bg-img/12.jpg') }}"></a>
-                        <!-- Product Tag -->
-                        <div class="product-tag sale-tag">
-                            <a href="#">Hot</a>
-                        </div>
-                        <div class="product-meta d-flex">
-                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                            <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
-                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                        </div>
-                    </div>
-                    <!-- Product Info -->
-                    <div class="product-info mt-15 text-center">
-                        <a href="shop-details.html">
-                            <p>Cactus Flower</p>
-                        </a>
-                        <h6>$10.99</h6>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Product Area -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="100ms">
-                    <!-- Product Image -->
-                    <div class="product-img">
-                        <a href="shop-details.html"><img src="{{ asset('public/frontend/img/bg-img/9.jpg') }}"></a>
-                        <!-- Product Tag -->
-                        <div class="product-tag">
-                            <a href="#">Hot</a>
-                        </div>
-                        <div class="product-meta d-flex">
-                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                            <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
-                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                        </div>
-                    </div>
-                    <!-- Product Info -->
-                    <div class="product-info mt-15 text-center">
-                        <a href="shop-details.html">
-                            <p>Cactus Flower</p>
-                        </a>
-                        <h6>$10.99</h6>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Product Area -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="200ms">
-                    <!-- Product Image -->
-                    <div class="product-img">
-                        <a href="shop-details.html"><img src="{{ asset('public/frontend/img/bg-img/10.jpg') }}"></a>
-                        <div class="product-meta d-flex">
-                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                            <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
-                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                        </div>
-                    </div>
-                    <!-- Product Info -->
-                    <div class="product-info mt-15 text-center">
-                        <a href="shop-details.html">
-                            <p>Cactus Flower</p>
-                        </a>
-                        <h6>$10.99</h6>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Product Area -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="300ms">
-                    <!-- Product Image -->
-                    <div class="product-img">
-                        <a href="shop-details.html"><img src="{{ asset('public/frontend/img/bg-img/11.jpg') }}"></a>
-                        <div class="product-meta d-flex">
-                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                            <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
-                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                        </div>
-                    </div>
-                    <!-- Product Info -->
-                    <div class="product-info mt-15 text-center">
-                        <a href="shop-details.html">
-                            <p>Cactus Flower</p>
-                        </a>
-                        <h6>$10.99</h6>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Product Area -->
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="400ms">
-                    <!-- Product Image -->
-                    <div class="product-img">
-                        <a href="shop-details.html"><img src="{{ asset('public/frontend/img/bg-img/12.jpg') }}"></a>
-                        <!-- Product Tag -->
-                        <div class="product-tag sale-tag">
-                            <a href="#">Hot</a>
-                        </div>
-                        <div class="product-meta d-flex">
-                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                            <a href="cart.html" class="add-to-cart-btn">Add to cart</a>
-                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
-                        </div>
-                    </div>
-                    <!-- Product Info -->
-                    <div class="product-info mt-15 text-center">
-                        <a href="shop-details.html">
-                            <p>Cactus Flower</p>
-                        </a>
-                        <h6>$10.99</h6>
-                    </div>
-                </div>
-            </div>
+            @endforeach
 
             <div class="col-12 text-center">
                 <a href="#" class="btn alazea-btn">View All</a>
@@ -211,3 +47,29 @@
         </div>
     </div>
 </section>
+
+@section('script')
+<script>
+$(document).on('click', '.cart-add', function() {
+    let id = $(this).data('id');
+    let quantity = 1;
+    let url = '{!! route("guest.cart.add") !!}';
+    let _token = '{{ csrf_token() }}';
+    $.ajax({
+        type: "post",
+        url: url,
+        data: {
+            '_token': _token,
+            'id': id,
+            'quantity': quantity
+        },
+        success: function (response) {
+            $('.cart-quantity').empty();
+            $('.cart-quantity').html('(' + response + ')');
+            alertify.set('notifier', 'position', 'bottom-left');
+            alertify.success('Đã thêm sản phẩm vào giỏ hàng');
+        }
+    });
+});
+</script>
+@endsection
