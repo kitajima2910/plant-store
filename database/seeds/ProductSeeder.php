@@ -22,9 +22,9 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'download.jpg',
                'price' => '189000',
                'sale_price' => '10',
-               'content' => '<p><img alt="" src="http://localhost/plant-store/public/uploads/products/3/download.jpg" style="height:205px; width:280px" /></p>
+               'content' => '<p><img alt="" src="http://localhost/plant-store/public/uploads/image/c%C3%A2y%20n%E1%BB%99i%20th%E1%BA%A5t/c%C3%A2y%20%C4%91%E1%BB%83%20b%C3%A0n/b%C3%A0ng%20sing/content1.jpg" style="height:205px; width:280px" /></p>
 
-               <p><img alt="" src="http://localhost/plant-store/public/uploads/products/3/download1.jpg" style="height:348px; width:280px" /></p>',
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/image/c%C3%A2y%20n%E1%BB%99i%20th%E1%BA%A5t/c%C3%A2y%20%C4%91%E1%BB%83%20b%C3%A0n/b%C3%A0ng%20sing/content2.jpg" style="height:187px; width:280px" /><img alt="" src="http://localhost/plant-store/public/uploads/products/3/download.jpg" style="height:205px; width:280px" /></p>',
                'user_id' => '3',
                'category_id' => '2',
                'status' => '1',
@@ -66,7 +66,7 @@ class ProductSeeder extends Seeder
             [ 
                'name' => 'Vạn Lộc',
                'slug' => Str::of('Vạn Lộc')->slug('-'), 
-               'feature_image_path' => '/public/uploads/products/3/f0MakZ8alA438EJ8iRj7wXorzsyWBjR3.jpg',
+               'feature_image_path' => '/public/uploads/products/3/t7JHsXdrhEMnWFsOtW5Fdc4y286WymUU.jpg',
                'feature_image_name' => 'image1.jpg',
                'price' => '349000',
                'sale_price' => '10',
