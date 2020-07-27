@@ -13,11 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// frontend
+// Frontend
 Route::get('/', 'HomeController@index');
-Route::get('/trang-chu.html', 'HomeController@index');
+Route::get('trang-chu.html', 'HomeController@index')->name('guest.trangChu');
+Route::get('{slug}.html', 'ProductController@viewProductDetails')->name('guest.viewProductDetails');
 
-// backend
+// Cart
+Route::post('them-gio-hang.html', 'CartController@add')->name('guest.cart.add');
+
+// Backend
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
 
     Route::group(['middleware' => ['guest']], function () {

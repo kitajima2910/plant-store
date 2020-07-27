@@ -54,6 +54,10 @@
     <script src="{{ asset('public/frontend/js/plugins/plugins.js') }}"></script>
     <!-- Active js -->
     <script src="{{ asset('public/frontend/js/active.js') }}"></script>
+    <!-- JavaScript -->
+    <script src="{{ asset('public/frontend/js/alertify.min.js') }}"></script>
+    
+    @yield('script')
 </body>
 
 </html>

@@ -16,6 +16,9 @@ Version: - v1.0
 @import url(magnific-popup.css);
 @import url(font-awesome.min.css);
 @import url(elegant-icon.css);
+@import url(alertify.min.css);
+@import url(default.min.css);
+@import url(semantic.min.css);
 /* :: 3.0 Base CSS */
 * {
   margin: 0;
