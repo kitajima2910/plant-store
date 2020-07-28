@@ -54,7 +54,7 @@
                                     @error('content_short')
                                         <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
                                     @enderror
-                                    <textarea class="form-control" name="content_short" rows="3">{{ old('content_short') }}</textarea>
+                                    <textarea class="form-control" name="content_short" rows="3">{{ $product->content_short }}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label>Nhập nội dung</label>

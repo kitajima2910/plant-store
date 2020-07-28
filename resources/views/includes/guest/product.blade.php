@@ -4,8 +4,8 @@
             <div class="col-12">
                 <!-- Section Heading -->
                 <div class="section-heading text-center">
-                    <h2>NEW ARRIVALS</h2>
-                    <p>We have the latest products, it must be exciting for you</p>
+                    <h2>Sản Phẩm Mới</h2>
+                    <p>Có những sản phẩm khác có lẽ bạn sẽ hứng thú</p>
                 </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
             @endforeach
 
             <div class="col-12 text-center">
-                <a href="#" class="btn alazea-btn">View All</a>
+                <a href="#" class="btn alazea-btn">XEM THÊM</a>
             </div>
 
         </div>

@@ -1,5 +1,24 @@
 @extends('layouts.guest.master')
 @section('title', 'Chi Tiết Sản Phẩm')
+@section('style')
+<style>
+    .description_area p:nth-of-type(2) {
+         display: flex;
+        justify-content: center;    
+    }
+
+    .single_product_details_area .carousel-inner{
+        width:450px;
+        height: 450px ;
+    }
+
+    .product-img a img{
+        width: 255px;
+        height: 255px;
+    }
+
+</style>
+@endsection
 @section('content')
 <!-- ##### Breadcrumb Area Start ##### -->
 @include('includes.guest.breadcrumb-area', ['currentPage' => 'Chi Tiết Sản Phẩm'])
@@ -50,10 +69,7 @@
                         <h4 class="title">{!! $product->name !!}</h4>
                         <h4 class="price">{!! number_format($product->price, 0, ',', '.') !!} VNĐ</h4>
                         <div class="short_overview">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pellem malesuada
-                                in nibh selama euismod. Curabitur a rhoncus dui. Nunc lobortis cursus magna utrum
-                                faucibus. Vivamus justo nibh, pharetra non risus accumsan, tincidunt suscipit leo.
-                            </p>
+                            <p>{{ $product->content_short }}</p>
                         </div>
 
                         <div class="cart--area d-flex flex-wrap align-items-center">
@@ -98,7 +114,7 @@
                     <ul class="nav nav-tabs" role="tablist" id="product-details-tab">
                         <li class="nav-item">
                             <a href="#description" class="nav-link active" data-toggle="tab"
-                                role="tab">Description</a>
+                                role="tab">MÔ TẢ</a>
                         </li>
                     </ul>
                     <!-- Tab Content -->
