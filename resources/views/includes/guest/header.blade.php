@@ -22,7 +22,7 @@
                             </div>
                             <!-- Cart -->
                             <div class="cart">
-                                <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 
+                                <a href="{!! route('guest.cart.index') !!}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 
                                     <span>Giỏ hảng <span class="cart-quantity">({!! $cartQuantity !!})</span></span>
                                 </a>
                             </div>

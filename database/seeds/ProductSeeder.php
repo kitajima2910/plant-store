@@ -21,6 +21,7 @@ class ProductSeeder extends Seeder
                'feature_image_path' => '/public/uploads/products/3/dYFkcRlH4Xut3gQIS2EdCn3VCAZsXUsP.jpg',
                'feature_image_name' => 'duoi-cong-1.jpg',
                'price' => '159000',
+               'final_price' => 143100,
                'sale_price' => '10',
                'content_short' => 'Với lá cây có màu sắc rất đặc biệt nên cây Đuôi Công cực kỳ phù hợp làm cây trang trí giúp tạo nên những không gian ấn tượng. Cây phù hợp để làm quà tặng, trang trí quán cà phê, trồng bồn, cây cảnh để bàn...',
                'content' => '<p>Nếu bạn đang cần t&igrave;m một loại c&acirc;y dễ sống, dễ chăm s&oacute;c, kh&ocirc;ng cần nhiều nắng v&agrave; đặc biệt l&agrave; phải nổi bật th&igrave; c&oacute; lẽ sự lựa chọn tuyệt vời đối với bạn l&agrave;&nbsp;<strong>c&acirc;y Đu&ocirc;i C&ocirc;ng</strong>. Vậy c&acirc;y c&oacute; những đặc điểm g&igrave; th&uacute; vị v&agrave; hấp dẫn mời c&aacute;c bạn cũng t&igrave;m hiểu ở b&agrave;i viết dưới đ&acirc;y.</p>
@@ -58,6 +59,7 @@ class ProductSeeder extends Seeder
                'feature_image_path' => '/public/uploads/products/3/Nkd1YVDqHpRbUzP2dHGwXYalhu762kjH.jpg',
                'feature_image_name' => 'huong-thao-1.jpg',
                'price' => '125000',
+               'final_price' => 125000,
                'sale_price' => '0',
                'content_short' => 'Cây Hương Thảo còn có tên gọi khác là Rosemary một loại cây có mùi thơm giúp tinh thần sảng khoái, đuổi được muỗi, và vừa có thể làm gia vị. Bạn sẽ thích ngay khi lần đầu được ngửi loại hương thơm từ cây phát ra.',
                'content' => '<p><strong>C&acirc;y Hương Thảo</strong>&nbsp;c&ograve;n c&oacute; t&ecirc;n gọi kh&aacute;c l&agrave; Rosemary, T&acirc;y Dương Chổi, đ&ocirc;i khi người ta gọi Hương Thảo bằng c&aacute;i t&ecirc;n&nbsp;anthos, theo tiếng Hy Lạp cổ đại, c&oacute; nghĩa l&agrave; &ldquo;hoa&rdquo;. Đ&acirc;y l&agrave;&nbsp;một lo&agrave;i c&acirc;y bụi c&oacute; nguồn gốc từ Địa Trung Hải, ưa sống trong những khu vực c&oacute; kh&iacute; hậu nhiệt đới. C&acirc;y c&oacute; thể được d&ugrave;ng để trang tr&iacute; tr&ecirc;n b&agrave;n l&agrave;m việc, hay ngo&agrave;i ban c&ocirc;ng vừa mang lại n&eacute;t đẹp cho ng&ocirc;i nh&agrave; của bạn, vừa gi&uacute;p tinh thần thư th&aacute;i sảng kho&aacute;i lại mang &yacute; nghĩa phong thủy t&acirc;m linh rất tốt.</p>
@@ -94,6 +96,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'dua-canh-nen-1.jpg',
                'price' => '130000',
                'sale_price' => '10',
+               'final_price' => 117000,
                'content_short' => 'Cây Dứa Nến thuộc dòng cây thân cỏ, có thân giả được tạo bởi những bẹ lá chụm lại với nhau. Cây có tuổi thọ lâu đời, sống phụ sinh, là có hình lưỡi giáo, dài, nhọn dần về phía đầu, lá mền và quanh lá không có răng cưa, mặt lá nhẵn bóng và xanh tốt quanh năm',
                'content' => '<p><strong>C&acirc;y Dứa Cảnh Nến</strong>&nbsp;hay c&ograve;n c&oacute; t&ecirc;n gọi kh&aacute;c như: C&acirc;y Phong Lộc Hoa, C&acirc;y Ng&ocirc;i Sao, C&acirc;y Dứa C&aacute;nh Sen&hellip;C&acirc;y c&oacute; t&ecirc;n khoa học l&agrave; Tillandsia imperalis thuộc họ thực vật Dứa Bromeliaceae c&oacute;&nbsp;nguồn gốc từ ch&acirc;u Mỹ, nhiều nhất l&agrave; c&aacute;c nước Mehico v&agrave; Equador. C&acirc;y được trồng rất phổ biến l&agrave;m c&acirc;y cảnh nội thất ở nước ta.</p>
 
@@ -139,6 +142,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'cay-co-lan-chi-1.jpg',
                'price' => '149000',
                'sale_price' => '5',
+               'final_price' => 141550,
                'content_short' => 'Cây Cỏ Lan Chi hay còn gọi là cây Dây Nhện, cây Mẫu Tử...Cây có sọc trắng xanh nhìn rất bắt mắt và nổi bật, hợp làm cây phong thủy cho người mệnh Kim và Thủy. Cây Lan Chi phù hợp làm cây để bàn, cây trang trí nội thất, văn phòng, làm cây treo, tường cây',
                'content' => '<p>Cỏ C&acirc;y Lan Chi hay c&ograve;n một số t&ecirc;n gọi kh&aacute;c như: C&acirc;y D&acirc;y Nhện, cỏ Mẫu Tử, C&acirc;y Lục Thảo Trổ,&nbsp;Thảo Lan Chi, c&acirc;y c&oacute; t&ecirc;n khoa học l&agrave;:&nbsp;Chlorophytum comosum l&agrave; một lo&agrave;i thực vật lọc kh&iacute; thuộc họ Th&ugrave;a (Agavaceae), c&oacute; nguồn gốc từ ch&acirc;u Phi. Năm 1794 lo&agrave;i n&agrave;y được nh&agrave; tự nhi&ecirc;n học người Thụy Điển Carl Peter Thunberg m&ocirc; tả lần đầu ti&ecirc;n với t&ecirc;n gọi Anthericum comosum. Năm 1862 n&oacute; được m&ocirc; tả lại v&agrave; đặt v&agrave;o chi Lục thảo (Chlorophytum) như hiện tại bởi Henri Antoine Jacques. C&acirc;y Cỏ Lan Chi ph&ugrave; hợp l&agrave;m c&acirc;y treo tường, tường c&acirc;y, c&acirc;y nội thất, c&acirc;y trang tr&iacute; qu&aacute;n c&agrave; ph&ecirc;, kệ tivi, c&acirc;y&nbsp;để b&agrave;n l&agrave;m việc&hellip;</p>
 
@@ -172,6 +176,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'cay-hoa-su-quan-tu-1.jpg',
                'price' => '219000',
                'sale_price' => '10',
+               'final_price' => 197100,
                'content_short' => 'Cây hoa Sử Quân Tử có mùi thơm mát, dễ trồng và không phải chăm sóc nhiều, cây phù hợp làm cây ban công, cây leo giàn trước cửa...',
                'content' => '<p>C&acirc;y hoa Sử Qu&acirc;n Tử hay c&ograve;n gọi c&acirc;y hoa Giun l&agrave; một trong những loại c&acirc;y d&acirc;y leo c&oacute; hoa phổ biến&nbsp;ở nước ta. V&igrave; c&acirc;y c&oacute; sức sống m&atilde;nh liệt c&oacute; hoa thơm nhẹ, &iacute;t s&acirc;u bệnh v&agrave; c&ograve;n&nbsp;được lấy l&agrave;m thuốc n&ecirc;n hết sức an to&agrave;n. Nếu bạn đang muốn t&igrave;m loại c&acirc;y lấy b&oacute;ng m&aacute;t v&agrave; đẹp v&agrave;o m&ugrave;a h&egrave;, &iacute;t phải chăm s&oacute;c th&igrave; đ&acirc;y l&agrave; một sự lựa chọn tuyệt vời.&nbsp;<strong>C&acirc;y hoa Sử Qu&acirc;n Tử</strong>&nbsp;ph&ugrave; hợp l&agrave;m c&acirc;y ban c&ocirc;ng, c&acirc;y leo gi&agrave;n trước cửa&hellip;</p>
 
@@ -201,6 +206,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'chuoi-re-quat-1.jpg',
                'price' => '499000',
                'sale_price' => '15',
+               'final_price' => 424150,
                'content_short' => 'Cây Chuối Rẻ Quạt là loại cây có lá to và xanh tốt quanh năm, cây phù hợp trồng biệt thự sân vườn, bể bơi, cây trồng trong nhà, cây trồng văn phòng, sản khách sạn, nhà hàng, quán cafe',
                'content' => '<p>C&acirc;y Chuối Rẻ Quạt hay c&ograve;n c&oacute; t&ecirc;n gọi kh&aacute;c l&agrave;&nbsp;c&acirc;y Chuối Quạt hay Chuối Cọ (danh ph&aacute;p hai phần: Ravenala madagascariensis) l&agrave; c&acirc;y thuộc họ Thi&ecirc;n điểu (Strelitziaceae), đặc hữu của Madagascar. Tuy nhi&ecirc;n n&oacute; kh&ocirc;ng phải l&agrave; chuối (họ Musaceae) v&agrave; cũng kh&ocirc;ng phải l&agrave; cọ (họ Arecaceae), c&acirc;y&nbsp;<strong>Chuối Rẻ Quạt</strong>&nbsp;l&agrave; lo&agrave;i duy nhất của chi Ravenala. Với l&aacute; to v&agrave; xanh quanh năm n&ecirc;n c&acirc;y&nbsp;được&nbsp;ưa th&iacute;ch&nbsp;để lựa chọn&nbsp;l&agrave;m c&acirc;y cảnh trong nh&agrave;, c&acirc;y nội thất, c&acirc;y&nbsp;để trang tr&iacute; shop, sản kh&aacute;ch sạn, bể bơi,&nbsp;qu&aacute;n cafe, s&acirc;n vườn biệt thự&hellip;</p>
 
@@ -230,6 +236,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'hanh-phuc-1.jpg',
                'price' => '155000',
                'sale_price' => '20',
+               'final_price' => 124000,
                'content_short' => 'Cây Hạnh Phúc có ý nghĩa phong thủy mang đến hạnh phúc, đầm ấm cho gia chủ. Cây để làm kiểng có nhiều kích cỡ khác nhau để phù hợp cho gia chủ để bàn hay để dưới đất làm cây văn phòng, cây bày trước sảnh, hiên nhà. Cây phù hợp tặng khai trương, tân gia và tặng người thương.',
                'content' => '<p>C&acirc;y Hạnh Ph&uacute;c l&agrave; một trong những c&acirc;y được ưa chuộng&nbsp;ở Việt Nam nhưng t&agrave;i liệu về c&acirc;y n&agrave;y rất&nbsp;&iacute;t v&agrave; rất nhiều th&ocirc;ng tin tr&ecirc;n mạng&nbsp;đưa ra l&agrave; sai. Sau khi t&igrave;m hiểu một c&aacute;ch kỹ lưỡng th&igrave;&nbsp;&nbsp;đ&atilde; t&igrave;m ra&nbsp;được c&acirc;y c&oacute; t&ecirc;n khoa học ch&iacute;nh x&aacute;c l&agrave;: Heteropanax Chinensis l&agrave; chi thực vật c&oacute; hoa trong họ Araliaceae&nbsp;c&ograve;n gọi l&agrave; họ Nh&acirc;n S&acirc;m tương tự giống với c&acirc;y Ngũ Gia B&igrave;.&nbsp;<strong>C&acirc;y Hạnh Ph&uacute;c</strong>&nbsp;c&oacute;&nbsp;&yacute; nghĩa phong thủy mang&nbsp;đến hạnh ph&uacute;c,&nbsp;đầm ấm&nbsp;cho gia chủ. C&acirc;y&nbsp;để l&agrave;m kiểng c&oacute; nhiều k&iacute;ch cỡ kh&aacute;c nhau&nbsp;để ph&ugrave; hợp cho gia chủ&nbsp;để b&agrave;n hay&nbsp;để dưới&nbsp;đất l&agrave;m c&acirc;y văn ph&ograve;ng, c&acirc;y b&agrave;y trước sảnh, hi&ecirc;n nh&agrave;. C&acirc;y ph&ugrave; hợp tặng khai trương, t&acirc;n gia v&agrave; tặng người thương.</p>
 
@@ -261,6 +268,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'bup-da-do-1.jpg',
                'price' => '125000',
                'sale_price' => '20',
+               'final_price' => 100000,
                'content_short' => 'Cây Đa Búp Đỏ có ý nghĩa phong thủy mang đến cho gia chủ cuộc sống bình an và êm ấm. Ngoài ra cây còn có tác dụng hút được khói thuốc lá, các khí độc khác như: formaldehyde, carbon monoxide, hydrogen fluoride và một số chất gây ung thư ở thể hơi.',
                'content' => '<p>C&acirc;y Đa B&uacute;p Đỏ hay c&ograve;n c&oacute; t&ecirc;n gọi kh&aacute;c l&agrave; C&acirc;y Đa Cao Su, C&acirc;y Đa Dai hay C&acirc;y Đa Ấn Độ. C&acirc;y rất dễ sống v&agrave; c&oacute; sức ph&aacute;t triển mạnh, c&acirc;y Đa B&uacute;p Đỏ&nbsp;c&oacute; &yacute; nghĩa phong thủy mang đến cho gia chủ cuộc sống b&igrave;nh an v&agrave; &ecirc;m ấm. Ngo&agrave;i ra c&acirc;y c&ograve;n c&oacute; khả năng h&uacute;t được kh&oacute;i thuốc l&aacute;, c&aacute;c kh&iacute; độc kh&aacute;c như: formaldehyde, carbon monoxide, hydrogen fluoride v&agrave; một số chất g&acirc;y ung thư ở thể hơi. C&acirc;y c&oacute; th&iacute;ch nghi nhanh với điều kiện m&ocirc;i trường v&igrave; thế c&acirc;y c&oacute; thể trồng được cả trong nh&agrave; lẫn ngo&agrave;i trời, hoặc m&ocirc;i trường b&aacute;n r&acirc;m l&agrave; l&uacute;c nắng, l&uacute;c m&aacute;t như ở hi&ecirc;n nh&agrave; v&agrave; cửa sổ. C&acirc;y ph&ugrave; hợp l&agrave;m qu&agrave; tặng, c&acirc;y để b&agrave;n, c&acirc;y văn ph&ograve;ng.</p>
 
@@ -306,6 +314,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'trau-ba-de-vuong-1.jpg',
                'price' => '130000',
                'sale_price' => '15',
+               'final_price' => 110500,
                'content_short' => 'Cây Trầu Bà Đế Vương Xanh an toàn, có sức sống tốt, phát triển nhanh, sống được trong điều kiện thiếu nắng như ở trong nhà, văn phòng. Chính vì vậy mà nó được nhân giống và phát triển rộng rãi trên nhiều quốc gia để làm cây cảnh trang trí. Cây Đế Vương Xanh mang ý nghĩa cho sự quyền lực và may mắn.',
                'content' => '<p>C&acirc;y Trầu B&agrave; Đế Vương Xanh hay c&ograve;n c&oacute; t&ecirc;n gọi kh&aacute;c l&agrave; c&acirc;y Đế Vương Xanh (t&ecirc;n khoa học: Philodendron Imperial Green) l&agrave; một lo&agrave;i thực vật c&oacute; hoa trong họ R&aacute;y (Araceae). Nguồn gốc của c&acirc;y từ đảo Solomon, nguy&ecirc;n sinh ở Indonesia. V&igrave;&nbsp;<strong>c&acirc;y Trầu B&agrave; Đế Vương Xanh</strong>&nbsp;an to&agrave;n, c&oacute; sức sống tốt, ph&aacute;t triển nhanh, sống được trong điều kiện thiếu nắng như ở trong nh&agrave;, văn ph&ograve;ng. Ch&iacute;nh v&igrave; vậy m&agrave; n&oacute; được nh&acirc;n giống v&agrave; ph&aacute;t triển rộng r&atilde;i tr&ecirc;n nhiều quốc gia để l&agrave;m c&acirc;y cảnh trang tr&iacute;. C&acirc;y Đế Vương Xanh mang &yacute; nghĩa cho sự quyền lực v&agrave; may mắn.</p>
 
@@ -343,6 +352,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'truong-sinh-1.jpg',
                'price' => '125000',
                'sale_price' => '5',
+               'final_price' => 118750,
                'content_short' => 'Cây Trường Sinh có tác dụng làm sạch không khí, hút các bụi bẩn và hấp thụ các chất độc hại như: Formandehit, cacbondioxit...Trong phong thủy cây mang đến sức khỏe, tiền tài, may mắn cho gia chủ. Phù hợp làm cây để bàn làm việc, phòng khách, quầy lễ tân, quà tặng...',
                'content' => '<p>Qua t&ecirc;n gọi&nbsp;<strong>C&acirc;y Trường Sinh</strong>&nbsp;ch&uacute;ng ta cũng đ&atilde; biết được n&oacute; l&agrave; loại c&acirc;y c&oacute; sức sống m&atilde;nh liệt, xanh tốt quanh năm, c&acirc;y&nbsp;kh&ocirc;ng chịu được nắng gắt ưa nơi m&aacute;t, c&oacute; &aacute;nh nắng nhẹ, ch&iacute;nh v&igrave; vậy c&acirc;y Trường Sinh rất th&iacute;ch hợp l&agrave;m c&acirc;y cảnh trong nh&agrave;, c&acirc;y cảnh để b&agrave;n l&agrave;m việc. C&acirc;y c&oacute; t&aacute;c dụng l&agrave;m sạch kh&ocirc;ng kh&iacute;, h&uacute;t c&aacute;c bụi bẩn v&agrave; hấp thụ c&aacute;c chất độc hại như: Formandehit, cacbondioxit&hellip;Trong phong thủy c&acirc;y mang đến sức khỏe, tiền t&agrave;i, may mắn cho gia chủ. C&acirc;y Trường Sinh đại diện cho mệnh Mộc, điều n&agrave;y c&oacute; nghĩa nếu bạn l&agrave; người mệnh Hỏa hoặc mệnh Mộc sẽ rất th&iacute;ch hợp với loại c&acirc;y n&agrave;y, n&oacute; sẽ mang đến cho gia đ&igrave;nh bạn nhiều điều tốt đẹp.</p>
 

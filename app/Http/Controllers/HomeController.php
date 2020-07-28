@@ -18,7 +18,7 @@ class HomeController extends Controller
     public function index() {
 
         // Products
-        $products = $this->product->where('status', 1)->take(4)->get();
+        $products = $this->product->where('status', 1)->orderBy('id', 'desc')->take(4)->get();
 
         return view('pages.guest.index', compact('products'));
     }

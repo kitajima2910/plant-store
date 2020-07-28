@@ -15,8 +15,13 @@ class CartController extends Controller
         $this->product = $product;
     }
 
+    public function index() {
+        return view('pages.guest.cart');
+    }
+
     public function add(Request $request)
     {
+
         $quantity = $request->get('quantity');
         $id = $request->get('id');
         $product = $this->product->find($id);
@@ -24,13 +29,34 @@ class CartController extends Controller
         $data['id'] = $product->id;
         $data['name'] = $product->name;
         $data['qty'] = $quantity;
-        $data['price'] = $product->price;
+        $data['price'] = $product->final_price;
         $data['weight'] = 1;
         $data['options']['feature_image_path'] = $product->feature_image_path;
         Cart::add($data);
         
         $count = Cart::count() > 0 ? Cart::count() : 0;
         
-        return view('ajax.guest.cart-quantity', compact('count'));
+        if($request->has('pageToCart')) {
+            return redirect()->route($request->get('pageToCart'));
+        }
+
+        $cardQuantity = view('ajax.guest.cart-quantity', compact('count'))->render();
+        return response()->json(['cardQuantity' => $cardQuantity, 'code' => 200], 200);
+    }
+
+    public function del(Request $request) {
+
+        Cart::update($request->get('rowId'), 0);
+
+        $count = Cart::count() > 0 ? Cart::count() : 0;
+        
+        $cardQuantity = view('ajax.guest.cart-quantity', compact('count'))->render();
+        $cartTable = view('ajax.guest.cart-table')->render();
+
+        return response()->json([
+            'cardQuantity' => $cardQuantity,
+            'cartTable' => $cartTable,
+            'code' => 200
+        ], 200);
     }
 }

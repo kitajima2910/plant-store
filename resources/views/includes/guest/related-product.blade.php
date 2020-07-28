@@ -16,14 +16,14 @@
                     <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="100ms">
                         <!-- Product Image -->
                         <div class="product-img">
-                            <a href="#"><img src="{{ asset($item['feature_image_path']) }}"></a>
+                            <a href="{!! route('guest.viewProductDetails', $item['slug']) !!}"><img src="{{ asset($item['feature_image_path']) }}"></a>
                             <!-- Product Tag -->
                             <div class="product-tag">
                                 {{-- <a href="#">Hot</a> --}}
                             </div>
                             <div class="product-meta d-flex">
                                 <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                <a href="#" class="add-to-cart-btn cart-add" data-id="{!! $item['id'] !!}">Add to cart</a>
+                                <a href="javascript:void(0);" class="add-to-cart-btn cart-add" data-id="{!! $item['id'] !!}">Add to cart</a>
                                 <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
                             </div>
                         </div>
@@ -32,7 +32,12 @@
                             <a href="{!! route('guest.viewProductDetails', $item['slug']) !!}">
                                 <p>{!! $item['name'] !!}</p>
                             </a>
-                            <h6>{!! number_format($item['price'], 0, ',', '.') !!} VNĐ</h6>
+                            @if ($item['sale_price'] > 0)
+                                <s>{!! number_format($item['price'], 0, ',', '.') !!} VNĐ</s>
+                                <h6>{!! number_format($item['final_price'], 0, ',', '.') !!} VNĐ</h6>
+                            @else
+                                <h6>{!! number_format($item['final_price'], 0, ',', '.') !!} VNĐ</h6>
+                            @endif
                         </div>
                     </div>
                 </div>

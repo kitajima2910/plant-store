@@ -3,7 +3,7 @@
 @section('style')
 <style>
     .description_area p:nth-of-type(2) {
-         display: flex;
+        display: flex;
         justify-content: center;    
     }
 
@@ -35,7 +35,7 @@
                         <div id="product_details_slider" class="carousel slide" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <a class="product-img" href="#">
+                                    <a class="product-img" href="javascript:void(0);">
                                         <img class="d-block w-100" src="{!! asset($product->feature_image_path) !!}">
                                     </a>
                                 </div>
@@ -67,14 +67,17 @@
                 <div class="col-12 col-md-6">
                     <div class="single_product_desc">
                         <h4 class="title">{!! $product->name !!}</h4>
-                        <h4 class="price">{!! number_format($product->price, 0, ',', '.') !!} VNĐ</h4>
+                        <h4 class="price">{!! number_format($product->final_price, 0, ',', '.') !!} VNĐ</h4>
                         <div class="short_overview">
                             <p>{{ $product->content_short }}</p>
                         </div>
 
                         <div class="cart--area d-flex flex-wrap align-items-center">
                             <!-- Add to Cart Form -->
-                            <form class="cart clearfix d-flex align-items-center" method="post">
+                            <form class="cart clearfix d-flex align-items-center" action="{!! route('guest.cart.add') !!}" method="post">
+                                @csrf
+                                <input type="hidden" name="id" value="{!! $product->id !!}">
+                                <input type="hidden" name="pageToCart" value="guest.cart.index">
                                 <div class="quantity">
                                     <span class="qty-minus"
                                         onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i
@@ -85,8 +88,7 @@
                                         onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i
                                             class="fa fa-plus" aria-hidden="true"></i></span>
                                 </div>
-                                <button type="submit" name="addtocart" value="5" class="btn alazea-btn ml-15">Add to
-                                    cart</button>
+                                <button type="submit" class="btn alazea-btn ml-15">thêm giỏ hàng</button>
                             </form>
                             <!-- Wishlist & Compare -->
                             <div class="wishlist-compare d-flex flex-wrap align-items-center">

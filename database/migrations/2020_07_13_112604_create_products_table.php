@@ -21,8 +21,9 @@ class CreateProductsTable extends Migration
             $table->string('slug')->unique();
             $table->string('feature_image_path')->nullable(); // Demo: https://via.placeholder.com/150 có size 150x150
             $table->string('feature_image_name')->nullable();
-            $table->integer('price');
+            $table->bigInteger('price');
             $table->integer('sale_price')->nullable();
+            $table->bigInteger('final_price');
             $table->mediumText('content_short');
             $table->text('content');
             $table->unsignedBigInteger('user_id');
