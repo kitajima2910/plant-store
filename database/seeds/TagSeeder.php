@@ -74,6 +74,64 @@ class TagSeeder extends Seeder
                 'tags_name' => 'truong-sinh',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(), 
+            ],
+            
+            
+            // CÂY TRONG NHÀ
+            [
+                'tags_name' => 'tuong-cay-xanh',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'tung-la-han',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'cay-canh-trong-nha',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'lan-quan-tu',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'bang-singapore',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'cay-tung-thom',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'hoa-trang-nguyen',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'may-man-tai-loc',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'tung-bong-lai',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'hong-mon',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'cau-tieu-tram',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
             ],    
         ]);
     }
