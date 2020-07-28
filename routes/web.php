@@ -19,7 +19,12 @@ Route::get('trang-chu.html', 'HomeController@index')->name('guest.trangChu');
 Route::get('{slug}.html', 'ProductController@viewProductDetails')->name('guest.viewProductDetails');
 
 // Cart
-Route::post('them-gio-hang.html', 'CartController@add')->name('guest.cart.add');
+Route::group(['prefix' => 'cart'], function () {
+    Route::get('gio-hang.html', 'CartController@index')->name('guest.cart.index');
+    Route::post('them-san-pham.html', 'CartController@add')->name('guest.cart.add');
+    Route::post('xoa-san-pham.html', 'CartController@del')->name('guest.cart.del');
+});
+
 
 // Backend
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
