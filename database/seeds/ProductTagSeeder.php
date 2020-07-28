@@ -380,7 +380,189 @@ class ProductTagSeeder extends Seeder
                'updated_at' => Carbon::now(), 
            ],
          
-         
+
+        //    CÂY ĐỂ BÀN
+        [
+            'product_id' => '21',
+            'tag_id' => '1',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '21',
+            'tag_id' => '24',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '21',
+            'tag_id' => '25',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '22',
+            'tag_id' => '1',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '22',
+            'tag_id' => '24',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '22',
+            'tag_id' => '26',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '23',
+            'tag_id' => '1',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '23',
+            'tag_id' => '24',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '23',
+            'tag_id' => '27',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '24',
+            'tag_id' => '1',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '24',
+            'tag_id' => '24',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '24',
+            'tag_id' => '28',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '25',
+            'tag_id' => '1',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '25',
+            'tag_id' => '24',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '25',
+            'tag_id' => '29',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '26',
+            'tag_id' => '1',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '26',
+            'tag_id' => '24',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '26',
+            'tag_id' => '30',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '27',
+            'tag_id' => '1',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '27',
+            'tag_id' => '24',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '27',
+            'tag_id' => '31',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '28',
+            'tag_id' => '1',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '28',
+            'tag_id' => '24',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '28',
+            'tag_id' => '32',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '29',
+            'tag_id' => '1',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '29',
+            'tag_id' => '24',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '29',
+            'tag_id' => '33',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '30',
+            'tag_id' => '1',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '30',
+            'tag_id' => '24',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        [
+            'product_id' => '30',
+            'tag_id' => '34',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(), 
+        ],
+        
         ]);
     }
     }
