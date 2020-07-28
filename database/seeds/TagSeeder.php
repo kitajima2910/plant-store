@@ -16,35 +16,65 @@ class TagSeeder extends Seeder
     {
         DB::table('tags')->insert([
             [
-                'tags_name' => Str::of('Cây Để Bàn')->slug('-'),
+                'tags_name' => 'cay-canh',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(), 
-            ],
+            ],    
             [
-                'tags_name' => Str::of('Cây Để Sàn')->slug('-'),
+                'tags_name' => 'cay-canh-phong-thuy',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(), 
-            ],
+            ],    
             [
-                'tags_name' => Str::of('Cây Terrarium')->slug('-'),
+                'tags_name' => 'cay-duoi-cong',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(), 
-            ],
+            ],    
             [
-                'tags_name' => Str::of('Tiểu Cảnh Terrarium')->slug('-'),
+                'tags_name' => 'huong-thao',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(), 
-            ],
+            ],    
             [
-                'tags_name' => Str::of('Chậu Lọ')->slug('-'),
+                'tags_name' => 'dua-canh-nen',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(), 
-            ],
+            ],    
             [
-                'tags_name' => Str::of('Phụ  Kiện')->slug('-'),
+                'tags_name' => 'co-lan-chi',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(), 
-            ],
+            ],    
+            [
+                'tags_name' => 'hoa-su-quan-tu',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'chuoi-re-quat',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'hanh-phuc',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'da-bup-do',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'trau-ba-de-vuong',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'truong-sinh',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
         ]);
     }
 }

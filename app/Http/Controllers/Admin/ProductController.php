@@ -60,6 +60,7 @@ class ProductController extends Controller
                 'price' => $request->get('price'),
                 'sale_price' => $request->get('sale_price'),
                 'content' => $request->get('content'),
+                'content_short' => $request->get('content_short'),
                 'user_id' => Auth::user()->id,
                 'category_id' => $request->get('category_id'),
                 'status' => $request->get('status'),

@@ -28,7 +28,7 @@ class ProductController extends Controller
         }
         $tagsStr = join(', ', $tagsArr);
         $productOfCategory = $this->category->where('name', $productCategory['name'])->get();
-        $productOfCategory = $this->category->find($productOfCategory[0]->id)->products()->take(4)->get()->toArray();
+        $productOfCategory = $this->category->find($productOfCategory[0]->id)->products()->inRandomOrder()->take(4)->get()->toArray();
 
         return view('pages.guest.shop-details', compact('product', 'productImages', 'productCategory', 'tagsStr', 'productOfCategory'));
     }

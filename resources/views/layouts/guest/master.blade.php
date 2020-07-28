@@ -16,6 +16,8 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="{{ asset('public/frontend/css/style.css') }}">
+    
+    @yield('style')
 
 </head>
 
