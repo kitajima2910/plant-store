@@ -32,7 +32,7 @@ class SliderController extends Controller
    public function store(AdminFormSlider $request){
         $sliderInsert = [
             // 'link' => $request->get('link'),
-            'link' =>  Str::of($request->get('link'))->slug('-'),
+            'link' =>  Str::of($request->get('link'))->slug('-') .'.html',
             'content' => $request->get('content'),
             'status' => $request->get('status'),
             'created_at' => Carbon::now(),
@@ -77,7 +77,7 @@ class SliderController extends Controller
     public function update(AdminFormSlider $request,$id){
         $sliderUpdate = [
             // 'link' => $request->get('link'),
-            'link' =>  Str::of($request->get('link'))->slug('-'),
+            'link' =>  Str::of($request->get('link'))->slug('-') .'.html',
             'content' => $request->get('content'),
             'status' => $request->get('status'),
             'created_at' => Carbon::now(),

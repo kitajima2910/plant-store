@@ -17,6 +17,12 @@
         height: 255px;
     }
 
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none !important;
+        margin: 0;
+    }   
+
 </style>
 @endsection
 @section('content')

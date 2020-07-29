@@ -1800,8 +1800,8 @@ class ProductSeeder extends Seeder
                'feature_image_path' => '/public/uploads/products/3/BAMEyDere3Vi2q4moxq3zVvTU7CzMv9h.jpg',
                'feature_image_name' => 'sen-da-tu-phuong-1.jpg',
                'price' => '29000',
-               'sale_price' => '0',
-               'final_price' => 29000,
+               'sale_price' => '10',
+               'final_price' => 26100,
                'content_short' => 'Sen đá tứ phương mang ý nghĩa dù bạn có ở bốn phương trời, hay ở đi đâu cũng sẽ được may mắn, cây phù hợp để bàn làm việc, quán cà phê, bàn học...Hoặc để làm tiểu cảnh',
                'content' => '<h2>C&Aacute;CH CHĂM S&Oacute;C SEN Đ&Aacute; TỨ&nbsp;PHƯƠNG</h2>
 
