@@ -113,7 +113,7 @@
                         $('.ajax-cart-table').html(response.cartTable);
 
                         alertify.set('notifier', 'position', 'top-right');
-                        alertify.success('Đaã xoá sản phẩm ra giỏ hàng');
+                        alertify.success('Đã xoá sản phẩm ra giỏ hàng');
                     }
                 }
             });
