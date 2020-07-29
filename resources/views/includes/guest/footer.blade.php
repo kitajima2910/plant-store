@@ -28,27 +28,19 @@
                             <h5>SẢN PHẨM MỚI</h5>
                         </div>
 
-                        <!-- Single Best Seller Products -->
-                        <div class="single-best-seller-product d-flex align-items-center">
-                            <div class="product-thumbnail">
-                                <a href="shop-details.html"><img src="{{ asset('public/frontend/img/bg-img/4.jpg') }}"></a>
+                        @foreach ($productsShare as $item)
+                            <!-- Single Best Seller Products -->
+                            <div class="single-best-seller-product d-flex align-items-center">
+                                <div class="product-thumbnail">
+                                    <a href="{!! route('guest.viewProductDetails', $item->slug) !!}"><img style="width: 70px; height: 70px;" src="{{ asset($item->feature_image_path) }}"></a>
+                                </div>
+                                <div class="product-info">
+                                    <a href="{!! route('guest.viewProductDetails', $item->slug) !!}">{!! $item->name !!}</a>
+                                    <p>{!! number_format($item->final_price, 0, ',', '.') !!} VNĐ</p>
+                                </div>
                             </div>
-                            <div class="product-info">
-                                <a href="shop-details.html">Cactus Flower</a>
-                                <p>$10.99</p>
-                            </div>
-                        </div>
+                        @endforeach
 
-                        <!-- Single Best Seller Products -->
-                        <div class="single-best-seller-product d-flex align-items-center">
-                            <div class="product-thumbnail">
-                                <a href="shop-details.html"><img src="{{ asset('public/frontend/img/bg-img/5.jpg') }}"></a>
-                            </div>
-                            <div class="product-info">
-                                <a href="shop-details.html">Tulip Flower</a>
-                                <p>$11.99</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
 

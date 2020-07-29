@@ -59,4 +59,27 @@ class CartController extends Controller
             'code' => 200
         ], 200);
     }
+
+    public function update(Request $request) {
+        $rowId = $request->get('rowId');
+        $quantity = $request->get('quantity');
+
+        if(empty($quantity) || $quantity < 0 || $quantity > 100) {
+            $cartTable = view('ajax.guest.cart-table')->render();
+            return response()->json(['cartTable' => $cartTable, 'code' => 204], 200);
+        }
+
+        Cart::update($rowId, $quantity);
+
+        $count = Cart::count() > 0 ? Cart::count() : 0;
+
+        $cardQuantity = view('ajax.guest.cart-quantity', compact('count'))->render();
+        $cartTable = view('ajax.guest.cart-table')->render();
+    
+        return response()->json([
+            'cardQuantity' => $cardQuantity,
+            'cartTable' => $cartTable,
+            'code' => 200
+        ], 200);
+    }
 }

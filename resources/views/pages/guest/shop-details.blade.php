@@ -7,7 +7,8 @@
         justify-content: center;    
     }
 
-    .single_product_details_area .carousel-inner{
+    .single_product_details_area .carousel-inner,
+    .single_product_details_area .carousel-inner img {
         width:450px;
         height: 450px ;
     }
@@ -47,7 +48,7 @@
                                 </div>
                                 @foreach ($productImages as $item)
                                     <div class="carousel-item">
-                                        <a class="product-img" href="#">
+                                        <a class="product-img" href="javascript:void(0);">
                                             <img class="d-block w-100" src="{!! asset($item->image_path) !!}">
                                         </a>
                                     </div>

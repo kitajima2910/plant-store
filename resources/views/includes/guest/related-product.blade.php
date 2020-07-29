@@ -18,8 +18,10 @@
                         <div class="product-img">
                             <a href="{!! route('guest.viewProductDetails', $item['slug']) !!}"><img src="{{ asset($item['feature_image_path']) }}"></a>
                             <!-- Product Tag -->
-                            <div class="product-tag">
-                                {{-- <a href="#">Hot</a> --}}
+                            <div class="product-tag {{ $item['sale_price'] > 0 ? 'sale-tag' : '' }}">
+                                @if ($item['sale_price'] > 0)
+                                    <a href="javascript:void(0);">{{ 'SALE '. $item['sale_price'] . '%' }}</a>
+                                @endif
                             </div>
                             <div class="product-meta d-flex">
                                 <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
