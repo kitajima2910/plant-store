@@ -33,7 +33,6 @@ class LoginController extends Controller
 
             $userId = Auth::guard('customers')->user()->id;
             $cartOffline = CartOffline::where('identifier', $userId)->first();
-            $savedcart = CartOffline::where('identifier', $userId)->get('content');
 
             if(!empty($cartOffline)) {
                 Cart::restore($userId);
@@ -50,13 +49,4 @@ class LoginController extends Controller
 
     }
 
-    public function logout() {
-        if(Auth::guard('customers')->check()) {
-            $userId = Auth::guard('customers')->user()->id;
-            Cart::erase($userId);
-            Cart::store($userId);
-            Auth::guard('customers')->logout();
-            return redirect()->route('guest.trangChu');
-        }
-    }
 }
