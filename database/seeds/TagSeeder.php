@@ -248,7 +248,66 @@ class TagSeeder extends Seeder
                 'tags_name' => 'ngoc-duoc',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(), 
-            ],    
+            ], 
+            
+            //CÂY CẢNH SEN ĐÁ
+            [
+                'tags_name' => 'cay-canh-sen-da',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],   
+            [
+                'tags_name' => 'sedum-da-quang',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],   
+            [
+                'tags_name' => 'do-la-trang',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],   
+            [
+                'tags_name' => 'nhung-vien-do',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],   
+            [
+                'tags_name' => 'la-tim',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],   
+            [
+                'tags_name' => 'chuoi-ngoc-bi',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],   
+            [
+                'tags_name' => 'mong-rong-vien-trang',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],   
+            [
+                'tags_name' => 'thach-bich-canh-buom',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],   
+            [
+                'tags_name' => 'tu-phuong',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],   
+            [
+                'tags_name' => 'ham-ca-sau',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],   
+            [
+                'tags_name' => 'mat-na',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],   
+         
+          
         ]);
     }
 }

@@ -1566,6 +1566,354 @@ class ProductSeeder extends Seeder
                'created_at' => Carbon::now(),
                'updated_at' => Carbon::now(),   
             ],
+
+            //CÂY CẢNH SEN ĐÁ
+            [ 
+               'name' => 'Cây Sen Đá Sedum Dạ Quang',
+               'slug' => Str::of('Cây Sen Đá Sedum Dạ Quang')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/UzvF8lkEnH85TKWgcBzwQ5H9znrENTTP.jpg',
+               'feature_image_name' => 'sedum-da-quang-1.jpg',
+               'price' => '29000',
+               'sale_price' => '0',
+               'final_price' => 29000,
+               'content_short' => 'Sen đá sedum dạ quang phù để bàn, trang trí quá cà phê, góc học tập, trồng với tiểu cảnh, terrarium...Cây mang ý nghĩa cho một tình yêu, tình bạn vĩnh cửu không bao giờ phai nhòa dù có khó khăn như màn đêm bao phủ không còn thấy đường thì vẫn có người dẫn lỗi để có thể dễ dàng vượt qua.',
+               'content' => '<p>Sedum dạ quang thuộc d&ograve;ng sedum l&agrave;&nbsp;d&ograve;ng bao gồm những c&acirc;y c&oacute; h&igrave;nh d&aacute;ng nhỏ x&iacute;u v&agrave; cực kỳ đ&aacute;ng y&ecirc;u. D&ograve;ng sedum cũng thuộc họ sen đ&aacute;, c&acirc;y mọc th&agrave;nh những bụi nhỏ c&oacute; h&igrave;nh d&aacute;ng dạng đ&agrave;i, m&agrave;u sắc s&aacute;ng nội bật nh&igrave;n rất bắt mắt. Ch&iacute;nh v&igrave; thế n&oacute; c&oacute; t&ecirc;n gọi l&agrave;&nbsp;<strong>sedum dạ quang</strong>.</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/sedum-da-quang.jpg" style="height:327px; width:400px" /></p>
+               
+               <h2>C&Aacute;CH CHĂM S&Oacute;C SEN Đ&Aacute; SEDUM DẠ QUANG</h2>
+               
+               <p>Sen đ&aacute; sedum dạ quang cũng thuộc họ sen đ&aacute;<strong>&nbsp;</strong>n&ecirc;n c&aacute;ch chăm s&oacute;c v&ocirc; c&ugrave;ng đơn giản v&agrave; dễ d&agrave;ng. Bạn chỉ cần lưu &yacute; một ch&uacute;t về &aacute;nh s&aacute;ng v&agrave; nước.</p>
+               
+               <h3>TƯỚI NƯỚC</h3>
+               
+               <p>Sen đ&aacute; Sedum dạ quang thuộc dạng đ&agrave;i v&agrave; c&oacute; khả năng trữ nước ở l&aacute; v&agrave; th&acirc;n, n&ecirc;n bạn kh&ocirc;ng cần tưới nước nhiều, chỉ cần một tuần tưới 1 lần, nếu thời tiết kh&ocirc; n&oacute;ng th&igrave; c&oacute; thể 2 lần. Hạn chế tưới trực tiếp n&ecirc;n l&aacute;, v&igrave; <strong>sedum dạ quang&nbsp;</strong>c&oacute; nhiều c&acirc;y v&agrave; lại dạng đ&agrave;i n&ecirc;n nước đọng tr&ecirc;n l&aacute; rất l&acirc;u kh&ocirc; dẫn đến thối l&aacute;.</p>
+               
+               <h3>ĐẤT</h3>
+               
+               <p>Đất trồng ph&ugrave; hợp với sedum dạ quang l&agrave; loại đất dễ tho&aacute;t nước v&agrave; c&oacute; độ m&ugrave;n cao, bạn c&oacute; thể trộn đất trồng với sơ dừa, tro, xỉ than đun rồi đập nhỏ để lấy sự th&ocirc;ng tho&aacute;ng cho đất c&oacute; thể trộn th&ecirc;m ph&acirc;n b&ograve; kh&ocirc; hoặc một số thuốc chống nấm mốc.</p>
+               
+               <h3>&Aacute;NH S&Aacute;NG</h3>
+               
+               <p>Sedum dạ quang ưa s&aacute;ng nhưng kh&ocirc;ng th&iacute;ch &aacute;nh s&aacute;ng qu&aacute; gắt v&agrave; nắng. N&ecirc;n che 30% &aacute;nh s&aacute;ng bằng lưới khi c&oacute; &aacute;nh nắng buổi trưa. C&acirc;y th&iacute;ch nhất &aacute;nh s&aacute;ng buổi sớm v&agrave; xế chiều.</p>
+               
+               <h3>NH&Acirc;N GIỐNG</h3>
+               
+               <p>V&igrave; c&acirc;y mọc dạng bụi n&ecirc;n bạn c&oacute; thể t&aacute;ch nhỏ ra trồng v&agrave;o khu đất rộng để nh&acirc;n giống, đ&oacute; l&agrave; c&aacute;ch nh&acirc;n giống an to&agrave;n v&agrave; tỷ lệ th&agrave;nh c&ocirc;ng cao. Ngo&agrave;i ra bạn c&oacute; thể nh&acirc;n giống bằng c&aacute;ch gi&acirc;m c&agrave;nh.</p>',
+               'user_id' => '3',
+               'category_id' => '5',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Sen Đá Đô Là Trắng',
+               'slug' => Str::of('Sen Đá Đô Là Trắng')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/9ZpbCGHNl0nVGpBnaTbX2517jcLrRD86.jpg',
+               'feature_image_name' => 'sen-da-do-la-trang-1.jpg',
+               'price' => '29000',
+               'sale_price' => '0',
+               'final_price' => 29000,
+               'content_short' => 'Cây Sen Đá Đô La Trắng có ý nghĩa mang đến tiền bạc cho gia chủ. Cây phù hợp để bàn làm việc, bàn học, trang trí quán cà phê, trồng kèm với các loại sen đá khác.',
+               'content' => '<p>L&agrave; loại c&acirc;y c&oacute; sức sống kh&aacute; mạnh liệt, với những chiếc l&aacute; nhỏ h&igrave;nh tr&ograve;n, giữa l&aacute; thường c&oacute; m&agrave;u xanh b&ecirc;n ngo&agrave;i c&oacute; viền trắng, l&aacute; cứng c&aacute;p nh&igrave;n rất bắt mắt, th&acirc;n&nbsp;<strong>sen đ&aacute; đ&ocirc; l&aacute; trắng</strong>&nbsp;c&oacute; m&agrave;u đỏ thẫm, m&agrave; đen dần phần gốc khi c&acirc;y trưởng th&agrave;nh v&agrave; sống l&acirc;u năm. C&acirc;y c&oacute; &yacute; nghĩa mang đến tiền bạc cho gia chủ.</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/do-la-trang.jpg" style="height:381px; width:400px" /></p>
+               
+               <h2>C&Aacute;CH CHĂM S&Oacute;C SEN Đ&Aacute; Đ&Ocirc; LA TRẮNG</h2>
+               
+               <p>L&agrave; loại c&acirc;y rất dễ sống 1 tuần bạn c&oacute; thể tưới nước 2 lần, v&agrave; bạn cũng c&oacute; thể tưới trực tiếp l&ecirc;n c&acirc;y, kh&ocirc;ng cần phải tưới ngấm ngược v&agrave; như c&aacute;c loại sen đ&aacute;&nbsp;kh&aacute;c. N&ecirc;n để c&acirc;y ở nơi c&oacute; &aacute;nh nắng buổi sớm, tuy nhi&ecirc;n c&acirc;y cũng c&oacute; thể chịu được &aacute;nh nắng gắt, bạn c&oacute; thể để c&acirc;y ngo&agrave;i trời với lượng &aacute;nh s&aacute;ng nhiều. Nếu để trong văn ph&ograve;ng hoặc nơi kh&ocirc;ng c&oacute; &aacute;nh nắng th&igrave; 2 ng&agrave;y bạn n&ecirc;n đem ra phơi nắng một lần để c&acirc;y c&oacute; m&agrave;u sắc đẹp v&agrave; tươi tắn.</p>
+               
+               <h3><strong>NHIỆT ĐỘ</strong></h3>
+               
+               <p>Nhiệt độ ph&ugrave; hợp l&agrave; từ 15 &ndash; 35 độ, nếu thời tiết xuống dưới 10 độ hoặc lớn hơn 40 độ th&igrave; bạn n&ecirc;n mang c&acirc;y v&agrave;o trong nh&agrave; để. Lạnh qu&aacute; th&igrave; c&oacute; thể thắp đ&egrave;n cho c&acirc;y.</p>
+               
+               <h3><strong>NH&Acirc;N GIỐNG</strong></h3>
+               
+               <p>Bạn c&oacute; thể nh&acirc;n giống sen đ&aacute; đ&ocirc; la trắng bằng c&aacute;ch gi&acirc;m c&agrave;nh. Cắt c&aacute;c c&agrave;nh nhỏ phơi cho kh&ocirc;ng vết nhựa rồi cắm xuống đất, hoặc để nơi r&acirc;m m&aacute;t để mọc rễ rồi cắm xuống đất.</p>',
+               'user_id' => '3',
+               'category_id' => '5',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Sen Đá Nhung Viền Đỏ',
+               'slug' => Str::of('Sen Đá Nhung Viền Đỏ')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/Cd2VRIj4v4m4ekBlqSvKYrdQOgvBcTQ6.jpg',
+               'feature_image_name' => 'sen-da-nhung-vien-do-1.jpg',
+               'price' => '29000',
+               'sale_price' => '0',
+               'final_price' => 29000,
+               'content_short' => 'Sen đá nhung viền đỏ có lớp lông nhỏ và nhiều trên lá, sờ lá rất mượt và mền như nhung. Cây mang ý nghĩa một cuộc sống đầy đủ trong nhung gấm lụa là. Cây phù hợp để bàn làm việc, bàn học, trang trí quán cà phê, bàn tiếp khách, lễ tân..',
+               'content' => '<p>Sen đ&aacute; nhung viền đỏ l&agrave; sản phẩm kh&aacute; giống với nhung viền đen, tuy nhi&ecirc;n th&igrave; nhung viền đỏ c&oacute; l&aacute; nhọn hơn v&agrave; l&aacute; b&eacute; hơn so với nhung viền đen. L&aacute; c&acirc;y cũng c&oacute; l&ocirc;ng m&agrave;u trắng nhưng nhỏ v&agrave; mịn hơn sen đ&aacute; nhung viền đen&nbsp;&nbsp;M&agrave;u đỏ đậm nhạt của l&aacute; thể hiện t&igrave;nh trạng c&acirc;y đủ nắng hay thiếu nắng. C&acirc;y mang &yacute; nghĩa một cuộc sống nhung gấm lụa l&agrave;.</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/nhung-vien-do.jpg" style="height:309px; width:400px" /></p>
+               
+               <h2>C&Aacute;CH CHĂM S&Oacute;C SEN Đ&Aacute; NHUNG VIỀN ĐỎ</h2>
+               
+               <p>L&aacute; của sen đ&aacute; nhung viền đỏ ch&iacute;nh l&agrave; giấy quỳ b&aacute;o hiệu t&igrave;nh trạng của c&acirc;y. Nếu c&acirc;y thiếu nước l&aacute; sẽ quắt v&agrave; kh&ocirc;ng được căng mọng, nếu c&acirc;y thiếu nắng viền đ&oacute; v&agrave; m&agrave;u l&aacute; sẽ nhạt dần v&agrave; rủ xuống gần mặt đất. Dựa v&agrave;o đ&acirc;y bạn c&oacute; thể điều chỉnh được nước v&agrave; &aacute;nh nắng cho&nbsp;<em><strong>sen đ&aacute; nhung viền đỏ</strong></em>.</p>
+               
+               <h3><strong>NƯỚC</strong></h3>
+               
+               <p>1 tuần bạn tưới nước một lần, kh&ocirc;ng tưới v&agrave;o c&acirc;y v&agrave; l&aacute; c&acirc;y, c&aacute;ch tưới tốt nhất l&agrave; ngấm ngược để chậu c&acirc;y v&agrave; bồn, khay nước c&oacute; mực nước bằng 1/3 chiều cao chậu để trong 40s th&igrave; nhấc ra, v&igrave; ở dưới đ&aacute;y chậu c&oacute; lỗ tho&aacute;t nước n&oacute; sẽ ngấm ngược nước ở dưới l&ecirc;n, sẽ đảm bảo đất kh&ocirc;ng bị ẩm qu&aacute;.</p>
+               
+               <h3><strong>&Aacute;NH S&Aacute;NG</strong></h3>
+               
+               <p>Bạn để nơi c&oacute; &aacute;nh s&aacute;ng trực tiếp hoặc c&oacute; m&aacute;i che 30% l&agrave; tốt nhất, n&ecirc;n tr&aacute;nh để c&acirc;y&nbsp;<strong>sen đ&aacute; nhung viền đỏ</strong>&nbsp;v&agrave;o giữa trưa nắng, trời m&ugrave;a h&egrave; như vậy sẽ l&agrave;m c&acirc;y bị h&eacute;o. &Aacute;nh nắng rất tốt cho c&acirc;y, kh&ocirc;ng chỉ gi&uacute;p c&acirc;y quang hợp m&agrave; n&oacute; c&ograve;n tạo n&ecirc;n sắc đẹp cho l&aacute;, v&agrave; khử c&aacute;c nấm mốc ở đất trồng.</p>',
+               'user_id' => '3',
+               'category_id' => '5',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Sen Đá Lá Tim',
+               'slug' => Str::of('Sen Đá Lá Tim')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/tkRp1s7s35lGrNeatznNHBYUMPDro1wN.jpg',
+               'feature_image_name' => 'sen-da-la-tim-1.jpg',
+               'price' => '29000',
+               'sale_price' => '0',
+               'final_price' => 29000,
+               'content_short' => 'Cây sen đá lá tim có lá dày, khi mọc lên tường mọc 2 lá một giống hệt hình trái tim có màu xanh xẫm nhìn cây rất cứng cáp và có sức sống.',
+               'content' => '<p>Sen đ&aacute; l&aacute; tim biểu tượng cho t&igrave;nh y&ecirc;u vĩnh cửu. L&agrave; c&acirc;y thuộc họ bỏng mọng nước c&oacute; khả năng t&iacute;ch trữ nước trong l&aacute; để chịu nắng, kh&ocirc; k&eacute;o d&agrave;i cả th&aacute;ng, nhưng c&acirc;y lại kh&ocirc;ng chịu được ẩm ướt 4 -5 li&ecirc;n tiếp. C&acirc;y sen đ&aacute; l&aacute; tim c&oacute; l&aacute; d&agrave;y, khi mọc l&ecirc;n tường mọc 2 l&aacute; một giống hệt h&igrave;nh tr&aacute;i tim c&oacute; m&agrave;u xanh xẫm nh&igrave;n c&acirc;y rất cứng c&aacute;p v&agrave; c&oacute; sức sống.</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/sen-da-la-tim.jpg" style="height:264px; width:400px" /></p>
+               
+               <h2>CHĂM S&Oacute;C SEN Đ&Aacute; L&Aacute; TIM</h2>
+               
+               <p>Như m&igrave;nh đ&atilde;&nbsp;chia sẻ ở tr&ecirc;n th&igrave;&nbsp;<em><strong><a href="https://webcaycanh.com/sen-da-la-tim/">s</a>en đ&aacute; l&aacute; tim</strong></em>&nbsp;l&agrave; loại c&acirc;y mọng nước, giống như sương rồng c&oacute; khả năng t&iacute;ch trữ nước để c&oacute; thể chịu được kh&ocirc; hạn v&agrave; nắng n&oacute;ng, tuy nhi&ecirc;n n&oacute; lại kh&ocirc;ng chịu được c&aacute;i r&eacute;t v&agrave; mưa triền mi&ecirc;n. V&igrave; vậy điều kiện th&iacute;ch hợp nhất cho sen đ&aacute; l&aacute; tim l&agrave;:</p>
+               
+               <h3><strong>&Aacute;NH S&Aacute;NG</strong></h3>
+               
+               <p>Sen đ&aacute; l&aacute; tim cần &aacute;nh s&aacute;ng để quang hợp với n&oacute; cũng như <em>c&aacute;c loại sen đ&aacute;</em>&nbsp;kh&aacute;c th&iacute;ch &aacute;nh s&aacute;ng buổi sớm, c&oacute; thể chịu được &aacute;nh nắng trực tiếp nhưng kh&ocirc;ng n&ecirc;n để c&acirc;y ra &aacute;nh nắng qu&aacute; gắt như nắng m&ugrave;a h&egrave; buổi trưa. Nhiệt độ th&iacute;ch hợp l&agrave; 15 &ndash; 35 độ, vậy n&ecirc;n để c&acirc;y v&agrave;o chỗ c&oacute; m&aacute;i che nhưng vấn đảm bảo &aacute;nh s&aacute;ng như cửa sổ ban c&ocirc;ng, vừa c&oacute; &aacute;nh nắng m&agrave; tr&aacute;nh được mưa b&atilde;o.</p>
+               
+               <h3><strong>NƯỚC</strong></h3>
+               
+               <p>Đối với nước th&igrave; rất cần cho c&acirc;y để gi&uacute;p c&aacute;c chất kho&aacute;ng, dinh dưỡng ở đất vận chuyển từ rễ đưa l&ecirc;n nu&ocirc;i c&acirc;y, nhưng bản chỉ cần tưới 1 tuần/lần l&agrave; đủ nếu trời n&oacute;ng, thời tiết kh&ocirc; c&oacute; thể l&agrave; 2 lần.</p>',
+               'user_id' => '3',
+               'category_id' => '5',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Sen Đá Chuỗi Ngọc Bi',
+               'slug' => Str::of('Sen Đá Chuỗi Ngọc Bi')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/wbovBh7bgzyILdbgUHyus2v4boWxrCxn.jpg',
+               'feature_image_name' => 'sen-da-chuoi-ngoc-bi-1.jpg',
+               'price' => '29000',
+               'sale_price' => '0',
+               'final_price' => 29000,
+               'content_short' => 'Sen đá chuỗi ngọc bi mang đến sự đầy đủ, lúc nào cũng căng tròn và mũn mĩn. Cây phù hợp để ở cửa sổ, hiên trước cửa nhà, sảnh khách sạn...',
+               'content' => '<p>Mũm mĩn v&agrave; đầy đặn đ&oacute; l&agrave; 2 từ rất hợp l&yacute; v&agrave; ch&iacute;nh x&aacute;c để mi&ecirc;u tả sen đ&aacute; chuỗi ngọc bi. L&agrave; một trong những loại sen đ&aacute; khi lớn c&oacute; khả năng rủ xuống v&agrave; ra hoa, n&ecirc;n n&oacute; khiến nhiều người th&iacute;ch ngay từ c&aacute;i nh&igrave;n đầu ti&ecirc;n. C&acirc;y ph&ugrave; hợp trồng trong chậu treo để ngo&agrave;i h&agrave;ng lang, cửa sổ, s&acirc;n&hellip;</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/chuoi-ngoc-bi.jpg" style="height:550px; width:550px" /></p>
+               
+               <h3><strong>NƯỚC</strong></h3>
+               
+               <p>Một tuần bạn chỉ cần tưới nước một lần cho c&acirc;y để đam bảo sự sinh trưởng v&agrave; ph&aacute;t triển tốt.</p>
+               
+               <h3><strong>ĐẤT TRỒNG</strong></h3>
+               
+               <p>Loại tơi xốp dễ tho&aacute;t nước, c&oacute; thể bạn trộn th&ecirc;m với tro, chấu, m&ugrave;n để c&oacute; loại đất ưa th&iacute;ch cho sen đ&aacute; chuỗi ngọc bi.</p>
+               
+               <h3><strong>&Aacute;NH S&Aacute;NG</strong></h3>
+               
+               <p>&Aacute;nh s&aacute;ng lu&ocirc;n rất cần đối với c&aacute;c loại c&acirc;y v&agrave; <strong><em>sen đ&aacute; chuỗi ngọc bi&nbsp;</em></strong>cũng kh&ocirc;ng l&agrave; ngoại lệ, n&oacute; th&iacute;ch &aacute;nh s&aacute;ng nhất l&agrave; &aacute;nh s&aacute;ng buổi sớm, nhưng n&ecirc;n tr&aacute;nh những nơi c&oacute; &aacute;nh nắng gắt như buổi trưa trời m&ugrave;a h&egrave; sẽ khiến c&acirc;y nhanh ch&oacute;ng kh&ocirc; h&eacute;o.</p>
+               
+               <h3><strong>NH&Acirc;N GIỐNG</strong></h3>
+               
+               <p>L&agrave; loại ph&aacute;t triển rất nhanh sen đ&aacute; chuỗi ngọc bi c&oacute; thể nh&acirc;n giống từ l&aacute; hoặc gi&acirc;m c&agrave;nh đều c&oacute; thể ph&aacute;t triển th&agrave;nh c&acirc;y.</p> ',
+               'user_id' => '3',
+               'category_id' => '5',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Sen Đá Móng Rồng Viền Trắng',
+               'slug' => Str::of('Sen Đá Móng Rồng Viền Trắng')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/mWMSFOSrUvsVum1kZbcEv1X0Pur1J3oQ.jpg',
+               'feature_image_name' => 'mong-rong-vien-trang-1.jpg',
+               'price' => '29000',
+               'sale_price' => '0',
+               'final_price' => 29000,
+               'content_short' => 'Sen đá móng rồng viền trắng hay còn gọi là sen ngựa vằn, lá dài và nhọn ở đầu, mọc xung quanh trục, trên lá còn có các viền trắng nhỏ giống như chú ngựa vằn. Cây phù hợp để bàn làm viêc, bàn học, trang trí bàn cà phê...',
+               'content' => '<p>Sen đ&aacute; m&oacute;ng rồng viền trắng hay c&ograve;n gọi l&agrave; sen ngựa vằn, l&aacute; d&agrave;i v&agrave; nhọn ở đầu, mọc xung quanh trục, tr&ecirc;n l&aacute; c&ograve;n c&oacute; c&aacute;c viền trắng nhỏ giống như ch&uacute; ngựa vằn. C&acirc;y c&oacute; hoa m&agrave;u nhưng kh&ocirc;ng nở to hoa mọc th&agrave;nh ch&ugrave;m mỗi hoa chỉ sống được tầm 2 ng&agrave;y nhưng ra li&ecirc;n tiếp nhau, hoa n&agrave;y t&agrave;n hoa kia lại nở suốt một m&ugrave;a. C&acirc;y mang&nbsp;&yacute; nghĩa&nbsp;cho&nbsp;sự bảo vệ v&agrave; che chở, c&acirc;y ph&ugrave; hợp để b&agrave;n l&agrave;m việc, b&agrave;n học, tiểu cảnh&hellip;</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/mong-rong-vien-trang.jpg" style="height:533px; width:400px" /></p>
+               
+               <h2>C&Aacute;CH CHĂM S&Oacute;C SEN Đ&Aacute; M&Oacute;NG RỒNG VIỀN TRẮNG</h2>
+               
+               <p><strong>Sen đ&aacute; m&oacute;ng rồng viền trắng&nbsp;</strong>cũng thuộc loại chăm s&oacute;c tương tự như xương rồng, n&oacute; cần nhiều &aacute;nh nắng, kh&ocirc;ng cần nhiều nước, n&ecirc;n bạn chăm s&oacute;c loại c&acirc;y sen đ&aacute; m&oacute;ng rồng viền trắng n&agrave;y rất đơn giản v&agrave; kh&ocirc;ng tốn qu&aacute; nhiều c&ocirc;ng sức, c&oacute; thể 1 tuần bạn chỉ cần tưới nước 1 lần.</p>
+               
+               <p>C&aacute;ch tưới nước tốt nhất cho sen đ&aacute;&nbsp;&nbsp;l&agrave; bạn tưới ở m&eacute;p chậu để nước ngấm v&agrave; c&acirc;y hoặc tưới theo c&aacute;ch ngấm ngược l&agrave; để chậu v&agrave;o khay c&oacute; mực nước cao bằng 1/3 chiều cao của chậu để trong 30s rồi nhấc ra. Bạn c&oacute; thể kiểm tra xem nước đ&atilde; ngấm v&agrave;o đất chưa ( v&igrave; c&oacute; thể n&oacute; bị tắc lỗ tho&aacute;t nước ở dưới đ&aacute;y nước kh&ocirc;ng ngấm được l&ecirc;n ) bằng c&aacute;ch d&ugrave;ng que tăm kh&ocirc; cắm v&agrave;o chậu.</p>
+               
+               <p>H&atilde;y nhớ cho n&oacute; tắm nắng thường xuy&ecirc;n. Nếu bạn để trong văn ph&ograve;ng th&igrave; 2 -3 ng&agrave;y n&ecirc;n cho c&acirc;y ra nắng một lần.</p>
+               
+               <p>Lưu &yacute;: Tr&aacute;nh ng&agrave;y n&agrave;o cũng tưới nước hoặc vảy nước l&ecirc;n l&aacute; v&igrave; l&aacute;&nbsp;<strong><em>m&oacute;ng rồng viền trắng</em></strong>&nbsp;ở kẽ nước rất kh&oacute; tho&aacute;t nước, để nước l&acirc;u trong đ&oacute; sẽ dẫn đến thối l&aacute;. Khi l&aacute; kh&ocirc;ng được căng mọc, h&eacute;o quắt l&agrave; biểu hiện thiếu nước. L&aacute; thưa m&agrave;u kh&ocirc;ng đẹp l&agrave; thiếu nắng v&agrave; thi&ecirc;u th&ocirc;ng tho&aacute;ng.</p>',
+               'user_id' => '3',
+               'category_id' => '5',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Sen Đá Thạch Bích Cánh Bướm',
+               'slug' => Str::of('Sen Đá Thạch Bích Cánh Bướm')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/pwxeOvH9dOtG3qFIk0fuXIFz5WEiJjxg.jpg',
+               'feature_image_name' => 'sen-da-thach-bich-canh-buom-1.jpg',
+               'price' => '29000',
+               'sale_price' => '0',
+               'final_price' => 29000,
+               'content_short' => 'Sen đá thạch bích cánh bướm có ý nghĩa mạng đến sự giàu sang mà chung thủy. Cây phù để bàn làm việc, bàn học, tiểu cảnh...',
+               'content' => '<p>Sen đ&aacute; thạch b&iacute;ch c&aacute;nh bướm l&agrave; c&acirc;y thuộc loại họ bỏng, c&acirc;y xanh tốt quanh năm, l&aacute; c&oacute; m&agrave;u xanh, nhẵn, b&oacute;ng, h&igrave;nh dạng giống c&aacute;nh bướm, viền l&aacute; c&oacute; m&agrave;u t&iacute;m, c&acirc;y thường ra hoa v&agrave;o m&ugrave;a xu&acirc;n hoặc cuối đ&ocirc;ng. Sen đ&aacute; thạch b&iacute;ch c&aacute;nh bướm mang đến t&agrave;i lộc, gi&agrave;u c&oacute; v&agrave; ph&uacute; qu&yacute;.</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/sen-da-thach-bich-canh-buom.jpg" style="height:561px; width:480px" /></p>
+               
+               <h3><strong>NƯỚC</strong></h3>
+               
+               <p>Nước l&agrave; một trong những yếu tố kh&oacute; khăn v&agrave; kh&oacute; điều ch&iacute;nh nhất đối với tất cả loại sen đ&aacute;. Sen đ&aacute; hường l&agrave; loại mọng nước ch&uacute;ng kh&ocirc;ng cần qu&aacute; nhiều nước vẫn c&oacute; thể sống tốt. Bạn c&oacute; thể tưới trực tiếp v&agrave;o c&acirc;y sen đ&aacute; thạch b&iacute;ch c&aacute;nh bướm, nếu l&uacute;c c&oacute; hoa th&igrave; bạn n&ecirc;n bớt tưới v&agrave; kh&ocirc;ng tưới l&ecirc;n hoa. Ngo&agrave;i ra bạn c&oacute; thể tưới theo c&aacute;ch ngấm ngược, c&aacute;ch n&agrave;y l&agrave; c&aacute;ch tốt nhất v&agrave; &aacute;p dụng cho tất cả c&aacute;c loại sen đ&aacute;.</p>
+               
+               <h3><strong>C&Aacute;CH TƯỚI NƯỚC</strong></h3>
+               
+               <p>Bạn đặt chậu c&acirc;y v&agrave;o khay nước c&oacute; mực nước cao bằng 1/3 chiều cao chậu. Bạn để vậy trong 30s nhấc ra. Chỉ cần l&agrave;m thế 1 tuần/ lần l&agrave; c&acirc;y c&oacute; thể sống tốt. Nếu trời n&oacute;ng, kh&ocirc; bạn c&oacute; thể tưới tăng th&ecirc;m 1 lần l&agrave; 2 lần tr&ecirc;n tuần l&agrave; đủ.</p>
+               
+               <h3><strong>&Aacute;NH S&Aacute;NG</strong></h3>
+               
+               <p>&Aacute;nh s&aacute;ng quyết định mầu sắc của&nbsp;l&aacute; c&acirc;y m&agrave;u xanh đậm hay nhạt, viền l&aacute; c&oacute; mầu t&iacute;m hay hồng. Nếu c&acirc;y c&agrave;ng được tiếp x&uacute;c nhiều với &aacute;nh s&aacute;ng th&igrave; m&agrave;u l&aacute; c&agrave;ng đẹp.</p>
+               
+               <p>Đối với c&acirc;y để trong văn ph&ograve;ng 2 -3 ng&agrave;y bạn lại cho c&acirc;y tắm nắng 1 lần mỗi lần 8h nh&eacute;. Hoặc bạn c&oacute; thể l&agrave;m theo c&aacute;ch trước khi ra về để ở nơi c&oacute; &aacute;nh s&aacute;ng b&igrave;nh m&igrave;nh, v&agrave; s&aacute;ng mai đi l&agrave;m bạn lại đem c&acirc;y v&agrave;o. Tuy nhi&ecirc;n ch&uacute; &yacute; kh&ocirc;ng để c&acirc;y ở &aacute;nh nắng qu&aacute; gắt sẽ l&agrave;m ch&aacute;y l&agrave;, như nhưng thời điểm 12h trưa v&agrave; m&ugrave;a h&egrave;.</p>
+               
+               <h3><strong>ĐẤT TRỒNG</strong></h3>
+               
+               <p>Ngo&agrave;i loại đất chua l&agrave; kh&ocirc;ng th&iacute;ch hợp với sen đ&aacute; thạch b&iacute;ch th&igrave; tất cả đều ph&ugrave; hợp. Tuy nhi&ecirc;n nếu bạn trồng trong chậu th&igrave; diện t&iacute;ch chậu nhỏ n&ecirc;n cần nhiều dinh dưỡng hơn v&agrave; cần phải thay đất mỗi năm.</p>',
+               'user_id' => '3',
+               'category_id' => '5',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Sen Đá Tứ Phương',
+               'slug' => Str::of('Sen Đá Tứ Phương')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/BAMEyDere3Vi2q4moxq3zVvTU7CzMv9h.jpg',
+               'feature_image_name' => 'sen-da-tu-phuong-1.jpg',
+               'price' => '29000',
+               'sale_price' => '0',
+               'final_price' => 29000,
+               'content_short' => 'Sen đá tứ phương mang ý nghĩa dù bạn có ở bốn phương trời, hay ở đi đâu cũng sẽ được may mắn, cây phù hợp để bàn làm việc, quán cà phê, bàn học...Hoặc để làm tiểu cảnh',
+               'content' => '<h2>C&Aacute;CH CHĂM S&Oacute;C SEN Đ&Aacute; TỨ&nbsp;PHƯƠNG</h2>
+
+               <p><strong>&Aacute;nh s&aacute;ng</strong></p>
+               
+               <p><strong>Sen đ&aacute; tứ&nbsp;phương</strong>&nbsp;chăm s&oacute;c kh&aacute; dễ d&agrave;ng, c&acirc;y rất dễ sống, bạn cần cho c&acirc;y c&oacute; đủ nắng để c&oacute; m&agrave;u sắc đẹp v&agrave; xanh tốt, sen đ&aacute; tứ phương th&iacute;ch nhất l&agrave; &aacute;nh s&aacute;ng l&uacute;c sớm v&agrave; ho&agrave;ng h&ocirc;n.</p>
+               
+               <p><strong>Nước</strong></p>
+               
+               <p>Kh&ocirc;ng như c&aacute;c loại sen đ&aacute; kh&aacute;c loại sen đ&aacute; n&agrave;y bạn c&oacute; thể tưới trực tiếp l&ecirc;n c&acirc;y, c&aacute;ch tốt nhất l&agrave; để chậu v&agrave;o trong một khay nước c&oacute; mực nước bằng 1/3 chiều cao của chậu, để trong khay 30s rồi bạn nhấc chậu ra. 1 tuần bạn chị n&ecirc;n tưới nước 1 -2 lần mỗi lần tưới bạn thử nhấc chậu n&ecirc;n khi cảm nặng hơn 1/2 trọng lượng ban đầu l&agrave; được đối với c&aacute;c loại chứa c&acirc;y nhẹ, c&ograve;n chậu c&acirc;y nặng th&igrave; bạn tự cảm nhận hoặc d&ugrave;ng tăm cắm v&agrave;o đất để thử độ ẩm, vừa tưới xong th&igrave; ẩm 3/4 đất l&agrave; ok.</p>
+               
+               <p><strong>Đất</strong></p>
+               
+               <p>1 năm bạn n&ecirc;n thay đất một lần đất bạn c&oacute; thể mua ở ngo&agrave;i tiệm, nếu c&oacute; tro th&igrave; c&aacute;c bạn c&oacute; thể trộn th&ecirc;m v&agrave;o để đất đựng&nbsp;<strong>sen đ&aacute; tư phương</strong>&nbsp;dễ tho&aacute;t nước v&agrave; dễ c&acirc;y cũng dễ ph&aacute;t triển. Khi n&agrave;o rễ mọc xuống tận đ&aacute;y chậu trồi ra ngo&agrave;i lỗ tho&aacute;t nước l&uacute;c đ&oacute; bạn c&oacute; thể thay chậu kh&aacute;c to hơn</p>',
+               'user_id' => '3',
+               'category_id' => '5',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Sen Đá Hàm Cá Sấu',
+               'slug' => Str::of('Sen Đá Hàm Cá Sấu')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/FxqZLohveWHqOnbHoulgehAMlhiQuKis.jpg',
+               'feature_image_name' => 'sen-da-ham-ca-sau-1.jpg',
+               'price' => '29000',
+               'sale_price' => '0',
+               'final_price' => 29000,
+               'content_short' => 'Cây sen đá hàm cá sấu mang ý nghĩa con người luôn có điểm tốt điểm xấu, bạn đừng nên nhìn mà điểm xấu mà quên đi cái tốt, nhìn vào cái tốt để suy nghĩ tích cực để cuộc sống vui vẻ hơn. Cây phù hợp để ở bàn làm việc, góc học tập, trồng với tiểu cảnh, các góc riêng nhỏ.',
+               'content' => '<p>L&agrave; một trong những loại sen đ&aacute; kh&aacute; gai g&oacute;c nh&igrave;n rất giống xương rồng, nhưng gai của n&oacute; lại rất mềm khi mọc trồi non l&ecirc;n nh&igrave;n như h&agrave;m con c&aacute; sấu, c&oacute; lẽ bạn mới nh&igrave;n kh&ocirc;ng th&iacute;ch n&oacute; đ&acirc;u nhưng khi n&oacute; ra hoa th&igrave; suy nghĩ của bạn sẽ ho&agrave;n to&agrave;n kh&aacute;c. C&acirc;y mang &yacute; nghĩa con người lu&ocirc;n c&oacute; điểm tốt điểm xấu, bạn đừng n&ecirc;n nh&igrave;n v&agrave;o c&aacute;i xấu m&agrave; qu&ecirc;n đi những việc l&agrave;m tốt trước đ&oacute;.</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/sen-da-ham-ca-sau.jpg" style="height:425px; width:640px" /></p>
+               
+               <h2>CHĂM S&Oacute;C SEN Đ&Aacute; H&Agrave;M C&Aacute; SẤU</h2>
+               
+               <p><strong>&Aacute;nh s&aacute;ng:</strong></p>
+               
+               <p>H&atilde;y đảm bảo&nbsp;<strong>&aacute;nh s&aacute;ng của sen đ&aacute; h&agrave;m c&aacute; sấu</strong>&nbsp;để c&acirc;y lu&ocirc;n c&oacute; m&agrave;u sắc tươi tắn v&agrave; nhiều l&aacute;, nếu thiếu nắng c&acirc;y sẽ nhạt m&agrave;u v&agrave; thưa l&aacute;.</p>
+               
+               <p>Nếu bạn để trong văn ph&ograve;ng th&igrave; 2 &ndash; 3 ng&agrave;y n&ecirc;n cho c&acirc;y ra ngo&agrave;i tắm nắng 8 tiếng. Hoặc trước khi ra về bạn mang c&acirc;y ra ngo&agrave;i cửa c&oacute; chỗ che chắn mưa, nhưng vẫn đảm bảo &aacute;nh s&aacute;ng buổi sớm c&oacute; thể chiếu v&agrave;o c&acirc;y, đến s&aacute;ng ng&agrave;y mai đi l&agrave;m lại mang c&acirc;y v&agrave;o.</p>
+               
+               <p>Đ&ocirc;i với những chỗ vẫn c&oacute; &aacute;nh nắng nhưng kh&ocirc;ng nhiều th&igrave; vẫn c&oacute; thể chập nhận được đối với sen đ&aacute; h&agrave;m c&aacute; sấu.</p>
+               
+               <p><strong>Nước:</strong></p>
+               
+               <p>Tưới nước cho c&acirc;y 1 -2 lần / tuần mỗi lần khoảng 1/2 lượng nước ngấm v&agrave;o bầu đất. C&aacute;c tốt nhất l&agrave; bạn cho c&acirc;y v&agrave;o chậu nước với mực nước 1/3 chậu rồi cho nước thấm ngược từ đ&aacute;y chậu l&ecirc;n l&agrave; tốt nhất khoảng 30s để trong chậu nước hoặc bạn tự cảm nhận điều n&agrave;y.</p>
+               
+               <p>Tưới bằng b&igrave;nh phun sương bạn c&oacute; thể tưới l&ecirc;n c&acirc;y ở vị tr&iacute; xa thay v&igrave; tưới trực tiếp v&agrave;o c&acirc;y, nếu kh&ocirc;ng c&oacute; b&igrave;nh ph&ugrave;n sương th&igrave; bạn h&atilde;y tưới ở ngo&agrave;i th&agrave;nh chậu để nước ngẫm dần v&agrave;o giữa</p>
+               
+               <p><strong>Nhiệt độ:</strong></p>
+               
+               <p>Nhiệt độ từ 15 &ndash; 35*c l&agrave; nhiệt độ th&iacute;ch hợp nhất cho&nbsp;<em>c&acirc;y sen đ&aacute; c&aacute; sấu.</em></p>
+               
+               <p><strong>Đất trồng:</strong></p>
+               
+               <p>C&oacute; thể 3 th&aacute;ng bạn n&ecirc;n bổ sung dinh dưỡng cho c&acirc;y v&agrave; 1 năm n&ecirc;n thay đất 1 lần, c&oacute; thể mua lu&ocirc;n đất ở cửa h&agrave;ng cho tiện</p>
+               
+               <p><strong>Nh&acirc;n giống:</strong></p>
+               
+               <p>C&acirc;y sen đ&aacute; c&aacute; sấu ph&aacute;t triển rất mạnh c&oacute; thể gi&acirc;m c&agrave;nh hoặc l&aacute; cũng c&oacute; thể l&ecirc;n c&acirc;y con</p>
+               
+               <p><strong>Ch&uacute; &yacute;:</strong></p>
+               
+               <p>C&acirc;y nhũn l&aacute; trong trường hợp l&aacute; chưa gi&agrave; th&igrave; c&oacute; nghĩa c&acirc;y đang bị &uacute;ng nước cần phải thay đất cho c&acirc;y, l&aacute; c&acirc;y kh&ocirc;ng căng nhăn nheo l&agrave; đ&atilde; thiếu nước, m&agrave;u sắc kh&ocirc;ng tươi l&aacute; thưa l&agrave; thiếu nắng. C&acirc;y thường chết v&igrave; l&yacute; do &uacute;ng nước n&ecirc;n c&aacute;c bạn ch&uacute; &yacute; lượng nước tưới nh&eacute;!</p>',
+               'user_id' => '3',
+               'category_id' => '5',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Sen Đá Mặt Nạ',
+               'slug' => Str::of('Sen Đá Mặt Nạ')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/kljF1oMMGRkP4MUTexlZwTatDT5ZtzCM.jpg',
+               'feature_image_name' => 'sen-da-mat-na-1.jpg',
+               'price' => '29000',
+               'sale_price' => '0',
+               'final_price' => 29000,
+               'content_short' => 'Sen đá mặt nạ có ý nghĩa mong muốn người được nhận hoặc là tự bản thân tự nhủ với mình hãy luôn sống thật với cá tính và phong cách của mình. Cây thường phù hợp trồng thêm với tiểu cảnh hoặc cách cây sen đá khác.',
+               'content' => '<p>Sen đ&aacute; mặt nạ c&oacute; t&ecirc;n khoa học l&agrave; Delosperma echinatum. Đ&acirc;y l&agrave; một lo&agrave;i c&acirc;y mộng nước, bản địa ở Nam Phi. Lo&agrave;i c&acirc;y n&agrave;y c&ograve;n c&oacute; t&ecirc;n tiếng Anh kh&aacute;c l&agrave; &lsquo;pickle plant&rsquo;. C&acirc;y c&oacute; một lớp gai nấm tấm nhỏ tr&ecirc;n l&aacute; v&agrave; th&acirc;n c&oacute; lẽ ch&iacute;nh v&igrave; l&yacute; do đ&oacute; m&agrave; n&oacute; c&oacute; t&ecirc;n l&agrave; sen đ&aacute; mặt nạ&nbsp;C&acirc;y mang &yacute; nghĩa h&atilde;y sống thật với bản th&acirc;n đừng sống với chiếc mặt nạ.</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/sen-da-mat-na.jpg" style="height:428px; width:400px" /></p>
+               
+               <h2>C&Aacute;CH CHĂM S&Oacute;C SEN Đ&Aacute; MẶT LẠ</h2>
+               
+               <p>Cũng thuộc loại c&acirc;y bụi nếu được chăm s&oacute;c một c&aacute;ch tốt v&agrave; ph&ugrave; hợp c&acirc;y sẽ đẻ rất nhanh đến m&ugrave;a bạn c&oacute; thể thưởng thức c&aacute;i đẹp của những b&ocirc;ng hoa nhỏ s&iacute;u giữ một nền xanh thẫm.</p>
+               
+               <h3>1. ĐẤT TRỒNG</h3>
+               
+               <p>Đất trồng kh&aacute; quan trọng với tất cả loại c&acirc;y, nếu đất tốt th&igrave; bạn c&oacute; thể &iacute;t chăm s&oacute;c m&agrave; c&acirc;y vấn phất triển một c&aacute;ch b&igrave;nh thường.&nbsp;<strong>Sen đ&aacute; mặt nạ</strong>&nbsp;y&ecirc;u cầu loại đất trồng c&oacute; khả năng tho&aacute;t nước tốt, c&oacute; thể sử dụng c&aacute;c th&agrave;nh phần bao gồm: Sỉ Than, tro, đất pha c&aacute;t, ph&acirc;n b&ograve;, ph&acirc;n dynamic. Hoặc đơn giản hơn l&agrave; d&ugrave;ng hỗ hợp c&aacute;t, sỏi, đất pha c&aacute;t v&agrave; ph&acirc;n &hellip;t&ugrave;y vật liệu bạn c&oacute;, điều quan trọng l&agrave; hỗn hợp đất cần tho&aacute;t nước thật tốt.</p>
+               
+               <h3>2. TƯỚI NƯỚC</h3>
+               
+               <p>Nước tưới l&agrave; điều kiện rất quan trọng trong việc&nbsp;<em><strong>chăm s&oacute;c sen đ&aacute; mặt nạ</strong></em>, thừa nước hoặc bị &uacute;ng l&acirc;u ng&agrave;y c&acirc;y rễ bị thối, thiếu nước c&acirc;y c&oacute; biểu hiện l&aacute; nhăn, m&agrave;u sắc nhạt kh&ocirc;ng đẹp.</p>
+               
+               <p><strong>Loại nước tưới:</strong>&nbsp;c&oacute; thể sử dụng c&aacute;c loại nước c&oacute; độ PH trung b&igrave;nh 5,5-7 như nước mưa hay nước m&aacute;y để tưới</p>
+               
+               <p><strong>Lượng nước tưới</strong>: Tưới cho nước ngấm đủ xuống rễ c&acirc;y khoảng 3/4 chậu trồng, kh&ocirc;ng n&ecirc;n để nước đọng l&ecirc;n ngọn c&acirc;y nếu bạn để c&acirc;y nơi nhiệt độ thấp. Lượng nước tưới phụ thuộc độ th&ocirc;ng tho&aacute;ng, nhiệt độ nơi trồng, sự tho&aacute;t nước của đất trồng&hellip;. Để c&acirc;y ở nơi kh&ocirc; r&aacute;o tho&aacute;ng m&aacute;t, nhiệt độ cao th&igrave; c&oacute; thể tưới nhiều v&agrave; ngược lại. Th&ocirc;ng thường thời gian tưới nước lại th&iacute;ch hợp l&agrave; từ 2-5 ng&agrave;y t&ugrave;y điều kiện m&ocirc;i trường, khi đất đ&atilde; kh&ocirc; ho&agrave;n to&agrave;n.</p>
+               
+               <p><strong>C&aacute;ch tưới</strong>: C&oacute; thể tưới trực tiếp từ tr&ecirc;n xuống, tưới c&agrave;ng gần m&eacute;p chậu c&agrave;ng tốt. Qu&yacute; kh&aacute;ch n&ecirc;n sử dụng phương ph&aacute;p tưới thẩm thấu ngược rất an to&agrave;n cho c&acirc;y như sau: D&ugrave;ng một chậu nước với &iacute;t nước trong đ&oacute;, sau đ&oacute; ng&acirc;m &frac14; chậu c&acirc;y v&agrave;o nước trong khoảng 2-3 ph&uacute;t cho nước thấm từ đ&aacute;y chậu l&ecirc;n. C&oacute; thể đặt chậu c&acirc;y l&ecirc;n một c&aacute;i khay th&iacute;ch hợp v&agrave; tưới nước v&agrave;o khay thay v&igrave; tưới l&ecirc;n c&acirc;y sẽ an to&agrave;n hơn. Nước sẽ thấm từ đ&aacute;y chậu l&ecirc;n rễ. khay c&oacute; chiều cao 0.5-2 cm t&ugrave;y thuộc chiều cao chậu trồng, kh&ocirc;ng cao qu&aacute; 1/3 chiều cao chậu.Khi n&agrave;o thấy kh&ocirc; hết nước th&igrave; 2-3 ng&agrave;y sau tưới tiếp. Hoặc c&oacute; thể d&ugrave;ng b&igrave;nh sịt xương để tưới cho c&acirc;y</p>
+               
+               <p>Số lần tưới: phụ thuộc v&agrave;o thời tiết, nếu thời tiết m&aacute;t mẻ hoặc mưa nhiều tưới 1-2 lần/ tuần, v&agrave; th&ecirc;m 1-2 lần/tuần nếu trời n&oacute;ng. N&ecirc;n quan s&aacute;t kỹ đất trồng kh&ocirc; hẳn ta mới tưới.</p>
+               
+               <h3>3. &Aacute;NH S&Aacute;NG V&Agrave; KH&Ocirc;NG KH&Iacute;</h3>
+               
+               <p><strong>Sen đ&aacute; mặt nạ</strong>&nbsp;ưa &aacute;nh s&aacute;ng dịu như v&agrave;o buổi s&aacute;ng đến l&uacute;c 9h&nbsp;v&agrave; kh&ocirc;ng kh&iacute; tho&aacute;ng m&aacute;t n&ecirc;n để c&acirc;y nơi c&oacute; đủ &aacute;nh s&aacute;ng v&agrave; tho&aacute;ng m&aacute;t c&acirc;y sẽ ph&aacute;t triển tốt nhất. Khi chăm s&oacute;c c&acirc;y qu&yacute; kh&aacute;ch n&ecirc;n quan s&aacute;t l&aacute; để biết c&acirc;y c&oacute; thiếu nắng hay kh&ocirc;ng, biểu hiện th&ocirc;ng thường của việc thiếu nắng l&agrave; l&aacute; c&acirc;y rủ xuống v&agrave; nhạt m&agrave;u đi.</p>',
+               'user_id' => '3',
+               'category_id' => '5',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
         ]);
     }
 }

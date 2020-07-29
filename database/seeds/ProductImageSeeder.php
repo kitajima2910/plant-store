@@ -612,6 +612,99 @@ class ProductImageSeeder extends Seeder
                'updated_at' => Carbon::now(),   
             ],
         
+
+            //CÂY CẢNH SEN ĐÁ
+            [ 
+               'image_path' => '/public/uploads/products/3/EsVFUJWBVrM9pjlAsi0KqaILoMf6VXFq.jpg',
+               'image_name' => 'sedum-da-quang-2.jpg',
+               'product_id' => '41',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'image_path' => '/public/uploads/products/3/XEsiWp7UbRKKNdhYh6xeUvZ9KqNs4hKe.jpg',
+               'image_name' => 'sedum-da-quang-3.jpg',
+               'product_id' => '41',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'image_path' => '/public/uploads/products/3/bSkA296E9p3VtEawM0d3DrQFXA4Hp2zW.jpg',
+               'image_name' => 'sen-da-do-la-trang-2.jpg',
+               'product_id' => '42',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'image_path' => '/public/uploads/products/3/TO4mVn9tQmdKzPRzLmlTXkjicUs5gX7X.jpg',
+               'image_name' => 'sen-da-do-la-trang-3.jpg',
+               'product_id' => '42',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'image_path' => '/public/uploads/products/3/2TPcDQPIAnuyhv8eLwTIhsxWmuQcJwxi.jpg',
+               'image_name' => 'sen-da-nhung-vien-do-2.jpg',
+               'product_id' => '43',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'image_path' => '/public/uploads/products/3/Nz049mOSyrvIhSYuBHnDycanoHcVZcB2.jpg',
+               'image_name' => 'sen-da-la-tim-2.jpg',
+               'product_id' => '44',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'image_path' => '/public/uploads/products/3/lNo0xKoZx4a8v4oMpUXSCgjVr1IJ22vc.jpg',
+               'image_name' => 'sen-da-chuoi-ngoc-bi-2.jpg',
+               'product_id' => '45',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'image_path' => '/public/uploads/products/3/ciQRc6hcX5ofh8rCnkK7hrBNeYUxF7dH.jpg',
+               'image_name' => 'mong-rong-vien-trang-2.jpg',
+               'product_id' => '46',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'image_path' => '/public/uploads/products/3/SqCz1QMz2mNWisCITCx7RseeOqGyyWwo.jpg',
+               'image_name' => 'sen-da-thach-bich-canh-buom-2.jpg',
+               'product_id' => '47',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'image_path' => '/public/uploads/products/3/VVgdoErftwRX5HMTq7pJqXmlYWJfwNP6.jpg',
+               'image_name' => 'sen-da-tu-phuong-2.jpg',
+               'product_id' => '48',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'image_path' => '/public/uploads/products/3/jypOwZUooSbveU7GAUt3fD3kFF4mKzvv.jpg',
+               'image_name' => 'sen-da-ham-ca-sau-2.jpg',
+               'product_id' => '49',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'image_path' => '/public/uploads/products/3/D1Osx1eneBFqpjw6IjXR9u9UfJAxDMH2.jpg',
+               'image_name' => 'sen-da-ham-ca-sau-3.jpg',
+               'product_id' => '49',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'image_path' => '/public/uploads/products/3/H58S9C9vmZz1YGZhaKbAlawO1L3kRqrG.jpg',
+               'image_name' => 'sen-da-mat-na-3.jpg',
+               'product_id' => '50',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
         ]);
     }
     }
