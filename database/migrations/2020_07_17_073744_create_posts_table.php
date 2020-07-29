@@ -20,9 +20,14 @@ class CreatePostsTable extends Migration
             $table->string('name')->unique();
             $table->string('slug')->unique();
             $table->string('image');
-            $table->text('content');
+            $table->longText('content');
+            $table->unsignedBigInteger('user_id');
             $table->tinyInteger('status')->define(1);
             $table->timestamps();
+
+            $table->foreign('user_id')
+            ->references('id')->on('users')
+            ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

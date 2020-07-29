@@ -19,11 +19,19 @@ Route::get('trang-chu.html', 'HomeController@index')->name('guest.trangChu');
 Route::get('{slug}.html', 'ProductController@viewProductDetails')->name('guest.viewProductDetails');
 
 // Cart
-Route::group(['prefix' => 'cart'], function () {
-    Route::get('gio-hang.html', 'CartController@index')->name('guest.cart.index');
+Route::group(['prefix' => 'gio-hang'], function () {
+    Route::get('hien-thi-san-pham.html', 'CartController@index')->name('guest.cart.index');
     Route::post('them-san-pham.html', 'CartController@add')->name('guest.cart.add');
     Route::post('xoa-san-pham.html', 'CartController@del')->name('guest.cart.del');
     Route::post('cap-nhat-san-pham.html', 'CartController@update')->name('guest.cart.update');
+});
+
+// Customer
+Route::group(['prefix' => 'nguoi-dung'], function () {
+    Route::get('dang-nhap.html', 'LoginController@index')->name('guest.user.login');
+    Route::get('dang-xuat.html', 'LoginController@logout')->name('guest.user.logout');
+    Route::post('dang-nhap.html', 'LoginController@login')->name('guest.user.login');
+    Route::get('dang-ky.html', 'RegisterController@index')->name('guest.user.index');
 });
 
 

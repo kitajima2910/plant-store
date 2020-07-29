@@ -16,10 +16,23 @@
 
                         <!-- Top Header Content -->
                         <div class="top-header-meta d-flex">
-                            <!-- Login -->
-                            <div class="login">
-                                <a href="#"><i class="fa fa-user" aria-hidden="true"></i> <span>Login</span></a>
-                            </div>
+                            @if (!Auth::guard('customers')->check())
+                                <!-- Login -->
+                                <div class="login">
+                                    <a href="{!! route('guest.user.login') !!}"><i class="fa fa-user" aria-hidden="true"></i> <span>Đăng nhập</span></a>
+                                </div>
+                                <!-- Register -->
+                                <div class="login">
+                                    <a href="#"><i class="fa fa-key" aria-hidden="true"></i> <span>Đăng ký</span></a>
+                                </div>
+                            @else
+                                <div class="login">
+                                    <a href="javascript:void(0);"><i class="fa fa-user" aria-hidden="true"></i> <span>{!! Auth::guard('customers')->user()->name !!}</span></a>
+                                </div>
+                                <div class="login">
+                                    <a href="{!! route('guest.user.logout') !!}"><i class="fa fa-sign-out" aria-hidden="true"></i> <span>Đăng xuất</span></a>
+                                </div>
+                            @endif
                             <!-- Cart -->
                             <div class="cart">
                                 <a href="{!! route('guest.cart.index') !!}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 
