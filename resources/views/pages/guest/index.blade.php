@@ -17,6 +17,12 @@
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="{{ asset('public/frontend/css/style.css') }}">
 
+    <style>
+          .product-img a img{
+             width: 255px;
+            height: 255px;
+            }
+    </style>
 </head>
 
 <body>
