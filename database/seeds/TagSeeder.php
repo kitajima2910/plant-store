@@ -190,6 +190,64 @@ class TagSeeder extends Seeder
                 'tags_name' => 'than-long',
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(), 
+            ],
+            
+            
+            // CÂY CẢNH VĂN PHÒNG
+            [
+                'tags_name' => 'cay-canh-van-phong',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'hoa-tigon',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'gymo',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'kim-tho',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'cung-dien-vang',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'lan-y-thuy-sinh',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'kim-ngan-thuy-sinh',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => '3D',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'sedum-com',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'luc-binh',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
+            ],    
+            [
+                'tags_name' => 'ngoc-duoc',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(), 
             ],    
         ]);
     }

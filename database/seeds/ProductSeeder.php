@@ -403,6 +403,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'tuong-cay-xanh-1.jpg',
                'price' => '799000',
                'sale_price' => '15',
+               'final_price' => 679150,
                'content_short' => 'Combo bao gồm lướt sắt sơn tĩnh điện, 3 chậu cây cảnh treo, miễn phí thi công, phù hợp để làm tường ban công, khoảng tường trống trong văn phòng, nhà',
                'content' => '<p>Ở 2 th&agrave;nh phố lớn Hồ Ch&iacute; Minh v&agrave; H&agrave; Nội th&igrave; mức độ &ocirc; nhiễm ng&agrave;y c&agrave;ng cao, số người d&acirc;n ở lại th&agrave;nh phố gia tăng rất nhiều, khiến mọi thứ trở n&ecirc;n trật trội, cạnh tranh nhau hơn, khiến con người lu&ocirc;n c&oacute; cảm gi&aacute;c bức bối, căng thẳng&nbsp;dễ dẫn đến t&igrave;nh trạng stress kh&eacute;o d&agrave;i, để giải quyết vấn đề đ&oacute; th&igrave; bạn cần c&oacute; kh&ocirc;ng gian v&agrave; thời gian thư gi&atilde;n gi&uacute;p mọi thứ trở lại&nbsp;c&acirc;n bằng. V&agrave;&nbsp;Web C&acirc;y Cảnh muốn&nbsp;đề cập một giải ph&aacute;p gi&uacute;p giải tỏa căng thẳng&nbsp;đ&oacute; l&agrave; &ldquo;<strong>Tường c&acirc;y xanh&quot;</strong></p>
 
@@ -440,6 +441,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'tung-la-han-1.jpg',
                'price' => '125000',
                'sale_price' => '5',
+               'final_price' => 118750,
                'content_short' => 'Cây Tùng La Hán được tượng trưng cho chữ Thọ chính vì thế cây mang ý nghĩa phong thủy về sức khỏe. Cây thường được dùng để làm quà tặng, quà mừng thọ với ý nguyện mong gia chủ luôn mạnh khỏe và bình an.',
                'content' => '<p>C&acirc;y T&ugrave;ng La H&aacute;n c&oacute; 2 loại 1 loại l&aacute; ngắn v&agrave; 1 loại l&aacute; d&agrave;i. C&acirc;y c&oacute; t&ecirc;n khoa học l&agrave;: Podocarpus macrophyllus l&agrave; một lo&agrave;i c&acirc;y cảnh thuộc họ Th&ocirc;ng tre (Podocarpaceae) c&oacute; nguồn gốc từ Nhật Bản v&agrave; Trung Quốc thường được trồng l&agrave;m cảnh trong c&ocirc;ng vi&ecirc;n, đ&igrave;nh ch&ugrave;a, vườn nh&agrave;. V&igrave; l&aacute; c&acirc;y c&oacute; tuổi thọ kh&aacute; l&acirc;u, nếu ở điều kiện tốt trung b&igrave;nh 5 năm c&acirc;y mới thay l&aacute;.&nbsp;<strong>C&acirc;y T&ugrave;ng La H&aacute;n</strong>&nbsp;được tượng trưng cho chữ Thọ ch&iacute;nh v&igrave; thế c&acirc;y mang &yacute; nghĩa phong thủy về sức khỏe. C&acirc;y thường được d&ugrave;ng để l&agrave;m qu&agrave; tặng, qu&agrave; mừng thọ với &yacute; nguyện mong gia chủ lu&ocirc;n mạnh khỏe v&agrave; b&igrave;nh an.</p>
 
@@ -477,6 +479,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'lan-quan-tu-1.jpg',
                'price' => '155000',
                'sale_price' => '10',
+               'final_price' =>139000 ,
                'content_short' => 'Cây Lan Quân Tử được coi là cây vượng tài đối với người tuổi Mùi. Người cầm tinh con Dê không để ý chuyện tiền tài, cũng không ham muốn kiếm tiền nên họ ít khi cố gắng để làm việc, vì vậy đương nhiên không có khả năng phát tài. Bạn có thể đặt một chậu Lan Quân Tử tại góc bên phải của bức tường đối diện ghế sô-pha, để tăng vận quý nhân trợ giúp bạn trên con đường phát tài.',
                'content' => '<p><strong>C&acirc;y Lan Qu&acirc;n Tử</strong>&nbsp;được coi l&agrave; lo&agrave;i hoa sang trọng, kh&ocirc;ng những vậy trong phong thủy n&oacute; c&ograve;n mang đến sự danh gi&aacute; v&agrave; ph&uacute; qu&yacute; cho chủ nh&acirc;n. C&acirc;y được coi l&agrave; c&acirc;y vượng t&agrave;i đối với người tuổi M&ugrave;i. Người cầm tinh con D&ecirc; kh&ocirc;ng để &yacute; chuyện tiền t&agrave;i, cũng kh&ocirc;ng ham muốn kiếm tiền n&ecirc;n họ &iacute;t khi cố gắng để l&agrave;m việc, v&igrave; vậy đương nhi&ecirc;n kh&ocirc;ng c&oacute; khả năng ph&aacute;t t&agrave;i.&nbsp;Bạn c&oacute; thể đặt một chậu Lan Qu&acirc;n Tử tại g&oacute;c b&ecirc;n phải của bức tường đối diện ghế s&ocirc;-pha, để tăng vận qu&yacute; nh&acirc;n trợ gi&uacute;p bạn tr&ecirc;n con đường ph&aacute;t t&agrave;i.</p>
 
@@ -518,6 +521,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'bang-sing-1.jpg',
                'price' => '499000',
                'sale_price' => '10',
+               'final_price' => 449100,
                'content_short' => 'Cây Bàng Singapore phù hợp làm cây văn phòng, trang trí nội thất, cây trong nhà. Vị trí thích hợp để cây ở sảnh khách sạn, quầy thu ngân, hành lang, ban công, phòng sếp, phòng họp và làm quà tặng khai trương.',
                'content' => '<p><strong>C&acirc;y B&agrave;ng Singapore</strong>&nbsp;l&agrave; loại c&acirc;y nội thất đang được ưa chuộng nhất hiện nay, c&oacute; nguồn gốc từ phương T&acirc;y mới được du nhập v&agrave;o Việt Nam, bạn sẽ bắt gặp loại c&acirc;y n&agrave;y ở những nơi c&oacute; kh&ocirc;ng gian v&agrave; kiến tr&uacute;c hiện đại. Kh&ocirc;ng phải ngẫu nhi&ecirc;n m&agrave; c&acirc;y B&agrave;ng Singapore lại được ưa chuộng nhất hiện nay, m&agrave; v&igrave; những được điểm của n&oacute; rất ph&ugrave; hợp với kh&iacute; hậu nhiệt đới, ẩm gi&oacute; m&ugrave;a của nước ta, hơn nữa c&acirc;y sống tốt ở m&ocirc;i trường m&aacute;y lạnh, nơi c&oacute; &aacute;nh s&aacute;ng nhẹ v&agrave; đặc biệt n&oacute; l&agrave; loại c&acirc;y sống l&acirc;u năm. Với t&aacute;n l&aacute; lớn, tr&ograve;n v&agrave; đầy đặn xanh tốt quanh năm tượng trưng cho sự may mắn v&agrave; gi&agrave;u sang.</p>
 
@@ -559,6 +563,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'tung-thon-1.jpg',
                'price' => '215000',
                'sale_price' => '0',
+               'final_price' => 215000,
                'content_short' => 'Cây Tùng Thơm hay còn Tùng Hương, Tùng Chanh cây có mùi hương chanh nhẹ dễ chịu, màu sắc cây tươi sáng nhìn rất nổi bật phù hợp làm cây trang trí, để văn phòng, bàn lễ tân...',
                'content' => '<p>C&acirc;y T&ugrave;ng Thơm hay c&ograve;n c&aacute;i t&ecirc;n gọi kh&aacute;c l&agrave; T&ugrave;ng Hương, T&ugrave;ng Chanh. C&acirc;y c&oacute; t&ecirc;n khoa học&nbsp;Cupressus macrocarpa, thuộc họ T&ugrave;ng, trắc thuộc l&aacute; kim c&oacute; m&agrave;u xanh n&otilde;n chuối, c&acirc;y c&oacute; nguồn gốc từ ph&iacute;a Nam Ch&acirc;u Mỹ, được trồng nhiều ở c&aacute;c v&ugrave;ng n&uacute;i c&oacute; nhiệt độ ẩm thấp. Sau n&agrave;y c&acirc;y được đưa về Việt Nam v&agrave; trồng nhiều ở nơi c&oacute; kh&iacute; hậu m&aacute;t mẻ, để nh&acirc;n giống. Sau khi c&acirc;y cứng c&aacute;p th&igrave; được chuyển đến c&aacute;c nơi kh&aacute;c nhau để l&agrave;m c&acirc;y cảnh văn ph&ograve;ng, để b&agrave;n trang tr&iacute;.&nbsp;<strong>C&acirc;y T&ugrave;ng Thơm</strong>&nbsp;mang đến sự thoải m&aacute;i, sảng kho&aacute;i v&agrave; giảm stress gi&uacute;p gia chủ tập trung hơn trong c&ocirc;ng việc để đưa ra được những quyết định ch&iacute;nh x&aacute;c. C&acirc;y ph&ugrave; hợp để l&agrave;m trang tr&iacute; đ&ecirc;m noel, gi&aacute;ng sinh, trang tr&iacute; qu&aacute;n c&agrave; ph&ecirc;, văn ph&ograve;ng&hellip;</p>
 
@@ -594,6 +599,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'trang-nguyen-1.jpg',
                'price' => '210000',
                'sale_price' => '0',
+               'final_price' => 210000,
                'content_short' => 'Cây Hoa Trạng Nguyên có ý nghĩa phong thủy mang đến thành công, đỗ đạt và may mắn. Cây phù hợp làm cây cảnh văn phòng, quầy lễ tân, quầy thu ngân, cây cảnh để trước cửa nhà.',
                'content' => '<p>C&acirc;y Trạng Nguy&ecirc;n hay c&ograve;n c&oacute; t&ecirc;n gọi l&agrave; c&acirc;y Nhất Phẩm Hồng, c&acirc;y c&oacute; nguồn gốc ở miền nam Mexico, Trung Mỹ v&agrave; ch&acirc;u Phi. Với mầu đỏ nổi bật c&acirc;y được du nhập v&agrave; mang trồng l&agrave;m c&acirc;y cảnh ở nhiều quốc gia ở Hoa Kỳ n&oacute; c&oacute; t&ecirc;n&nbsp;Poinsettia, theo t&ecirc;n của Joel Roberts Poinsett, đại sứ Hoa Kỳ đầu ti&ecirc;n tại Mexico, l&agrave; người đ&atilde; đưa lo&agrave;i c&acirc;y n&agrave;y v&agrave;o Hoa Kỳ năm 1825. Tại Hoa Kỳ, trạng nguy&ecirc;n c&oacute; thể t&igrave;m thấy trong tự nhi&ecirc;n c&oacute; mọc hoang d&atilde; tại Hawaii v&agrave; Puerto Rico. C&aacute;c t&ecirc;n gọi trong c&aacute;c ng&ocirc;n ngữ kh&aacute;c l&agrave; Mexican flame leaf (l&aacute; lửa Mexico), Christmas star (sao N&ocirc; en), Winter rose (hồng m&ugrave;a đ&ocirc;ng), Noche Buena, hoa Ataturk (tại Thổ Nhĩ Kỳ), Pascua, 聖誕花 (th&aacute;nh đản hoa), 聖誕紅 (th&aacute;nh đản hồng) v.v&hellip;C&acirc;y ph&ugrave; hợp để l&agrave;m qu&agrave; tặng khai trương, c&acirc;y cảnh văn ph&ograve;ng, quầy lễ t&acirc;n, b&agrave;n thu ng&acirc;n, c&acirc;y Trạng Nguy&ecirc;n c&ograve;n thường để trước cửa nh&agrave; để đ&oacute;n may mắn v&agrave; th&agrave;nh c&ocirc;ng.</p>
 
@@ -635,6 +641,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'may-man-tai-loc-1.jpg',
                'price' => '149000',
                'sale_price' => '5',
+               'final_price' => 141550,
                'content_short' => 'Cây May Mắn Tài Lộc giúp cho gia chủ làm ăn thuận lợi, sáng suốt trong việc đưa ra những quyết định. Cây phù hợp làm quà tặng, cây để bàn, trang trí...',
                'content' => '<p><strong>C&acirc;y May Mắn</strong>&nbsp;hay c&ograve;n c&oacute; t&ecirc;n gọi kh&aacute;c l&agrave;&nbsp;<strong>c&acirc;y T&agrave;i Lộc</strong>&nbsp;l&agrave; một trong những c&acirc;y được d&acirc;n văn ph&ograve;ng đang rất ưa chuộng, v&igrave; chỉ cần nghe t&ecirc;n th&ocirc;i c&aacute;c bạn cũng đ&atilde; biết &yacute; nghĩa của loại c&acirc;y n&agrave;y. C&acirc;y mang đến may mắn v&agrave; t&agrave;i lộc cho gia chủ, c&acirc;y May Mắn T&agrave;i Lộc gi&uacute;p gia chủ lu&ocirc;n c&oacute; tinh thần thoải m&aacute;i để đưa ra những quyết định ch&iacute;nh x&aacute;c. C&acirc;y nhỏ xinh ph&ugrave; hợp để l&agrave;m c&acirc;y cảnh để b&agrave;n, qu&agrave; tặng, trang tr&iacute; c&aacute;c g&oacute;c nhỏ&hellip;</p>
 
@@ -672,6 +679,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'tung-bong-lai-1.jpg',
                'price' => '125000',
                'sale_price' => '10',
+               'final_price' => 112500,
                'content_short' => 'Cây Tùng Bồng Lai để bàn mang ý nghĩa phong thủy nhiều tới sức khỏe, tài lộc, thịnh vượng, giữ tiền và giữ của cho người sở hữu. Cây phong thủy dành cho người tuổi Thân',
                'content' => '<p>C&acirc;y T&ugrave;ng Bồng Lai hay c&ograve;n c&oacute; t&ecirc;n gọi kh&aacute;c l&agrave; T&ugrave;ng L&aacute; Văn Tr&uacute;c, T&ugrave;ng L&aacute; Thi&ecirc;n M&ocirc;n Đ&ocirc;ng. Đ&acirc;y l&agrave; giống c&acirc;y bản địa của v&ugrave;ng&nbsp;California-Mỹ. Nhưng c&acirc;y c&oacute; sức sống kh&aacute; m&atilde;nh liệt n&ecirc;n n&oacute; dễ d&agrave;ng th&iacute;ch nghi với điều kiện ở Việt Nam.&nbsp;<strong>C&acirc;y T&ugrave;ng Bồng Lai</strong>&nbsp;mang &yacute; nghĩa phong thủy nhiều tới sức khỏe, t&agrave;i lộc, thịnh vượng, giữ tiền v&agrave; giữ của cho người sở hữu. Đặc biệt với người cầm tinh con khỉ, c&oacute; được c&acirc;y n&agrave;y như c&oacute; qu&yacute; nh&acirc;n ph&ugrave; trợ, l&agrave;m ăn ph&aacute;t t&agrave;i&hellip;C&acirc;y T&ugrave;ng Bồng Lai nhỏ ph&ugrave; hợp để b&agrave;n, kệ s&aacute;ch, trang tr&iacute; qu&aacute;n c&agrave; ph&ecirc;.</p>
 
@@ -705,6 +713,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'hong-mon-1.jpg',
                'price' => '135000',
                'sale_price' => '15',
+               'final_price' =>114750 ,
                'content_short' => 'Cây Hồng Môn tượng trưng cho tình yêu và lòng hiếu khách, cây phù hợp để bày phòng khách, quầy lễ tân, nơi nhiều người thường xuyên qua lại, hoặc để trang trí nội thất đều rất hợp.',
                'content' => '<p>C&acirc;y Hồng M&ocirc;n&nbsp;c&oacute; nguy&ecirc;n xuất từ Colombia v&agrave; Ecuador. C&acirc;y Hồng M&ocirc;n (Anthurium) l&agrave; chi lớn nhất thuộc họ r&aacute;y Araceae với khoảng 600 &ndash; 800 ( c&oacute; thể &nbsp;1.000 )&nbsp;lo&agrave;i ph&acirc;n bố ở v&ugrave;ng Trung v&agrave; Nam Mỹ. Được ph&aacute;t hiện năm 1876 ở Colombia. Hồng M&ocirc;n c&ograve;n một số t&ecirc;n gọi kh&aacute;c như: M&ocirc;n Hồng, Vĩ Hoa Tr&ograve;n, Buồm Đỏ&hellip;<strong>C&acirc;y Hồng M&ocirc;n</strong>&nbsp;trong phong thủy tượng trưng cho t&igrave;nh y&ecirc;u , l&ograve;ng hiếu kh&aacute;ch. Ngo&agrave;i ra c&acirc;y rất ph&ugrave; hợp với người mệnh Hỏa v&agrave; mệnh Thổ, c&acirc;y sẽ mang đến t&agrave;i lộc v&agrave; may mắn cho những người bản mệnh n&agrave;y. C&acirc;y ph&ugrave; hợp l&agrave;m c&acirc;y để b&agrave;n, ph&ograve;ng kh&aacute;ch, quầy lễ t&acirc;n, trang tr&iacute; qu&aacute;n c&agrave; ph&ecirc;, c&aacute;c g&oacute;c nhỏ trong nh&agrave;. C&acirc;y c&oacute; t&aacute;c dụng thanh lọc kh&ocirc;ng kh&iacute;.</p>
 
@@ -742,6 +751,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'cau-tieu-tram-1.jpg',
                'price' => '69000',
                'sale_price' => '0',
+               'final_price' => 69000,
                'content_short' => 'Cây Câu Tiểu Trâm hay còn gọi là cau may mắn, cây ưa mát không cần nhiều ánh sáng vẫn có thể phát triển, Cau Tiểu Trâm có khả năng hút các chất khí độc và lọc sạch không ý. Cây mang ý nghĩa may mắn và tài lộc trong phong thủy.',
                'content' => '<p>C&acirc;y Cau&nbsp;Tiểu Tr&acirc;m l&agrave; loại c&acirc;y ưa m&aacute;t v&agrave; y&ecirc;u cầu &aacute;nh s&aacute;ng kh&ocirc;ng nhiều, c&oacute; thể ph&aacute;t triển tốt m&agrave; chỉ cần &aacute;nh s&aacute;ng đ&egrave;n huỳnh quang, n&ecirc;n n&oacute;&nbsp;rất ph&ugrave; hợp l&agrave;m c&acirc;y để b&agrave;n,&nbsp;văn ph&ograve;ng, trong nh&agrave;&hellip;Hơn thế nữa ngo&agrave;i ra n&oacute; c&ograve;n gi&uacute;p lọc sạch c&aacute;c chất kh&iacute; độc, bụi bẩn trong kh&ocirc;ng kh&iacute; rất c&oacute; lợi cho sức khỏe. C&acirc;y mang &yacute; nghĩa phong thủy c&oacute; t&aacute;c dụng &aacute;n ngữ v&agrave; loại bỏ kh&iacute; xấu. Trồng một c&acirc;y cau tiểu tr&acirc;m trong nh&agrave; để khai th&ocirc;ng vượn kh&iacute;, mang lại may mắn t&agrave;i lộc cho gia chủ.</p>
 
@@ -777,6 +787,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'chuoi-ngoc-dung-1.jpg',
                'price' => '29000',
                'sale_price' => '0',
+               'final_price' => 29000,
                'content_short' => 'Cây Sen Đá Chuỗi Ngọc Đứng phù hợp với việc trang trí bàn làm việc, góc học tập. Cây có hình thù giống như ngọn đuốc tạo cho ta cảm giác cần phát phát triển, cần phải phấn đấu. Cây phù hợp làm quà tặng, trang trí các góc nhỏ như bàn làm việc, góc học tập, lan can cửa sổ, bàn cà phê....',
                'content' => '<p>C&acirc;y Sen Đ&aacute;&nbsp;Chuỗi Ngọc Đứng hay c&ograve;n gọi l&agrave; c&acirc;y chuỗi, l&agrave; một giống của lo&agrave;i Chuỗi ngọc (Sedum morganianum) hay c&ograve;n được gọi l&agrave; Đu&ocirc;i lừa (burro&rsquo;s tail or donkey tail). Đ&acirc;y l&agrave; một lo&agrave;i bản đại ở ph&iacute;a Bắc Mexico v&agrave; Honduras. Sedum morganianum ph&aacute;t triển tốt cả trong nh&agrave; v&agrave; ngo&agrave;i trời, điều kiện &aacute;nh s&aacute;ng tốt nhưng kh&ocirc;ng qu&aacute; n&oacute;ng. C&oacute; thể d&ugrave;ng để trang tr&iacute; cửa sổ, kh&ocirc;ng gian kh&aacute;ch sạn, qu&aacute;n c&agrave; ph&ecirc;.&nbsp;<strong>C&acirc;y Sen Đ&aacute; Chuỗi Ngọc Đứng&nbsp;</strong>c&oacute; thể để trang tr&iacute; b&agrave;n l&agrave;m việc, g&oacute;c học tập, để b&agrave;n&hellip;</p>
 
@@ -808,6 +819,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'sen-da-thuocduoc-1.jpg',
                'price' => '29000',
                'sale_price' => '0',
+               'final_price' => 29000,
                'content_short' => 'Cây sen đá thược dược ngoài ý nghĩa một tình yêu, tình bạn bền vững mãi với thời gian thì nó còn có ý nghĩa tình yêu của người là hạnh phúc của tôi. Cây dùng để trang trí tiểu cảnh, để bàn làm việc, bàn uống nước, bàn lễ tân, quán cà phê...',
                'content' => '<p>Sen Đ&aacute; thuộc c&acirc;y họ bỏng c&oacute; tất chả 393 lo&agrave;i kh&aacute;c nhau để ph&acirc;n biệt được từng loại th&igrave; c&oacute; lẽ bạn phải t&igrave;m hiểu kh&aacute; nhiều. Tuy nhi&ecirc;n&nbsp;nếu bạn đ&atilde; thấy hoa thược dược th&igrave; khi nh&igrave;n c&acirc;y sen đ&aacute; loại n&agrave;y bạn c&oacute; thể ph&aacute;t hiện ngay ra n&oacute;. N&oacute; c&oacute; l&aacute; giống như những c&aacute;nh hoa chỉ kh&aacute;c l&agrave; n&oacute; m&agrave;u xanh. Đ&oacute; ch&iacute;nh l&agrave;&nbsp;Sen Đ&aacute; Thược Dược</p>
 
@@ -841,6 +853,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'sen-da-hong-phan-1.jpg',
                'price' => '29000',
                'sale_price' => '0',
+               'final_price' => 29000,
                'content_short' => 'Sen đá hồng phấn có ý nghĩa cho một tình yêu và tình bạn bền vững mãi theo thời gian. Cây phù hợp để làm quà tặng, để bàn làm việc, trang trí quán cà phê, góc học tập...',
                'content' => '<p>Sen đ&aacute; hồng phấn l&agrave; loại sen đ&aacute; nh&igrave;n kh&aacute;c giống sen đ&aacute; đất về h&igrave;nh d&aacute;ng nhưng n&oacute; c&oacute; m&agrave;u xanh xẫm hơn v&agrave; tr&ecirc;n viền l&aacute; c&oacute; m&agrave;u kh&ocirc;ng, tr&ecirc;n l&aacute; th&igrave; c&oacute; một lớp phấn trắng mỏng c&oacute; lẽ ch&iacute;nh v&igrave; điều n&agrave;y m&agrave; n&oacute; c&oacute; t&ecirc;n gọi l&agrave; hồng phấn. Sen đ&aacute; hồng phấn c&oacute; &yacute; nghĩa cho một t&igrave;nh y&ecirc;u, t&igrave;nh bạn bền vững theo thời gian.</p>
 
@@ -894,6 +907,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'sen-da-vien-hong-1.jpg',
                'price' => '29000',
                'sale_price' => '0',
+               'final_price' => 29000,
                'content_short' => 'Cây sen đá viền hồng phù hợp với việc trang trí bàn làm việc, góc học tập, góc nhỏ trong gia đình. Cây bé thường chỉ cao từ 10 -20 cm, mang ý nghĩa cho tình yêu và tình bạn bền chặt.',
                'content' => '<p>C&acirc;y cảnh sen đ&aacute; viền hồng l&agrave; một trong những c&acirc;y cảnh thuộc họ&nbsp;thuốc bỏng ( Crassualaceae ). C&acirc;y c&oacute; nhiều c&aacute;nh nhỏ h&igrave;nh như c&aacute;nh hoa sen. C&acirc;y mang &yacute; nghĩa cho một t&igrave;nh y&ecirc;u, t&igrave;nh bạn b&agrave;n chặt, trọn đời vĩnh cửu theo thời gian. C&acirc;y d&ugrave;ng ph&ugrave; hợp để trang tr&iacute; b&agrave;n học, b&agrave;n l&agrave;m việc, kh&ocirc;ng gian nhỏ trong gia đ&igrave;nh&hellip;</p>
 
@@ -937,6 +951,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'sen-da-nhim-den-1.jpg',
                'price' => '29000',
                'sale_price' => '0',
+               'final_price' => 29000,
                'content_short' => 'Cây Sen Đá Nhím Đen có hình thù khá thú vị và độc đáo vì thế nó phù hợp để trang trí bàn uống cà phê, bàn học, các ô nhỏ trên kệ hoặc các góc nhỏ, và làm quà tặng',
                'content' => '<p>C&acirc;y Sen Đ&aacute; Nh&iacute;m Đen l&agrave; d&ograve;ng Sen Đ&aacute; mới, chưa được nh&acirc;n giống nhiều ở Việt Nam do vậy c&acirc;y mặc d&ugrave; c&oacute; k&iacute;ch thước kh&ocirc;ng lớn nhưng gi&aacute; th&agrave;nh cao hơn c&aacute;c loại Sen Đ&aacute; phổ th&ocirc;ng kh&aacute;c,&nbsp;so với c&aacute;c loại Sen Đ&aacute; dạng đ&agrave;i th&igrave;&nbsp;<em>Nh&iacute;m Đen</em>&nbsp;kh&aacute; khỏe v&agrave; lạ mắt. C&acirc;y ph&ugrave; hợp cho người th&iacute;ch sưu tầm c&aacute;c giống Sen Đ&aacute;, về phong thủy c&acirc;y hợp với người mệnh Mộc, Thủy</p>
 
@@ -970,6 +985,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'sen-da-dat-trang-1.png',
                'price' => '29000',
                'sale_price' => '0',
+               'final_price' => 29000,
                'content_short' => 'Cây Sen Đá Đất Trắng phù hợp để bàn làm việc, bàn học, bàn cà phê, bàn uống nước...Vì cây có màu trắng đại điện cho mệnh kim chính vì thể cây phù hợp với người mệnh Kim và người mệnh Thủy giúp chiêu tài lộc cho những người mệnh này về phong thủy',
                'content' => '<p>C&acirc;y Sen Đ&aacute; Đất Trắng c&oacute; đặc điểm gần như giống ho&agrave;n to&agrave;n với c&acirc;y Sen Đ&aacute; Đất, c&oacute; điều c&acirc;y Sen Đ&aacute; Đất th&igrave; l&aacute; c&oacute; m&agrave;u xanh v&agrave; bao phủ l&agrave; một lớp phấn mỏng c&ograve;n&nbsp;<strong>Sen Đ&aacute; Đất Trắng</strong>&nbsp;l&aacute; c&oacute; m&agrave;u trắng v&agrave; cũng được bao phủ th&ecirc;m một lớp phấn mỏng m&agrave;u trắng n&ecirc;n nh&igrave;n l&aacute; c&oacute; m&agrave;u trắng rất mịn m&agrave;ng. V&igrave; c&acirc;y c&oacute; m&agrave;u trắng n&ecirc;n rất ph&ugrave; hợp với người mệnh kim v&agrave; mệnh thủy gi&uacute;p tăng t&agrave;i lộc cho những người ở bản mệnh n&agrave;y v&agrave; th&iacute;ch Sen Đ&aacute;. C&acirc;y ph&ugrave; hợp để trang tr&iacute; b&agrave;n l&agrave;m việc, b&agrave;n c&agrave; ph&ecirc;, quần thu ng&acirc;n&hellip;</p>
 
@@ -1011,6 +1027,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'sen-da-mat-trang-1.jpg',
                'price' => '29000',
                'sale_price' => '0',
+               'final_price' => 29000,
                'content_short' => 'Cây Sen Đá Mặt Trăng phù hợp với người mệnh kim và thổ giúp mang đến tiền tài và danh vọng. Cây phù hợp làm cây để bàn, trang trí quán cà phê, cửa sổ...',
                'content' => '<p>Sen Đ&aacute; Mặt Trăng c&oacute; độ d&agrave;i của c&aacute;nh, thứ tự c&aacute;c c&aacute;nh xếp kh&aacute; giống với Sen Đ&aacute; Kim l&agrave; loại sen đ&aacute; được nhiều người biết đến hơn&nbsp;<strong>Sen Đ&aacute; Mặt Trăng</strong>. C&acirc;y mang &yacute; nghĩa cho sự minh bạch, r&otilde; r&agrave;nh v&agrave; c&ocirc;ng minh. Sen Đ&aacute; Mặt Trăng ph&ugrave; hợp với người mệnh kim v&agrave; thổ gi&uacute;p mang đến tiền t&agrave;i v&agrave; danh vọng. C&acirc;y ph&ugrave; hợp l&agrave;m c&acirc;y để b&agrave;n, trang tr&iacute; qu&aacute;n c&agrave; ph&ecirc;, cửa sổ&hellip;</p>
 
@@ -1048,6 +1065,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'sen-da-beo-vien-hong-1.jpg',
                'price' => '29000',
                'sale_price' => '0',
+               'final_price' => 29000,
                'content_short' => 'Cây Sen Đá Bèo Viền Hồng mang ý nghĩa cho một tình yêu, tình bạn vĩnh cửu bền vững mãi theo thời gian, nếu ai thích cây theo phong thủy thì cây phù hợp với người mệnh hỏa vì bản thân cây chỉ có 2 màu là màu xanh ( màu của mệnh mộc, mộc sinh hỏa ) và màu đỏ, hồng ( màu của mệnh hỏa hòa hợp ). Ngoài ra cây còn có tác dụng hút bức xạ máy tính. Cây phù hợp làm cây cảnh để bàn, trang trí quán cà phê, trang trí các góc nhỏ như kệ sách, quầy thu ngân...',
                'content' => '<p>Sen Đ&aacute; B&egrave;o Viền Hồng l&agrave; giống Sen Đ&aacute; mới, c&acirc;y c&oacute; vẻ đẹp kh&aacute; độc đ&aacute;o như được lai tạo từ nhiều d&ograve;ng Sen Đ&aacute; để tạo th&agrave;nh. C&acirc;y mang &yacute; nghĩa cho một t&igrave;nh y&ecirc;u, t&igrave;nh bạn vĩnh cửu bền vững m&atilde;i theo thời gian, nếu ai th&iacute;ch c&acirc;y theo phong thủy th&igrave; c&acirc;y ph&ugrave; hợp với người mệnh hỏa v&igrave; bản th&acirc;n&nbsp;<strong>Sen Đ&aacute; B&egrave;o Viền Hồng</strong>&nbsp;chỉ c&oacute; 2 m&agrave;u l&agrave; m&agrave;u xanh ( m&agrave;u của mệnh mộc, mộc sinh hỏa ) v&agrave; m&agrave;u đỏ, hồng ( m&agrave;u của mệnh hỏa h&ograve;a hợp ). Ngo&agrave;i ra c&acirc;y c&ograve;n c&oacute; t&aacute;c dụng h&uacute;t bức xạ m&aacute;y t&iacute;nh. C&acirc;y ph&ugrave; hợp l&agrave;m&nbsp;trang tr&iacute; qu&aacute;n c&agrave; ph&ecirc;, trang tr&iacute; c&aacute;c g&oacute;c nhỏ như kệ s&aacute;ch, quầy thu ng&acirc;n&hellip;</p>
 
@@ -1087,6 +1105,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'sen-da-mat-na-long-1.jpg',
                'price' => '29000',
                'sale_price' => '0',
+               'final_price' => 29000,
                'content_short' => 'Cây sen đá Mặt Nạ Lông là một trong những giống mới được lai tạo khá giống với đá Mặt Nạ. Cây phù hợp để bàn làm việc, bàn học, các góc nhỏ, trang trí quán cà phê....',
                'content' => '<p>Để đa dạng hơn về c&aacute;c chủng loại sen đ&aacute; th&igrave; sen đ&aacute; ng&agrave;y c&agrave;ng được nh&acirc;n giống với nhiều chủng loại, hoặc được lấy giống th&ecirc;m ở b&ecirc;n nước ngo&agrave;i. Sen đ&aacute; Mặt Nạ L&ocirc;ng l&agrave; một phi&ecirc;n bản mới của&nbsp;<a href="https://webcaycanh.com/sen-da-mat-na/" target="_blank">s</a>en&nbsp;nh&igrave;n c&oacute; vẻ bề ngo&agrave;i bắt mắt hơn so với sen đ&aacute; cũ. C&acirc;y mang &yacute; nghĩa h&atilde;y sống thật với bản th&acirc;n. Ph&ugrave; hợp l&agrave;m c&acirc;y để b&agrave;n, trang tr&iacute; c&aacute;c g&oacute;c nhỏ.</p>
 
@@ -1124,6 +1143,7 @@ class ProductSeeder extends Seeder
                'feature_image_name' => 'xuong-rong-than-long-1.jpg',
                'price' => '69000',
                'sale_price' => '0',
+               'final_price' => 69000,
                'content_short' => 'Xương rồng Thần Long là một trong loại xương rồng có hoa rất đẹp, hoa to và có nhiều màu sắc khác nhau từ màu trắng, cam, đỏ, hồng...Cây trên 2 năm mới cho ra hoa. Có khả năng hút bức xạ máy tính. Cây mang ý nghĩa cho sự bảo vệ, phù hợp để bàn làm việc, bàn học, quán cà phê...',
                'content' => '<p>Xương rồng Thần Long l&agrave; một trong loại xương rồng c&oacute; hoa rất đẹp, hoa to v&agrave; c&oacute; nhiều m&agrave;u sắc kh&aacute;c nhau từ m&agrave;u trắng, cam, đỏ, hồng&hellip;C&acirc;y tr&ecirc;n 2 năm mới cho ra hoa. C&acirc;y mang &yacute; nghĩa cho sự bảo vệ, ph&ugrave; hợp để b&agrave;n l&agrave;m việc, b&agrave;n học, qu&aacute;n c&agrave; ph&ecirc;&hellip;</p>
 
@@ -1148,6 +1168,400 @@ class ProductSeeder extends Seeder
                <p>Trong tự nhi&ecirc;n hoang d&atilde;, c&acirc;y xương rồng v&agrave; c&acirc;y mọng nước c&oacute; thể tồn tại, chịu đựng trong khoảng nhiệt độ lớn, chừng 10&deg;C &ndash; 50&deg;C. Tuy nhi&ecirc;n, nhiệt độ th&iacute;ch hợp để c&acirc;y ph&aacute;t triển v&agrave;o khoảng 15&deg;C &ndash; 28&deg;C. Nhiệt độ qu&aacute; cao hoặc qu&aacute; thấp c&oacute; thể l&agrave;m cho c&acirc;y ngừng ph&aacute;t triển v&agrave; suy yếu.</p>',
                'user_id' => '3',
                'category_id' => '3',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+
+
+            //CÂY CẢNH VĂN PHÒNG 
+            [ 
+               'name' => 'Cây Hoa Tigon',
+               'slug' => Str::of('Cây Hoa Tigon')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/0VxVWhhRw0sypiyswfx8MF412yexFNoO.jpg',
+               'feature_image_name' => 'hoa-tigon-1.jpg',
+               'price' => '149000',
+               'sale_price' => '10',
+               'final_price' => 134100,
+               'content_short' => 'Cây hoa Tigon có mùi thơm nhẹ, thân lá mền mại thích hợp với người thích trồng cây leo nhẹ nhàng. Cây phù hợp trồng cây che nắng sân, cổng, hàng rào và ban công',
+               'content' => '<p>C&acirc;y Hoa Tigon hay c&ograve;n gọi c&acirc;y hoa Tr&aacute;i Tim, hoa Tim Vỡ&nbsp;l&agrave; một trong những loại d&acirc;y leo phổ biến dễ trồng v&agrave; kh&ocirc;ng phải chăm s&oacute;c nhiều, hoa c&oacute; m&ugrave;i hương nhẹ kh&ocirc;ng nồng, hoa ra quanh năm&nbsp;&iacute;t s&acirc;u bệnh, c&acirc;y Hoa Tigon lọc kh&ocirc;ng kh&iacute; rất&nbsp;tốt v&agrave; đặc biệt c&acirc;y c&ograve;n c&oacute; thể l&agrave;m thuốc n&ecirc;n ho&agrave;n to&agrave;n an to&agrave;n đối với gia đ&igrave;nh c&oacute; trẻ nhỏ th&iacute;ch nghịch. Nếu bạn th&iacute;ch sự nhẹ nh&agrave;ng, l&atilde;ng mạn v&agrave;&nbsp;đang cần t&igrave;m loại c&acirc;y trồng gi&agrave;n, h&agrave;ng r&agrave;o, c&acirc;y leo trước cổng&nbsp;th&igrave; c&acirc;y Hoa Tigon l&agrave; một sự lựa chọn tuyệt vời.</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/hoa-tigon.jpg" style="height:400px; width:400px" /></p>
+               
+               <h2>C&Aacute;CH CHĂM S&Oacute;C C&Acirc;Y HOA TIGON</h2>
+               
+               <p>C&acirc;y Hoa Tigon c&oacute; khả năng sống v&agrave; th&iacute;ch nghi rất tốt với kh&iacute; hậu nhiệt&nbsp;đới&nbsp;ở nước ta, c&acirc;y chịu&nbsp;được hạn những cũng sống&nbsp;được&nbsp;ở nơi r&acirc;m m&aacute;t m&agrave; kh&ocirc;ng cần chăm s&oacute;c nhiều.</p>
+               
+               <p><em>&ndash;&nbsp;<strong>&Aacute;nh s&aacute;ng</strong>:&nbsp;</em>Chỉ cần lưu &yacute; l&uacute;c c&acirc;y non mới trồng th&igrave; bạn n&ecirc;n để c&acirc;y ở chỗ m&aacute;t tho&aacute;ng gi&oacute;, tr&aacute;nh nắng gắt buổi trưa l&agrave; được<em>,&nbsp;</em>c&ograve;n khi c&acirc;y trưởng th&agrave;nh th&igrave; kh&ocirc;ng quan trọng nắng mưa, tr&aacute;nh kh&ocirc;ng&nbsp;để ngập&nbsp;&uacute;ng l&acirc;u ng&agrave;y l&agrave;&nbsp;được<em>.</em></p>
+               
+               <p><em>&ndash;&nbsp;<strong>Tưới nướ</strong>c:&nbsp;</em>T&ugrave;y v&agrave;o điều kiện thời tiết nếu trời m&ugrave;a h&egrave; n&ecirc;n tưới<em>&nbsp;đ</em>ều đặn mỗi ng&agrave;y tưới nước 2 lần v&agrave;o s&aacute;ng sớm v&agrave; chiều tối để giữ đất ấm kh&ocirc;ng ướt. Khi khoảng được 1 th&aacute;ng, c&acirc;y&nbsp;đ&atilde; bắt đầu b&eacute;n rễ th&igrave; chỉ cần tưới nước một lần trong ng&agrave;y v&agrave; tưới với lượng vừa đủ để kh&ocirc;ng l&agrave;m &uacute;ng rễ c&acirc;y.</p>
+               
+               <p><em>&ndash;&nbsp;<strong>B&oacute;n ph&acirc;n</strong>:</em>&nbsp;Sau 10 ng&agrave;y, cần xới gốc v&agrave; l&agrave;m cỏ, l&agrave;m tơi đất quanh gốc c&acirc;y.&nbsp;B&ecirc;n cạnh đ&oacute; cũng kh&ocirc;ng qu&ecirc;n b&oacute;n ph&acirc;n th&uacute;c v&agrave; rải ph&acirc;n xung quanh gốc&nbsp;để c&acirc;y c&oacute; thể ph&aacute;t triển nhanh</p>
+               
+               <p><em>&ndash;&nbsp;<strong>Tỉa l&aacute;</strong>:&nbsp;</em>Tigon l&agrave; lo&agrave;i hoa nở gần như quanh năm. V&agrave;o m&ugrave;a kh&ocirc; hay đầu m&ugrave;a xu&acirc;n, n&ecirc;n tiến h&agrave;nh cắt tỉa l&aacute; gi&agrave; đi để tạo điều kiện cho l&aacute; non mọc&nbsp;ra nhiều, bởi th&ocirc;ng thường, l&aacute; gi&agrave; kh&ocirc;ng rụng c&ograve;n l&aacute; non mọc đ&egrave; l&ecirc;n l&aacute; kh&ocirc; sẽ khiến cho gi&agrave;n c&acirc;y bị d&agrave;y, nặng m&agrave; kh&ocirc;ng c&oacute; thẩm mỹ.</p>
+               
+               <p>&ndash;&nbsp;<em><strong>Đất trồng</strong></em>: C&acirc;y c&oacute; thể số ở nhiều loại đất kh&aacute;c nhau nhưng nếu muốn&nbsp;<strong>c&acirc;y Hoa Tigon</strong>&nbsp;ph&aacute;t triển tốt cần lưu &yacute;, đất phải nhiều m&ugrave;n, được xử l&yacute; s&acirc;u bệnh, nấm v&agrave; độ pH = 7. C&oacute; thể kết hợp đất trồng với tỉ lệ: 7 phần đất thịt, 2 phần r&aacute;c mục, 1 phần c&aacute;t + Nito, Photpho, Kali hoặc ph&acirc;n chuồng hoai mục 25%, đất m&agrave;u 50%, tro trấu 25%, ph&acirc;n v&ocirc; cơ 1%.</p>
+               
+               <p>&ndash;&nbsp;<em><strong>Nh&acirc;n Giống</strong></em>: C&acirc;y Hoa Tigon thường&nbsp;được nh&acirc;n giống bằng 2 phương ph&aacute;p ch&iacute;nh l&agrave; trồng bằng hạt hoặc gi&acirc;m c&agrave;nh.</p>',
+               'user_id' => '3',
+               'category_id' => '4',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Xương Rồng Gymo',
+               'slug' => Str::of('Xương Rồng Gymo')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/Na3ghUiLlzrjE3lmjjEbOFbrBQgG1qWm.jpg',
+               'feature_image_name' => 'xuong-rong-gymo-1.jpg',
+               'price' => '65000',
+               'sale_price' => '15',
+               'final_price' => 55250,
+               'content_short' => 'Xương rồng Gymno ấn tượng với hoa đa màu sắc, hoa to và đẹp. Cây nhỏ xinh phù hợp để tặng quà, để bàn làm việc, trang trí quán cà phê...',
+               'content' => '<p>C&acirc;y xương rồng Gymno c&oacute; t&ecirc;n đầy đủ l&agrave; Gymnocalycium l&agrave; một chi xương rồng Nam Mỹ. T&ecirc;n của chi Gymnocalycium (từ tiếng Hy Lạp, &ldquo;calyx trần trụi&rdquo;) chỉ nụ hoa kh&ocirc;ng c&oacute; l&ocirc;ng hoặc gai. L&agrave; họ xương rồng&nbsp;được nhiều người&nbsp;ưa th&iacute;ch v&igrave;&nbsp;đặc&nbsp;điểm&nbsp;ấn tượng l&agrave; hoa c&ograve;n to hơn cả c&acirc;y. C&acirc;y xương rồng Gymno ph&ugrave; hợp&nbsp;để b&agrave;n, ban c&ocirc;ng v&agrave; l&agrave;m qu&agrave; tặng sinh nhật, hoặc dịp lễ. Xương rồng trong tiếng T&acirc;y Ban Nha c&oacute; nghĩa l&agrave; &rdquo; h&atilde;y&nbsp;đến v&agrave; mang em&nbsp;đi &rdquo; khi người con g&aacute;i tặng cho người con trai như một lời nhắn về sự&nbsp;đồng&nbsp;&yacute; t&igrave;nh cảm của người con trai. Trong phong thủy c&acirc;y mang&nbsp;&yacute; nghĩa bảo vệ v&agrave; trừ t&agrave;.</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/xuong-rong-gymo.jpg" style="height:400px; width:400px" /></p>
+               
+               <h2>C&Aacute;CH CHĂM S&Oacute;C XƯƠNG RỒNG GYMNO</h2>
+               
+               <p>Tất cả lo&agrave;i xương rồng&nbsp;đều nổi tiếng với khả năng chịu hạn v&agrave; rất dễ chăm s&oacute;c.</p>
+               
+               <h3>NƯỚC</h3>
+               
+               <p>Yếu tố kh&aacute; quan trọng với người chơi xương rồng, thường sai lầm khiến c&acirc;y chết l&agrave; tưới nước. C&acirc;y xương rồng gymno thường&nbsp;được&nbsp;đặt&nbsp;ở 2 m&ocirc;i trường: Văn ph&ograve;ng, trong nh&agrave; v&agrave;&nbsp;ở ngo&agrave;i trời. Nếu bạn&nbsp;để trong nh&agrave; v&agrave; văn ph&ograve;ng th&igrave; 2 tuần mới n&ecirc;n tưới 1 lần nếu như m&ocirc;i trường&nbsp;ở&nbsp;đ&oacute; kh&ocirc;ng qu&aacute; kh&ocirc;. C&ograve;n&nbsp;đối với c&acirc;y&nbsp;để bancol ngo&agrave;i trời th&igrave; n&ecirc;n c&oacute; m&aacute;i che v&agrave; 1 tuần tưới 1 lần. Ch&uacute;&nbsp;&yacute; mỗi lần tưới cũng chỉ cần&nbsp;tưới ẩm, tr&aacute;nh&nbsp;để c&acirc;y bị&nbsp;ẩm&nbsp;đất l&acirc;u ng&agrave;y.</p>
+               
+               <h3>ĐẤT</h3>
+               
+               <p>Đất để trồng c&acirc;y xương rồng Gymno n&oacute;i ri&ecirc;ng v&agrave; xương rồng n&oacute;i chung th&igrave; cần loại&nbsp;đất tho&aacute;ng, kh&ocirc;ng giữ nước. Bạn c&oacute; thể trộn&nbsp;đất với xỉ than&nbsp;đun rồi&nbsp;đập vụn, trấu hun&nbsp;để&nbsp;đất c&oacute;&nbsp;độ tho&aacute;ng v&agrave; kh&ocirc;ng giữ nước.</p>
+               
+               <h3>&Aacute;NH S&Aacute;NG, NHIỆT&nbsp;ĐỘ</h3>
+               
+               <p>Điều kiện tốt l&agrave; n&ecirc;n cho c&acirc;y dưới&nbsp;&aacute;nh nắng khoảng 6 tiếng/ng&agrave;y, nếu bạn&nbsp;để trong văn ph&ograve;ng th&igrave; tưới&nbsp;&iacute;t nước nhưng c&acirc;y sẽ kh&oacute; ra hoa n&ecirc;n&nbsp;để trong văn ph&ograve;ng. Nhiệt&nbsp;độ th&iacute;ch hợp từ&nbsp;15&deg;C &ndash; 28&deg;C</p>
+               
+               <h3>NH&Acirc;N GIỐNG</h3>
+               
+               <p>C&aacute;ch phổ biến&nbsp;để nh&acirc;n giống xương rồng l&agrave; t&aacute;ch c&acirc;y con hoặc trồng từ hạt</p>',
+               'user_id' => '3',
+               'category_id' => '4',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Xương Rồng Kim Thổ',
+               'slug' => Str::of('Xương Rồng Kim Thổ')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/T2kcLzlCc8ZfHtAM48EPbOCCPXEY9WLO.jpg',
+               'feature_image_name' => 'xuong-rong-kim-tho-1.jpg',
+               'price' => '29000',
+               'sale_price' => '0',
+               'final_price' => 29000,
+               'content_short' => 'Cây Xương Rồng Kim Hổ có khả năng sống ở điều kiện khắc nhiệt, có khả năng hấp thụ bức xạ máy tính nên rất phù hợp để bàn máy tính, bàn làm việc, trang trí quán cà phê...',
+               'content' => '<p>C&acirc;y xương rồng kim hổ thuộc họ: Xương rồng. T&ecirc;n khoa học: Echinocactus grusonii. Kim hổ gai trắng, hoặc nhiều gai. Nguồn gốc từ v&ugrave;ng sa mạc Mehico. Được ph&acirc;n bố tại c&aacute;c v&ugrave;ng sa mạc nhiệt đới kh&ocirc; n&oacute;ng. L&agrave; một trong những loại xương rồng c&oacute; khả năng ph&aacute;t triển bề ngang lớn nhất trong c&aacute;c lo&agrave;i xương rồng. C&acirc;y&nbsp;<strong>xương rồng kim hổ</strong>&nbsp;lớn ph&ugrave; hợp để trước cổng, trước cửa đề trừ t&agrave;, c&acirc;y nhỏ c&oacute; thể d&ugrave;ng để trang tr&iacute;, để b&agrave;n m&aacute;y t&iacute;nh để h&uacute;t bức xạ.</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/xuong-rong-kim-tho.jpg" style="height:225px; width:300px" /></p>
+               
+               <h2>C&Aacute;CH CHĂM S&Oacute;C SƯƠNG RỒNG KIM HỔ</h2>
+               
+               <p>L&agrave; lo&agrave;i c&acirc;y c&oacute; nguồn gốc từ xa mạc n&ecirc;n xương rồng kim hổ rất dễ chăm s&oacute;c v&agrave; c&oacute; khả năng th&iacute;ch nghi tốt, c&oacute; thể trồng trong nh&agrave; lẫn ngo&agrave;i trời, c&acirc;y chịu được hạn, nhưng kh&ocirc;ng chịu được ẩm qu&aacute; l&acirc;u.</p>
+               
+               <h3>ĐẤT TRỒNG</h3>
+               
+               <p>V&igrave; kh&ocirc;ng chịu được ẩm l&acirc;u, do vậy loại&nbsp;<strong>đất tốt nhất với xương rồng kim hổ</strong>&nbsp;l&agrave; loại c&oacute; khả năng tho&aacute;t nước tốt m&agrave; vẫn c&oacute; nhiều dinh dưỡng, th&iacute;ch&nbsp;hợp với đất trồng pha c&aacute;t c&oacute; chứa chất v&ocirc;i, m&agrave;u mỡ.</p>
+               
+               <h3>&Aacute;NH S&Aacute;NG V&Agrave; NHIỆT ĐỘ</h3>
+               
+               <p>C&acirc;y ưa th&iacute;ch nơi c&oacute; đầy đủ &aacute;nh nắng, m&ugrave;a h&egrave; kỵ &aacute;nh nắng gắt chiếu trực tiếp buổi trưa, th&iacute;ch kh&iacute; hậu ấm, kh&ocirc;ng chịu được nhiệt độ dưới 8&nbsp;độ c.</p>
+               
+               <h3>NƯỚC</h3>
+               
+               <p>Nước l&agrave; một trong những thứ kh&oacute; điều chỉnh với họ xương rồng, thường th&igrave; nếu để trong văn ph&ograve;ng th&igrave; bạn 1 tuần tưới 1 lần, c&ograve;n để ngoại thất th&igrave; tuần tưới 2 -3 lần t&ugrave;y theo thời tiết. Mỗi lần tưới ước lượng đủ để ẩm đất l&agrave; được.</p>
+               
+               <h3>NH&Acirc;N GIỐNG</h3>
+               
+               <p>Để&nbsp;<strong>nh&acirc;n giống xương rồng kim hổ</strong>&nbsp;bạn c&oacute; thể d&ugrave;ng hạt, t&aacute;ch c&aacute;c c&acirc;y con mọc tr&ecirc;n c&acirc;y rồi để tr&ecirc;n đất.</p>
+               
+               <h2>XƯƠNG RỒNG KIM HỔ&nbsp;C&Oacute; 3 LOẠI</h2>
+               
+               <p>Loại nhỏ đường k&iacute;nh khoảng 6 -8 cm: 30k</p>
+               
+               <p>Loại to khoảng 10 cm: 70k</p>',
+               'user_id' => '3',
+               'category_id' => '4',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Cây Cung Điện Vàng',
+               'slug' => Str::of('Cây Cung Điện Vàng')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/E9xcSX0THSIuBIZL9MRu7huUIMhjPo04.jpg',
+               'feature_image_name' => 'cung-dien-vang-1.jpg',
+               'price' => '135000',
+               'sale_price' => '20',
+               'final_price' => 108000,
+               'content_short' => 'Với màu sắc bắt mắt, dễ sống, ý nghĩa phong thủy đuổi tà mang đến may mắn, phù hợp với người mệnh kim và thủy mang đến tài lộc, thăng tiền. Cây phù hợp để bàn, làm quà, trang trí quán cà phê...',
+               'content' => '<p>C&acirc;y Cung Điện V&agrave;ng hay c&ograve;n được gọi l&agrave; c&acirc;y Huy Ho&agrave;ng, Ho&agrave;ng Mai mini, c&acirc;y Cung Điện Ho&agrave;ng Hậu. C&acirc;y thuộc họ r&aacute;y tương đồng với c&aacute;c loại c&acirc;y như C&acirc;y Ngọc Ng&acirc;n, C&acirc;y Vạn Lộc&hellip;C&acirc;y Cung Điện V&agrave;ng c&oacute; m&agrave;u sắc l&aacute; rất bắt mắt n&ecirc;n hay được chọn l&agrave;m c&acirc;y văn ph&ograve;ng, c&acirc;y để b&agrave;n, c&acirc;y nội thất, c&acirc;y phong thủy v&agrave; c&acirc;y để văn ph&ograve;ng. C&acirc;y ph&ugrave; hợp phong thủy với người mệnh Kim v&agrave; Mệnh Thủy.</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/cung-dien-vang.jpg" style="height:400px; width:400px" /></p>
+               
+               <h2>&Yacute; NGHĨA PHONG THỦY C&Acirc;Y CUNG&nbsp;ĐIỆN V&Agrave;NG</h2>
+               
+               <p>Với &yacute; nghĩa phong thủy trừ t&agrave;, xua đi những điều xấu, đem đến sự may mắn, tốt l&agrave;nh, thịnh vượng cho gia chủ. C&acirc;y Cung&nbsp;Điện V&agrave;ng thời xưa rất&nbsp;được&nbsp;ưa chuộng&nbsp;ở trong ho&agrave;ng cung. Ngo&agrave;i ra c&acirc;y rất ph&ugrave; hợp với người mệnh Thủy v&agrave; mệnh Kim gi&uacute;p mang&nbsp;đến t&agrave;i lộc v&agrave; sự thăng tiến.</p>
+               
+               <h2>C&Aacute;CH CHĂM S&Oacute;C C&Acirc;Y CUNG&nbsp;ĐIỆN V&Agrave;NG</h2>
+               
+               <p>Thuộc họ r&aacute;y n&ecirc;n c&acirc;y rất dễ sống v&agrave; chăm s&oacute;c, c&oacute; thể sống&nbsp;được&nbsp;ở trong&nbsp;điều kiện thiếu s&aacute;ng, m&aacute;y lạnh.</p>
+               
+               <h3>NƯỚC</h3>
+               
+               <p>T&ugrave;y thuộc v&agrave;o&nbsp;điều kiện m&ocirc;i trường&nbsp;đặt c&acirc;y m&agrave; c&oacute; lượng nước tưới ph&ugrave; hợp,&nbsp;<strong>c&acirc;y Cung&nbsp;Điện V&agrave;ng</strong>&nbsp;thiếu nước th&igrave; l&aacute; sẽ mềm. Thường c&acirc;y&nbsp;để trong nh&agrave; th&igrave; 1 tuần tưới 1 lần, nếu&nbsp;để cạnh cửa sổ, nơi tho&aacute;ng gi&oacute; th&igrave; 1 tuần tưới 2 lần. Ngo&agrave;i ra c&aacute;c bạn c&oacute; thể tham khảo <strong>đĩa tự tưới</strong>&nbsp;chỉ cần&nbsp;đổ nước v&agrave;o&nbsp;đĩa, nước sẽ&nbsp;được tự h&uacute;t l&ecirc;n v&agrave; gi&uacute;p b&agrave;n, nơi&nbsp;đặt c&acirc;y&nbsp;được sạch sẽ.</p>
+               
+               <h3>&Aacute;NH S&Aacute;NG, NHIỆT&nbsp;ĐỘ</h3>
+               
+               <p>C&acirc;y th&iacute;ch hợp với&nbsp;điều kiện b&aacute;n r&acirc;m,&nbsp;ưa&nbsp;&aacute;nh s&aacute;ng buổi sớm v&agrave; chiều&nbsp;tối. Tr&aacute;nh&nbsp;để c&acirc;y nơi nắng gắt của buổi trưa trời&nbsp;m&ugrave;a h&egrave; dễ khiến c&acirc;y mất nước nhanh, bị ch&aacute;y l&aacute;. Nhiệt&nbsp;độ&nbsp;ưa th&iacute;ch từ 18 &ndash; 24&deg;C.</p>
+               
+               <h3>ĐẤT</h3>
+               
+               <p>Loại&nbsp;đất&nbsp;ưa th&iacute;ch với c&acirc;y Cung&nbsp;Điện&nbsp;V&agrave;ng l&agrave; loại&nbsp;đất m&ugrave;n, tơi xốp, bạn c&oacute; thể trộn&nbsp;đất với sơ dừa, trấu hun&hellip;</p>
+               
+               <p>Đối với c&acirc;y Cung Điện V&agrave;ng&nbsp;trồng thủy sinh th&igrave; chỉ cần nhỏ 2 &ndash; 3 giọt chất dinh dưỡng một tuần v&agrave;o trong nước, khi thấy nước c&oacute; m&ugrave;i th&igrave; cần thay nước v&agrave; loại bỏ rễ thối.</p>
+               
+               <h3>B&Oacute;N PH&Acirc;N</h3>
+               
+               <p>Khi&nbsp;đất trồng hết chất dinh dưỡng c&acirc;y c&ograve;i cọc th&igrave; bạn c&oacute; thể mua&nbsp;đạm rắc th&ecirc;m dưới gốc, hoặc thay&nbsp;đất cho c&acirc;y.</p>
+               
+               <h3>NH&Acirc;N GIỐNG</h3>
+               
+               <p>C&aacute;ch nh&acirc;n giống tốt nhất&nbsp;đối với c&acirc;y Cung&nbsp;Điện V&agrave;ng&nbsp;đ&oacute; l&agrave; t&aacute;ch bụi, ngo&agrave;i ra bạn c&oacute; thể trồng bằng hạt, hoặc gi&acirc;m c&agrave;nh.</p>',
+               'user_id' => '3',
+               'category_id' => '4',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Cây Lan Ý Thủy Sinh',
+               'slug' => Str::of('Cây Lan Ý Thủy Sinh')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/1QwPAmtei4we8D3pwfnWKktb7sgYqFtZ.jpg',
+               'feature_image_name' => 'lan-y-thuy-sinh-1.jpg',
+               'price' => '155000',
+               'sale_price' => '5',
+               'final_price' => 147250,
+               'content_short' => 'Cây Lan Ý thủy sinh có tác dụng thanh lọc không khí, hấp thụ các chất gây ung thư như formaldehyde, benzen và trichloroethylene, ngoài ra nó còn có khả năng giúp hấp thụ các bức xạ nhân tạo phát ra từ máy tính, tivi, lò vi sóng, đồ hồ điện tử...Cây phù hợp để bàn làm việc, trang ý quán cà phê, bàn uống nước....',
+               'content' => '<p>C&acirc;y Lan &Yacute; c&oacute; t&ecirc;n khoa học&nbsp;Spathiphyllum wallisii, thuộc họ&nbsp;Araceae, ngo&agrave;i ra Lan &Yacute; c&ograve;n c&aacute;c t&ecirc;n gọi kh&aacute;c như: Bạch M&ocirc;n, Vỹ Hoa Trắng, Huệ Hoa B&igrave;nh. C&oacute; lẽ ch&iacute;nh v&igrave; lo&agrave;i c&acirc;y n&agrave;y c&oacute; hoa trắng v&agrave; bền n&ecirc;n được đặt t&ecirc;n như vậy.&nbsp;<strong>C&acirc;y Lan &Yacute; thủy sinh</strong>&nbsp;c&ograve;n đứng đầu danh s&aacute;ch lo&agrave;i c&acirc;y lọc kh&ocirc;ng kh&iacute;, kh&ocirc;ng chỉ hấp thụ một số chất g&acirc;y ung thư như: formaldehyde, benzen v&agrave; trichloroethylene, n&oacute; c&ograve;n hấp thụ cả xylene v&agrave; toluene&nbsp;h&oacute;a chất t&igrave;m thấy trong dầu hỏa. Hơn thế nữa n&oacute; c&ograve;n hấp thụ năng lượng bức xạ nh&acirc;n tạo ph&aacute;t ra từ tivi, điện thoại, l&ograve; vi s&oacute;ng, m&aacute;y t&iacute;nh, đ&agrave;i, đồng hồ điện tử&hellip;C&acirc;y ph&ugrave; hợp để b&agrave;n l&agrave;m việc, b&agrave;n học, ph&ograve;ng kh&aacute;ch, trang tr&iacute; qu&aacute;n c&agrave; ph&ecirc;, b&agrave;n lễ t&acirc;n, c&aacute;c kh&ocirc;ng gian trống&hellip;</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/lan-y-thuy-sinh.jpg" style="height:300px; width:250px" /></p>
+               
+               <p>Nhiều người lầm tưởng hoa của lan &yacute; l&agrave; phần mo bao quanh một c&aacute;i nhị nhưng thực chất, hoa của lan &yacute; ch&iacute;nh l&agrave; c&aacute;i nhị đ&oacute;, hoa nhỏ mọc th&agrave;nh cụm h&igrave;nh trụ cong m&agrave;u trắng ng&agrave; hoặc v&agrave;ng nhạt, b&ecirc;n ngo&agrave;i được bao quanh&nbsp; bởi mo l&aacute; h&igrave;nh gần giống tr&aacute;i tim, thường c&oacute; m&agrave;u trắng muốt hoặc pha lẫn ch&uacute;t xanh nhạt.</p>
+               
+               <h2>C&Aacute;CH CHĂM S&Oacute;C LAN &Yacute;</h2>
+               
+               <p><em><strong>C&acirc;y Lan &Yacute; thủy sinh</strong></em>&nbsp;c&oacute; c&aacute;ch chăm s&oacute;c phải n&oacute;i l&agrave; cực cực dễ d&agrave;ng. V&igrave; lọc kh&iacute; v&agrave; h&uacute;t bụi tốt n&ecirc;n l&aacute; hay bị bẩn thi thoảng bạn c&oacute; thể d&ugrave;ng khăn ướt để lau l&aacute;.</p>
+               
+               <h3>&Aacute;NH S&Aacute;NG</h3>
+               
+               <p>C&acirc;y Lan &Yacute; thủy sinh thuộc loại c&acirc;y cảnh văn ph&ograve;ng&nbsp;ch&iacute;nh v&igrave; thế n&oacute; c&oacute; thể sống được ở trong m&ocirc;i trường m&aacute;y lạnh, thiếu &aacute;nh s&aacute;ng chỉ cần &aacute;nh s&aacute;ng đ&egrave;n huỳnh quang cũng c&oacute; thể sống được, tuy nhi&ecirc;n thiếu nắng th&igrave; l&aacute; c&acirc;y sẽ kh&ocirc;ng xanh đậm m&agrave; sẽ nhạt dần t&ugrave;y theo mức độ thiếu s&aacute;ng tới đ&acirc;u. Tốt nhất l&agrave; n&ecirc;n để c&acirc;y Lan &Yacute; thủy sinh ở cửa sổ, h&agrave;nh lang những nơi c&oacute; &aacute;nh s&aacute;ng chiếu tới nhưng tr&aacute;nh được &aacute;nh nắng gắt, v&igrave; nếu để ở trời nắng gắt c&acirc;y dễ bị ch&aacute;y l&aacute; v&agrave; b&igrave;nh c&acirc;y lại l&agrave; thủy tinh khả năng hấp thụ sẽ cao hơn khiến nước n&oacute;ng dẫn tới chết c&acirc;y.</p>
+               
+               <h3>NƯỚC</h3>
+               
+               <p>Kh&aacute;c so với việc trồng đất t&ugrave;y c&acirc;y Lan &Yacute; được trồng trong nước vấn đề nước đ&atilde; trở n&ecirc;n qu&aacute; dễ d&agrave;ng, chỉ khi n&agrave;o b&igrave;nh hết nước th&igrave; ta lại đổ đầy nước v&agrave;o trong b&igrave;nh l&agrave; được, nếu l&agrave; nước m&aacute;y th&igrave; n&ecirc;n để 1 ng&agrave;y cho bốc hết m&ugrave;i clo, v&agrave; khi đổ nước v&agrave;o b&igrave;nh bạn n&ecirc;n đổ qua, đổ lại để tạo kh&ocirc;ng kh&iacute; cho nước, khi nước đục l&agrave; c&oacute; thể do nhiều rễ bị thối, cần thay nước v&agrave; bỏ rễ thối đi l&agrave; được. Để c&acirc;y ph&aacute;t triển mạnh c&oacute; thể cho 1 v&agrave;i giọt dung dịch thủy sinh khi bạn thay nước mới.</p>
+               
+               <h3>NHIỆT ĐỘ</h3>
+               
+               <p>C&acirc;y l&agrave; lo&agrave;i hoa ưa b&oacute;ng m&aacute;t v&agrave; nhiệt độ kh&ocirc;ng qu&aacute; cao cũng kh&ocirc;ng qu&aacute; thấp, ch&iacute;nh v&igrave; vậy ở điều kiện ẩm ướt,&nbsp;<em>c&acirc;y Lan &Yacute; thủy sinh</em>&nbsp;sinh trưởng v&agrave; ph&aacute;t triển tốt nhất ở nhiệt độ 27 độ.</p>
+               
+               <h3>NH&Acirc;N GIỐNG</h3>
+               
+               <p>C&acirc;y Lan &yacute; l&agrave; lo&agrave;i c&acirc;y c&oacute; sức sống v&ocirc; c&ugrave;ng mạnh mẽ, chỉ việc t&aacute;ch một v&agrave;i c&acirc;y từ kh&oacute;m c&acirc;y lan &yacute; đang trồng đem đặt v&agrave;o chậu kh&aacute;c l&agrave; c&oacute; thể c&oacute; một chậu lan &yacute; ho&agrave;n to&agrave;n mới. Thường th&igrave; người ta nh&acirc;n giống lan &yacute; đ&uacute;ng v&agrave;o l&uacute;c thay chậu, thời điểm đ&oacute; thường diễn ra v&agrave;o m&ugrave;a xu&acirc;n, m&ugrave;a đầu ti&ecirc;n trong năm. Sau khi bụi đ&atilde; đủ lớn th&igrave; c&oacute; thể chuyển sang trồng bằng nước.</p>',
+               'user_id' => '3',
+               'category_id' => '4',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Cây Kim Ngân Thủy Sinh',
+               'slug' => Str::of('Cây Kim Ngân Thủy Sinh')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/gb0iKuM0UfocNGnGIatRNcMaryMYy1Uk.jpg',
+               'feature_image_name' => 'kim-ngan-thuy-sinh-2.jpg',
+               'price' => '159000',
+               'sale_price' => '10',
+               'final_price' => 143100,
+               'content_short' => 'Cây kim ngân thủy sinh hay còn có tên gọi khác là money tree ( cây tiền ) là một trong những cây số 1 về phong thủy. Cây phù hợp để bàn làm việc, văn phòng, trang trí quán cà phê, bàn lễ tân...',
+               'content' => '<p>C&acirc;y kim ng&acirc;n thủy sinh hay c&ograve;n c&oacute; t&ecirc;n gọi kh&aacute;c l&agrave;&nbsp;money tree ( c&acirc;y tiền ) l&agrave; một trong những c&acirc;y số 1 về phong thủy. Mặc d&ugrave; c&oacute;&nbsp;xuất xứ từ Mexico, Brazill Nam Mỹ v&agrave; đầm lầy Trung Mỹ nhưng v&igrave; &yacute; nghĩa của&nbsp;<strong>c&acirc;y kim ng&acirc;n thủy sinh</strong>&nbsp;m&agrave; n&oacute; nhanh ch&oacute;ng được ph&aacute;t triển tại Việt Nam. V&agrave; một t&aacute;c dụng m&agrave; &iacute;t người biết đến l&agrave; n&oacute; c&oacute; thể đuổi được muỗi.</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/kim-ngan-thuy-sinh.jpg" style="height:400px; width:400px" /></p>
+               
+               <h2>C&Aacute;CH CHĂM S&Oacute;C V&Agrave; &Yacute;&nbsp;NGHĨA PHONG THỦY CỦA KIM NG&Acirc;N</h2>
+               
+               <h3><strong>&Yacute; NGHĨA PHONG THỦY</strong></h3>
+               
+               <p>C&acirc;y gi&uacute;p mang lại nhiều tiền t&agrave;i, đồng thời g&igrave;n giữ t&agrave;i sản chặt chẽ.</p>
+               
+               <p><strong>C&aacute;ch chăm s&oacute;c:&nbsp;</strong>Kim ng&acirc;n th&iacute;ch nghi được ở mọi thời tiết n&oacute;ng &ndash; lạnh, c&oacute; thể trồng trực tiếp xuống đất, nước hoặc trong chậu. C&aacute;ch thức chăm s&oacute;c c&acirc;y Kim ng&acirc;n để trang tr&iacute; nội ngoại thất tương đối đơn giản v&agrave; dễ thực hiện.</p>
+               
+               <h3><strong>NƯỚC</strong></h3>
+               
+               <p><strong>C&acirc;y kim ng&acirc;n thủy sinh</strong>&nbsp;chỉ cần 10 ng&agrave;y th&ecirc;m nước khi&nbsp;thay nước cho c&acirc;y n&ecirc;n thay bằng nước giếng hoặc nước m&aacute;y c&oacute; độ clo thấp hoặc để nước 1, 2 ng&agrave;y ngo&agrave;i trời để c&aacute;c chất tẩy rửa được bay hết. Khi cho nước v&agrave;o b&igrave;nh bạn n&ecirc;n đổ nước qua lại để tăng &ocirc; xi trong nước gi&uacute;p c&acirc;y ph&aacute;t triển tốt hơn.</p>
+               
+               <h3><strong>NHIỆT ĐỘ</strong></h3>
+               
+               <p>C&acirc;y sống được ở nhiệt độ từ 4&deg;C đến 40&deg;C ph&aacute;t triển th&iacute;ch hợp ở nhiệt độ 18&deg;C đến 26&deg;C.<br />
+               Như vậy đối với c&acirc;y được trồng trong nh&agrave; hoặc trồng trong ph&ograve;ng lạnh c&acirc;y vẫn sinh trưởng b&igrave;nh thường. Tuy nhi&ecirc;n để c&acirc;y tồn tại l&acirc;u cần phải điều chỉnh nhiệt độ ph&ugrave; hợp.</p>
+               
+               <h3><strong>&Aacute;NH S&Aacute;NG</strong></h3>
+               
+               <p>C&acirc;y đặt trong nh&agrave; với &aacute;nh s&aacute;ng của đ&egrave;n huỳnh quang th&igrave; c&acirc;y vẫn đ&aacute;p ứng được với điều kiện sinh trưởng v&agrave; ph&aacute;t triển. Tuy nhi&ecirc;n để c&acirc;y ph&aacute;t triển tốt, th&igrave;nh thoảng ta n&ecirc;n đưa c&acirc;y ra ngo&agrave;i trời dưới t&aacute;n c&acirc;y lớn với chu kỳ 10 ng&agrave;y/lần, như vậy c&acirc;y sẽ hấp thụ được &aacute;nh s&aacute;ng v&agrave; ph&aacute;t triển tốt hơn.</p>
+               
+               <p>C&acirc;y kim ng&acirc;n thủy sinh gi&aacute;:&nbsp;<strong>160.000</strong>&nbsp;<strong>VNĐ</strong>&nbsp;( Gi&aacute; chưa bao gồm b&igrave;nh thủy tinh ) v&agrave;&nbsp;<strong>205.000</strong>&nbsp;<strong>VNĐ</strong>&nbsp;( Gi&aacute; đ&atilde; bao gồm b&igrave;nh thủy tinh</p>
+               
+               <p>Ch&uacute; &yacute;: khi đổi nước, thay nước bạn chỉ cần đỏ mực nước đủ để cho tiếp x&uacute;c với rễ kh&ocirc;ng n&ecirc;n đổ ngập cả th&acirc;n.</p>',
+               'user_id' => '3',
+               'category_id' => '4',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Sen Đá 3D',
+               'slug' => Str::of('Sen Đá 3D')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/5SAI0sY7RpN9NMLTIxVX6uK1WCXOTVt1.jpg',
+               'feature_image_name' => 'sen-da-3d-1.jpg',
+               'price' => '29000',
+               'sale_price' => '0',
+               'final_price' => 29000,
+               'content_short' => 'Cây Sen Đá 3D mang ý nghĩa phong thủy cho một tình yêu và một tình bạn vĩnh cửu, không đổi thay theo thời gian. Cây phù hợp để bàn làm việc, trang trí góc học tập, quán cà phê... Cây có cách chăm sóc khá đơn giản.',
+               'content' => '<p>Sen đ&aacute; 3D ph&aacute;t triển theo dạng đ&agrave;i, l&agrave; loại sen đ&aacute; c&oacute; những vạch đen ở viền l&aacute; v&agrave; giữa l&aacute;, ch&iacute;nh v&igrave; điều đ&oacute; m&agrave; khi ch&uacute;ng ta nh&igrave;n sẽ cảm gi&aacute;c được l&aacute; n&oacute; rất thật 3D chứ kh&ocirc;ng phải 2D như c&aacute;c loại kh&aacute;c khi nh&igrave;n. C&acirc;y mang &yacute; nghĩa phong thủy cho một t&igrave;nh y&ecirc;u v&agrave; một t&igrave;nh bạn vĩnh cửu, kh&ocirc;ng đổi thay theo thời gian. C&acirc;y sen đ&aacute; 3D ph&ugrave; hợp để b&agrave;n l&agrave;m việc, trang tr&iacute; g&oacute;c học tập, qu&aacute;n c&agrave; ph&ecirc;&hellip;</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/sen-da-3d.jpg" style="height:300px; width:225px" /></p>
+               
+               <h2>C&Aacute;CH CHĂM S&Oacute;C SEN Đ&Aacute; 3D</h2>
+               
+               <p>C&aacute;c l&aacute; của sen đ&aacute; 3D mặc d&ugrave; mọc theo dạng đ&agrave;i nhưng kh&ocirc;ng đan kh&iacute;t v&agrave;o nhau như một số loại sen đ&aacute; hồng phấn, viền hồng, đất v&agrave; th&aacute;i n&ecirc;n cũng giảm được khả năng thối khi người chăm s&oacute;c kh&ocirc;ng biết m&agrave; tưới trực tiếp l&ecirc;n c&acirc;y.</p>
+               
+               <h3>TƯỚI NƯỚC</h3>
+               
+               <p>Kh&ocirc;ng kh&aacute;c g&igrave; với c&aacute;c loại sen đ&aacute; kh&aacute;c, sen đ&aacute; 3D cũng c&oacute; c&aacute;ch chăm s&oacute;c cũng rất đơn giản, một tuần chỉ cần tưới 1 lần nếu để trong văn ph&ograve;ng, m&ocirc;i trường ẩm, v&agrave; 1 tuần 2 lần với kh&ocirc;ng kh&iacute; kh&ocirc;, n&oacute;ng.</p>
+               
+               <h3>ĐẤT</h3>
+               
+               <p>Loại đất dễ kiếm v&agrave; th&iacute;ch hợp với sen đ&aacute; 3D l&agrave; loại đất được trộn với xỉ than đun rồi đập nhỏ, trộn với đất, tro, chấu v&agrave; sơ dừa. Loại hỗn hợp n&agrave;y rất th&iacute;ch hợp với c&aacute;c loại sen đ&aacute; v&igrave; n&oacute; vừa tho&aacute;t nước nhanh m&agrave; vẫn đảm bảo chất dinh dưỡng cho c&acirc;y.</p>
+               
+               <h3>&Aacute;NH S&Aacute;NG</h3>
+               
+               <p>&Aacute;nh s&aacute;ng lu&ocirc;n l&agrave; một phần kh&ocirc;ng thể thiếu đối với c&acirc;y trồng để g&oacute;p phần quan trọng trong qu&aacute; tr&igrave;nh quang hợp, tạo ra dinh dưỡng nu&ocirc;i c&acirc;y, đối với sen đ&aacute; &aacute;nh s&aacute;ng c&ograve;n tạo n&ecirc;n m&agrave;u sắc cho c&acirc;y, thường nếu để c&acirc;y trong văn ph&ograve;ng th&igrave; trước khi về bạn mang c&acirc;y ra ngo&agrave;i cửa sổ, h&agrave;ng lang sau đ&oacute; s&aacute;ng h&ocirc;m sau đi l&agrave;m bạn lại mang v&agrave;o ph&ograve;ng l&agrave;m việc. C&ograve;n nếu chăm s&oacute;c ở nh&agrave; th&igrave; để trong trời chỉ cần tr&aacute;nh &aacute;nh nắng buổi trưa m&ugrave;a h&egrave; v&agrave; mưa lớn l&agrave; được.</p>
+               
+               <h3>NH&Acirc;N GIỐNG</h3>
+               
+               <p>C&acirc;y c&oacute; thể nh&acirc;n giống bằng hạt, l&aacute;, v&agrave; gi&acirc;m c&agrave;nh. V&igrave; thuộc họ bỏng n&ecirc;n c&acirc;y rất dễ nh&acirc;n giống, chỉ c&oacute; vấn đề l&agrave; thời tiết kh&ocirc;ng ph&ugrave; hợp th&igrave; c&acirc;y ph&aacute;t triển rất chậm.</p>',
+               'user_id' => '3',
+               'category_id' => '4',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Sen Đá Sedum Cơm',
+               'slug' => Str::of('Sen Đá Sedum Cơm')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/WSwNpAZsdaEqpIHs5wyEkO6ODgRcOxt4.jpg',
+               'feature_image_name' => 'se-dum-com-1.jpg',
+               'price' => '29000',
+               'sale_price' => '0',
+               'final_price' => 29000,
+               'content_short' => 'Sen Đá Sedum Cơm nằm trong họ sedum là dòng có bông và lá rất nhỏ, phù hợp với những người yêu thích sự nhỏ nhắn, cây phù hợp để bàn làm việc và các góc nhỏ',
+               'content' => '<p>Sen đ&aacute; Sedum Cơm nằm trong họ sedum l&agrave; d&ograve;ng c&oacute; b&ocirc;ng v&agrave; l&aacute; rất nhỏ, thường d&ugrave;ng để phối trong tiểu cảnh, hoặc d&agrave;nh cho những người th&iacute;ch c&aacute;c loại c&acirc;y nhỏ nhắn v&agrave; đ&aacute;ng y&ecirc;u. C&acirc;y ph&ugrave; hợp để b&agrave;n l&agrave;m việc, trang tr&iacute; qu&aacute;n, trồng tại c&aacute;c &ocirc; nhỏ ở cửa sổ, ban c&ocirc;ng&hellip;</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/sedum-com.jpg" style="height:300px; width:225px" /></p>
+               
+               <h3>TƯỚI NƯỚC</h3>
+               
+               <p>Trời m&ugrave;a lạnh hoặc để trong văn ph&ograve;ng k&iacute;n c&oacute; điều h&ograve;a th&igrave; 1 tuần chỉ n&ecirc;n tưới 1 lần, mỗi lần đủ ẩm đất l&agrave; được. Nếu để ngo&agrave;i trời th&igrave; n&ecirc;n che đi để tr&aacute;nh mưa v&agrave; 1 tuần c&oacute; thể tưới 2 lần, trời n&oacute;ng cũng c&oacute; thể tưới 2 lần t&ugrave;y theo điệu kiện đất v&agrave; c&acirc;y c&oacute; bị tho&aacute;t hơi nước kh&ocirc;ng để bạn c&oacute; thể tự căn chỉnh&nbsp;lượng nước.</p>
+               
+               <h3>ĐẤT</h3>
+               
+               <p>L&agrave; loại c&acirc;y nhỏ kh&ocirc;ng ưa được nước n&ecirc;n đất của Sedum Cơm phải xốp, c&oacute; khả năng tho&aacute;t nước tốt nhưng vẫn c&oacute; đủ dưỡng chất, bạn c&oacute; thể trộn đất với tro, chấu, sơ dừa th&ecirc;m xỉ than đu rồi đập nhỏ để tạo sự th&ocirc;ng tho&aacute;ng cho đất.</p>
+               
+               <h3>&Aacute;NH S&Aacute;NG</h3>
+               
+               <p>C&acirc;y th&iacute;ch &aacute;nh s&aacute;ng của buổi sớm cũng như chiều tối, hoặc &aacute;nh s&aacute;ng trời m&ugrave;a đ&ocirc;ng v&agrave; thu, tr&aacute;nh để c&acirc;y giữa trời nắng gắt m&ugrave;a h&egrave; c&acirc;y dễ bị sốc nhiệt m&agrave; chết.</p>
+               
+               <h3>NH&Acirc;N GIỐNG</h3>
+               
+               <p>C&acirc;y sen đ&aacute; Sedum Cơm c&oacute; thể nh&acirc;n giống bằng l&aacute;, gi&acirc;m c&agrave;nh, t&aacute;ch bụi, c&aacute;ch tốt nhất l&agrave; t&aacute;ch bụi v&igrave; c&acirc;y tương đối nhỏ n&ecirc;n c&aacute;ch biện ph&aacute;p nh&acirc;n giống bằng l&aacute; v&agrave; cắt từng c&agrave;nh nhỏ hơi kh&oacute;&nbsp;</p>',
+               'user_id' => '3',
+               'category_id' => '4',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Sen Đá Lục Bình',
+               'slug' => Str::of('Sen Đá Lục Bình')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/PO0uVRibuRFpaMwSAThKNtjNYUZ7rMoA.jpg',
+               'feature_image_name' => 'sen-da-luc-binh-1.jpg',
+               'price' => '29000',
+               'sale_price' => '0',
+               'final_price' => 29000,
+               'content_short' => 'Cây Sen Đá Lục Bình có màu xanh tươi mát mang đến cho không gian của bạn sự thoải mái, cây phù hợp để bàn, trang trí quán cà phê...Cây mang ý nghĩa giữ chặt những gì mình đạt được.',
+               'content' => '<p>Sen đ&aacute; Lục B&igrave;nh l&agrave; một trong những giống mới từ b&ecirc;n nước ngo&agrave;i được đưa về Việt Nam, nay đ&atilde; được nh&acirc;n giống th&agrave;nh c&ocirc;ng, c&acirc;y c&oacute; m&agrave;u xanh tươi m&aacute;t c&aacute;nh mỏng mềnh, đem đến sự tươi m&aacute;t cho kh&ocirc;ng gian. C&acirc;y ph&ugrave; hợp với người mệnh mộc v&agrave; mệnh hỏa, với &yacute; nghĩa phong thủy giữ chắc những g&igrave; m&igrave;nh đ&atilde; đạt được.</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/sen-da-luc-binh.jpg" style="height:300px; width:277px" /></p>
+               
+               <h3>&Aacute;NH S&Aacute;NG</h3>
+               
+               <p>Những c&acirc;y sen đ&aacute; n&oacute;i chung thường loại c&oacute; m&agrave;u sắc như đỏ, đen, hồng l&agrave; những loại cần nhiều &aacute;nh s&aacute;ng để n&ecirc;n m&agrave;u, c&ograve;n những loại c&oacute; m&agrave;u xanh như sen đ&aacute; Lục B&igrave;nh, sen đ&aacute; Đất, sen đ&aacute; Th&aacute;i, sen đ&aacute; Xanh&hellip; Th&igrave; cần &iacute;t &aacute;nh s&aacute;ng hơn bạn chỉ cần để cửa sổ, ban c&ocirc;ng c&oacute; &aacute;nh s&aacute;ng nhẹ l&agrave; được. Nếu để trong nh&agrave; th&igrave; n&ecirc;n 2 &ndash; 3 ng&agrave;y mang ra ngo&agrave;i trời, đặc điểm của sen đ&aacute; l&agrave; cần th&ecirc;m cả sự th&ocirc;ng tho&aacute;ng y&ecirc;u tố n&agrave;y gi&uacute;p c&acirc;y kh&iacute;t l&aacute;.</p>
+               
+               <h3>NƯỚC</h3>
+               
+               <p>V&igrave; c&acirc;y l&aacute; kh&aacute; mỏng n&ecirc;n lượng nước trữ cũng kh&ocirc;ng được nhiều như một số loại sen đ&aacute; kh&aacute;c, tuy nhi&ecirc;n th&igrave; đ&atilde; thuộc họ sen đ&aacute; th&igrave; đều c&oacute; khả năng sinh tồn ở m&ocirc;i trường thiếu nước, n&ecirc;n bạn chỉ cần tưới 1 lần một tuần nếu để trong nh&agrave; v&agrave; 1 tuần tưới 2 lần nếu để ngo&agrave;i trời, hoặc nơi c&oacute; khả năng tho&aacute;t nước, bốc hơi nước, n&oacute;ng&hellip;</p>
+               
+               <h3>ĐẤT</h3>
+               
+               <p>Đất l&agrave; điều kh&aacute; quan trọng loại đất m&ugrave;n th&igrave; gi&uacute;p c&acirc;y ph&aacute;t triển nhanh, loại đất nhiều xỉ than th&igrave; gi&uacute;p tho&aacute;t nước tốt, n&ecirc;n tối ưu nhất l&agrave; bạn n&ecirc;n trộn 2 loại n&agrave;y với nhau c&ograve;n kh&ocirc;ng c&oacute; điều kiện bạn c&oacute; thể trồng nguy&ecirc;n bằng xỉ than đậm nhỏ lọc mịn, hoặc đất m&ugrave;n tribat b&aacute;n ngo&agrave;i tiệp, nhưng tuyệt đối kh&ocirc;ng n&ecirc;n trồng nguy&ecirc;n đất vườn đất vườn giữ nước rất l&acirc;u n&ecirc;n nếu kh&ocirc;ng ch&uacute; &yacute; c&acirc;y c&oacute; thể chết bất cứ l&uacute;c n&agrave;o.</p>
+               
+               <h3>NH&Acirc;N GIỐNG</h3>
+               
+               <p>C&acirc;y sen đ&aacute; Lục B&igrave;nh c&oacute; thể nh&acirc;n giống theo nhiều phương ph&aacute;p kh&aacute;c nhau như l&aacute;, gi&acirc;m c&agrave;nh, hạt đều được.</p>',
+               'user_id' => '3',
+               'category_id' => '4',
+               'status' => '1',
+               'created_at' => Carbon::now(),
+               'updated_at' => Carbon::now(),   
+            ],
+            [ 
+               'name' => 'Sen Đá Ngọc Đuốc',
+               'slug' => Str::of('Sen Đá Ngọc Đuốc')->slug('-'), 
+               'feature_image_path' => '/public/uploads/products/3/gnROi023XtMRDMcmg0nk8zYqbUR72W7s.jpg',
+               'feature_image_name' => 'sen-da-ngoc-duoc-1.jpg',
+               'price' => '29000',
+               'sale_price' => '0',
+               'final_price' => 29000,
+               'content_short' => 'Sen đá Ngọc Guốc là một trong những loại sen đá có hình dáng khá độc đáo, nếu bạn vặt 1 chiếc lá của cây ra rồi đặt xuống đất thì sẽ thấy nó giống như hình chiếc guốc chính vì vậy mà cây có tên là sen đá Ngọc Guốc, cây mang ý nghĩa cho một tình yêu và tình bạn vĩnh cửu, rất thích hợp dành cho những bạn thích sự độc đáo và mới lạ, cây phù hợp làm cây cảnh để bàn, tặng nhau trong các dịp sinh nhật…',
+               'content' => '<p>Sen đ&aacute; Ngọc Guốc mang &yacute; nghĩa cho một t&igrave;nh y&ecirc;u v&agrave; t&igrave;nh bạn vĩnh cửu, rất th&iacute;ch hợp d&agrave;nh cho những bạn th&iacute;ch sự độc đ&aacute;o v&agrave; mới lạ, c&acirc;y ph&ugrave; hợp l&agrave;m c&acirc;y cảnh để b&agrave;n, tặng nhau trong c&aacute;c dịp sinh nhật...</p>
+
+               <p><img alt="" src="http://localhost/plant-store/public/uploads/img-content/sen-da-ngoc-duoc.jpg" style="height:300px; width:300px" /></p>
+               
+               <h3>ĐẤT</h3>
+               
+               <p>Loại đất ph&ugrave; hợp trồng sen đ&aacute; Ngọc Guốc l&agrave; loại đất tơi xốp c&oacute; khả năng tho&aacute;t nước tốt, độ m&ugrave;n cao, nhất l&agrave; tr&ecirc;n bền mặt v&igrave; l&aacute; tiếp x&uacute;c s&aacute;t với đất nếu mặt tr&ecirc;n kh&ocirc;ng tho&aacute;t nước nhanh c&oacute; thể dẫn đến t&igrave;nh trạng l&aacute; bị ẩm l&acirc;u v&agrave; thối. Bạn c&oacute; thể mua loại đất tribat mặt tr&ecirc;n c&oacute; thể dải sỏi để dễ tho&aacute;t nước, hoặc lấy xỉ than tổ ong đun rồi đập vụn rồi trộn với tro.</p>
+               
+               <h3>NƯỚC</h3>
+               
+               <p>Chỉ cần 1 tuần bạn tưới nước 1 lần nếu để trong điều kiện &iacute;t bị mất nước v&agrave; thời tiết kh&ocirc;ng kh&ocirc; v&agrave; n&oacute;ng, c&ograve;n kh&ocirc;ng c&oacute; thể l&agrave; 2 -3 lần nếu bạn để c&acirc;y ngo&agrave;i trời v&agrave; t&ugrave;y theo thời tiết, c&aacute;ch tốt nhất bạn h&atilde;y nh&igrave;n l&aacute; để tưới nước khi n&agrave;o l&aacute; nhăn, quắt v&agrave; kh&ocirc;ng mọng th&igrave; l&agrave; đang thiếu nước c&ograve;n l&agrave; vẫn căng mọng th&igrave; kh&ocirc;ng cần tưới.</p>
+               
+               <h3>&Aacute;NH S&Aacute;NG</h3>
+               
+               <p>Sen đ&aacute; Ngọc Guốc cần &aacute;nh s&aacute;ng để c&oacute; thể ph&aacute;t triển v&agrave; đẹp nhưng chỉ cần &aacute;nh nắng buổi s&aacute;ng sớm hay l&uacute;c chiều muộn l&agrave; đủ, tr&aacute;nh &aacute;nh nắng buổi trưa m&ugrave;a h&egrave; để c&acirc;y kh&ocirc;ng bị sốc nhiệt m&agrave; chết, c&ograve;n m&ugrave;a thu v&agrave; đ&ocirc;ng th&igrave; bạn c&oacute; thể để thoải m&aacute;i.</p>
+               
+               <h3>NH&Acirc;N GIỐNG</h3>
+               
+               <p>C&acirc;y c&oacute; thể nh&acirc;n giống bằng l&aacute;, gi&acirc;m c&agrave;nh hoặc trồng bằng hạt đều được.</p>
+               
+               <h3>PH&Acirc;N B&Oacute;N</h3>
+               
+               <p>Nếu để c&acirc;y ph&aacute;t triển nhanh bạn c&oacute; thể b&oacute;n th&ecirc;m loại ph&acirc;n tan chậm hoặc tr&ecirc;n th&ecirc;m v&agrave;o đất nhưng kh&ocirc;ng n&ecirc;n qu&aacute; nhiều, v&agrave; n&ecirc;n c&aacute;ch 3 &ndash; 6 th&aacute;ng mới b&oacute;n một lần tr&aacute;nh trường hợp l&agrave;m c&acirc;y sốc.</p>',
+               'user_id' => '3',
+               'category_id' => '4',
                'status' => '1',
                'created_at' => Carbon::now(),
                'updated_at' => Carbon::now(),   
