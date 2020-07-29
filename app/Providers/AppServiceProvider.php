@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Product;
 use App\Setting;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\View;
@@ -36,10 +37,13 @@ class AppServiceProvider extends ServiceProvider
             foreach($settings as $item) {
                 $settingsArr[$item->config_key] = $item->config_value;
             }
+            // Products
+            $productsShare = Product::where('status', 1)->orderBy('id', 'desc')->take(2)->get();
 
             $view->with([
                 'cartQuantity' => $cartQuantity,
                 'settingsArr' => $settingsArr,
+                'productsShare' => $productsShare,
             ]);
 
             

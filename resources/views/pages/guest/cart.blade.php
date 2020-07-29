@@ -5,6 +5,11 @@
     .cart-table thead th {
         padding: 30px 15px;
     }
+
+    .cart_product_img img {
+        width: 100px;
+        height: 86px;
+    }
 </style>
 @endsection
 @section('content')
@@ -43,14 +48,7 @@
                                         </td>
                                         <td class="qty">
                                             <div class="quantity">
-                                                <span class="qty-minus"
-                                                    onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN(   qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i
-                                                        class="fa fa-minus" aria-hidden="true"></i></span>
-                                                <input type="number" class="qty-text" id="qty" step="1" min="1" max="99"
-                                                    name="quantity" value="{!! $cart->qty !!}">
-                                                <span class="qty-plus"
-                                                    onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN(   qty )) effect.value++;return false;"><i
-                                                        class="fa fa-plus" aria-hidden="true"></i></span>
+                                                <input type="number" class="qty-text cart-update" id="qty" step="1" min="1" max="99" name="quantity" value="{!! $cart->qty !!}" data-rowid="{!! $cart->rowId !!}">
                                             </div>
                                         </td>
                                         <td class="price"><span>{!! number_format($cart->price, 0, ',', '.') !!} VNĐ</span></td>
@@ -115,10 +113,56 @@
                         $('.ajax-cart-table').html(response.cartTable);
 
                         alertify.set('notifier', 'position', 'top-right');
-                        alertify.success('Đã xoá sản phẩm ra giỏ hàng');
+                        alertify.success('Đaã xoá sản phẩm ra giỏ hàng');
                     }
                 }
             });
         });
+
+        $(document).on('change', '.cart-update', function() {
+            let quantity = $(this).val();
+            let rowId = $(this).data('rowid');
+            let url = '{!! route("guest.cart.update") !!}';
+            let _token = '{{ csrf_token() }}';
+
+            // if(quantity === '' || quantity < 0 || quantity > 100) {
+            //     $(this).val(1)
+            // }
+            
+            $.ajax({
+                type: "post",
+                url: url,
+                data: {
+                    '_token': _token,
+                    'rowId': rowId,
+                    'quantity': quantity
+                },
+                success: function (response) {
+                    if(response.code === 204) { 
+            
+                        // Cập nhật table
+                        $('.ajax-cart-table').empty();
+                        $('.ajax-cart-table').html(response.cartTable);
+
+                        alertify.set('notifier', 'position', 'top-right');
+                        alertify.error('Cập nhật không thành công');
+                    }
+                    if(response.code === 200) {
+                        // Cập nhật số lượng
+                        $('.cart-quantity').empty();
+                        $('.cart-quantity').html('(' + response.cardQuantity + ')');
+            
+                        // Cập nhật table
+                        $('.ajax-cart-table').empty();
+                        $('.ajax-cart-table').html(response.cartTable);
+
+                        alertify.set('notifier', 'position', 'top-right');
+                        alertify.success('Cập nhật thành công');
+                    }
+                }
+            });
+
+        });
+
     </script>
 @endsection

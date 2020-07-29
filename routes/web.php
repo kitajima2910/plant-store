@@ -23,6 +23,7 @@ Route::group(['prefix' => 'cart'], function () {
     Route::get('gio-hang.html', 'CartController@index')->name('guest.cart.index');
     Route::post('them-san-pham.html', 'CartController@add')->name('guest.cart.add');
     Route::post('xoa-san-pham.html', 'CartController@del')->name('guest.cart.del');
+    Route::post('cap-nhat-san-pham.html', 'CartController@update')->name('guest.cart.update');
 });
 
 
