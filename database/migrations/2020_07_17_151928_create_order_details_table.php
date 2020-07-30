@@ -13,7 +13,6 @@ class CreateOrderDetailsTable extends Migration
      */
     public function up()
     {
-        $this->down();
 
         Schema::create('order_details', function (Blueprint $table) {
             $table->unsignedBigInteger('order_id');

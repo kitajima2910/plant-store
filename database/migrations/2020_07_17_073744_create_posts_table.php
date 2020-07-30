@@ -13,7 +13,6 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        $this->down();
 
         Schema::create('posts', function (Blueprint $table) {
             $table->id();

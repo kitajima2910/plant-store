@@ -13,8 +13,7 @@ class CreateSettingsTable extends Migration
      */
     public function up()
     {
-        $this->down();
-
+        
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
             $table->string('config_key');
