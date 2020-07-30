@@ -13,7 +13,6 @@ class CreateProductImagesTable extends Migration
      */
     public function up()
     {
-        $this->down();
 
         Schema::create('product_images', function (Blueprint $table) {
             $table->id();

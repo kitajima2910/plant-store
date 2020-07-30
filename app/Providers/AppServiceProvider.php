@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Menu;
 use App\Product;
 use App\Setting;
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -39,11 +40,14 @@ class AppServiceProvider extends ServiceProvider
             }
             // Products
             $productsShare = Product::where('status', 1)->orderBy('id', 'desc')->take(2)->get();
-
+            // Menus
+            $menusShare  = Menu::where('status', 1)->get();
+            
             $view->with([
                 'cartQuantity' => $cartQuantity,
                 'settingsArr' => $settingsArr,
-                'productsShare' => $productsShare,
+                'productsShare' => $productsShare,                
+                'menusShare' => $menusShare,                
             ]);
 
             

@@ -13,7 +13,6 @@ class CreateSlidersTable extends Migration
      */
     public function up()
     {
-        $this->down();
 
         Schema::create('sliders', function (Blueprint $table) {
             $table->id();
