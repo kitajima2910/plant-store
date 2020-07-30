@@ -54,8 +54,9 @@ $(document).on('click', '.cart-add', function() {
     let quantity = 1;
     let url = '{!! route("guest.cart.add") !!}';
     let _token = '{{ csrf_token() }}';
+
     $.ajax({
-        type: "post",
+        type: "get",
         url: url,
         data: {
             '_token': _token,
@@ -63,10 +64,17 @@ $(document).on('click', '.cart-add', function() {
             'quantity': quantity
         },
         success: function (response) {
+            
             $('.cart-quantity').empty();
-            $('.cart-quantity').html('(' + response + ')');
-            alertify.set('notifier', 'position', 'bottom-left');
-            alertify.success('Đã thêm sản phẩm vào giỏ hàng');
+            $('.cart-quantity').html('(' + response.cardQuantity + ')');
+
+            setTimeout(function() {
+                alertify.set('notifier', 'position', 'bottom-left');
+                var delay = alertify.get('notifier','delay');
+                alertify.set('notifier','delay', 2);
+                alertify.success('Đã thêm sản phẩm vào giỏ hàng');
+                alertify.set('notifier','delay', delay);
+            }, 300);
         }
     });
 });

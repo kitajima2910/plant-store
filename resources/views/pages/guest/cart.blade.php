@@ -95,8 +95,9 @@
             let rowId = $(this).data('rowid');
             let url = '{!! route("guest.cart.del") !!}';
             let _token = '{{ csrf_token() }}';
+
             $.ajax({
-                type: "post",
+                type: "get",
                 url: url,
                 data: {
                     '_token': _token,
@@ -104,16 +105,21 @@
                 },
                 success: function (response) {
                     if(response.code === 200) {
+                        
                         // Cập nhật số lượng
                         $('.cart-quantity').empty();
-                        $('.cart-quantity').html('(' + response.cardQuantity + ')');
-            
-                        // Cập nhật table
+                        $('.cart-quantity').html('(' + response.cardQuantity + ')');   
+                                            // Cập nhật table
                         $('.ajax-cart-table').empty();
                         $('.ajax-cart-table').html(response.cartTable);
 
-                        alertify.set('notifier', 'position', 'top-right');
-                        alertify.success('Đã xoá sản phẩm ra giỏ hàng');
+                        setTimeout(function() {
+                            alertify.set('notifier', 'position', 'bottom-left');
+                            var delay = alertify.get('notifier','delay');
+                            alertify.set('notifier','delay', 2);
+                            alertify.success('Đã xoá sản phẩm ra giỏ hàng');
+                            alertify.set('notifier','delay', delay);
+                        }, 300);
                     }
                 }
             });
@@ -125,12 +131,8 @@
             let url = '{!! route("guest.cart.update") !!}';
             let _token = '{{ csrf_token() }}';
 
-            // if(quantity === '' || quantity < 0 || quantity > 100) {
-            //     $(this).val(1)
-            // }
-            
             $.ajax({
-                type: "post",
+                type: "get",
                 url: url,
                 data: {
                     '_token': _token,
@@ -139,25 +141,36 @@
                 },
                 success: function (response) {
                     if(response.code === 204) { 
-            
+                        
                         // Cập nhật table
                         $('.ajax-cart-table').empty();
                         $('.ajax-cart-table').html(response.cartTable);
 
-                        alertify.set('notifier', 'position', 'top-right');
-                        alertify.error('Cập nhật không thành công');
+                        setTimeout(function() {
+                            alertify.set('notifier', 'position', 'bottom-left');
+                            var delay = alertify.get('notifier','delay');
+                            alertify.set('notifier','delay', 2);
+                            alertify.error('Cập nhật không thành công');
+                            alertify.set('notifier','delay', delay);
+                        }, 300);
                     }
                     if(response.code === 200) {
+                        
                         // Cập nhật số lượng
                         $('.cart-quantity').empty();
                         $('.cart-quantity').html('(' + response.cardQuantity + ')');
-            
+                        
                         // Cập nhật table
                         $('.ajax-cart-table').empty();
                         $('.ajax-cart-table').html(response.cartTable);
 
-                        alertify.set('notifier', 'position', 'top-right');
-                        alertify.success('Cập nhật thành công');
+                        setTimeout(function() {
+                            alertify.set('notifier', 'position', 'bottom-left');
+                            var delay = alertify.get('notifier','delay');
+                            alertify.set('notifier','delay', 2);
+                            alertify.success('Cập nhật thành công');
+                            alertify.set('notifier','delay', delay);
+                        }, 300);
                     }
                 }
             });

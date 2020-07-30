@@ -17,14 +17,14 @@ use Illuminate\Support\Facades\Route;
 // Frontend
 Route::get('/', 'HomeController@index');
 Route::get('trang-chu.html', 'HomeController@index')->name('guest.trangChu');
-Route::get('{slug}.html', 'ProductController@viewProductDetails')->name('guest.viewProductDetails');
+Route::get('san-pham/{slug}.html', 'ProductController@viewProductDetails')->name('guest.viewProductDetails');
 
 // Cart
 Route::group(['prefix' => 'gio-hang'], function () {
     Route::get('hien-thi-san-pham.html', 'CartController@index')->name('guest.cart.index');
-    Route::post('them-san-pham.html', 'CartController@add')->name('guest.cart.add');
-    Route::post('xoa-san-pham.html', 'CartController@del')->name('guest.cart.del');
-    Route::post('cap-nhat-san-pham.html', 'CartController@update')->name('guest.cart.update');
+    Route::get('them-san-pham.html', 'CartController@add')->name('guest.cart.add');
+    Route::get('xoa-san-pham.html', 'CartController@del')->name('guest.cart.del');
+    Route::get('cap-nhat-san-pham.html', 'CartController@update')->name('guest.cart.update');
 });
 
 // Customer
