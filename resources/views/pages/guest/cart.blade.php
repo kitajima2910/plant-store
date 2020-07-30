@@ -35,7 +35,7 @@
                                     <th>SẢN PHẨM</th>
                                     <th>SỐ LƯỢNG</th>
                                     <th>GIÁ</th>
-                                    <th>TIỀN TRẢ</th>
+                                    <th>THÀNH TIỀN</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -78,7 +78,11 @@
                             <h5>{!! number_format($totalCart) !!} VNĐ</h5>
                         </div>
                         <div class="checkout-btn">
-                            <a href="#" class="btn alazea-btn w-100">Thanh toán</a>
+                            @if ($totalCart > 0)
+                                <a href="{!! route('gues.checkout.index') !!}" class="btn alazea-btn w-100">Thanh toán</a>
+                            @else
+                                <a href="javascript:void(0);" class="btn alazea-btn w-100 checkout">Thanh toán</a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -91,6 +95,16 @@
 @endsection
 @section('script')
     <script>
+        $(document).on('click', '.checkout', function() {
+            setTimeout(function() {
+                alertify.set('notifier', 'position', 'bottom-left');
+                var delay = alertify.get('notifier','delay');
+                alertify.set('notifier','delay', 2);
+                alertify.error('Không có sản phẩm nào');
+                alertify.set('notifier','delay', delay);
+            }, 300);
+        });
+
         $(document).on('click', '.cart-del', function() {
             let rowId = $(this).data('rowid');
             let url = '{!! route("guest.cart.del") !!}';

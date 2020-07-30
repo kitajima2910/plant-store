@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class CustomerAuthenticate
 {
@@ -19,6 +20,7 @@ class CustomerAuthenticate
         if(Auth::guard($guard)->check()) {
             return $next($request);
         }
-        return redirect()->route('guest.trangChu');
+        Session::put('checkout', 'checkout');
+        return redirect()->route('guest.user.login');
     }
 }

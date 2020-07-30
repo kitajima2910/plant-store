@@ -34,7 +34,7 @@ class ProductController extends Controller
 
             return view('pages.guest.shop-details', compact('product', 'productImages', 'productCategory', 'tagsStr', 'productOfCategory'));
         } catch (\Throwable $th) {
-            return redirect()->route('guest.trangChu');
+            return redirect()->route('guest.home');
         }
         
     }
