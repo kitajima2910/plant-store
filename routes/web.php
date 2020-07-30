@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index');
 Route::get('trang-chu.html', 'HomeController@index')->name('guest.trangChu');
 Route::get('san-pham/{slug}.html', 'ProductController@viewProductDetails')->name('guest.viewProductDetails');
+Route::get('san-pham.html','ProductController@index');
 
 // Cart
 Route::group(['prefix' => 'gio-hang'], function () {
