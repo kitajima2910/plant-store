@@ -28,14 +28,6 @@
                                     </td>
                                     <td class="qty">
                                         <div class="quantity">
-                                            {{-- <span class="qty-minus"
-                                                onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN(   qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i
-                                                    class="fa fa-minus" aria-hidden="true"></i></span> --}}
-                                            {{-- <input type="number" class="qty-text" id="qty" step="1" min="1" max="99"
-                                                name="quantity" value="{!! $cart->qty !!}"> --}}
-                                            {{-- <span class="qty-plus"
-                                                onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN(   qty )) effect.value++;return false;"><i
-                                                    class="fa fa-plus" aria-hidden="true"></i></span> --}}
                                             <input type="number" class="qty-text cart-update" id="qty" step="1" min="1" max="99" name="quantity" value="{!! $cart->qty !!}" data-rowid="{!! $cart->rowId !!}">
                                         </div>
                                     </td>
@@ -66,7 +58,11 @@
                         <h5>{!! number_format($totalCart) !!} VNĐ</h5>
                     </div>
                     <div class="checkout-btn">
-                        <a href="#" class="btn alazea-btn w-100">Thanh toán</a>
+                        @if ($totalCart > 0)
+                            <a href="{!! route('gues.checkout.index') !!}" class="btn alazea-btn w-100">Thanh toán</a>
+                        @else
+                            <a href="javascript:void(0);" class="btn alazea-btn w-100 checkout">Thanh toán</a>
+                        @endif
                     </div>
                 </div>
             </div>

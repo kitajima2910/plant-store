@@ -14,7 +14,7 @@ class LogoutController extends Controller
             Cart::erase($userId);
             Cart::store($userId);
             Auth::guard('customers')->logout();
-            return redirect()->route('guest.trangChu');
+            return redirect()->route('guest.home');
         }
     }
 }

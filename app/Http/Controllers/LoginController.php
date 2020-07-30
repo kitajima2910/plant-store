@@ -6,6 +6,7 @@ use App\CartOffline;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -18,7 +19,7 @@ class LoginController extends Controller
 
     public function index() {
         if(Auth::guard('customers')->check()) {
-            return redirect()->route('guest.trangChu');
+            return redirect()->route('guest.home');
         }
         return view('pages.guest.login');
     }
@@ -42,7 +43,11 @@ class LoginController extends Controller
                 }
             }
             
-            return redirect()->intended('tran-chu.html');
+            if(Session::get('checkout')) {
+                Session::forget('checkout');
+                return redirect()->intended('thanh-toan/thong-tin-dat-hang.html');
+            }
+            return redirect()->intended('trang-chu.html');
         } else {
             return redirect()->back()->withInput()->withErrors(['errorLogin' => 'Email hoặc mật khẩu không đúng *,..,*']);
         }

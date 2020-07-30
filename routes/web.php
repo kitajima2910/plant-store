@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 // Frontend
 Route::get('/', 'HomeController@index');
-Route::get('trang-chu.html', 'HomeController@index')->name('guest.trangChu');
+Route::get('trang-chu.html', 'HomeController@index')->name('guest.home');
 Route::get('san-pham/{slug}.html', 'ProductController@viewProductDetails')->name('guest.viewProductDetails');
 Route::get('san-pham.html','ProductController@index');
 
@@ -34,6 +34,12 @@ Route::group(['prefix' => 'nguoi-dung'], function () {
     Route::post('dang-nhap.html', 'LoginController@login')->name('guest.user.login');
     Route::get('dang-xuat.html', 'LogoutController@logout')->name('guest.user.logout');
     Route::get('dang-ky.html', 'RegisterController@index')->name('guest.user.index');
+});
+
+// Checkout
+Route::group(['prefix' => 'thanh-toan'], function () {
+    Route::get('thong-tin-dat-hang.html', 'CheckoutController@index')->name('gues.checkout.index');
+    Route::post('thong-tin-dat-hang.html', 'CheckoutController@process')->name('gues.checkout.process');
 });
 
 

@@ -65,7 +65,7 @@
                 <nav class="classy-navbar justify-content-between" id="alazeaNav">
 
                     <!-- Nav Brand -->
-                    <a href="{!! route('guest.trangChu') !!}" class="nav-brand"><img
+                    <a href="{!! route('guest.home') !!}" class="nav-brand"><img
                             src="{{ asset('public/frontend/img/core-img/logo.png') }}"
                             width="100px"></a>
 
