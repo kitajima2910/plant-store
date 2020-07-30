@@ -3,6 +3,10 @@
      .classynav a {
          font-style: normal;
      }
+
+     .classy-menu {
+         display: flex
+     }
  </style>
 @endsection
 <header class="header-area">
@@ -79,8 +83,10 @@
                         </div>
             
                         <!-- Navbar Start -->
-                       @include('includes.guest.menu');
+                       @include('includes.guest.menu')
                         <!-- Navbar End --> 
+                        
+                      
                     </div>
                 </nav>
 
