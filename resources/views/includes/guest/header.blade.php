@@ -1,13 +1,13 @@
 @section('style')
- <style>
-     .classynav a {
-         font-style: normal;
-     }
+<style>
+    .classynav a {
+        font-style: normal;
+    }
 
-     .classy-menu {
-         display: flex
-     }
- </style>
+    .classy-menu {
+        display: flex
+    }
+</style>
 @endsection
 <header class="header-area">
 
@@ -83,17 +83,17 @@
                         </div>
             
                         <!-- Navbar Start -->
-                       @include('includes.guest.menu')
+                        @include('includes.guest.menu')
                         <!-- Navbar End --> 
                         
-                      
+                    
                     </div>
                 </nav>
 
                 <!-- Search Form -->
                 <div class="search-form">
                     <form action="#" method="get">
-                        <input type="search" name="search" id="search" placeholder="Type keywords &amp; press enter...">
+                        <input type="search" name="search" id="search" placeholder="Tìm kiếm &amp; nhấn phím enter...">
                         <button type="submit" class="d-none"></button>
                     </form>
                     <!-- Close Icon -->

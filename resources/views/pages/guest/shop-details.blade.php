@@ -81,7 +81,7 @@
 
                         <div class="cart--area d-flex flex-wrap align-items-center">
                             <!-- Add to Cart Form -->
-                            <form class="cart clearfix d-flex align-items-center" action="{!! route('guest.cart.add') !!}" method="post">
+                            <form class="cart clearfix d-flex align-items-center" action="{!! route('guest.cart.add') !!}" method="get">
                                 @csrf
                                 <input type="hidden" name="id" value="{!! $product->id !!}">
                                 <input type="hidden" name="pageToCart" value="guest.cart.index">
