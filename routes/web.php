@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -68,4 +69,10 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::resource('settings', 'SettingController');
     });
 
+});
+
+// Clear cache
+Route::get('/clear-cache', function() {
+    Artisan::call('cache:clear');
+    return "Cache is cleared";
 });
