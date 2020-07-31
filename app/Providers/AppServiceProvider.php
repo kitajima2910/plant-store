@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Category;
 use App\Menu;
 use App\Product;
 use App\Setting;
@@ -42,12 +43,15 @@ class AppServiceProvider extends ServiceProvider
             $productsShare = Product::where('status', 1)->orderBy('id', 'desc')->take(2)->get();
             // Menus
             $menusShare  = Menu::where('status', 1)->get();
-            
+            // Categories
+            $menuCategories = Category::where('parent_id', '=', 0)->get();
+
             $view->with([
                 'cartQuantity' => $cartQuantity,
                 'settingsArr' => $settingsArr,
                 'productsShare' => $productsShare,                
-                'menusShare' => $menusShare,                
+                'menusShare' => $menusShare,    
+                'menuCategories' => $menuCategories,            
             ]);
 
             

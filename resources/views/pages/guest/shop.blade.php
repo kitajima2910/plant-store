@@ -8,6 +8,9 @@
         height: 255px;
     }
 
+    .none{
+        display: none;
+    }
     .page-item.active .page-link {
     z-index: 1;
     color: #fff;
@@ -22,6 +25,23 @@
     .single-product-area .product-img .product-meta .compare-btn{
         padding-top: 14px;
     }
+
+    .footer-area .single-footer-widget .social-info a {
+        padding-top: 12px
+    }
+
+    
+    .shop-sorting-data {
+        float: right;    
+        padding-left: 915px;
+    }
+
+
+    .widget-desc a{
+        color: #707070;
+    }
+
+
 </style>
 @endsection
        <!-- ##### Breadcrumb Area Start ##### -->
@@ -32,10 +52,9 @@
           <!-- ##### Shop Area Start ##### -->
     <section class="shop-page section-padding-0-100">
         <div class="container">
-            <div class="row">
+            <div class="row" >
                 <!-- Shop Sorting Data -->
-                <div class="col-8"></div>
-                <div class="col-4">
+                <div class="col-12 bottom_line" >
                     <div class="shop-sorting-data d-flex flex-wrap align-items-center justify-content-between">
                         <div class="search_by_terms">
                             <form action="#" method="post" class="form-inline">
@@ -57,109 +76,61 @@
                     <div class="shop-sidebar-area">
                         <!-- Shop Widget -->
                         <div class="shop-widget catagory mb-50">
-                            <h4 class="widget-title">Categories</h4>
-                            <div class="widget-desc">
-                                <!-- Single Checkbox -->
-                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">All plants <span class="text-muted">(72)</span></label>
-                                </div>
-                                <!-- Single Checkbox -->
-                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                    <label class="custom-control-label" for="customCheck2">Outdoor plants <span class="text-muted">(20)</span></label>
-                                </div>
-                                <!-- Single Checkbox -->
-                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                    <label class="custom-control-label" for="customCheck3">Indoor plants <span class="text-muted">(15)</span></label>
-                                </div>
-                                <!-- Single Checkbox -->
-                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                    <label class="custom-control-label" for="customCheck4">Office Plants <span class="text-muted">(20)</span></label>
-                                </div>
-                                <!-- Single Checkbox -->
-                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                    <label class="custom-control-label" for="customCheck5">Potted <span class="text-muted">(15)</span></label>
-                                </div>
-                                <!-- Single Checkbox -->
-                                <div class="custom-control custom-checkbox d-flex align-items-center mb-2">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck6">
-                                    <label class="custom-control-label" for="customCheck6">Others <span class="text-muted">(2)</span></label>
-                                </div>
-                            </div>
+                            <h4 class="widget-title">Danh Mục</h4>
+                            @include('includes.guest.category')
                         </div>
 
                         <!-- Shop Widget -->
                         <div class="shop-widget best-seller mb-50">
                             <h4 class="widget-title">Best Seller</h4>
                             <div class="widget-desc">
-
-                                <!-- Single Best Seller Products -->
-                                <div class="single-best-seller-product d-flex align-items-center">
-                                    <div class="product-thumbnail">
-                                        <a href="shop-details.html"><img src="img/bg-img/4.jpg" alt=""></a>
-                                    </div>
-                                    <div class="product-info">
-                                        <a href="shop-details.html">Cactus Flower</a>
-                                        <p>$10.99</p>
-                                        <div class="ratings">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Single Best Seller Products -->
-                                <div class="single-best-seller-product d-flex align-items-center">
-                                    <div class="product-thumbnail">
-                                        <a href="shop-details.html"><img src="img/bg-img/5.jpg" alt=""></a>
-                                    </div>
-                                    <div class="product-info">
-                                        <a href="shop-details.html">Tulip Flower</a>
-                                        <p>$11.99</p>
-                                        <div class="ratings">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Single Best Seller Products -->
-                                <div class="single-best-seller-product d-flex align-items-center">
-                                    <div class="product-thumbnail">
-                                        <a href="shop-details.html"><img src="img/bg-img/34.jpg" alt=""></a>
-                                    </div>
-                                    <div class="product-info">
-                                        <a href="shop-details.html">Recuerdos Plant</a>
-                                        <p>$9.99</p>
-                                        <div class="ratings">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
-
-                    @include('ajax.guest.product-view')
-
-                        <!-- Pagination -->
-                       
+             
+                <div class="col-12 col-md-8 col-lg-9">
+                    <div class="shop-products-area">
+                        <div class="row">
+                @foreach ($products as $item)
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-product-area mb-50">
+                        <!-- Product Image -->
+                        <div class="product-img">
+                        <a href="{!! route('guest.viewProductDetails', $item->slug) !!}"><img src="{{asset($item->feature_image_path)}}" alt=""></a>
+                            <!-- Product Tag -->
+                            <div class="product-tag {{ $item->sale_price > 0 ? 'sale-tag' : 'none' }}">
+                                <a href="javascript:void(0);">{{ $item->sale_price > 0 ? 'SALE '. $item->sale_price . '%' : 'HOT' }}</a>
+                            </div>
+                            <div class="product-meta d-flex">
+                                <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
+                                <a href="javascript:void(0);" class="add-to-cart-btn cart-add" data-id="{!! $item->id !!}">Add to cart</a>
+                                <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
+                            </div>
+                        </div>
+                        <!-- Product Info -->
+                        <div class="product-info mt-15 text-center">
+                            <a href="{!! route('guest.viewProductDetails', $item->slug) !!}">
+                                <p>{{$item->name}}</p>
+                            </a>
+                            @if ($item->sale_price > 0)
+                            <s>{!! number_format($item->price, 0, ',', '.') !!} VNĐ</s>
+                            <h6>{!! number_format($item->final_price, 0, ',', '.') !!} VNĐ</h6>
+                        @else
+                            <h6>{!! number_format($item->final_price, 0, ',', '.') !!} VNĐ</h6>
+                        @endif
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+                        </div>
+                    </div>
+                </div>  
+                 <!-- Pagination -->
+                <div class="col-5"></div>
+                <div class="col-4">    
+                    {{$products->links()}}
+                </div>
                     </div>
                 </div>
             </div>
@@ -168,21 +139,21 @@
     <!-- ##### Shop Area End ##### -->
 
     @section('script')
-<script>
-$(document).on('click', '.cart-add', function() {
-    let id = $(this).data('id');
-    let quantity = 1;
-    let url = '{!! route("guest.cart.add") !!}';
-    let _token = '{{ csrf_token() }}';
+    <script>
+        $(document).on('click', '.cart-add', function() {
+        let id = $(this).data('id');
+        let quantity = 1;
+        let url = '{!! route("guest.cart.add") !!}';
+        let _token = '{{ csrf_token() }}';
 
-    $.ajax({
-        type: "get",
-        url: url,
-        data: {
-            '_token': _token,
-            'id': id,
-            'quantity': quantity
-        },
+        $.ajax({
+            type: "get",
+            url: url,
+            data: {
+                '_token': _token,
+                'id': id,
+                'quantity': quantity
+            },
         success: function (response) {
             
             $('.cart-quantity').empty();
@@ -198,5 +169,7 @@ $(document).on('click', '.cart-add', function() {
         }
     });
 });
+
+
 </script>
 @endsection
