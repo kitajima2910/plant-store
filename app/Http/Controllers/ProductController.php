@@ -18,19 +18,10 @@ class ProductController extends Controller
     }
 
     public function index(Request $request){
-        if($request->ajax() || 'NULL'){
-            // $products = Product::where('status','1')->orderBy('id','desc')->get()->paginate(6);
-            // return view('pages.guest.shop',compact('products'));
-
             $products = Product::where('status','1')->orderBy('id','desc')->paginate(9);
-  
-            if ($request->ajax()) {
-                return view('ajax.guest.product_view', compact('products'));
-            }
-            return view('pages.guest.shop', compact('products'));
-            
+            return view('pages.guest.shop', compact('products'));         
     }
-}
+
 
     public function viewProductDetails($slug)
     {
