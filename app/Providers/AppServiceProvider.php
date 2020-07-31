@@ -30,34 +30,34 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        
+
 
         View::composer(['*'], function ($view) {
+
             // Cart quantity
-            $cartQuantity = Cart::count();
+            $cartQuantityShare = Cart::count();
             // Settings
             $settings = Setting::where('status', 1)->get();
-            foreach($settings as $item) {
-                $settingsArr[$item->config_key] = $item->config_value;
+            foreach ($settings as $item) {
+                $settingsArrShare[$item->config_key] = $item->config_value;
             }
             // Products
             $productsShare = Product::where('status', 1)->orderBy('id', 'desc')->take(2)->get();
             // Menus
-            $menusShare  = Menu::where('status', 1)->get();
+            $menusShare  = Menu::where('status', 1)->where('parent_id', 0)->get();
             // Categories
-            $menuCategories = Category::where('parent_id', '=', 0)->get();
+            $menuCategoriesShare = Category::where('status', 1)->where('parent_id', 0)->get();
             // Post
-            $postShare = Post::where('status',1)->orderBy('id', 'desc')->take(4)->get();
-            $view->with([
-                'cartQuantity' => $cartQuantity,
-                'settingsArr' => $settingsArr,
-                'productsShare' => $productsShare,                
-                'menusShare' => $menusShare,    
-                'menuCategories' => $menuCategories,    
-                'postShare' => $postShare,        
-            ]);
-
+            $postShare = Post::where('status', 1)->orderBy('id', 'desc')->take(4)->get();
             
+            $view->with([
+                'cartQuantityShare' => $cartQuantityShare,
+                'settingsArrShare' => $settingsArrShare,
+                'productsShare' => $productsShare,
+                'menusShare' => $menusShare,
+                'menuCategoriesShare' => $menuCategoriesShare,
+                'postShare' => $postShare,
+            ]);
         });
     }
 }

@@ -19,10 +19,10 @@
                     <div class="top-header-content d-flex align-items-center justify-content-between">
                         <!-- Top Header Content -->
                         <div class="top-header-meta">
-                            <a href="mailto:{!! !empty($settingsArr['key_email']) ? $settingsArr['key_email'] : '#' !!}" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                <span>Địa chỉ email: {!! !empty($settingsArr['key_email']) ? $settingsArr['key_email'] : '' !!}</span></a>
-                            <a href="tel:{!! !empty($settingsArr['key_phone']) ? $settingsArr['key_phone'] : '#' !!}" data-toggle="tooltip" data-placement="bottom"><i
-                                    class="fa fa-phone" aria-hidden="true"></i> <span>Điện thoại: {!! !empty($settingsArr['key_phone']) ? $settingsArr['key_phone'] : '' !!}</span></a>
+                            <a href="mailto:{!! !empty($settingsArrShare['key_email']) ? $settingsArrShare['key_email'] : '#' !!}" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                <span>Địa chỉ email: {!! !empty($settingsArrShare['key_email']) ? $settingsArrShare['key_email'] : '' !!}</span></a>
+                            <a href="tel:{!! !empty($settingsArrShare['key_phone']) ? $settingsArrShare['key_phone'] : '#' !!}" data-toggle="tooltip" data-placement="bottom"><i
+                                    class="fa fa-phone" aria-hidden="true"></i> <span>Điện thoại: {!! !empty($settingsArrShare['key_phone']) ? $settingsArrShare['key_phone'] : '' !!}</span></a>
                         </div>
 
                         <!-- Top Header Content -->
@@ -47,7 +47,7 @@
                             <!-- Cart -->
                             <div class="cart">
                                 <a href="{!! route('guest.cart.index') !!}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 
-                                    <span>Giỏ hảng <span class="cart-quantity">({!! $cartQuantity !!})</span></span>
+                                    <span>Giỏ hảng <span class="cart-quantity">({!! $cartQuantityShare !!})</span></span>
                                 </a>
                             </div>
                         </div>

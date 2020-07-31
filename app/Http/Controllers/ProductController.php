@@ -18,7 +18,7 @@ class ProductController extends Controller
     }
 
     public function index(Request $request){
-            $products = Product::where('status','1')->orderBy('id','desc')->paginate(9);
+            $products = $this->product->where('status','1')->orderBy('id','desc')->paginate(9);
             return view('pages.guest.shop', compact('products'));         
     }
 

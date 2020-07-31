@@ -1,13 +1,13 @@
-<div class="widget-desc">
-    <ul data-role="treeview">
-        @foreach ($menuCategories as $menu)
+<div>
+    <ul>
+        @foreach ($menuCategoriesShare as $menu)
             <li>
                 <a href="{{$menu->slug .'.html'}}">
                     {{$menu->name}}
                 </a>
-            @if(count($menu->childs))
-            @include('includes.guest.manage-category-child', ['childs' => $menu->childs])
-            @endif
+                @if(count($menu->childs))
+                    @include('includes.guest.manage-category-child', ['childs' => $menu->childs, 'sub' => '--'])
+                @endif
             </li>
         @endforeach
     </ul>
