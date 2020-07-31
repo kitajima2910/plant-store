@@ -10,9 +10,9 @@
                         <div class="footer-logo mb-30">
                             <a href="#"><img src="{{ asset('public/frontend/img/core-img/logo.png') }}" width="100px"></a>
                         </div>
-                        <p>{!! !empty($settingsArr['key_footer_content']) ? $settingsArr['key_footer_content'] : '' !!}</p>
+                        <p>{!! !empty($settingsArrShare['key_footer_content']) ? $settingsArrShare['key_footer_content'] : '' !!}</p>
                         <div class="social-info">
-                            <a href="{!! !empty($settingsArr['key_facebook']) ? $settingsArr['key_facebook'] : '#' !!}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="{!! !empty($settingsArrShare['key_facebook']) ? $settingsArrShare['key_facebook'] : '#' !!}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                             <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                             <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
                             <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
@@ -52,11 +52,11 @@
                         </div>
 
                         <div class="contact-information">
-                            <p><span>Địa chỉ:</span> {!! !empty($settingsArr['key_address']) ? $settingsArr['key_address'] : '' !!}</p>
-                            <p><span>Điện thoại:</span> {!! !empty($settingsArr['key_phone']) ? $settingsArr['key_phone'] : '' !!}</p>
-                            <p><span>Địa chỉ email:</span> {!! !empty($settingsArr['key_email']) ? $settingsArr['key_email'] : '' !!}</p>
-                            <p><span>Giờ mở cửa:</span> {!! !empty($settingsArr['key_open_hours']) ? $settingsArr['key_open_hours'] : '' !!}</p>
-                            <p><span>Giờ happy:</span> {!! !empty($settingsArr['key_happy_hours']) ? $settingsArr['key_happy_hours'] : '' !!}</p>
+                            <p><span>Địa chỉ:</span> {!! !empty($settingsArrShare['key_address']) ? $settingsArrShare['key_address'] : '' !!}</p>
+                            <p><span>Điện thoại:</span> {!! !empty($settingsArrShare['key_phone']) ? $settingsArrShare['key_phone'] : '' !!}</p>
+                            <p><span>Địa chỉ email:</span> {!! !empty($settingsArrShare['key_email']) ? $settingsArrShare['key_email'] : '' !!}</p>
+                            <p><span>Giờ mở cửa:</span> {!! !empty($settingsArrShare['key_open_hours']) ? $settingsArrShare['key_open_hours'] : '' !!}</p>
+                            <p><span>Giờ happy:</span> {!! !empty($settingsArrShare['key_happy_hours']) ? $settingsArrShare['key_happy_hours'] : '' !!}</p>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                 <!-- Copywrite Text -->
                 <div class="col-12 col-md-12">
                     <div class="copywrite-text">
-                        <p>{!! !empty($settingsArr['key_copyright']) ? $settingsArr['key_copyright'] : '' !!}</p>
+                        <p>{!! !empty($settingsArrShare['key_copyright']) ? $settingsArrShare['key_copyright'] : '' !!}</p>
                     </div>
                 </div>
             </div>

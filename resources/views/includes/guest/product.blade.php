@@ -90,7 +90,7 @@
             @endforeach
         </div>
         <div class="col-12 text-center">
-            <a href="#" class="btn alazea-btn">XEM THÊM</a>
+            <a href="{!! route('guest.product.index') !!}" class="btn alazea-btn">XEM THÊM</a>
         </div>
     </div>
 </section>

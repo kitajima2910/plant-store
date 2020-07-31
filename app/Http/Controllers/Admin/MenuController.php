@@ -33,7 +33,7 @@ class MenuController extends Controller
     public function store(AdminFormMenu $request) {
         
         $menu = new Menu([
-            'name' => Str::upper($request->get('name')),
+            'name' => $request->get('name'),
             'parent_id' => $request->get('parent_id'),
             'slug' => Str::of($request->get('name'))->slug('-'),
             'status' => $request->get('status')
@@ -53,7 +53,7 @@ class MenuController extends Controller
     public function update(AdminFormMenu $request, $id) {
 
         $menu = Menu::find($id);
-        $menu->name = Str::upper($request->get('name'));
+        $menu->name = $request->get('name');
         $menu->parent_id = $request->get('parent_id');
         $menu->slug = Str::of($request->get('name'))->slug('-');
         $menu->status = $request->get('status');

@@ -1,7 +1,6 @@
 <section class="hero-area">
     <div class="hero-post-slides owl-carousel">
         @foreach ($sliders as $slider)
-
         <!-- Single Hero Post -->
         <div class="single-hero-post bg-overlay">
             <!-- Post Image -->
@@ -13,7 +12,7 @@
                         <div class="hero-slides-content text-center">
                             {{!! $slider->content !!}}
                             <div class="welcome-btn-group">
-                                <a href="{{$slider->link}}" class="btn alazea-btn mr-30">CONTACT US</a>
+                                <a href="{{$slider->link . '.html'}}" class="btn alazea-btn mr-30">CONTACT US</a>
                             </div>
                         </div>
                     </div>

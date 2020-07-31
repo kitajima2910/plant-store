@@ -32,7 +32,7 @@ class CategoryController extends Controller
     public function store(AdminFormCategory $request) {
         
         $category = new Category([
-            'name' => Str::upper($request->get('name')),
+            'name' => $request->get('name'),
             'parent_id' => $request->get('parent_id'),
             'slug' => Str::of($request->get('name'))->slug('-'),
             'status' => $request->get('status')
@@ -52,7 +52,7 @@ class CategoryController extends Controller
     public function update(AdminFormCategory $request, $id) {
 
         $category = Category::find($id);
-        $category->name = Str::upper($request->get('name'));
+        $category->name = $request->get('name');
         $category->parent_id = $request->get('parent_id');
         $category->slug = Str::of($request->get('name'))->slug('-');
         $category->status = $request->get('status');
