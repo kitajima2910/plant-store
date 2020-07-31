@@ -25,7 +25,7 @@ class UserSeeder extends Seeder
             ],
             [
                 'name' => 'Trần Thị Mỹ Lan',
-                'email' => 'lanttml@gmail.com',
+                'email' => 'lanttm@gmail.com',
                 'password' => bcrypt('123456'),
                 'level' => 0,
                 'status' => 1,
