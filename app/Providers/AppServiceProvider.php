@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Category;
 use App\Menu;
+use App\Post;
 use App\Product;
 use App\Setting;
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -29,15 +30,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        
+
 
         View::composer(['*'], function ($view) {
-            
+
             // Cart quantity
             $cartQuantityShare = Cart::count();
             // Settings
             $settings = Setting::where('status', 1)->get();
-            foreach($settings as $item) {
+            foreach ($settings as $item) {
                 $settingsArrShare[$item->config_key] = $item->config_value;
             }
             // Products
@@ -46,16 +47,17 @@ class AppServiceProvider extends ServiceProvider
             $menusShare  = Menu::where('status', 1)->where('parent_id', 0)->get();
             // Categories
             $menuCategoriesShare = Category::where('status', 1)->where('parent_id', 0)->get();
-
+            // Post
+            $postShare = Post::where('status', 1)->orderBy('id', 'desc')->take(4)->get();
+            
             $view->with([
                 'cartQuantityShare' => $cartQuantityShare,
                 'settingsArrShare' => $settingsArrShare,
-                'productsShare' => $productsShare,                
-                'menusShare' => $menusShare,    
-                'menuCategoriesShare' => $menuCategoriesShare,            
+                'productsShare' => $productsShare,
+                'menusShare' => $menusShare,
+                'menuCategoriesShare' => $menuCategoriesShare,
+                'postShare' => $postShare,
             ]);
-
-            
         });
     }
 }

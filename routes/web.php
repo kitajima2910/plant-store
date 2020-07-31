@@ -19,6 +19,8 @@ Route::get('/', 'HomeController@index');
 Route::get('trang-chu.html', 'HomeController@index')->name('guest.home');
 Route::get('san-pham/{slug}.html', 'ProductController@viewProductDetails')->name('guest.viewProductDetails');
 Route::get('san-pham.html','ProductController@index')->name('guest.product.index');
+Route::get('bai-viet.html','PostController@index');
+Route::get('bai-viet/{slug}.html', 'PostController@viewPostDetails')->name('guest.viewPostDetails');
 
 // Cart
 Route::group(['prefix' => 'gio-hang'], function () {
@@ -75,6 +77,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::resource('sliders', 'SliderController');
         // admin/settings
         Route::resource('settings', 'SettingController');
+        // admin/blogs
+        Route::resource('posts', 'PostController');
     });
 
 });
