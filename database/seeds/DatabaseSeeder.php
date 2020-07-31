@@ -20,5 +20,6 @@ class DatabaseSeeder extends Seeder
         $this->call(MenuSeeder::class); // DONE
         $this->call(SliderSeeder::class); // DONE
         $this->call(SettingSeeder::class); // DONE
+        $this->call(PostSeeder::class);
     }
 }

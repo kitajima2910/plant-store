@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Category;
 use App\Menu;
+use App\Post;
 use App\Product;
 use App\Setting;
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -45,13 +46,15 @@ class AppServiceProvider extends ServiceProvider
             $menusShare  = Menu::where('status', 1)->get();
             // Categories
             $menuCategories = Category::where('parent_id', '=', 0)->get();
-
+            // Post
+            $postShare = Post::where('status',1)->orderBy('id', 'desc')->take(4)->get();
             $view->with([
                 'cartQuantity' => $cartQuantity,
                 'settingsArr' => $settingsArr,
                 'productsShare' => $productsShare,                
                 'menusShare' => $menusShare,    
-                'menuCategories' => $menuCategories,            
+                'menuCategories' => $menuCategories,    
+                'postShare' => $postShare,        
             ]);
 
             

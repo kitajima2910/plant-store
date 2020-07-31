@@ -53,9 +53,6 @@ class SliderController extends Controller
 
 
     public function destroy($id) {
-        // $slider->delete();
-        // return redirect()->route('sliders.index');
-
         $slider = $this->slider->find($id);
         $pathDelete[] = $slider->feature_image_path;
     
