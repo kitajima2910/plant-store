@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use App\Product;
 use App\Setting;
 use App\Slider;
+use App\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,9 +25,15 @@ class HomeController extends Controller
         $products = $this->product->where('status', 1)->orderBy('id', 'desc')->take(4)->get();
         $productsSale = $this->product->where('status',1)->where('sale_price','>','0')->inRandomOrder()->take(8)->get();
 
-        //Sliders
+        // Sliders
         $sliders = $this->slider->where('status',1)->take(3)->get();
-        return view('pages.guest.index', compact('products','productsSale','sliders'));
+        
+        //User
+        $users = User::all();
+
+        // Posts
+        $posts = Post::where('status', 1)->orderBy('id', 'desc')->take(3)->get();
+        return view('pages.guest.index', compact('products','productsSale','sliders','posts','users'));
     }
 
 }

@@ -20,10 +20,10 @@
                             <div class="post-content">
                                 <h4 class="post-title">{{$post->name}}</h4>
                                     <div class="post-meta mb-30">
-                                        <a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>{{date('d-m-Y', strtotime($post->created_at))}}</a>
+                                        <a href="javacript:void(0);"><i class="fa fa-clock-o" aria-hidden="true"></i>{{date('d-m-Y', strtotime($post->created_at))}}</a>
                                             @foreach ($users as $user) 
                                                 @if ($user->id == $post->user_id)
-                                                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i>{{$user->name}}</a>
+                                                    <a href="javacript:void(0);"><i class="fa fa-user" aria-hidden="true"></i>{{$user->name}}</a>
                                                 @endif
                                             @endforeach
                                                 <div class="content">

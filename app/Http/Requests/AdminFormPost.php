@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Validation\Rule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class AdminFormPost extends FormRequest
@@ -24,7 +25,7 @@ class AdminFormPost extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
+            'name' => 'required|'  . Rule::unique('posts')->ignore($this->id),
             'content' => 'required',
             'feature_image_path' => 'mimes:jpg,jpeg,png,bmp',
         ];
@@ -34,6 +35,7 @@ class AdminFormPost extends FormRequest
     {
         return [
             'name.required' => 'Tên chưa được nhập',
+            'name.unique' => 'Tên bài viết đã tồn tại',
             'content.required' => 'Nội dung chưa được nhập',
             'feature_image_path.mimes' => 'Ảnh phải có đuôi jpg, jpeg, png, bmp',
            
