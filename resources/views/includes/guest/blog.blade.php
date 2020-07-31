@@ -4,76 +4,38 @@
             <div class="col-12">
                 <!-- Section Heading -->
                 <div class="section-heading text-center">
-                    <h2>LATEST NEWS</h2>
-                    <p>The breaking news about Gardening &amp; House plants</p>
+                    <h2>Bài viết mới</h2>
+                    <p>Thường xuyên theo dõi để cập nhật những bài viết mới nhất</p>
                 </div>
             </div>
         </div>
 
         <div class="row justify-content-center">
 
+            @foreach ($posts as $post)         
             <!-- Single Blog Post Area -->
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="single-blog-post mb-100">
                     <div class="post-thumbnail mb-30">
-                        <a href="single-post.html"><img src="{{ asset('public/frontend/img/bg-img/6.jpg') }}"></a>
+                        <a  href="{!! route('guest.viewPostDetails', $post->slug) !!}"><img style="width: 290px; height: 212px" src="{{ asset($post->feature_image_path) }}"></a>
                     </div>
                     <div class="post-content">
-                        <a href="single-post.html" class="post-title">
-                            <h5>Garden designers across the country forecast ideas shaping the gardening world in
-                                2018</h5>
+                        <a href="{!! route('guest.viewPostDetails', $post->slug) !!}" class="post-title">
+                            <h5>{{$post->name}}</h5>
                         </a>
                         <div class="post-meta">
-                            <a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 20 Jun 2018</a>
-                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i> Alan Jackson</a>
+                            <a href="javacript:void(0);"><i class="fa fa-clock-o" aria-hidden="true"></i>{{date('d-m-Y', strtotime($post->created_at))}}</a>
+                            @foreach ($users as $user)
+                            @if ($user->id == $post->user_id)
+                               <a href="javacript:void(0);"><i class="fa fa-user" aria-hidden="true"></i>{{$user->name}}</a>
+                             @endif
+                           @endforeach
                         </div>
-                        <p class="post-excerpt">Integer luctus diam ac scerisque consectetur. Vimus ottawas nec
-                            lacus sit amet. Aenean interdus mid vitae.</p>
+                        <p class="post-excerpt">{!! substr($post->content,0,160) .'...' !!}</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Single Blog Post Area -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="single-blog-post mb-100">
-                    <div class="post-thumbnail mb-30">
-                        <a href="single-post.html"><img src="{{ asset('public/frontend/img/bg-img/7.jpg') }}"></a>
-                    </div>
-                    <div class="post-content">
-                        <a href="single-post.html" class="post-title">
-                            <h5>2018 Midwest Tree and Shrub Conference: Resilient Plants for a Lasting Landscape
-                            </h5>
-                        </a>
-                        <div class="post-meta">
-                            <a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 20 Jun 2018</a>
-                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i> Christina Aguilera</a>
-                        </div>
-                        <p class="post-excerpt">Integer luctus diam ac scerisque consectetur. Vimus ottawas nec
-                            lacus sit amet. Aenean interdus mid vitae.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Blog Post Area -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="single-blog-post mb-100">
-                    <div class="post-thumbnail mb-30">
-                        <a href="single-post.html"><img src="{{ asset('public/frontend/img/bg-img/8.jpg') }}"></a>
-                    </div>
-                    <div class="post-content">
-                        <a href="single-post.html" class="post-title">
-                            <h5>The summer coming up, it’s time for both us and the flowers to soak up the sunshine
-                            </h5>
-                        </a>
-                        <div class="post-meta">
-                            <a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 19 Jun 2018</a>
-                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i> Mason Jenkins</a>
-                        </div>
-                        <p class="post-excerpt">Integer luctus diam ac scerisque consectetur. Vimus ottawas nec
-                            lacus sit amet. Aenean interdus mid vitae.</p>
-                    </div>
-                </div>
-            </div>
+            @endforeach
 
         </div>
     </div>

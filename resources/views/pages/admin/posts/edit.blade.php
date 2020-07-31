@@ -33,10 +33,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Nội dung</label>
-                                <textarea name="content" id="" cols="75" rows="10" >{{$post->content}}</textarea>
                                     @error('content')
-                                        <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
+                                    <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
                                     @enderror
+                                <textarea name="content" id="" cols="75" rows="10" >{{$post->content}}</textarea>
                                 </div>                      
                                  <div class="form-group">
                                     <label>Trạng thái</label>
