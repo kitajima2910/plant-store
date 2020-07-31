@@ -17,7 +17,7 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="single-blog-post mb-100">
                     <div class="post-thumbnail mb-30">
-                        <a  href="{!! route('guest.viewPostDetails', $post->slug) !!}"><img style="width: 290px; height: 212px" src="{{ asset($post->feature_image_path) }}"></a>
+                        <a  href="{!! route('guest.viewPostDetails', $post->slug) !!}"><img style="width: 350px; height: 255px" src="{{ asset($post->feature_image_path) }}"></a>
                     </div>
                     <div class="post-content">
                         <a href="{!! route('guest.viewPostDetails', $post->slug) !!}" class="post-title">
