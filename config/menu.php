@@ -76,6 +76,23 @@ return [
         ]
     ],
     [
+        'name' => 'Bài Viết',
+        'icon' => 'fa fa-pencil-square-o',
+        'active' => 'posts',
+        'items' => [
+            [
+                'name' => 'Danh sách bài viết',
+                'route' => 'posts.index',
+                'active' => 'posts'
+            ],
+            [
+                'name' => 'Thêm bài viết',
+                'route' => 'posts.create',
+                'active' => 'posts/create'
+            ],
+        ]
+    ],
+    [
         'name' => 'Cài đặt',
         'icon' => 'fa fa-cog',
         'active' => 'settings',

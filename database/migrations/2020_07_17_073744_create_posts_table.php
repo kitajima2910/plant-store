@@ -18,7 +18,8 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('name')->unique();
             $table->string('slug')->unique();
-            $table->string('image');
+            $table->string('feature_image_path')->nullable();
+            $table->string('feature_image_name')->nullable();
             $table->longText('content');
             $table->unsignedBigInteger('user_id');
             $table->tinyInteger('status')->define(1);
