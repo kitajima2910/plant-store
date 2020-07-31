@@ -20,6 +20,8 @@ class CreateOrdersTable extends Migration
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->string('address')->nullable();
+            $table->text('notes')->nullable();
+            $table->tinyInteger('status')->define(1);
             $table->timestamps();
             
             $table->foreign('user_id')

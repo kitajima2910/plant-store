@@ -12,7 +12,9 @@ class LogoutController extends Controller
         if(Auth::guard('customers')->check()) {
             $userId = Auth::guard('customers')->user()->id;
             Cart::erase($userId);
-            Cart::store($userId);
+            if(Cart::content()->count() > 0) {
+                Cart::store($userId);
+            }
             Auth::guard('customers')->logout();
             return redirect()->route('guest.home');
         }

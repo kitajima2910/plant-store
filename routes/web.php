@@ -40,6 +40,7 @@ Route::group(['prefix' => 'nguoi-dung'], function () {
 Route::group(['prefix' => 'thanh-toan'], function () {
     Route::get('thong-tin-dat-hang.html', 'CheckoutController@index')->name('gues.checkout.index');
     Route::post('thong-tin-dat-hang.html', 'CheckoutController@process')->name('gues.checkout.process');
+    Route::get('thong-tin-gui-mail.html', 'CheckoutController@mail')->name('gues.checkout.mail');
 });
 
 

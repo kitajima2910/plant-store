@@ -15,7 +15,7 @@
                                 <th>SẢN PHẨM</th>
                                 <th>SỐ LƯỢNG</th>
                                 <th>GIÁ</th>
-                                <th>TIỀN TRẢ</th>
+                                <th>THÀNH TIỀN</th>
                                 <th></th>
                             </tr>
                         </thead>
