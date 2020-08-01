@@ -45,7 +45,7 @@
                                     @endforeach
                                 
                                 </div>
-                                    <p class="post-excerpt">{!! substr($post->content,0,160) .'...' !!}</p>
+                                    <p class="post-excerpt">{!! Str::limit($post->content, 200, '...') !!}</p>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                     </div>
 
                                <!-- ##### Single Widget Area ##### -->
-                               <d class="single-widget-area">
+                               <div class="single-widget-area">
                                 <!-- Title -->
                                 <div class="widget-title">
                                     <h4>Top Sản Phẩm</h4>

@@ -43,7 +43,7 @@ class UserSeeder extends Seeder
             ],
             [
                 'name' => 'Huỳnh Ngọc Huệ',
-                'email' => 'khachang1@gmail.com',
+                'email' => 'kitajima2910@gmail.com',
                 'password' => bcrypt('123456'),
                 'level' => 0,
                 'status' => 1,

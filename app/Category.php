@@ -12,7 +12,7 @@ class Category extends Model
     ];
     
     public function childs() {
-        return $this->hasMany(Category::class, 'parent_id', 'id') ;
+        return $this->hasMany(Category::class, 'parent_id', 'id')->where('status', 1);
     }
 
     public function products() {
