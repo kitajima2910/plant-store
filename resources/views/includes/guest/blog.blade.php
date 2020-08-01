@@ -31,7 +31,7 @@
                              @endif
                            @endforeach
                         </div>
-                        <p class="post-excerpt">{!! substr($post->content,0,160) .'...' !!}</p>
+                        <p class="post-excerpt">{!! Str::limit($post->content, 200, '...') !!}</p>
                     </div>
                 </div>
             </div>
