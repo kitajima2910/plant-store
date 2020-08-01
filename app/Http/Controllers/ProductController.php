@@ -17,11 +17,16 @@ class ProductController extends Controller
         $this->category = $category;
     }
 
-    public function index(Request $request){
-            $products = $this->product->where('status','1')->orderBy('id','desc')->paginate(9);
-            return view('pages.guest.shop', compact('products'));         
+    public function index(){
+            $categories = $this->category->where('status', 1)->where('parent_id', 0)->get();
+            $products = $this->product->where('status', 1)->orderBy('id','desc')->paginate(6);
+            return view('pages.guest.shop', compact('products', 'categories'));         
     }
 
+    public function ajaxIndex(){
+        $products = $this->product->where('status', 1)->orderBy('id','desc')->paginate(6);
+        return view('ajax.guest.product-data', compact('products'))->render();         
+}
 
     public function viewProductDetails($slug)
     {
@@ -43,5 +48,11 @@ class ProductController extends Controller
             return redirect()->route('guest.home');
         }
         
+    }
+
+    public function ajaxViewProduct(Request $request) {
+        $slug = $request->get('slug');
+        $products = $this->category->where('slug', $slug)->frist()->products()->paginate(6);
+        return view('ajax.guest.product-data', compact('products'))->render();
     }
 }

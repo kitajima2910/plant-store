@@ -46,7 +46,7 @@ class AppServiceProvider extends ServiceProvider
             // Menus
             $menusShare  = Menu::where('status', 1)->where('parent_id', 0)->get();
             // Categories
-            $menuCategoriesShare = Category::where('status', 1)->where('parent_id', 0)->get();
+            // $menuCategoriesShare = Category::where('status', 1)->where('parent_id', 0)->get();
             // Post
             $postShare = Post::where('status', 1)->orderBy('id', 'desc')->take(4)->get();
             
@@ -55,7 +55,7 @@ class AppServiceProvider extends ServiceProvider
                 'settingsArrShare' => $settingsArrShare,
                 'productsShare' => $productsShare,
                 'menusShare' => $menusShare,
-                'menuCategoriesShare' => $menuCategoriesShare,
+                // 'menuCategoriesShare' => $menuCategoriesShare,
                 'postShare' => $postShare,
             ]);
         });

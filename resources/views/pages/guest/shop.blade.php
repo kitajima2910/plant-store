@@ -2,47 +2,7 @@
 @section('title', 'Sản Phẩm')
 @section('content')
 @section('style')
-<style>
-    .product-img a img {
-        width: 255px;
-        height: 255px;
-    }
-
-    .none {
-        display: none;
-    }
-
-    .page-item.active .page-link {
-        z-index: 1;
-        color: #fff;
-        background-color: #70c745;
-        border-color: white;
-    }
-
-    .single-product-area .product-img .product-meta .wishlist-btn {
-        padding-top: 14px;
-    }
-
-    .single-product-area .product-img .product-meta .compare-btn {
-        padding-top: 14px;
-    }
-
-    .footer-area .single-footer-widget .social-info a {
-        padding-top: 12px
-    }
-
-
-    .shop-sorting-data {
-        float: right;
-        padding-left: 915px;
-    }
-
-
-    .widget-desc a {
-        color: #707070;
-    }
-
-</style>
+<link rel="stylesheet" href="{!! asset('public/vendors/shop/style.css') !!}">
 @endsection
 <!-- ##### Breadcrumb Area Start ##### -->
 @include('includes.guest.breadcrumb-area', ['currentPage' => 'Sản Phẩm'])
@@ -77,7 +37,20 @@
                     <!-- Shop Widget -->
                     <div class="shop-widget catagory mb-50">
                         <h4 class="widget-title">Danh Mục</h4>
-                        @include('includes.guest.category')
+                        {{-- @include('includes.guest.category')--}}
+                        <ul>
+                            @foreach ($categories as $menu)
+                                <li>
+                                    <a href="javascript:void(0);" class="click-slug" data-slug="{!! $menu->slug !!}">
+                                        {{$menu->name}}
+                                    </a>
+                                    @if(count($menu->childs))
+                                        @include('includes.guest.manage-category-child', ['childs' => $menu->childs, 'sub' => '--'])
+                                    @endif
+                                </li>
+                            @endforeach
+                        </ul>
+                        
                     </div>
 
                     <!-- Shop Widget -->
@@ -88,52 +61,53 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-12 col-md-8 col-lg-9">
-                <div class="shop-products-area">
-                    <div class="row">
-                        @foreach($products as $item)
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="single-product-area mb-50">
-                                    <!-- Product Image -->
-                                    <div class="product-img">
-                                        <a href="{!! route('guest.viewProductDetails', $item->slug) !!}"><img
-                                                src="{{ asset($item->feature_image_path) }}" alt=""></a>
-                                        <!-- Product Tag -->
-                                        <div
-                                            class="product-tag {{ $item->sale_price > 0 ? 'sale-tag' : 'none' }}">
-                                            <a
-                                                href="javascript:void(0);">{{ $item->sale_price > 0 ? 'SALE '. $item->sale_price . '%' : 'HOT' }}</a>
+            <div class="col-12 col-md-8 col-lg-9" id="show-product">
+                
+                    <div class="shop-products-area">
+                        <div class="row">
+                        
+                            @foreach($products as $item)
+                                <div class="col-12 col-sm-6 col-lg-4">
+                                    <div class="single-product-area mb-50">
+                                        <!-- Product Image -->
+                                        <div class="product-img">
+                                            <a href="{!! route('guest.viewProductDetails', $item->slug) !!}"><img
+                                                    src="{{ asset($item->feature_image_path) }}" alt=""></a>
+                                            <!-- Product Tag -->
+                                            <div
+                                                class="product-tag {{ $item->sale_price > 0 ? 'sale-tag' : 'none' }}">
+                                                <a
+                                                    href="javascript:void(0);">{{ $item->sale_price > 0 ? 'SALE '. $item->sale_price . '%' : 'HOT' }}</a>
+                                            </div>
+                                            <div class="product-meta d-flex">
+                                                <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
+                                                <a href="javascript:void(0);" class="add-to-cart-btn cart-add"
+                                                    data-id="{!! $item->id !!}">Add to cart</a>
+                                                <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
+                                            </div>
                                         </div>
-                                        <div class="product-meta d-flex">
-                                            <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
-                                            <a href="javascript:void(0);" class="add-to-cart-btn cart-add"
-                                                data-id="{!! $item->id !!}">Add to cart</a>
-                                            <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
+                                        <!-- Product Info -->
+                                        <div class="product-info mt-15 text-center">
+                                            <a href="{!! route('guest.viewProductDetails', $item->slug) !!}">
+                                                <p>{{ $item->name }}</p>
+                                            </a>
+                                            @if($item->sale_price > 0)
+                                                <s>{!! number_format($item->price, 0, ',', '.') !!} VNĐ</s>
+                                                <h6>{!! number_format($item->final_price, 0, ',', '.') !!} VNĐ</h6>
+                                            @else
+                                                <h6>{!! number_format($item->final_price, 0, ',', '.') !!} VNĐ</h6>
+                                            @endif
                                         </div>
-                                    </div>
-                                    <!-- Product Info -->
-                                    <div class="product-info mt-15 text-center">
-                                        <a href="{!! route('guest.viewProductDetails', $item->slug) !!}">
-                                            <p>{{ $item->name }}</p>
-                                        </a>
-                                        @if($item->sale_price > 0)
-                                            <s>{!! number_format($item->price, 0, ',', '.') !!} VNĐ</s>
-                                            <h6>{!! number_format($item->final_price, 0, ',', '.') !!} VNĐ</h6>
-                                        @else
-                                            <h6>{!! number_format($item->final_price, 0, ',', '.') !!} VNĐ</h6>
-                                        @endif
                                     </div>
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        </div>
                     </div>
+                <!-- Pagination -->
+                <div class="col-5"></div>
+                <div class="col-4 pagin-center">
+                    {{ $products->links() }}
                 </div>
-            </div>
-            <!-- Pagination -->
-            <div class="col-5"></div>
-            <div class="col-4">
-                {{ $products->links() }}
             </div>
         </div>
     </div>
@@ -173,6 +147,36 @@
             }
         });
     });
+    
+    $(document).on('click', '.pagination a', function(e) {
+        e.preventDefault();
+        let page = $(this).attr('href').split('page=')[1];
+        let url = '{!! route("guest.product.ajaxIndex") !!}?page=' + page;
+        
+        $.ajax({
+            type: "get",
+            url: url,
+            success: function (data) {
+                $('#show-product').empty();
+                $('#show-product').html(data);
+            }
+        });
+    });
 
+    $(document).on('click', '.click-slug', function(e) {
+        e.preventDefault();
+        let slug = $(this).data('slug');
+        let url = '{!! route("guest.ajaxViewProduct") !!}';
+        $.ajax({
+            type: "get",
+            url: url,
+            data: {
+                slug: slug
+            },
+            success: function (response) {
+                
+            }
+        });
+    });
 </script>
 @endsection

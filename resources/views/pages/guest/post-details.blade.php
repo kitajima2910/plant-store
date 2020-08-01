@@ -33,17 +33,6 @@
                             </div>
                         </div>
 
-                        <!-- Post Tags & Share -->
-                        <div class="post-tags-share d-flex justify-content-between align-items-center">
-                            <!-- Share -->
-                            <div class="post-share">
-                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-
                         <!-- Comment Area Start -->
                         <div class="comment_area clearfix">
                             <h4 class="headline">2 Comments</h4>
