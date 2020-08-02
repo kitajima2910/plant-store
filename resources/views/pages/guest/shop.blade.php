@@ -61,7 +61,9 @@
                 </div>
             </div>
             <div class="col-12 col-md-8 col-lg-9" id="show-product">
-                
+                    @if (count($products) == 0)
+                        <h3>Không tìm thấy sản phẩm nào!</h3>
+                    @endif
                     <div class="shop-products-area">
                         <div class="row">
                         
