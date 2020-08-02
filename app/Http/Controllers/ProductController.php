@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ProductController extends Controller
 {
@@ -17,16 +18,35 @@ class ProductController extends Controller
         $this->category = $category;
     }
 
-    public function index(){
+    public function index() {
+            Session::forget('sort-product');
+            Session::forget('category-slug');
             $categories = $this->category->where('status', 1)->where('parent_id', 0)->get();
             $products = $this->product->where('status', 1)->orderBy('id','desc')->paginate(6);
             return view('pages.guest.shop', compact('products', 'categories'));         
     }
 
-    public function ajaxIndex(){
-        $products = $this->product->where('status', 1)->orderBy('id','desc')->paginate(6);
-        return view('ajax.guest.product-data', compact('products'))->render();         
-}
+    public function ajaxIndex(Request $request) {
+        if($request->ajax()) {
+
+            $sort = !empty(Session::get('sort-product')) && !empty(Session::get('sort-product')) != $request->get('sort') ? Session::get('sort-product') : $request->get('sort');
+            
+            if($sort == 'prod-gia-thap-cao') {
+                $products = $this->product->where('status', 1)->orderBy('final_price')->paginate(6);
+            } else if($sort == 'prod-gia-cao-thap') {
+                $products = $this->product->where('status', 1)->orderBy('final_price', 'desc')->paginate(6);
+            } else if($sort == 'prod-sale') {
+                $products = $this->product->where('status', 1)->where('sale_price', '>', 0)->orderBy('id','desc')->paginate(6);
+            } else {
+                $products = $this->product->where('status', 1)->orderBy('id','desc')->paginate(6);
+            }
+        
+            Session::put('sort-product', $sort);
+            $productData = view('ajax.guest.product-data', compact('products'))->render();         
+            return response()->json(['productData' => $productData, 'code' => 200], 200);
+        }
+        
+    }
 
     public function viewProductDetails($slug)
     {
@@ -50,9 +70,27 @@ class ProductController extends Controller
         
     }
 
-    public function ajaxViewProduct(Request $request) {
-        $slug = $request->get('slug');
-        $products = $this->category->where('slug', $slug)->frist()->products()->paginate(6);
-        return view('ajax.guest.product-data', compact('products'))->render();
+    public function viewProduct($slug) {
+        Session::forget('category-slug');
+        $categories = $this->category->where('status', 1)->where('parent_id', 0)->get();
+        $products = $this->category->where('slug', $slug)->first()->products()->paginate(6);
+        return view('pages.guest.shop', compact('products', 'categories'));
     }
+
+    public function ajaxViewProduct(Request $request) {
+        
+        if($request->ajax()) {
+            if(empty(Session::get('category-slug'))) {
+                $slug = $request->get('slug');
+            } else {
+                $slug = Session::get('category-slug');
+            }
+            Session::put('category-slug', $slug);
+            $products = $this->category->where('slug', $slug)->first()->products()->paginate(6);
+            $productData = view('ajax.guest.product-data', compact('products'))->render();         
+            return response()->json(['productData' => $productData, 'code' => 200], 200);
+        }
+    }
+
+
 }
