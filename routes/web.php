@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 // Frontend
 Route::get('/', 'HomeController@index');
 Route::get('trang-chu.html', 'HomeController@index')->name('guest.home');
+Route::post('trang-chu.html', 'HomeController@searchProducts')->name('guest.searchProducts');
 Route::get('san-pham/{slug}.html', 'ProductController@viewProductDetails')->name('guest.viewProductDetails');
 // Route::get('san-pham/danh-muc/{slug}.html', 'ProductController@viewProduct')->name('guest.viewProduct');
 Route::get('ajax/san-pham/danh-muc/hien-thi.html', 'ProductController@viewProduct')->name('guest.viewProduct');
