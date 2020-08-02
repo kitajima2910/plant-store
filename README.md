@@ -2,7 +2,7 @@
 ## Plant Store 2020/07/11
 
 == Hướng dẫn chạy source
-Lưu ý: bỏ ở thư mục htdocs(xampp) hoac84 www(wampserver)
+Lưu ý: bỏ ở thư mục htdocs(xampp) hoặc www(wampserver)
 1. composer install (cài package)
 2. npm install (cài package)
 3. phpunit (check errors)
