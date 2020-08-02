@@ -40,7 +40,8 @@
                         <ul>
                             @foreach ($categories as $menu)
                                 <li>
-                                    <a href="{!! route('guest.viewProduct', $menu->slug) !!}">
+                                    {{-- <a href="{!! route('guest.viewProduct', $menu->slug) !!}"> --}}
+                                    <a href="javascript:void(0);" class="cate-slug" data-slug="{!! $menu->slug !!}">
                                         {{$menu->name}}
                                     </a>
                                     @if(count($menu->childs))
@@ -149,7 +150,25 @@
     $(document).on('change', '.sort-products', function() {
         let sort = $(this).children("option:selected").val();
         let url = '{!! route("guest.product.ajaxIndex") !!}?sort=' + sort;
-        console.log(url);
+        location.hash = '';
+
+        $.ajax({
+            type: "get",
+            url: url,
+            success: function (data) {
+                if(data.code === 200) {
+                    $('#show-product').empty();
+                    $('#show-product').html(data.productData);
+                }
+            }
+        });
+    });
+
+    $(document).on('click', '.cate-slug', function(e) {
+        let slug = $(this).data('slug');
+        let url = '{!! route("guest.viewProduct") !!}?slug=' + slug;
+        location.hash = slug;
+        
         $.ajax({
             type: "get",
             url: url,
@@ -167,11 +186,8 @@
         let page = $(this).attr('href').split('page=')[1];
         let pageCategory = '';
         try {
-            pageCategory = $(this).attr('href').split('/')[6];
-            pageCategory = pageCategory.split('?')[0];
-            pageCategory = pageCategory.split('.')[0];
+            pageCategory = location.hash.split('#')[1];
         } catch (error) {
-            // console.error(error);
         }
         let url = '';
         if(pageCategory !== undefined) {
