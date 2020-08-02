@@ -16,7 +16,6 @@
 
 <div class="container">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-            <div class="row">
             <div class="card card-signin mb-3">
                 <div class="card-body">
                     <h5 class="card-title text-center">ĐĂNG NHẬP</h5>
@@ -26,15 +25,19 @@
                     <form class="form-signin" action="{!! route('guest.user.login') !!}" method="POST">
                         @csrf
                         <div class="form-label-group">
-                            <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Nhập địa chỉ email"
-                                required autofocus>
+                            <input type="text" id="inputEmail" name="email" class="form-control" placeholder="Nhập địa chỉ email" autofocus>
                             <label for="inputEmail">Nhập địa chỉ email</label>
+                            @error('email')
+                                <span class="text-danger font-italic">{{ $message }}</span>
+                            @enderror
                         </div>
 
                         <div class="form-label-group">
-                            <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Nhập mật khẩu"
-                                required>
+                            <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Nhập mật khẩu">
                             <label for="inputPassword">Nhập mật khẩu</label>
+                            @error('password')
+                                <span class="text-danger font-italic">{{ $message }}</span>
+                            @enderror
                         </div>
 
                         <div class="custom-control custom-checkbox mb-3">

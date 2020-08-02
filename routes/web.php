@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index');
 Route::get('trang-chu.html', 'HomeController@index')->name('guest.home');
 Route::get('san-pham/{slug}.html', 'ProductController@viewProductDetails')->name('guest.viewProductDetails');
+Route::get('san-pham/danh-muc/{slug}.html', 'ProductController@viewProduct')->name('guest.viewProduct');
 Route::get('ajax/san-pham/danh-muc.html', 'ProductController@ajaxViewProduct')->name('guest.ajaxViewProduct');
 Route::get('san-pham.html', 'ProductController@index')->name('guest.product.index');
 Route::get('ajax/san-pham.html', 'ProductController@ajaxIndex')->name('guest.product.ajaxIndex');

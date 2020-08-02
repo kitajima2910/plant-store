@@ -9,7 +9,7 @@
 <!-- ##### Breadcrumb Area End ##### -->
 
 <div class="loading">
-    <h1>Đang xử lý thanh toán, bạn vui lòng chờ...</h1>
+    <h1>Đang xử lý đặt hàng, bạn vui lòng chờ...</h1>
     <div class="loader"></div>
     <h3>Plant Store<h3>
 </div>

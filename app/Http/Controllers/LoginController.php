@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\CartOffline;
+use App\Http\Requests\GuestFormLogin;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -24,7 +25,7 @@ class LoginController extends Controller
         return view('pages.guest.login');
     }
 
-    public function login(Request $request) {
+    public function login(GuestFormLogin $request) {
 
         $email = $request->get('email');
         $password = $request->get('password');

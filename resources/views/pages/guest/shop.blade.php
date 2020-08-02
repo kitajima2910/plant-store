@@ -17,12 +17,12 @@
                 <div class="shop-sorting-data d-flex flex-wrap align-items-center justify-content-between">
                     <div class="search_by_terms">
                         <form action="#" method="post" class="form-inline">
-                            <select class="custom-select widget-title">
+                            <select class="custom-select widget-title sort-products">
                                 <option value="prod-gia-thap-cao">Thứ tự giá: thấp đến cao</option>
                                 <option value="prod-gia-cao-thap">Thứ tự giá: cao đến thấp</option>
                                 <option value="prod-hot" selected>Mới nhất</option>
                                 <option value="prod-sale">Thứ tự theo giảm giá</option>
-                                <option value="prod-ratting">Thứ tự theo đánh giá</option>
+                                {{-- <option value="prod-ratting">Thứ tự theo đánh giá</option> --}}
                             </select>
                         </form>
                     </div>
@@ -37,11 +37,10 @@
                     <!-- Shop Widget -->
                     <div class="shop-widget catagory mb-50">
                         <h4 class="widget-title">Danh Mục</h4>
-                        {{-- @include('includes.guest.category')--}}
                         <ul>
                             @foreach ($categories as $menu)
                                 <li>
-                                    <a href="javascript:void(0);" class="click-slug" data-slug="{!! $menu->slug !!}">
+                                    <a href="{!! route('guest.viewProduct', $menu->slug) !!}">
                                         {{$menu->name}}
                                     </a>
                                     @if(count($menu->childs))
@@ -50,7 +49,6 @@
                                 </li>
                             @endforeach
                         </ul>
-                        
                     </div>
 
                     <!-- Shop Widget -->
@@ -147,34 +145,49 @@
             }
         });
     });
-    
-    $(document).on('click', '.pagination a', function(e) {
-        e.preventDefault();
-        let page = $(this).attr('href').split('page=')[1];
-        let url = '{!! route("guest.product.ajaxIndex") !!}?page=' + page;
-        
+
+    $(document).on('change', '.sort-products', function() {
+        let sort = $(this).children("option:selected").val();
+        let url = '{!! route("guest.product.ajaxIndex") !!}?sort=' + sort;
+        console.log(url);
         $.ajax({
             type: "get",
             url: url,
             success: function (data) {
-                $('#show-product').empty();
-                $('#show-product').html(data);
+                if(data.code === 200) {
+                    $('#show-product').empty();
+                    $('#show-product').html(data.productData);
+                }
             }
         });
     });
-
-    $(document).on('click', '.click-slug', function(e) {
+    
+    $(document).on('click', '.pagination a', function(e) {
         e.preventDefault();
-        let slug = $(this).data('slug');
-        let url = '{!! route("guest.ajaxViewProduct") !!}';
+        let page = $(this).attr('href').split('page=')[1];
+        let pageCategory = '';
+        try {
+            pageCategory = $(this).attr('href').split('/')[6];
+            pageCategory = pageCategory.split('?')[0];
+            pageCategory = pageCategory.split('.')[0];
+        } catch (error) {
+            // console.error(error);
+        }
+        let url = '';
+        if(pageCategory !== undefined) {
+            url = '{!! url("ajax/san-pham/danh-muc.html") !!}?slug=' + pageCategory + '&page=' + page;
+        } else {
+            url = '{!! route("guest.product.ajaxIndex") !!}?page=' + page;
+        }
+
         $.ajax({
             type: "get",
             url: url,
-            data: {
-                slug: slug
-            },
-            success: function (response) {
-                
+            success: function (data) {
+                if(data.code === 200) {
+                    $('#show-product').empty();
+                    $('#show-product').html(data.productData);
+                }
             }
         });
     });
