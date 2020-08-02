@@ -49,7 +49,8 @@ class LoginController extends Controller
             }
             return redirect()->intended('trang-chu.html');
         } else {
-            return redirect()->back()->withInput()->withErrors(['errorLogin' => 'Email hoặc mật khẩu không đúng *,..,*']);
+            // return redirect()->back()->withInput()->withErrors(['errorLogin' => 'Email hoặc mật khẩu không đúng *,..,*']);
+            return redirect()->route('guest.user.login')->withInput()->withErrors(['errorLogin' => 'Email hoặc mật khẩu không đúng *,..,*']);
         }
 
     }

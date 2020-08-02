@@ -34,7 +34,7 @@
                                 </div>
                                 <!-- Register -->
                                 <div class="login">
-                                    <a href="#"><i class="fa fa-key" aria-hidden="true"></i> <span>Đăng ký</span></a>
+                                    <a href="{!! route('guest.user.register') !!}"><i class="fa fa-key" aria-hidden="true"></i> <span>Đăng ký</span></a>
                                 </div>
                             @else
                                 <div class="login">

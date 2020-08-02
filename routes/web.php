@@ -38,7 +38,8 @@ Route::group(['prefix' => 'nguoi-dung'], function () {
     Route::get('dang-nhap.html', 'LoginController@index')->name('guest.user.login');
     Route::post('dang-nhap.html', 'LoginController@login')->name('guest.user.login');
     Route::get('dang-xuat.html', 'LogoutController@logout')->name('guest.user.logout');
-    Route::get('dang-ky.html', 'RegisterController@index')->name('guest.user.index');
+    Route::post('dang-ky.html', 'RegisterController@store')->name('guest.user.register');
+    Route::get('dang-ky.html', 'RegisterController@index')->name('guest.user.register');
 });
 
 // Checkout
