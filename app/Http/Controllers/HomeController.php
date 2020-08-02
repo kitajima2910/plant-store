@@ -8,6 +8,7 @@ use App\Setting;
 use App\Slider;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
@@ -34,6 +35,12 @@ class HomeController extends Controller
         // Posts
         $posts = Post::where('status', 1)->orderBy('id', 'desc')->take(3)->get();
         return view('pages.guest.index', compact('products','productsSale','sliders','posts','users'));
+    }
+
+    public function searchProducts(Request $request) {
+        $search = $request->get('search');
+        Session::put('search', $search);
+        return redirect()->route('guest.product.index');
     }
 
 }

@@ -92,7 +92,8 @@
 
                 <!-- Search Form -->
                 <div class="search-form">
-                    <form action="#" method="get">
+                    <form action="{!! route('guest.searchProducts') !!}" method="post">
+                        @csrf
                         <input type="search" name="search" id="search" placeholder="Tìm kiếm &amp; nhấn phím enter...">
                         <button type="submit" class="d-none"></button>
                     </form>

@@ -22,23 +22,33 @@ class ProductController extends Controller
             Session::forget('sort-product');
             Session::forget('category-slug');
             $categories = $this->category->where('status', 1)->where('parent_id', 0)->get();
+            if(!empty(Session::get('search'))) {
+                $sort = Session::get('search');
+                $products = $this->product->where('status', 1)->where('name', 'like', '%' . $sort . '%')->paginate(6);
+                Session::put('sort-product', $sort);
+                Session::forget('search');
+                return view('pages.guest.shop', compact('products', 'categories'));
+            }
             $products = $this->product->where('status', 1)->orderBy('id','desc')->paginate(6);
             return view('pages.guest.shop', compact('products', 'categories'));         
     }
 
     public function ajaxIndex(Request $request) {
+        
         if($request->ajax()) {
 
             $sort = !empty(Session::get('sort-product')) && !empty(Session::get('sort-product')) != $request->get('sort') ? Session::get('sort-product') : $request->get('sort');
-            
+
             if($sort == 'prod-gia-thap-cao') {
                 $products = $this->product->where('status', 1)->orderBy('final_price')->paginate(6);
             } else if($sort == 'prod-gia-cao-thap') {
                 $products = $this->product->where('status', 1)->orderBy('final_price', 'desc')->paginate(6);
             } else if($sort == 'prod-sale') {
                 $products = $this->product->where('status', 1)->where('sale_price', '>', 0)->orderBy('id','desc')->paginate(6);
-            } else {
+            } else if($sort == 'prod-hot') {
                 $products = $this->product->where('status', 1)->orderBy('id','desc')->paginate(6);
+            } else { // Search ajax
+                $products = $this->product->where('status', 1)->where('name', 'like', '%' . $sort . '%')->paginate(6);
             }
         
             Session::put('sort-product', $sort);
@@ -98,6 +108,5 @@ class ProductController extends Controller
             return response()->json(['productData' => $productData, 'code' => 200], 200);
         }
     }
-
 
 }
