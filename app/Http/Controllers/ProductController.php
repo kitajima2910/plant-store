@@ -29,7 +29,7 @@ class ProductController extends Controller
                 Session::forget('search');
                 return view('pages.guest.shop', compact('products', 'categories'));
             }
-            $products = $this->product->where('status', 1)->orderBy('id','desc')->paginate(6);
+            $products = $this->product->where('status', 1)->orderBy('id')->paginate(6);
             return view('pages.guest.shop', compact('products', 'categories'));         
     }
 
