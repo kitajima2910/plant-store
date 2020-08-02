@@ -70,11 +70,18 @@ class ProductController extends Controller
         
     }
 
-    public function viewProduct($slug) {
-        Session::forget('category-slug');
-        $categories = $this->category->where('status', 1)->where('parent_id', 0)->get();
-        $products = $this->category->where('slug', $slug)->first()->products()->paginate(6);
-        return view('pages.guest.shop', compact('products', 'categories'));
+    public function viewProduct(Request $request) {
+        if($request->ajax()) {
+            // dd($request->get('slug'));
+            $slug = $request->get('slug');
+            Session::forget('category-slug');
+            // $categories = $this->category->where('status', 1)->where('parent_id', 0)->get();
+            $products = $this->category->where('slug', $slug)->first()->products()->paginate(6);
+            // return view('pages.guest.shop', compact('products', 'categories'));
+            $productData = view('ajax.guest.product-data', compact('products'))->render();         
+            return response()->json(['productData' => $productData, 'code' => 200], 200);
+        }
+        
     }
 
     public function ajaxViewProduct(Request $request) {
