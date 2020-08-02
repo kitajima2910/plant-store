@@ -8,9 +8,15 @@
 @include('includes.guest.breadcrumb-area', ['currentPage' => 'Đăng Nhập'])
 <!-- ##### Breadcrumb Area End ##### -->
 
+@if ($message = Session::get('success'))
+<div class="alert alert-success">
+    <p>{{ $message }}</p>
+</div>
+@endif
+
 <div class="container">
-    <div class="row">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="row">
             <div class="card card-signin mb-3">
                 <div class="card-body">
                     <h5 class="card-title text-center">ĐĂNG NHẬP</h5>
