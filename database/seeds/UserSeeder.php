@@ -49,7 +49,7 @@ class UserSeeder extends Seeder
             ],
             [
                 'name' => 'Huỳnh Ngọc Huệ',
-                'email' => 'kitajima2910@gmail.com',
+                'email' => 'khachhang1@gmail.com',
                 'password' => bcrypt('123456'),
                 'phone' => '123456',
                 'address' => 'GV',
@@ -60,7 +60,7 @@ class UserSeeder extends Seeder
             ],
             [
                 'name' => 'Nguyễn An Khang',
-                'email' => 'khachang2@gmail.com',
+                'email' => 'khachhang2@gmail.com',
                 'password' => bcrypt('123456'),
                 'phone' => '123456',
                 'address' => 'GV',
@@ -71,7 +71,7 @@ class UserSeeder extends Seeder
             ],
             [
                 'name' => 'Võ Nhất Vũ',
-                'email' => 'khachang3@gmail.com',
+                'email' => 'khachhang3@gmail.com',
                 'password' => bcrypt('123456'),
                 'phone' => '123456',
                 'address' => 'GV',
