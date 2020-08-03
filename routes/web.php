@@ -15,15 +15,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Frontend
+// Home
 Route::get('/', 'HomeController@index');
 Route::get('trang-chu.html', 'HomeController@index')->name('guest.home');
 Route::post('trang-chu.html', 'HomeController@searchProducts')->name('guest.searchProducts');
+
+// Product
 Route::get('san-pham/{slug}.html', 'ProductController@viewProductDetails')->name('guest.viewProductDetails');
-// Route::get('san-pham/danh-muc/{slug}.html', 'ProductController@viewProduct')->name('guest.viewProduct');
 Route::get('ajax/san-pham/danh-muc/hien-thi.html', 'ProductController@viewProduct')->name('guest.viewProduct');
 Route::get('ajax/san-pham/danh-muc.html', 'ProductController@ajaxViewProduct')->name('guest.ajaxViewProduct');
 Route::get('san-pham.html', 'ProductController@index')->name('guest.product.index');
 Route::get('ajax/san-pham.html', 'ProductController@ajaxIndex')->name('guest.product.ajaxIndex');
+
+// Post
 Route::get('bai-viet.html', 'PostController@index');
 Route::get('ajax/bai-viet.html', 'PostController@ajaxIndex')->name('guest.post.ajaxIndex'); 
 Route::get('bai-viet/{slug}.html', 'PostController@viewPostDetails')->name('guest.viewPostDetails');
@@ -44,6 +48,10 @@ Route::group(['prefix' => 'nguoi-dung'], function () {
     Route::post('dang-ky.html', 'RegisterController@store')->name('guest.user.register');
     Route::get('dang-ky.html', 'RegisterController@index')->name('guest.user.register');
 });
+
+// facebook
+Route::get('/redirect/{provider}', 'SocialController@redirect')->name('guest.user.redirect.social');
+Route::get('trang-chu.html/callback/{provider}', 'SocialController@callback');
 
 // Checkout
 Route::group(['prefix' => 'thanh-toan'], function () {
