@@ -1,5 +1,13 @@
 @extends('layouts.guest.master')
 @section('title', 'Chi Tiết Sản Phẩm')
+@section('meta')
+    <meta property="og:image" content="{!! asset($product->feature_image_path) !!}">
+    <meta property="og:site_name" content="{!! url('') !!}">
+    <meta property="og:description" content="{{ $product->content_short }}">
+    <meta property="og:title" content="{!! $product->name !!}">
+    <meta property="og:url" content="{!! url('san-pham') . '/' . $product->slug . '.html'!!}">
+    <meta property="og:type" content="website">
+@endsection
 @section('style')
 <style>
     .description_area p:nth-of-type(2) {
@@ -107,6 +115,9 @@
                         <div class="products--meta">
                             <p><span>Danh mục:</span> <span>{!! $productCategory['name'] !!}</span></p>
                             <p><span>Tags:</span> <span>{!! $tagsStr !!}</span></p>
+                            <p>
+                                <div class="fb-share-button" data-href="http://localhost/plant-store/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={!! url('san-pham') . '/' . $product->slug . '.html'!!};src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a></div>
+                            </p>
                         </div>
 
                     </div>

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    @yield('meta')
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,6 +49,9 @@
     <script src="{{ asset('public/frontend/js/active.js') }}"></script>
     <!-- JavaScript -->
     <script src="{{ asset('public/frontend/js/alertify.min.js') }}"></script>
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0&appId=615438979352457&autoLogAppEvents=1" nonce="QGuyVj6e"></script>
     
     @yield('script')
 </body>
