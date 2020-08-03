@@ -74,10 +74,8 @@
                                     <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Đăng
                                         ký</button>
                                     <hr class="my-4">
-                                    <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i
-                                            class="fa fa-google mr-2"></i> Đăng nhập bằng Google</button>
-                                    <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i
-                                            class="fa fa-facebook-f mr-2"></i> Đăng nhập bằng Facebook</button>
+                                    <a href="{!! route('guest.user.redirect.social', ['facebook']) !!}" class="btn btn-lg btn-facebook btn-block text-uppercase text-white"><i
+                                        class="fa fa-facebook-f mr-2"></i> Đăng nhập bằng Facebook</a>
                                 </div>
                             </div>
                         </div>
