@@ -225,7 +225,7 @@
             let parentId = $('.parent_id').val();
             let url = '{!! route("guest.comment.store") !!}?body=' + body + '&post_id=' + postId + '&user_id=' + customer_id + '&parent_id=' + parentId;
 
-            if(body === '') {
+            if(body.trim() === '') {
                 setTimeout(function() {
                     alertify.set('notifier', 'position', 'bottom-left');
                     var delay = alertify.get('notifier','delay');
