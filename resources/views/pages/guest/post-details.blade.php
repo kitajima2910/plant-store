@@ -1,11 +1,9 @@
 @extends('layouts.guest.master')
 @section('title', 'Bài Viết')
 @section('content')
-@section('style')
-@endsection
- <!-- ##### Breadcrumb Area Start ##### -->
- @include('includes.guest.breadcrumb-area', ['currentPage' => 'Bài Viết'])
- <!-- ##### Breadcrumb Area End ##### -->
+<!-- ##### Breadcrumb Area Start ##### -->
+@include('includes.guest.breadcrumb-area', ['currentPage' => 'Bài Viết'])
+<!-- ##### Breadcrumb Area End ##### -->
 
     <!-- ##### Blog Content Area Start ##### -->
     <section class="blog-content-area section-padding-0-100">
@@ -35,95 +33,61 @@
 
                         <!-- Comment Area Start -->
                         <div class="comment_area clearfix">
-                            <h4 class="headline">2 Comments</h4>
-
-                            <ol>
-                                <!-- Single Comment Area -->
-                                <li class="single_comment_area">
-                                    <div class="comment-wrapper d-flex">
-                                        <!-- Comment Meta -->
-                                        <div class="comment-author">
-                                            <img src="{{asset("public/frontend/img/bg-img/37.jpg")}}" alt="">
-                                        </div>
-                                        <!-- Comment Content -->
-                                        <div class="comment-content">
-                                            <div class="d-flex align-items-center justify-content-between">
-                                                <h5>Simona Halep</h5>
-                                                <span class="comment-date">09:00 AM,  20 Jun 2018</span>
-                                            </div>
-                                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetu adipisci velit, sed quia non numquam eius modi</p>
-                                            <a class="active" href="#">Reply</a>
-                                        </div>
-                                    </div>
-                                    <ol class="children">
+                            <div class="comment-data">
+                                <h4 class="headline">{!! $commentsCount !!} bình luận</h4>
+                                <ol>
+                                    @foreach ($comments as $comment)
                                         <li class="single_comment_area">
                                             <div class="comment-wrapper d-flex">
                                                 <!-- Comment Meta -->
                                                 <div class="comment-author">
-                                                    <img src={{asset("public/frontend/img/bg-img/38.jpg")}} alt="">
+                                                    <img src="{{ asset("public/uploads/70x70.png")}}" width="70px" height="70px">
                                                 </div>
                                                 <!-- Comment Content -->
                                                 <div class="comment-content">
                                                     <div class="d-flex align-items-center justify-content-between">
-                                                        <h5>Rafael Nadal</h5>
-                                                        <span class="comment-date">09:30 AM,  20 Jun 2018</span>
+                                                        <h5>{!! $comment->user()->get('name')[0]->name !!}</h5>
+                                                        <span class="comment-date">{!! $comment->created_at !!}</span>
                                                     </div>
-                                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetu adipisci velit, sed quia non numquam eius modi</p>
-                                                    <a class="active" href="#">Reply</a>
+                                                    <p>{!! $comment->body !!}</p>
+                                                    <a class="active reply" data-parentid="{!! $comment->id !!}" href="javascript:void(0);">Trả lời</a>
                                                 </div>
                                             </div>
+                                            @if(count($comment->childs))
+                                                @include('includes.guest.manage-comment-child', ['childs' => $comment->childs])
+                                            @endif
                                         </li>
-                                    </ol>
-                                </li>
-                                <li class="single_comment_area">
-                                    <div class="comment-wrapper d-flex">
-                                        <!-- Comment Meta -->
-                                        <div class="comment-author">
-                                            <img src="{{asset("public/frontend/img/bg-img/39.jpg")}}" alt="">
-                                        </div>
-                                        <!-- Comment Content -->
-                                        <div class="comment-content">
-                                            <div class="d-flex align-items-center justify-content-between">
-                                                <h5>Maria Sharapova</h5>
-                                                <span class="comment-date">02:20 PM,  20 Jun 2018</span>
-                                            </div>
-                                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetu adipisci velit, sed quia non numquam eius modi</p>
-                                            <a class="active" href="#">Reply</a>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ol>
+                                    @endforeach
+                                </ol>
+                            </div>
                         </div>
+                        
 
                         <!-- Leave A Comment -->
-                        <div class="leave-comment-area clearfix">
+                        <div class="leave-comment-area clearfix" id="rely-comment">
                             <div class="comment-form">
                                 <h4 class="headline">Bình luận</h4>
 
                                 <div class="contact-form-area">
                                     <!-- Comment Form -->
-                                    <form action="#" method="post">
-                                        <div class="row">
-                                            <div class="col-12 col-md-6">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="contact-name" placeholder="Tên">
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-6">
-                                                <div class="form-group">
-                                                    <input type="email" class="form-control" id="contact-email" placeholder="Địa chỉ email">
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="form-group">
-                                                    <textarea class="form-control" name="message" id="message" cols="30" rows="10" placeholder="Nhập bình luận..."></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <button type="submit" class="btn alazea-btn">Gửi bình luận</button>
+                                    @if (auth()->guard('customers')->check())
+                                        <input type="hidden" class="customer_id" value="{!! auth()->guard('customers')->user()->id !!}" />
+                                    @else
+                                        <input type="hidden" class="customer_id" value="" />
+                                    @endif
+                                    
+                                    <input type="hidden" class="post_id" name="post_id" value="{{ $post->id }}" />
+                                    <input type="hidden" class="parent_id" name="parent_id" value="0" />
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <textarea class="form-control body" name="body" cols="30" rows="10" placeholder="Nhập bình luận..."></textarea>
                                             </div>
                                         </div>
-                                    </form>
+                                        <div class="col-12">
+                                            <button type="button" class="btn alazea-btn comments">Gửi bình luận</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -157,7 +121,7 @@
                             </div>
                             @endforeach
                         </div>
-                          
+                        
                         </div>
 
                         <!-- ##### Single Widget Area ##### -->
@@ -228,4 +192,62 @@
         </div>
     </section>
     <!-- ##### Blog Content Area End ##### -->
+@endsection
+@section('script')
+    <script>
+        $(document).on('click', '.reply', function() {
+            $('html, body').animate({
+                scrollTop: $('#rely-comment').offset().top - 300
+            }, 500);
+
+            let parentid = $(this).data('parentid');
+            $('.parent_id').val(parentid);
+        });
+        
+
+        $(document).on('click', '.comments', function() {
+            let customer_id = $('.customer_id').val();
+            
+            if(customer_id === '') {
+                setTimeout(function() {
+                    alertify.set('notifier', 'position', 'bottom-left');
+                    var delay = alertify.get('notifier','delay');
+                    alertify.set('notifier','delay', 2);
+                    alertify.error('Bạn chưa đăng nhập');
+                    alertify.set('notifier','delay', delay);
+                }, 300);
+                return;
+            }
+
+
+            let body = $('.body').val();
+            let postId = $('.post_id').val();
+            let parentId = $('.parent_id').val();
+            let url = '{!! route("guest.comment.store") !!}?body=' + body + '&post_id=' + postId + '&user_id=' + customer_id + '&parent_id=' + parentId;
+
+            if(body === '') {
+                setTimeout(function() {
+                    alertify.set('notifier', 'position', 'bottom-left');
+                    var delay = alertify.get('notifier','delay');
+                    alertify.set('notifier','delay', 2);
+                    alertify.error('Nội dung chưa được nhập');
+                    alertify.set('notifier','delay', delay);
+                }, 300);
+                return;
+            }
+
+            $.ajax({
+                type: "get",
+                url: url,
+                success: function (data) {
+                    if(data.code === 200) {
+                        $('.body').val('');
+                        $('.parent_id').val(0);
+                        $('.comment-data').empty();
+                        $('.comment-data').html(data.viewComments);
+                    }
+                }
+            });
+        });
+    </script>
 @endsection

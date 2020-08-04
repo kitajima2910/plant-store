@@ -52,7 +52,7 @@
 
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0&appId=615438979352457&autoLogAppEvents=1" nonce="QGuyVj6e"></script>
-    
+
     @yield('script')
 </body>
 

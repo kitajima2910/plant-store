@@ -22,7 +22,12 @@ class SocialController extends Controller
 
     public function redirect($provider)
     {
-        return Socialite::driver($provider)->redirect();
+        try {
+            return Socialite::driver($provider)->redirect();
+        } catch (\Throwable $th) {
+            return redirect()->route('guest.home');
+        }
+        
     }
 
     public function callback($provider)
