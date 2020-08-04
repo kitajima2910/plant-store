@@ -32,6 +32,9 @@ Route::get('bai-viet.html', 'PostController@index');
 Route::get('ajax/bai-viet.html', 'PostController@ajaxIndex')->name('guest.post.ajaxIndex'); 
 Route::get('bai-viet/{slug}.html', 'PostController@viewPostDetails')->name('guest.viewPostDetails');
 
+// Comment
+Route::get('ajax/bai-viet/comments.html', 'CommentController@store')->name('guest.comment.store');
+
 // Cart
 Route::group(['prefix' => 'gio-hang'], function () {
     Route::get('hien-thi-san-pham.html', 'CartController@index')->name('guest.cart.index');

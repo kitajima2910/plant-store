@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
 use App\Post;
 use App\User;
 use Illuminate\Http\Request;
@@ -10,11 +11,13 @@ class PostController extends Controller
 {   
     private $post;
     private $user;
+    private $comment;
 
-    public function __construct(Post $post, User $user)
+    public function __construct(Post $post, User $user, Comment $comment)
     {
         $this->post = $post;
         $this->user = $user;
+        $this->comment = $comment;
     }
 
     public function index(){
@@ -27,7 +30,9 @@ class PostController extends Controller
         try {
             $users = $this->user->all();
             $post = $this->post->where('slug', $slug)->first();
-            return view('pages.guest.post-details', compact('post', 'users'));
+            $comments = $this->post->find($post->id)->comments()->where('parent_id', '=', 0)->get();
+            $commentsCount = $this->post->find($post->id)->comments()->count();
+            return view('pages.guest.post-details', compact('post', 'users', 'comments', 'commentsCount'));
         } catch (\Throwable $th) {
             return redirect()->route('guest.home');
         }
