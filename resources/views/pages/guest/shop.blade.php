@@ -1,9 +1,9 @@
 @extends('layouts.guest.master')
 @section('title', 'Sản Phẩm')
-@section('content')
 @section('style')
 <link rel="stylesheet" href="{!! asset('public/vendors/shop/style.css') !!}">
 @endsection
+@section('content')
 <!-- ##### Breadcrumb Area Start ##### -->
 @include('includes.guest.breadcrumb-area', ['currentPage' => 'Sản Phẩm'])
 <!-- ##### Breadcrumb Area End ##### -->
@@ -116,7 +116,7 @@
     </div>
 </section>
 <!-- ##### Shop Area End ##### -->
-
+@endsection
 @section('script')
 <script>
     $(document).on('click', '.cart-add', function () {
