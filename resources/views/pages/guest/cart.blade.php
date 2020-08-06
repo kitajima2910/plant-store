@@ -123,7 +123,7 @@
                         // Cập nhật số lượng
                         $('.cart-quantity').empty();
                         $('.cart-quantity').html('(' + response.cardQuantity + ')');   
-                                            // Cập nhật table
+                        // Cập nhật table
                         $('.ajax-cart-table').empty();
                         $('.ajax-cart-table').html(response.cartTable);
 

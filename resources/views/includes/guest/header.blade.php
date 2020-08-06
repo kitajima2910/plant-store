@@ -46,6 +46,9 @@
                             @endif
                             <!-- Cart -->
                             <div class="cart">
+                                <a href="{!! route('guest.wishlist.index') !!}"><i class="fa fa-heart" aria-hidden="true"></i> 
+                                    <span>Yêu thích <span class="cart-heart">({!! $wishlistQuantityShare !!})</span></span>
+                                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <a href="{!! route('guest.cart.index') !!}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> 
                                     <span>Giỏ hảng <span class="cart-quantity">({!! $cartQuantityShare !!})</span></span>
                                 </a>
