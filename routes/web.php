@@ -35,6 +35,14 @@ Route::get('bai-viet/{slug}.html', 'PostController@viewPostDetails')->name('gues
 // Comment
 Route::get('ajax/bai-viet/comments.html', 'CommentController@store')->name('guest.comment.store');
 
+// Wishlist
+Route::group(['prefix' => 'yeu-thich'], function () {
+    Route::get('hien-thi-san-pham.html', 'WishlistController@index')->name('guest.wishlist.index');
+    Route::get('them-san-pham.html', 'WishlistController@add')->name('guest.wishlist.add');
+    Route::get('xoa-san-pham.html', 'WishlistController@del')->name('guest.wishlist.del');
+    Route::get('xoa-tat-ca-san-pham.html', 'WishlistController@delall')->name('guest.wishlist.delall');
+});
+
 // Cart
 Route::group(['prefix' => 'gio-hang'], function () {
     Route::get('hien-thi-san-pham.html', 'CartController@index')->name('guest.cart.index');

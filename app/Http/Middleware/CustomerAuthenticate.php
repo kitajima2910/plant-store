@@ -20,7 +20,7 @@ class CustomerAuthenticate
         if(Auth::guard($guard)->check()) {
             return $next($request);
         }
-        Session::put('checkout', 'checkout');
+        // Session::put('checkout', 'checkout');
         return redirect()->route('guest.user.login');
     }
 }

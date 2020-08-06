@@ -12,6 +12,11 @@
 <section class="shop-page section-padding-0-100">
     <div class="container">
         <div class="row">
+            @if (auth()->guard('customers')->check())
+                <input type="hidden" class="wishlist_id" value="{!! auth()->guard('customers')->user()->id !!}" />
+            @else
+                <input type="hidden" class="wishlist_id" value="" />
+            @endif
             <!-- Shop Sorting Data -->
             <div class="col-12 bottom_line">
                 <div class="shop-sorting-data d-flex flex-wrap align-items-center justify-content-between">
@@ -81,9 +86,9 @@
                                                     href="javascript:void(0);">{{ $item->sale_price > 0 ? 'SALE '. $item->sale_price . '%' : 'HOT' }}</a>
                                             </div>
                                             <div class="product-meta d-flex">
-                                                <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
+                                                <a href="javascript:void(0);" class="wishlist-btn wishlist-add" data-id="{!! $item->id !!}"><i class="icon_heart_alt"></i></a>
                                                 <a href="javascript:void(0);" class="add-to-cart-btn cart-add"
-                                                    data-id="{!! $item->id !!}">Add to cart</a>
+                                                    data-id="{!! $item->id !!}">thêm giỏ hàng</a>
                                                 <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
                                             </div>
                                         </div>
@@ -119,17 +124,65 @@
 @endsection
 @section('script')
 <script>
+$(document).on('click', '.wishlist-add', function() {
+    let customer_id = $('.wishlist_id').val();
+            
+    if(customer_id === '') {
+        setTimeout(function() {
+            alertify.set('notifier', 'position', 'bottom-left');
+            var delay = alertify.get('notifier','delay');
+            alertify.set('notifier','delay', 2);
+            alertify.error('Bạn chưa đăng nhập');
+            alertify.set('notifier','delay', delay);
+        }, 300);
+        return;
+    }
+
+    let id = $(this).data('id');
+    let url = '{!! route("guest.wishlist.add") !!}';
+
+    $.ajax({
+        type: "get",
+        url: url,
+        data: {
+            'id': id,
+        },
+        success: function (response) {
+            if(response.code === 200) {
+                $('.cart-heart').empty();
+                $('.cart-heart').html('(' + response.cardHeart + ')');
+                
+                setTimeout(function() {
+                    alertify.set('notifier', 'position', 'bottom-left');
+                    var delay = alertify.get('notifier','delay');
+                    alertify.set('notifier','delay', 2);
+                    alertify.success('Đã thêm sản phẩm yêu thích');
+                    alertify.set('notifier','delay', delay);
+                }, 300);
+            }
+            if(response.code === 204) {
+                setTimeout(function() {
+                    alertify.set('notifier', 'position', 'bottom-left');
+                    var delay = alertify.get('notifier','delay');
+                    alertify.set('notifier','delay', 2);
+                    alertify.error('Đã có sản phẩm yêu thích');
+                    alertify.set('notifier','delay', delay);
+                }, 300);
+            }
+        }
+    });
+});
+
+
     $(document).on('click', '.cart-add', function () {
         let id = $(this).data('id');
         let quantity = 1;
         let url = '{!! route("guest.cart.add") !!}';
-        let _token = '{{ csrf_token() }}';
 
         $.ajax({
             type: "get",
             url: url,
             data: {
-                '_token': _token,
                 'id': id,
                 'quantity': quantity
             },

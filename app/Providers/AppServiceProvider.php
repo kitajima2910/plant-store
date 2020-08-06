@@ -7,7 +7,9 @@ use App\Menu;
 use App\Post;
 use App\Product;
 use App\Setting;
+use App\Wishlist;
 use Gloudemans\Shoppingcart\Facades\Cart;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -49,6 +51,12 @@ class AppServiceProvider extends ServiceProvider
             // $menuCategoriesShare = Category::where('status', 1)->where('parent_id', 0)->get();
             // Post
             $postShare = Post::where('status', 1)->orderBy('id', 'desc')->take(4)->get();
+
+            if(Auth::guard('customers')->check()) {
+                $wishlistQuantityShare = Wishlist::where('user_id', Auth::guard('customers')->user()->id)->count();
+            } else {
+                $wishlistQuantityShare = 0;
+            }
             
             $view->with([
                 'cartQuantityShare' => $cartQuantityShare,
@@ -57,6 +65,7 @@ class AppServiceProvider extends ServiceProvider
                 'menusShare' => $menusShare,
                 // 'menuCategoriesShare' => $menuCategoriesShare,
                 'postShare' => $postShare,
+                'wishlistQuantityShare' => $wishlistQuantityShare,
             ]);
         });
     }
