@@ -36,6 +36,11 @@ table, th, td {
 .tb-function{
     text-align: center;
 }
+
+.product-thumbnail  img{
+    width: 70px;
+    height: 70px;
+}
 </style>
 @endsection
 @section('content')
@@ -359,19 +364,26 @@ $(document).on('click', '.wishlist-add', function() {
         for(let obj of compare) {
             if(obj.id === objProd.id) {
                 flag = false;
+                setTimeout(function() {
+                alertify.set('notifier', 'position', 'bottom-left');
+                var delay = alertify.get('notifier','delay');
+                alertify.set('notifier','delay', 2);
+                alertify.error('Sản phẩm đã có trong phần so sánh');
+                alertify.set('notifier','delay', delay);
+            }, 300);
                 break;}
                 }
 
                 if(flag === true) {
                     compare.push(objProd);
-                }
+                
                 setTimeout(function() {
                 alertify.set('notifier', 'position', 'bottom-left');
                 var delay = alertify.get('notifier','delay');
                 alertify.set('notifier','delay', 2);
                 alertify.success('Đã thêm sản phẩm để so sánh');
                 alertify.set('notifier','delay', delay);
-            }, 300);
+            }, 300);}
         console.log(compare);
         }else{
             setTimeout(function() {
@@ -393,7 +405,7 @@ $(document).on('click', '.wishlist-add', function() {
     });
 
     function formatNumber(num) {
-        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
     }
 
     $(document).on('click', '.btn-show', function() {
