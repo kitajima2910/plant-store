@@ -62,6 +62,7 @@
             visibility: visible;
         }
         .modal-body table, th, td {
+            padding: 10px;
             border: 1px solid black;
         }
         .tb-name td{

@@ -136,7 +136,7 @@
                         <div class="single-widget-area">
                             <!-- Title -->
                             <div class="widget-title">
-                                <h4>Sản phẩm mua nhiều nhất</h4>
+                                <h4>Top sản phẩm</h4>
                             </div>
 
                             <!-- Single Best Seller Products -->
@@ -150,13 +150,13 @@
                                         <h6>{{$item->name}}</h6>
                                     </a> 
                                     <p>{!! number_format($item->final_price, 0, ',', '.') !!} VNĐ</p>
-                                    <div class="ratings">
+                                    {{-- <div class="ratings">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                             @endforeach
