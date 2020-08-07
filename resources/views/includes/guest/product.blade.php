@@ -115,7 +115,7 @@
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
-    <div class="modal-body">
+    <div class="modal-body" style="justify-content: center">
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-danger remove-btn" data-dismiss="modal">Xóa so sánh</button>
@@ -242,7 +242,7 @@ $(document).on('click', '.compare-btn', function() {
             alertify.set('notifier', 'position', 'bottom-left');
             var delay = alertify.get('notifier','delay');
             alertify.set('notifier','delay', 2);
-            alertify.error('Số lượng sản phẩm so sánh đã đủ');
+            alertify.error('Sản phẩm so sánh đã đầy');
             alertify.set('notifier','delay', delay);
         }, 300);
     }

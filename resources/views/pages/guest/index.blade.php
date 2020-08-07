@@ -18,10 +18,16 @@
     <link rel="stylesheet" href="{{ asset('public/frontend/css/style.css') }}">
 
     <style>
+        .modal-body {
+        display: flex;
+        justify-content: center;
+        }
         .modal-content{
+            min-width: 100%;
             overflow-x: auto;
-            width: 700px;
-            margin-left: -96px;
+            width: 900px;
+            margin-left: -190px;
+            margin: 40px -180px;
         }
         .tb-img img{
             width: 200px;
@@ -74,6 +80,8 @@
         .tb-function{
             text-align: center;
         }
+
+
     </style>
 </head>
 

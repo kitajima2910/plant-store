@@ -3,7 +3,7 @@
 @section('style')
 <link rel="stylesheet" href="{!! asset('public/vendors/shop/style.css') !!}">
 <style>
-    table, th, td {
+table, th, td {
     border: 1px solid black;
 }
 .tb-name td{
@@ -18,15 +18,20 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.modal-body {
+    justify-content: center;
+}
 .modal-content{
-            overflow-x: auto;
-            width: 700px;
-            margin-left: -96px;
-        }
-        .tb-img img{
-            width: 200px;
-            height: 200px;
-        }
+    min-width: 100%;
+    overflow-x: auto;
+    width: 900px;
+    margin-left: -190px;
+    margin: 40px -180px;
+}
+.tb-img img{
+    width: 200px;
+    height: 200px;
+}
 .tb-function{
     text-align: center;
 }
@@ -90,7 +95,7 @@
                         <div class="single-widget-area">
                             <!-- Title -->
                             <div class="widget-title">
-                                <h4>Sản phẩm nổi bật</h4>
+                                <h4>Sản phẩm mua nhiều nhất</h4>
                             </div>
 
                             <!-- Single Best Seller Products -->
@@ -372,7 +377,7 @@ $(document).on('click', '.wishlist-add', function() {
                 alertify.set('notifier', 'position', 'bottom-left');
                 var delay = alertify.get('notifier','delay');
                 alertify.set('notifier','delay', 2);
-                alertify.error('Số lượng sản phẩm so sánh đã đủ');
+                alertify.error('Sản phẩm so sánh đã đầy');
                 alertify.set('notifier','delay', delay);
             }, 300);
         }
