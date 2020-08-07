@@ -29,7 +29,7 @@
                                 <a href="javascript:void(0);">{{ $item->sale_price > 0 ? 'SALE '. $item->sale_price . '%' : 'HOT' }}</a>
                             </div>
                             <div class="product-meta d-flex">
-                                <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
+                                <a href="javascript:void(0);" class="wishlist-btn wishlist-add" data-id="{!! $item->id !!}"><i class="icon_heart_alt"></i></a>
                                 <a href="javascript:void(0);" class="add-to-cart-btn cart-add" data-id="{!! $item->id !!}">Thêm giỏ hàng</a>
                             <a href="javascript:void(0);"  data-prod="{{$item}}" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
                             </div>
@@ -73,7 +73,7 @@
                                 <a href="javascript:void(0);">{{ $item->sale_price > 0 ? 'SALE '. $item->sale_price . '%' : 'HOT' }}</a>
                             </div>
                             <div class="product-meta d-flex">
-                                <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
+                                <a href="javascript:void(0);" class="wishlist-btn wishlist-add" data-id="{!! $item->id !!}"><i class="icon_heart_alt"></i></a>
                                 <a href="javascript:void(0);" class="add-to-cart-btn cart-add" data-id="{!! $item->id !!}">Thêm giỏ hàng</a>
                                 <a href="javascript:void(0);" data-prod="{{$item}}" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
 
