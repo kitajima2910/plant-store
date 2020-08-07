@@ -107,7 +107,7 @@
                             </form>
                             <!-- Wishlist & Compare -->
                             <div class="wishlist-compare d-flex flex-wrap align-items-center">
-                                <a href="#" class="wishlist-btn ml-15"><i class="icon_heart_alt"></i></a>
+                                <a href="javascript:void(0);" class="wishlist-btn ml-15 wishlist-add" data-id="{!! $product->id !!}"><i class="icon_heart_alt"></i></a>
                                 <a href="#" class="compare-btn ml-15"><i class="arrow_left-right_alt"></i></a>
                             </div>
                         </div>
@@ -155,4 +155,56 @@
 <!-- ##### Related Product Area Start ##### -->
 @include('includes.guest.related-product')
 <!-- ##### Related Product Area End ##### -->
+@endsection
+@section('script')
+<script>
+$(document).on('click', '.wishlist-add', function() {
+    let customer_id = $('.wishlist_id').val();
+            
+    if(customer_id === '') {
+        setTimeout(function() {
+            alertify.set('notifier', 'position', 'bottom-left');
+            var delay = alertify.get('notifier','delay');
+            alertify.set('notifier','delay', 2);
+            alertify.error('Bạn chưa đăng nhập');
+            alertify.set('notifier','delay', delay);
+        }, 300);
+        return;
+    }
+
+    let id = $(this).data('id');
+    let url = '{!! route("guest.wishlist.add") !!}';
+
+    $.ajax({
+        type: "get",
+        url: url,
+        data: {
+            'id': id,
+        },
+        success: function (response) {
+            if(response.code === 200) {
+                $('.cart-heart').empty();
+                $('.cart-heart').html('(' + response.cardHeart + ')');
+                
+                setTimeout(function() {
+                    alertify.set('notifier', 'position', 'bottom-left');
+                    var delay = alertify.get('notifier','delay');
+                    alertify.set('notifier','delay', 2);
+                    alertify.success('Đã thêm sản phẩm yêu thích');
+                    alertify.set('notifier','delay', delay);
+                }, 300);
+            }
+            if(response.code === 204) {
+                setTimeout(function() {
+                    alertify.set('notifier', 'position', 'bottom-left');
+                    var delay = alertify.get('notifier','delay');
+                    alertify.set('notifier','delay', 2);
+                    alertify.error('Đã có sản phẩm yêu thích');
+                    alertify.set('notifier','delay', delay);
+                }, 300);
+            }
+        }
+    });
+});
+</script>
 @endsection
