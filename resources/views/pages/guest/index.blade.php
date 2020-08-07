@@ -18,9 +18,61 @@
     <link rel="stylesheet" href="{{ asset('public/frontend/css/style.css') }}">
 
     <style>
+        .modal-content{
+            overflow-x: auto;
+            width: 700px;
+            margin-left: -96px;
+        }
+        .tb-img img{
+            width: 200px;
+            height: 200px;
+        }
         .product-img a img{
             width: 255px;
             height: 255px;
+        }
+        .single-compare{
+            padding-left: 20px;
+        }
+        .btn-show{
+            position: fixed;
+            bottom: 337px;
+            right: 49px;
+            z-index: 99;
+            background-color: #70c745;
+            text-decoration: none;
+        }
+        .btn-show:hover{
+            background-color: #303030
+        }
+        .btn-primary{
+            border-color:white !important;
+        }
+
+        .hidden{
+            visibility: hidden;
+        }
+        .show{
+            visibility: visible;
+        }
+        .modal-body table, th, td {
+            border: 1px solid black;
+        }
+        .tb-name td{
+            text-align: center;
+        }
+        .tb-price td{
+            text-align: center;
+        }
+        .tb-content td p{
+            width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .tb-function{
+            text-align: center;
         }
     </style>
 </head>
