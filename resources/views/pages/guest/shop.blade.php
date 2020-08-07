@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="{!! asset('public/vendors/shop/style.css') !!}">
 <style>
 table, th, td {
+    padding: 10px;
     border: 1px solid black;
 }
 .tb-name td{
@@ -95,7 +96,7 @@ table, th, td {
                         <div class="single-widget-area">
                             <!-- Title -->
                             <div class="widget-title">
-                                <h4>Sản phẩm mua nhiều nhất</h4>
+                                <h4>Top sản phẩm</h4>
                             </div>
 
                             <!-- Single Best Seller Products -->
@@ -109,13 +110,13 @@ table, th, td {
                                         <h6>{{$item->name}}</h6>
                                     </a>    
                                     <p>{!! number_format($item->final_price, 0, ',', '.') !!} VNĐ</p>
-                                    <div class="ratings">
+                                    {{-- <div class="ratings">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                             @endforeach
@@ -391,6 +392,10 @@ $(document).on('click', '.wishlist-add', function() {
         sessionStorage.setItem('compare', JSON.stringify(compare));
     });
 
+    function formatNumber(num) {
+        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+    }
+
     $(document).on('click', '.btn-show', function() {
     $('.modal-body').html('');
     if(compare.length == 0){
@@ -401,7 +406,8 @@ $(document).on('click', '.wishlist-add', function() {
         // $('.modal-body').append("<div class='single-compare'><div class='compare-img'> <img src='http://localhost/plant-store"+compare[i].feature_image_path +"'></div><div>" +compare[i].name + "</div> <h6>"+compare[i].final_price+"VNĐ</h6><div> <a type='button' href='javascript:void(0);' class='btn btn-success cart-add' data-id='"+compare[i].id+"'>Thêm vào giỏ hàng</a>'</div></table>")
         $('.tb-name').append("<td><a href='http://localhost/plant-store/san-pham/"+compare[i].slug+".html'>"+compare[i].name+"</a></td>")
         $('.tb-img').append("<td><a href='http://localhost/plant-store/san-pham/"+compare[i].slug+".html'><img src='http://localhost/plant-store"+compare[i].feature_image_path +"'></a></td>")
-        $('.tb-price').append("<td><h6>"+compare[i].final_price+"VNĐ</h6></td>")
+        var price = formatNumber(compare[i].final_price);
+        $('.tb-price').append("<td><h6>"+price+"VNĐ</h6></td>")
         $('.tb-function').append("<td><a type='button' href='javascript:void(0);' class='btn btn-success cart-add' data-id='"+compare[i].id+"'>Thêm vào giỏ hàng</a></td>")
         $('.tb-content').append("<td><p>"+compare[i].content_short+"</p></td>")
         // $('.tb-rating').append("<td></td>")
