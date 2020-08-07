@@ -2,6 +2,35 @@
 @section('title', 'Sản Phẩm')
 @section('style')
 <link rel="stylesheet" href="{!! asset('public/vendors/shop/style.css') !!}">
+<style>
+    table, th, td {
+    border: 1px solid black;
+}
+.tb-name td{
+    text-align: center;
+}
+.tb-price td{
+    text-align: center;
+}
+.tb-content td p{
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.modal-content{
+            overflow-x: auto;
+            width: 700px;
+            margin-left: -96px;
+        }
+        .tb-img img{
+            width: 200px;
+            height: 200px;
+        }
+.tb-function{
+    text-align: center;
+}
+</style>
 @endsection
 @section('content')
 <!-- ##### Breadcrumb Area Start ##### -->
@@ -84,7 +113,7 @@
                                                 <a href="#" class="wishlist-btn"><i class="icon_heart_alt"></i></a>
                                                 <a href="javascript:void(0);" class="add-to-cart-btn cart-add"
                                                     data-id="{!! $item->id !!}">Add to cart</a>
-                                                <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
+                                                <a href="javascript:void(0);" class="compare-btn" data-prod="{{$item}}"><i class="arrow_left-right_alt"></i></a>
                                             </div>
                                         </div>
                                         <!-- Product Info -->
@@ -112,13 +141,35 @@
             </div>
         </div>
     </div>
-    </div>
-    </div>
 </section>
 <!-- ##### Shop Area End ##### -->
+    <!-- Button trigger modal -->
+    <button type="button" id="btn-show" class="btn btn-primary btn-show hidden" data-toggle="modal" data-target="#exampleModal">
+        <i class="arrow_left-right_alt"></i>
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">So sánh sản phẩm</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-danger remove-btn" data-dismiss="modal">Xóa so sánh</button>
+        </div>
+        </div>
+        </div>
+    </div>
 @endsection
 @section('script')
 <script>
+
     $(document).on('click', '.cart-add', function () {
         let id = $(this).data('id');
         let quantity = 1;
@@ -209,5 +260,83 @@
             }
         });
     });
+
+    // Comparision products
+
+    var compare = sessionStorage.getItem('compare') != null ? JSON.parse(sessionStorage.getItem('compare')) : [];
+
+    if(compare.length > 0) {
+        $("button#btn-show").removeClass("hidden");
+        $("button#btn-show").addClass("show");
+    }
+    
+    $(document).on('click', '.compare-btn', function() {
+        if(compare.length<3){
+        objProd = $(this).data('prod');
+
+        let flag = true;
+        for(let obj of compare) {
+            if(obj.id === objProd.id) {
+                flag = false;
+                break;}
+                }
+
+                if(flag === true) {
+                    compare.push(objProd);
+                }
+                setTimeout(function() {
+                alertify.set('notifier', 'position', 'bottom-left');
+                var delay = alertify.get('notifier','delay');
+                alertify.set('notifier','delay', 2);
+                alertify.success('Đã thêm sản phẩm để so sánh');
+                alertify.set('notifier','delay', delay);
+            }, 300);
+        console.log(compare);
+        }else{
+            setTimeout(function() {
+                alertify.set('notifier', 'position', 'bottom-left');
+                var delay = alertify.get('notifier','delay');
+                alertify.set('notifier','delay', 2);
+                alertify.error('Số lượng sản phẩm so sánh đã đủ');
+                alertify.set('notifier','delay', delay);
+            }, 300);
+        }
+
+        $("button#btn-show").removeClass("hidden");
+        $("button#btn-show").addClass("show");
+        compare.sort(function(a, b) {
+            return  a.price-b.price;
+        });
+
+        sessionStorage.setItem('compare', JSON.stringify(compare));
+    });
+
+    $(document).on('click', '.btn-show', function() {
+    $('.modal-body').html('');
+    if(compare.length == 0){
+        $('.modal-body').append('<div>Không có dữ liệu để so sánh</div>');
+    }else{
+        $('.modal-body').append("<table><tr class='tb-img'><th>Hình ảnh</th></tr><tr class='tb-name'><th>Tên</th></tr><tr class='tb-price'><th>Giá</th></tr><tr class='tb-content'><th>Chi tiết</th></tr><tr class='tb-rating'><th>Đánh giá</th></tr><tr class='tb-function'><th>Hành động</th></tr></table>")
+        for(var i=0; i<compare.length; i++){
+        // $('.modal-body').append("<div class='single-compare'><div class='compare-img'> <img src='http://localhost/plant-store"+compare[i].feature_image_path +"'></div><div>" +compare[i].name + "</div> <h6>"+compare[i].final_price+"VNĐ</h6><div> <a type='button' href='javascript:void(0);' class='btn btn-success cart-add' data-id='"+compare[i].id+"'>Thêm vào giỏ hàng</a>'</div></table>")
+        $('.tb-name').append("<td><a href='http://localhost/plant-store/san-pham/"+compare[i].slug+".html'>"+compare[i].name+"</a></td>")
+        $('.tb-img').append("<td><a href='http://localhost/plant-store/san-pham/"+compare[i].slug+".html'><img src='http://localhost/plant-store"+compare[i].feature_image_path +"'></a></td>")
+        $('.tb-price').append("<td><h6>"+compare[i].final_price+"VNĐ</h6></td>")
+        $('.tb-function').append("<td><a type='button' href='javascript:void(0);' class='btn btn-success cart-add' data-id='"+compare[i].id+"'>Thêm vào giỏ hàng</a></td>")
+        $('.tb-content').append("<td><p>"+compare[i].content_short+"</p></td>")
+        $('.tb-rating').append("<td></td>")
+        }
+    }
+});
+
+    $(document).on('click', '.remove-btn', function() {
+        
+        compare = [];
+        sessionStorage.setItem('compare', JSON.stringify(compare));
+        $(".btn-show").removeClass("show");
+        $(".btn-show").addClass("hidden");
+    });
+
+
 </script>
 @endsection

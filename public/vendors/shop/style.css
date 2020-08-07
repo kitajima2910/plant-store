@@ -41,3 +41,44 @@
     display: table;
     margin: 0 auto;
 }
+
+.modal-content{
+    overflow-x: auto;
+    width: 700px;
+    margin-left: -96px;
+}
+.modal-body{
+    display: flex;
+}
+.compare-img img{
+    width: 200px;
+    height: 200px;
+}
+.product-img a img{
+    width: 255px;
+    height: 255px;
+}
+.single-compare{
+    padding-left: 20px;
+}
+.btn-show{
+    position: fixed;
+    bottom: 337px;
+    right: 49px;
+    z-index: 99;
+    background-color: #70c745;
+    text-decoration: none;
+}
+.btn-show:hover{
+    background-color: #303030
+}
+.btn-primary{
+    border-color:white !important;
+}
+
+.hidden{
+visibility: hidden;
+}
+.show{
+visibility: visible;
+}

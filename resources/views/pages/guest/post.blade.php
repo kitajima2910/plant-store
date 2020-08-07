@@ -13,6 +13,10 @@
             background-color: #70c745;
             border-color: white;
         }
+        .post-thumb img{
+            width: 70px;
+            height: 52.5px;
+        }
     </style>
 @endsection
 <!-- ##### Breadcrumb Area Start ##### -->

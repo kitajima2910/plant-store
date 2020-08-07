@@ -1,5 +1,13 @@
 @extends('layouts.guest.master')
 @section('title', 'Bài Viết')
+@section('style')
+    <style>
+        .post-thumb img{
+            width: 70px;
+            height: 52.5px;
+        }
+    </style>
+@endsection
 @section('content')
 <!-- ##### Breadcrumb Area Start ##### -->
 @include('includes.guest.breadcrumb-area', ['currentPage' => 'Bài Viết'])
