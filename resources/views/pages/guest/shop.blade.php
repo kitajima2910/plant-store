@@ -117,7 +117,7 @@
                                             <div class="product-meta d-flex">
                                                 <a href="javascript:void(0);" class="wishlist-btn wishlist-add" data-id="{!! $item->id !!}"><i class="icon_heart_alt"></i></a>
                                                 <a href="javascript:void(0);" class="add-to-cart-btn cart-add"
-                                                    data-id="{!! $item->id !!}">Thêm vào giỏ hàng</a>
+                                                    data-id="{!! $item->id !!}">Thêm giỏ hàng</a>
                                                 <a href="javascript:void(0);" class="compare-btn" data-prod="{{$item}}"><i class="arrow_left-right_alt"></i></a>
                                             </div>
                                         </div>
