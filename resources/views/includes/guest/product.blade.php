@@ -261,7 +261,7 @@ $(document).on('click', '.btn-show', function() {
     if(compare.length == 0){
         $('.modal-body').append('<div>Không có dữ liệu để so sánh</div>');
     }else{
-        $('.modal-body').append("<table><tr class='tb-img'><th>Hình ảnh</th></tr><tr class='tb-name'><th>Tên</th></tr><tr class='tb-price'><th>Giá</th></tr><tr class='tb-content'><th>Chi tiết</th></tr><tr class='tb-rating'><th>Đánh giá</th></tr><tr class='tb-function'><th>Hành động</th></tr></table>")
+        $('.modal-body').append("<table><tr class='tb-img'><th>Hình ảnh</th></tr><tr class='tb-name'><th>Tên</th></tr><tr class='tb-price'><th>Giá</th></tr><tr class='tb-content'><th>Chi tiết</th></tr><tr class='tb-function'><th>Hành động</th></tr></table>")
         for(var i=0; i<compare.length; i++){
         // $('.modal-body').append("<div class='single-compare'><div class='compare-img'> <img src='http://localhost/plant-store"+compare[i].feature_image_path +"'></div><div>" +compare[i].name + "</div> <h6>"+compare[i].final_price+"VNĐ</h6><div> <a type='button' href='javascript:void(0);' class='btn btn-success cart-add' data-id='"+compare[i].id+"'>Thêm vào giỏ hàng</a>'</div></table>")
         $('.tb-name').append("<td><a href='http://localhost/plant-store/san-pham/"+compare[i].slug+".html'>"+compare[i].name+"</a></td>")
@@ -269,7 +269,7 @@ $(document).on('click', '.btn-show', function() {
         $('.tb-price').append("<td><h6>"+compare[i].final_price+"VNĐ</h6></td>")
         $('.tb-function').append("<td><a type='button' href='javascript:void(0);' class='btn btn-success cart-add' data-id='"+compare[i].id+"'>Thêm vào giỏ hàng</a></td>")
         $('.tb-content').append("<td><p>"+compare[i].content_short+"</p></td>")
-        $('.tb-rating').append("<td></td>")
+        // $('.tb-rating').append("<td></td>")
         }
         }
 });
