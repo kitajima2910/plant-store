@@ -86,12 +86,35 @@
                         </ul>
                     </div>
 
-                    <!-- Shop Widget -->
-                    <div class="shop-widget best-seller mb-50">
-                        <h4 class="widget-title">Best Seller</h4>
-                        <div class="widget-desc">
+                        <!-- ##### Single Widget Area ##### -->
+                        <div class="single-widget-area">
+                            <!-- Title -->
+                            <div class="widget-title">
+                                <h4>Sản phẩm nổi bật</h4>
+                            </div>
+
+                            <!-- Single Best Seller Products -->
+                            @foreach ($bestSellerShare as $item)
+                            <div class="single-best-seller-product d-flex align-items-center">
+                                <div class="product-thumbnail">
+                                    <img src="{{asset($item->feature_image_path)}}" alt="{!! route('guest.viewPostDetails', $item->slug) !!}">
+                                </div>
+                                <div class="product-info">
+                                    <a href="{!! route('guest.viewProductDetails', $item->slug) !!}">
+                                        <h6>{{$item->name}}</h6>
+                                    </a>    
+                                    <p>{!! number_format($item->final_price, 0, ',', '.') !!} VNĐ</p>
+                                    <div class="ratings">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
                         </div>
-                    </div>
                 </div>
             </div>
             <div class="col-12 col-md-8 col-lg-9" id="show-product">

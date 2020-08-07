@@ -4,12 +4,14 @@ namespace App\Providers;
 
 use App\Category;
 use App\Menu;
+use App\OrderDetail;
 use App\Post;
 use App\Product;
 use App\Setting;
 use App\Wishlist;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -47,10 +49,12 @@ class AppServiceProvider extends ServiceProvider
             $productsShare = Product::where('status', 1)->orderBy('id', 'desc')->take(2)->get();
             // Menus
             $menusShare  = Menu::where('status', 1)->where('parent_id', 0)->get();
-            // Categories
-            // $menuCategoriesShare = Category::where('status', 1)->where('parent_id', 0)->get();
-            // Post
+            // Posts
             $postShare = Post::where('status', 1)->orderBy('id', 'desc')->take(4)->get();
+
+            // Best Sellers
+            $bestSellerShare = DB::table('order_details')->join('products','order_details.product_id','=','products.id')->inRandomOrder()->take(3)->get();
+
 
             if(Auth::guard('customers')->check()) {
                 $wishlistQuantityShare = Wishlist::where('user_id', Auth::guard('customers')->user()->id)->count();
@@ -63,9 +67,9 @@ class AppServiceProvider extends ServiceProvider
                 'settingsArrShare' => $settingsArrShare,
                 'productsShare' => $productsShare,
                 'menusShare' => $menusShare,
-                // 'menuCategoriesShare' => $menuCategoriesShare,
                 'postShare' => $postShare,
                 'wishlistQuantityShare' => $wishlistQuantityShare,
+                'bestSellerShare' => $bestSellerShare,
             ]);
         });
     }
