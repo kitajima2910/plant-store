@@ -6,6 +6,10 @@
             width: 70px;
             height: 52.5px;
         }
+        .product-thumbnail  img{
+            width: 70px;
+            height: 70px;
+        }
     </style>
 @endsection
 @section('content')
