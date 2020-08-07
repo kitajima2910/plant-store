@@ -89,7 +89,7 @@
                             <div class="single-widget-area">
                                 <!-- Title -->
                                 <div class="widget-title">
-                                    <h4>Sản phẩm nổi bật</h4>
+                                    <h4>Sản phẩm mua nhiều nhất</h4>
                                 </div>
     
                                 <!-- Single Best Seller Products -->
