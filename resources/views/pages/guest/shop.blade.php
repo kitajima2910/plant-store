@@ -169,7 +169,6 @@
 @endsection
 @section('script')
 <script>
-
     $(document).on('click', '.cart-add', function () {
         let id = $(this).data('id');
         let quantity = 1;
