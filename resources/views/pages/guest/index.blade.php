@@ -82,6 +82,23 @@
             text-align: center;
         }
 
+.remove-cmp{
+    padding-left: 180px;
+}
+
+.header-cmp-0 .remove-cmp{
+    padding-left: 100px;
+}
+.cmp-0{
+    background-color: greenyellow;
+}
+
+.product-tag a{
+    background-color: #e61d47;
+    border-radius: 2px;
+    color: white;
+    padding: 0 10px;
+}
 
     </style>
 </head>
