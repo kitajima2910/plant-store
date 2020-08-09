@@ -446,6 +446,7 @@ $(document).on('click', '.related-cmp', function() {
             feature_image_path: $(this).data('img'),
             final_price: $(this).data('price'),
             content_short: $(this).data('content'),
+            slug: $(this).data('slug'),
         }
 
     let flag = true;
