@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Order;
 use App\OrderDetail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use PDF;
 
 class OrderController extends Controller
 {
@@ -16,6 +18,16 @@ class OrderController extends Controller
     {
         $this->order = $order;
         $this->orderDetail = $orderDetail;
+    }
+
+    public function printOrder($checkoutCode) {
+
+        $order = $this->order->where('id', $checkoutCode)->first();
+        $orderDetails = $order->orderDetails;
+
+        $pdf = PDF::loadView('pdf.orderdetails', compact('order', 'orderDetails'));
+        return $pdf->download('orderdetails.pdf');
+
     }
 
     public function index() {

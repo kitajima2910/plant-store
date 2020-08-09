@@ -6,6 +6,7 @@ use App\Comment;
 use App\Post;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
 class PostController extends Controller
 {   
@@ -21,6 +22,7 @@ class PostController extends Controller
     }
 
     public function index(){
+        Session::forget('checkout');
         $posts = $this->post->where('status',1)->orderBy('id', 'desc')->paginate(6);
         $users = $this->user->all();
         return view('pages.guest.post', compact('posts', 'users'));

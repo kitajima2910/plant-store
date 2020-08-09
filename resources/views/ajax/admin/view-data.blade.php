@@ -10,6 +10,6 @@
         </td>
         <td>{!! number_format($item->products[0]->price, 0, ',', '.') !!} VNĐ</td>
         <td>{!! $item->quantity !!}</td>
-        <td>{!! number_format($item->price, 0, ',', '.') !!} VNĐ</td>
+        <td>{!! number_format($item->price * $item->quantity, 0, ',', '.') !!} VNĐ</td>
     </tr>
 @endforeach

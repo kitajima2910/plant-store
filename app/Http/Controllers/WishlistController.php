@@ -7,6 +7,7 @@ use App\Wishlist;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class WishlistController extends Controller
 {
@@ -21,6 +22,7 @@ class WishlistController extends Controller
     }
 
     public function index() {
+        Session::forget('checkout');
         $customersId = Auth::guard('customers')->user()->id;
         $idProduct = $this->wishlist->where('user_id', $customersId)->get('product_id');
         $wishlists = [];

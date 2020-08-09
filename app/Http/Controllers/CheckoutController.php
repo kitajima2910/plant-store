@@ -48,6 +48,7 @@ class CheckoutController extends Controller
 
             $order = $this->order->create([
                 'user_id' => $request->get('user_id'),
+                'name' => trim($request->get('name')),
                 'email' => $request->get('email'),
                 'phone' => $request->get('phone'),
                 'address' => $request->get('address'),

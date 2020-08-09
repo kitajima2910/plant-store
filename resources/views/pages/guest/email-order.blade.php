@@ -1,7 +1,7 @@
 @php
     $cartContents = $content;
 @endphp
-<h4>Chào {!! auth()->guard('customers')->user()->name !!},</h4>
+<h4>Chào {!! $order->name !!},</h4>
 <hr>
 <h5>DANH SÁCH ĐẶT HÀNG CỦA BẠN:</h5>
 <h5>MÃ ĐƠN HÀNG: {!! $order->id !!}</h5>
@@ -19,6 +19,7 @@
     <tbody>
         @php
             $i = 0;
+            $count = 0;
         @endphp
         @foreach($cartContents as $item)
             <tr>
@@ -28,11 +29,18 @@
                 <td>{!! $item->qty !!}</td>
                 <td>{!! number_format($item->price * $item->qty, 0, ',', '.') !!} VNĐ</td>
             </tr>
+            @php
+                $count++;
+            @endphp
         @endforeach
     </tbody>
 </table>
-<span><strong>Tổng tiền: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!! number_format($totalCart, 0, ',',
-        '.') !!} VNĐ</strong></span>
+<span><strong>Tổng giảm: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!! number_format($totalCart, 0, ',',
+    '.') !!} VNĐ</strong></span><br>
+<span><strong>Phí giao dịch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!! number_format($count * 5000, 0, ',',
+'.') !!} VNĐ</strong></span><br>
+<span><strong>Tổng thanh toán: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!! number_format($totalCart + ($count * 5000), 0, ',',
+'.') !!} VNĐ</strong></span>
 <hr>
-<h4>Cảm ơn bạn!</h4>
-<h4>Plan Store</h4>
+<p><strong>Cảm ơn bạn!</strong></p>
+<p><strong>Plan Store</strong></p>
