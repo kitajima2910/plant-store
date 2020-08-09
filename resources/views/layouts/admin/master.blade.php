@@ -89,6 +89,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="{{ asset('public/backend/js/jquery.nicescroll.js') }}"></script>
     <script src="{{ asset('public/backend/js/jquery.scrollTo.js') }}"></script>
     <script src="{{ asset('public/ckeditor/ckeditor.js') }}"></script>
+    <script src="{{ asset('public/frontend/js/alertify.min.js') }}"></script>
     @yield('script')
 
 </body>
