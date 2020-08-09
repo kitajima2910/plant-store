@@ -32,7 +32,7 @@
                             <div class="product-meta d-flex">
                                 <a href="javascript:void(0);" class="wishlist-btn wishlist-add" data-id="{!! $item['id'] !!}"><i class="icon_heart_alt"></i></a>
                                 <a href="javascript:void(0);" class="add-to-cart-btn cart-add" data-id="{!! $item['id'] !!}">thêm giỏ hàng</a>
-                                <a href="#" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
+                                <a href="#" class="related-cmp" data-id="{{$item['id']}}" data-content="{{$item['content_short']}}" data-name= "{{$item['name']}}" data-price="{{$item['final_price']}}" data-img="{{$item['feature_image_path']}}"><i class="arrow_left-right_alt"></i></a>
                             </div>
                         </div>
                         <!-- Product Info -->

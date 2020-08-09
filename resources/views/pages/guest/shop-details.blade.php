@@ -166,7 +166,7 @@
                             <!-- Wishlist & Compare -->
                             <div class="wishlist-compare d-flex flex-wrap align-items-center">
                                 <a href="javascript:void(0);" class="wishlist-btn ml-15 wishlist-add" data-id="{!! $product->id !!}"><i class="icon_heart_alt"></i></a>
-                                <a href="javascript:void(0);" data-prod="{{$product}}" class="compare-btn"><i class="arrow_left-right_alt"></i></a>
+                                <a href="javascript:void(0);" data-prod="{{$product}}" class="compare-btn ml-15"><i class="arrow_left-right_alt"></i></a>
                             </div>
                         </div>
 
@@ -368,7 +368,7 @@ $(document).on('click', '.compare-btn', function() {
     $("button#btn-show").removeClass("hidden");
     $("button#btn-show").addClass("show");
     compare.sort(function(a, b) {
-        return  a.price-b.price;
+        return  a.final_price-b.final_price;
     });
 
     sessionStorage.setItem('compare', JSON.stringify(compare));
@@ -435,6 +435,62 @@ if(compare.length == 0){
     $('.tag-0').append("<div class='product-tag'><a href='javascript:void(0);'>Rẻ vô địch</a></div>")
 }
 })
+
+
+//Related Compare
+$(document).on('click', '.related-cmp', function() {
+    if(compare.length<3){
+        objRelated = {
+            id: $(this).data('id'),    
+            name: $(this).data('name'),
+            feature_image_path: $(this).data('img'),
+            final_price: $(this).data('price'),
+            content_short: $(this).data('content'),
+        }
+
+    let flag = true;
+    for(let obj of compare) {
+        if(obj.id === objRelated.id) {
+            flag = false;
+            setTimeout(function() {
+            alertify.set('notifier', 'position', 'bottom-left');
+            var delay = alertify.get('notifier','delay');
+            alertify.set('notifier','delay', 2);
+            alertify.error('Sản phẩm đã có trong phần so sánh');
+            alertify.set('notifier','delay', delay);
+        }, 300);
+            break;}
+            }
+
+            if(flag === true) {
+                compare.push(objRelated);
+            
+            setTimeout(function() {
+            alertify.set('notifier', 'position', 'bottom-left');
+            var delay = alertify.get('notifier','delay');
+            alertify.set('notifier','delay', 2);
+            alertify.success('Đã thêm sản phẩm để so sánh');
+            alertify.set('notifier','delay', delay);
+        }, 300);}
+    console.log(compare);
+    }else{
+        setTimeout(function() {
+            alertify.set('notifier', 'position', 'bottom-left');
+            var delay = alertify.get('notifier','delay');
+            alertify.set('notifier','delay', 2);
+            alertify.error('Sản phẩm so sánh đã đầy');
+            alertify.set('notifier','delay', delay);
+        }, 300);
+    }
+
+    $("button#btn-show").removeClass("hidden");
+    $("button#btn-show").addClass("show");
+    compare.sort(function(a, b) {
+        return  a.final_price-b.final_price;
+    });
+
+    sessionStorage.setItem('compare', JSON.stringify(compare));
+});
 
 </script>
 @endsection

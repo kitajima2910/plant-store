@@ -416,7 +416,7 @@ $(document).on('click', '.wishlist-add', function() {
         $("button#btn-show").removeClass("hidden");
         $("button#btn-show").addClass("show");
         compare.sort(function(a, b) {
-            return  a.price-b.price;
+            return  a.final_price-b.final_price;
         });
 
         sessionStorage.setItem('compare', JSON.stringify(compare));
