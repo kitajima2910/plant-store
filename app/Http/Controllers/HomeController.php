@@ -22,6 +22,8 @@ class HomeController extends Controller
 
     public function index() {
 
+        Session::forget('checkout');
+        
         // Products
         $products = $this->product->where('status', 1)->orderBy('id', 'desc')->take(4)->get();
         $productsSale = $this->product->where('status',1)->where('sale_price','>','0')->inRandomOrder()->take(8)->get();

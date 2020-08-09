@@ -19,6 +19,7 @@ class ProductController extends Controller
     }
 
     public function index() {
+            Session::forget('checkout');
             Session::forget('sort-product');
             Session::forget('category-slug');
             $categories = $this->category->where('status', 1)->where('parent_id', 0)->get();

@@ -38,9 +38,12 @@
 
                         <div class="row">
                             <div class="col-md-12 mb-4">
-                                <input type="text" class="form-control" name="name" readonly
+                                <input type="text" class="form-control" name="name"
                                     value="{!! auth()->guard('customers')->user() ->name !!}"
                                     placeholder="Họ và tên *">
+                                @error('name')
+                                    <label class="text-danger font-italic">{{ $message }}</label>
+                                @enderror
                             </div>
                             <div class="col-12 mb-4">
                                 <input type="text" class="form-control" name="email"
@@ -92,6 +95,7 @@
                             <tbody>
                                 @php
                                     $i = 0;
+                                    $count = 0;
                                 @endphp
                                 @foreach($cartContents as $item)
                                     <tr>
@@ -101,11 +105,18 @@
                                         <td>{!! $item->qty !!}</td>
                                         <td>{!! number_format($item->price * $item->qty, 0, ',', '.') !!} VNĐ</td>
                                     </tr>
+                                    @php
+                                        $count++;
+                                    @endphp
                                 @endforeach
                             </tbody>
                         </table>
-                        <span><strong>Tổng tiền: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!! number_format($totalCart, 0, ',',
-                                '.') !!} VNĐ</strong></span>
+                        <span><strong>Tổng giảm: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!! number_format($totalCart, 0, ',',
+                                '.') !!} VNĐ</strong></span><br>
+                        <span><strong>Phí giao dịch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!! number_format($count * 5000, 0, ',',
+                            '.') !!} VNĐ</strong></span><br>
+                        <span><strong>Tổng thanh toán: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!! number_format($totalCart + ($count * 5000), 0, ',',
+                            '.') !!} VNĐ</strong></span>        
                         <div class="checkout-btn mt-30">
                             <button type="submit" class="btn alazea-btn w-100 loading-checkout">ĐẶT HÀNG</button>
                         </div>

@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Requests\GuestFormRegister;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class RegisterController extends Controller
 {
     public function index(){
+        Session::forget('checkout');
         return view('pages.guest.register');
     }
 

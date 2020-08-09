@@ -18,5 +18,6 @@ class LogoutController extends Controller
             Auth::guard('customers')->logout();
             return redirect()->route('guest.home');
         }
+        return redirect()->route('guest.home');
     }
 }

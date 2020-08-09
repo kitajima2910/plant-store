@@ -16,6 +16,7 @@ class OrderSeeder extends Seeder
         DB::table('orders')->insert([
             [   
                 'user_id' => '4',
+                'name' => 'Phạm Xuân Hoài',
                 'email' => 'khachhang1@gmail.com',
                 'phone' => '0933691822',
                 'address' => '643 Đinh Tiên Hoàng, Hà Nội',
@@ -26,6 +27,7 @@ class OrderSeeder extends Seeder
             ],
             [   
                 'user_id' => '5',
+                'name' => 'Phạm Xuân Hoài',
                 'email' => 'khachhang2@gmail.com',
                 'phone' => '0933691822',
                 'address' => '422/34/2 Phan Huy Ích, Q. Gò Vấp, TP.Hồ Chí Minh',
@@ -36,6 +38,7 @@ class OrderSeeder extends Seeder
             ],
             [   
                 'user_id' => '5',
+                'name' => 'Phạm Xuân Hoài',
                 'email' => 'khachhang2@gmail.com',
                 'phone' => '0933691822',
                 'address' => '422/34/2 Phan Huy Ích, Q. Gò Vấp, TP.Hồ Chí Minh',
@@ -46,6 +49,7 @@ class OrderSeeder extends Seeder
             ],
             [   
                 'user_id' => '6',
+                'name' => 'Phạm Xuân Hoài',
                 'email' => 'khachhang3@gmail.com',
                 'phone' => '0933691822',
                 'address' => '234 Nuyễn Huệ, TP. Quy Nhơn',
@@ -56,6 +60,7 @@ class OrderSeeder extends Seeder
             ],
             [   
                 'user_id' => '6',
+                'name' => 'Phạm Xuân Hoài',
                 'email' => 'khachhang3@gmail.com',
                 'phone' => '0933691822',
                 'address' => '234 Nuyễn Huệ, TP. Quy Nhơn',

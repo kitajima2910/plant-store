@@ -109,6 +109,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::resource('orders', 'OrderController');
         Route::get('ajax/orders/status', 'OrderController@ajaxStatus')->name('admin.order.ajaxStatus');
         Route::get('ajax/orders/details', 'OrderController@ajaxDetails')->name('admin.order.ajaxDetails');
+        Route::get('ajax/orders/details/printOrder/{checkoutCode}', 'OrderController@printOrder')->name('admin.order.printOrder');
     });
 
 });
