@@ -36,59 +36,59 @@
     table, th, td {
     padding: 10px;
     border: 1px solid black;
-}
-.tb-name td{
-    text-align: center;
-}
-.tb-price td{
-    text-align: center;
-}
-.tb-content td p{
-    width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.modal-body {
-    justify-content: center;
-}
-.modal-content{
-    min-width: 100%;
-    overflow-x: auto;
-    width: 900px;
-    margin-left: -190px;
-    margin: 40px -180px;
-}
-.tb-img img{
-    width: 200px;
-    height: 200px;
-}
-.tb-function{
-    text-align: center;
-}
+    }
+    .tb-name td{
+        text-align: center;
+    }
+    .tb-price td{
+        text-align: center;
+    }
+    .tb-content td p{
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .modal-body {
+        justify-content: center;
+    }
+    .modal-content{
+        min-width: 100%;
+        overflow-x: auto;
+        width: 900px;
+        margin-left: -190px;
+        margin: 40px -180px;
+    }
+    .tb-img img{
+        width: 200px;
+        height: 200px;
+    }
+    .tb-function{
+        text-align: center;
+    }
 
-.product-thumbnail  img{
-    width: 70px;
-    height: 70px;
-}
+    .product-thumbnail  img{
+        width: 70px;
+        height: 70px;
+    }
 
-.remove-cmp{
-    padding-left: 180px;
-}
+    .remove-cmp{
+        padding-left: 180px;
+    }
 
-.header-cmp-0 .remove-cmp{
-    padding-left: 100px;
-}
-.cmp-0{
-    background-color: greenyellow;
-}
+    .header-cmp-0 .remove-cmp{
+        padding-left: 100px;
+    }
+    .cmp-0{
+        background-color: greenyellow;
+    }
 
-.product-tag a{
-    background-color: #e61d47;
-    border-radius: 2px;
-    color: white;
-    padding: 0 10px;
-}
+    .product-tag a{
+        background-color: #e61d47;
+        border-radius: 2px;
+        color: white;
+        padding: 0 10px;
+    }
 
 </style>
 @endsection

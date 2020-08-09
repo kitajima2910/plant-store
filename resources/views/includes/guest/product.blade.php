@@ -230,18 +230,18 @@ $(document).on('click', '.compare-btn', function() {
                 alertify.error('Sản phẩm đã có trong phần so sánh');
                 alertify.set('notifier','delay', delay);
             }, 300);
-                break;}
-                }
+                break;
+        }
+    }
 
-                if(flag === true) {
-                    compare.push(objProd);
-                
-                setTimeout(function() {
-                alertify.set('notifier', 'position', 'bottom-left');
-                var delay = alertify.get('notifier','delay');
-                alertify.set('notifier','delay', 2);
-                alertify.success('Đã thêm sản phẩm để so sánh');
-                alertify.set('notifier','delay', delay);
+    if(flag === true) {
+        compare.push(objProd);
+        setTimeout(function() {
+            alertify.set('notifier', 'position', 'bottom-left');
+            var delay = alertify.get('notifier','delay');
+            alertify.set('notifier','delay', 2);
+            alertify.success('Đã thêm sản phẩm để so sánh');
+            alertify.set('notifier','delay', delay);
             }, 300);}
         console.log(compare);
     }else{
@@ -284,11 +284,10 @@ $(document).on('click', '.compare-btn', function() {
     // $('.tb-rating').append("<td></td>")
     }
     $('.tag-0').append("<div class='product-tag'><a href='javascript:void(0);'>Rẻ vô địch</a></div>")
-}
+    }
 });
 
 $(document).on('click', '.remove-btn', function() {
-    
     compare = [];
     sessionStorage.setItem('compare', JSON.stringify(compare));
     $(".btn-show").removeClass("show");
@@ -300,30 +299,30 @@ $(document).on('click','.removecmp-btn',function() {
     compare.splice($(this).data('cmpid'),1);
     sessionStorage.setItem('compare', JSON.stringify(compare));
     setTimeout(function() {
-                alertify.set('notifier', 'position', 'bottom-left');
-                var delay = alertify.get('notifier','delay');
-                alertify.set('notifier','delay', 2);
-                alertify.error('Đã xóa sản phẩm khỏi so sánh');
-                alertify.set('notifier','delay', delay);
-            }, 300);
+        alertify.set('notifier', 'position', 'bottom-left');
+        var delay = alertify.get('notifier','delay');
+        alertify.set('notifier','delay', 2);
+        alertify.error('Đã xóa sản phẩm khỏi so sánh');
+        alertify.set('notifier','delay', delay);
+    }, 300);
     $('.modal-body').html('');
-if(compare.length == 0){
-    $('.modal-body').append('<div>Không có dữ liệu để so sánh</div>');
-}else{
-    $('.modal-body').append("<table><tr class='tb-img'><th>Hình ảnh</th></tr><tr class='tb-name'><th>Tên</th></tr><tr class='tb-price'><th>Giá</th></tr><tr class='tb-content'><th>Chi tiết</th></tr><tr class='tb-function'><th>Hành động</th></tr></table>")
-    for(var i=0; i<compare.length; i++){
-    // $('.modal-body').append("<div class='single-compare'><div class='compare-img'> <img src='http://localhost/plant-store"+compare[i].feature_image_path +"'></div><div>" +compare[i].name + "</div> <h6>"+compare[i].final_price+"VNĐ</h6><div> <a type='button' href='javascript:void(0);' class='btn btn-success cart-add' data-id='"+compare[i].id+"'>Thêm vào giỏ hàng</a>'</div></table>")
-    $('.tb-name').append("<td><a href='http://localhost/plant-store/san-pham/"+compare[i].slug+".html'>"+compare[i].name+"</a></td>")
-    $('.tb-img').append("<td><div class='header-cmp-"+i+"' style='display:flex;'><div class='tag-"+i+"'></div><div class='remove-cmp'><a href='javascript:void(0);' class='removecmp-btn' data-cmpid='"+i+"' >X</a></div></div><div><a href='http://localhost/plant-store/san-pham/"+compare[i].slug+".html'><img src='http://localhost/plant-store"+compare[i].feature_image_path +"'></a></div></td>")
-    var price = formatNumber(compare[i].final_price);
-    $('.tb-price').append("<td><h6 class='cmp-"+i+"'>"+price+"VNĐ</h6></td>")
-    $('.tb-function').append("<td><a type='button' href='javascript:void(0);' class='btn btn-success cart-add' data-id='"+compare[i].id+"'>Thêm vào giỏ hàng</a></td>")
-    $('.tb-content').append("<td><p>"+compare[i].content_short+"</p></td>")
-    // $('.tb-rating').append("<td></td>")
-    }
-    $('.tag-0').append("<div class='product-tag'><a href='javascript:void(0);'>Rẻ vô địch</a></div>")
-}
-})
+    if(compare.length == 0){
+        $('.modal-body').append('<div>Không có dữ liệu để so sánh</div>');
+    }else{
+        $('.modal-body').append("<table><tr class='tb-img'><th>Hình ảnh</th></tr><tr class='tb-name'><th>Tên</th></tr><tr class='tb-price'><th>Giá</th></tr><tr class='tb-content'><th>Chi tiết</th></tr><tr class='tb-function'><th>Hành động</th></tr></table>")
+        for(var i=0; i<compare.length; i++){
+        // $('.modal-body').append("<div class='single-compare'><div class='compare-img'> <img src='http://localhost/plant-store"+compare[i].feature_image_path +"'></div><div>" +compare[i].name + "</div> <h6>"+compare[i].final_price+"VNĐ</h6><div> <a type='button' href='javascript:void(0);' class='btn btn-success cart-add' data-id='"+compare[i].id+"'>Thêm vào giỏ hàng</a>'</div></table>")
+        $('.tb-name').append("<td><a href='http://localhost/plant-store/san-pham/"+compare[i].slug+".html'>"+compare[i].name+"</a></td>")
+        $('.tb-img').append("<td><div class='header-cmp-"+i+"' style='display:flex;'><div class='tag-"+i+"'></div><div class='remove-cmp'><a href='javascript:void(0);' class='removecmp-btn' data-cmpid='"+i+"' >X</a></div></div><div><a href='http://localhost/plant-store/san-pham/"+compare[i].slug+".html'><img src='http://localhost/plant-store"+compare[i].feature_image_path +"'></a></div></td>")
+        var price = formatNumber(compare[i].final_price);
+        $('.tb-price').append("<td><h6 class='cmp-"+i+"'>"+price+"VNĐ</h6></td>")
+        $('.tb-function').append("<td><a type='button' href='javascript:void(0);' class='btn btn-success cart-add' data-id='"+compare[i].id+"'>Thêm vào giỏ hàng</a></td>")
+        $('.tb-content').append("<td><p>"+compare[i].content_short+"</p></td>")
+        // $('.tb-rating').append("<td></td>")
+        }
+        $('.tag-0').append("<div class='product-tag'><a href='javascript:void(0);'>Rẻ vô địch</a></div>")
+    }   
+});
 
 
 </script>
