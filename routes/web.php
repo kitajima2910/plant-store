@@ -105,6 +105,10 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::resource('settings', 'SettingController');
         // admin/blogs
         Route::resource('posts', 'PostController');
+        // admin/orders
+        Route::resource('orders', 'OrderController');
+        Route::get('ajax/orders/status', 'OrderController@ajaxStatus')->name('admin.order.ajaxStatus');
+        Route::get('ajax/orders/details', 'OrderController@ajaxDetails')->name('admin.order.ajaxDetails');
     });
 
 });

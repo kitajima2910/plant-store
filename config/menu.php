@@ -93,6 +93,18 @@ return [
         ]
     ],
     [
+        'name' => 'Đơn Hàng',
+        'icon' => 'fa fa-shopping-cart',
+        'active' => 'orders',
+        'items' => [
+            [
+                'name' => 'Danh sách đơn hàng',
+                'route' => 'orders.index',
+                'active' => 'orders'
+            ],
+        ]
+    ],
+    [
         'name' => 'Cài đặt',
         'icon' => 'fa fa-cog',
         'active' => 'settings',
