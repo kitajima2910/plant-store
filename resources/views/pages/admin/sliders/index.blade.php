@@ -33,13 +33,13 @@
                             <td>{{ $slider->id}}</td>
                             <td>{{ $slider->link }}</td>
                             <td>
-                                <img src="{{ !empty($slider->feature_image_path) ? asset($slider->feature_image_path) : asset('public/uploads/200x170.png') }}" class="img-fluid thumbnail" width="75px" height="75px">
+                                <img src="{{ !empty($slider->feature_image_path) ? asset($slider->feature_image_path) : asset('public/uploads/200x170.png') }}" class="img-fluid thumbnail" width="160px" height="60px">
                             </td>
                             <td>
                                 <label class="{{ $slider->status == 1 ? 'label label-info' : 'label label-default'}}">{{ $slider->status == 1 ? 'Hoạt động' : 'Không hoạt động' }}</label>
                             </td>
                             <td>{{ $slider->created_at }}</td>
-                                 <td>     
+                                <td>     
                                     <a class="btn btn-xs btn-primary" href="{{ route('sliders.edit', $slider->id) }}" role="button"><i class="fa fa-edit"></i> Sửa</a>
                                     <a href="#" data-toggle="modal" data-id="{{ $slider->id }}" data-target="#deleteModal" class="btn btn-xs btn-danger delete"><i class="fa fa-trash"></i> Xoá</a>
                                 </td>

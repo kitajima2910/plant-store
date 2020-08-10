@@ -51,7 +51,7 @@
             <tr>
                 <th>Tên khách đặt</th>
                 <th>Điện thoại</th>
-                <th>Đại chỉ mail</th>
+                <th>Đại chỉ email</th>
             </tr>
         </thead>
         <tbody>
@@ -72,7 +72,7 @@
                 <th>Tên khách nhận</th>
                 <th>Địa chỉ</th>
                 <th>Điện thoại</th>
-                <th>Đại chỉ mail</th>
+                <th>Đại chỉ email</th>
                 <th>Ghi chú</th>
             </tr>
         </thead>
