@@ -26,6 +26,7 @@ Route::get('ajax/san-pham/danh-muc/hien-thi.html', 'ProductController@viewProduc
 Route::get('ajax/san-pham/danh-muc.html', 'ProductController@ajaxViewProduct')->name('guest.ajaxViewProduct');
 Route::get('san-pham.html', 'ProductController@index')->name('guest.product.index');
 Route::get('ajax/san-pham.html', 'ProductController@ajaxIndex')->name('guest.product.ajaxIndex');
+Route::get('ajax/san-pham/danh-gia.html', 'ProductController@ajaxRating')->name('guest.product.ajaxRating');
 
 // Post
 Route::get('bai-viet.html', 'PostController@index');

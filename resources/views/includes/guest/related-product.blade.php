@@ -40,6 +40,7 @@
                             <a href="{!! route('guest.viewProductDetails', $item['slug']) !!}">
                                 <p>{!! $item['name'] !!}</p>
                             </a>
+                            
                             @if ($item['sale_price'] > 0)
                                 <s>{!! number_format($item['price'], 0, ',', '.') !!} VNĐ</s>
                                 <h6>{!! number_format($item['final_price'], 0, ',', '.') !!} VNĐ</h6>

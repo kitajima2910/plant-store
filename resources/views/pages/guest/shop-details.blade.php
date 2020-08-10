@@ -90,6 +90,44 @@
         padding: 0 10px;
     }
 
+/* Ratings */
+.checked {
+    color: orange;
+}
+div.stars {
+    width: 270px;
+    display: inline-block;
+}
+
+input.star { display: none; }
+
+label.star {
+    float: right;
+    padding: 10px;
+    font-size: 36px;
+    color: #444;
+    transition: all .2s;
+}
+
+input.star:checked ~ label.star:before {
+    content: '\f005';
+    color: #FD4;
+    transition: all .25s;
+}
+
+input.star-5:checked ~ label.star:before {
+    color: #FE7;
+    text-shadow: 0 0 20px #952;
+}
+
+input.star-1:checked ~ label.star:before { color: #F62; }
+
+label.star:hover { transform: rotate(-15deg) scale(1.3); }
+
+label.star:before {
+    content: '\f006';
+    font-family: FontAwesome;
+}
 </style>
 @endsection
 @section('content')
@@ -149,7 +187,7 @@
                             <!-- Add to Cart Form -->
                             <form class="cart clearfix d-flex align-items-center" action="{!! route('guest.cart.add') !!}" method="get">
                                 @csrf
-                                <input type="hidden" name="id" value="{!! $product->id !!}">
+                                <input type="hidden" name="id" id="product_id" value="{!! $product->id !!}">
                                 <input type="hidden" name="pageToCart" value="guest.cart.index">
                                 <div class="quantity">
                                     <span class="qty-minus"
@@ -173,6 +211,16 @@
                         <div class="products--meta">
                             <p><span>Danh mục:</span> <span>{!! $productCategory['name'] !!}</span></p>
                             <p><span>Tags:</span> <span>{!! $tagsStr !!}</span></p>
+                            <p style="float: left"><span style="color: #303030; font-weight: 500;">Đánh giá:</span>
+                                <div id="rating-data">
+                                    <a href="#" class="rate_star"><span class="fa fa-star " id = "star1"></span></a>
+                                    <a href="#" class="rate_star"><span class="fa fa-star " id = "star2"></span></a>
+                                    <a href="#" class="rate_star"><span class="fa fa-star " id = "star3"></span></a>
+                                    <a href="#" class="rate_star"><span class="fa fa-star" id = "star4"></span></a>
+                                    <a href="#" class="rate_star"><span class="fa fa-star" id = "star5"></span></a>
+                                    <p>(trung bình {{ number_format($ratingAverage, 1, '.' , ',') }} sao dựa trên {{ $ratingCount }} đánh giá)</p>
+                                </div>
+                            </p>
                             <p>
                                 <div class="fb-share-button" data-href="http://localhost/plant-store/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={!! url('san-pham') . '/' . $product->slug . '.html'!!};src=sdkpreparse" class="fb-xfbml-parse-ignore">Chia sẻ</a></div>
                             </p>
@@ -192,7 +240,10 @@
                     <ul class="nav nav-tabs" role="tablist" id="product-details-tab">
                         <li class="nav-item">
                             <a href="#description" class="nav-link active" data-toggle="tab"
-                                role="tab">MÔ TẢ</a>
+                                role="tab">Mô Tả</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#reviews" class="nav-link" data-toggle="tab" role="tab">Đánh Giá</a>
                         </li>
                     </ul>
                     <!-- Tab Content -->
@@ -200,6 +251,30 @@
                         <div role="tabpanel" class="tab-pane fade show active" id="description">
                             <div class="description_area">
                                 {!! $product->content !!}
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="reviews">
+                            <div class="reviews_area">
+                                <div class="stars" class="form-control">
+                                    <input class="star star-5" id="star-5" type="radio" name="star" value="5"/>
+                                    <label class="star star-5" for="star-5"></label>
+                                    <input class="star star-4" id="star-4" type="radio" name="star" value="4"/>
+                                    <label class="star star-4" for="star-4"></label>
+                                    <input class="star star-3" id="star-3" type="radio" name="star" value="3"/>
+                                    <label class="star star-3" for="star-3"></label>
+                                    <input class="star star-2" id="star-2" type="radio" name="star" value="2"/>
+                                    <label class="star star-2" for="star-2"></label>
+                                    <input class="star star-1" id="star-1" type="radio" name="star" value="1"/>
+                                    <label class="star star-1" for="star-1"></label>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="comment" id="txtcomment" rows="3" placeholder="Ý kiến của bạn..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <button type="button" id="sendRating" class="btn alazea-btn mt-15">Gửi đánh giá</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -238,7 +313,22 @@
     </div>
 @endsection
 @section('script')
+<script src="{!! asset('public/vendors/shop-details/rating.js') !!}"></script>
 <script>
+$(function() {
+    // Ratings
+    let ratingAverageLength = {{ $ratingAverage }};
+    for(var i = 1; i <= ratingAverageLength; i++){
+        $("#star"+i).addClass("checked");
+    }
+});
+
+// Ratings for products
+$(document).on('click', '#sendRating', function() {
+    let route = '{!! route("guest.product.ajaxRating") !!}';
+    rating(route);
+});
+
 $(document).on('click', '.wishlist-add', function() {
     let customer_id = $('.wishlist_id').val();
             

@@ -4,18 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Product;
+use App\Rating;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Session;
 
 class ProductController extends Controller
 {
     private $product;
     private $category;
+    private $rating;
 
-    public function __construct(Product $product, Category $category)
+    public function __construct(Product $product, Category $category, Rating $rating)
     {
         $this->product = $product;
         $this->category = $category;
+        $this->rating = $rating;
     }
 
     public function index() {
@@ -74,7 +78,16 @@ class ProductController extends Controller
             $productOfCategory = $this->category->where('name', $productCategory['name'])->get();
             $productOfCategory = $this->category->find($productOfCategory[0]->id)->products()->inRandomOrder()->take(4)->get()->toArray();
 
-            return view('pages.guest.shop-details', compact('product', 'productImages', 'productCategory', 'tagsStr', 'productOfCategory'));
+            // Rating
+            $ratingSum = $this->rating->where('product_id', $product->id)->sum('rating');
+            $ratingCount = $this->rating->where('product_id', $product->id)->count();
+            $ratingAverage = 0;
+            if($ratingCount > 0) {
+                $ratingAverage = $ratingSum / $ratingCount;
+            }
+            
+
+            return view('pages.guest.shop-details', compact('product', 'productImages', 'productCategory', 'tagsStr', 'productOfCategory', 'ratingAverage', 'ratingCount'));
         } catch (\Throwable $th) {
             return redirect()->route('guest.home');
         }
@@ -107,6 +120,41 @@ class ProductController extends Controller
             $products = $this->category->where('slug', $slug)->first()->products()->paginate(6);
             $productData = view('ajax.guest.product-data', compact('products'))->render();         
             return response()->json(['productData' => $productData, 'code' => 200], 200);
+        }
+    }
+
+    public function ajaxRating(Request $request) {
+        if($request->ajax()) {
+
+            $userId = $request->get('user_id');
+            $productId = $request->get('product_id');
+
+            $userProduct = $this->rating->where('user_id', $userId)->where('product_id', $productId)->count();
+
+            if($userProduct === 0) {
+                $this->rating->create([
+                    'user_id' => $userId,
+                    'product_id' => $productId,
+                    'comment' => $request->get('comment'),
+                    'rating' => $request->get('rating'),
+                    'created_at' => Carbon::now(),
+                    'updated_at' => Carbon::now(),
+                ]);
+
+                // Rating
+                $ratingSum = $this->rating->where('product_id', $productId)->sum('rating');
+                $ratingCount = $this->rating->where('product_id', $productId)->count();
+                $ratingAverage = 0;
+                if($ratingCount > 0) {
+                    $ratingAverage = $ratingSum / $ratingCount;
+                }
+
+                $viewRatingData = view('ajax.guest.rating-data', compact('ratingAverage', 'ratingCount'))->render();
+                return response()->json(['viewRatingData' => $viewRatingData, 'code' => 200], 200);
+            } else {
+                return response()->json(['code' => 204], 200);
+            }
+            
         }
     }
 
