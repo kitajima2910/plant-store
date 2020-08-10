@@ -1,3 +1,4 @@
+<div class="rating-shop-data" style="display: none;">{!! json_encode($productOfCategoryRating) !!}</div>
 <div class="shop-products-area">
     <div class="row">
     
@@ -27,6 +28,13 @@
                         <a href="{!! route('guest.viewProductDetails', $item->slug) !!}">
                             <p>{{ $item->name }}</p>
                         </a>
+                        <div id="rating-shop-2" style="display: flex; justify-content: center;">
+                            <a href="#" class="rate_star"><span class="fa fa-star " id="star1-{!! $item->id !!}"></span></a>
+                            <a href="#" class="rate_star"><span class="fa fa-star " id="star2-{!! $item->id !!}"></span></a>
+                            <a href="#" class="rate_star"><span class="fa fa-star " id="star3-{!! $item->id !!}"></span></a>
+                            <a href="#" class="rate_star"><span class="fa fa-star" id="star4-{!! $item->id !!}"></span></a>
+                            <a href="#" class="rate_star"><span class="fa fa-star" id="star5-{!! $item->id !!}"></span></a>
+                        </div>
                         @if($item->sale_price > 0)
                             <s>{!! number_format($item->price, 0, ',', '.') !!} VNĐ</s>
                             <h6>{!! number_format($item->final_price, 0, ',', '.') !!} VNĐ</h6>
@@ -44,3 +52,15 @@
 <div class="col-4 pagin-center">
 {{ $products->links() }}
 </div>
+<script>
+$(document).ready(function() {
+    let ratingRelatedShopData = $('.rating-shop-data').text();
+    let ratingRelatedObjectShopData = JSON.parse(ratingRelatedShopData);
+    for (var item in ratingRelatedObjectShopData) {
+        let average = +ratingRelatedObjectShopData[item].split('*')[1];
+        for(var i = 1; i <= average; i++) {
+            $("#star" + i + '-' + item).addClass("checked");
+        }
+    }
+});
+</script>

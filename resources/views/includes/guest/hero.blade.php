@@ -12,7 +12,7 @@
                         <div class="hero-slides-content text-center">
                             {{!! $slider->content !!}}
                             <div class="welcome-btn-group">
-                                <a href="{{$slider->link . '.html'}}" class="btn alazea-btn mr-30">CONTACT US</a>
+                                <a href="{{$slider->link . '.html'}}" class="btn alazea-btn mr-30">PLANT STORE</a>
                             </div>
                         </div>
                     </div>

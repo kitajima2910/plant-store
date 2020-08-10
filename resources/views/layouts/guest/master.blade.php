@@ -17,7 +17,7 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="{{ asset('public/frontend/css/style.css') }}">
-    
+
     @yield('style')
 
 </head>
@@ -53,6 +53,19 @@
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0&appId=615438979352457&autoLogAppEvents=1" nonce="QGuyVj6e"></script>
     @yield('script')
+
+    <script>
+        $(document).ready(function() {
+            let ratingRelatedFooter = $('.rating-footer').text();
+            let ratingRelatedObjectFooter = JSON.parse(ratingRelatedFooter);
+            for (var item in ratingRelatedObjectFooter) {
+                let average = +ratingRelatedObjectFooter[item].split('*')[1];
+                for(var i = 1; i <= average; i++) {
+                    $("#star" + i + '-footer-' + item).addClass("checked");
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

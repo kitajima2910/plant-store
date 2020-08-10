@@ -34,7 +34,6 @@ class HomeController extends Controller
 
         $totalProductArray = $this->product->get('created_at');
         $totalUserArray = $this->user->get('created_at');
-        
         return view('pages.admin.index', compact('totalPrice', 'totalOrder', 'totalUser', 'totalProduct', 'totalProductArray', 'totalUserArray'));
     }
 }

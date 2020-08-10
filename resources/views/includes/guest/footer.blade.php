@@ -27,7 +27,7 @@
                         <div class="widget-title">
                             <h5>SẢN PHẨM MỚI</h5>
                         </div>
-
+                        <div class="rating-footer" style="display: none;">{!! json_encode($productOfCategoryRatingShare) !!}</div>
                         @foreach ($productsShare as $item)
                             <!-- Single Best Seller Products -->
                             <div class="single-best-seller-product d-flex align-items-center">
@@ -36,6 +36,13 @@
                                 </div>
                                 <div class="product-info">
                                     <a href="{!! route('guest.viewProductDetails', $item->slug) !!}">{!! $item->name !!}</a>
+                                    <div id="rating-footer" style="display: flex;">
+                                        <a href="#" class="rate_star"><span class="fa fa-star " id="star1-footer-{!! $item->id !!}"></span></a>
+                                        <a href="#" class="rate_star"><span class="fa fa-star " id="star2-footer-{!! $item->id !!}"></span></a>
+                                        <a href="#" class="rate_star"><span class="fa fa-star " id="star3-footer-{!! $item->id !!}"></span></a>
+                                        <a href="#" class="rate_star"><span class="fa fa-star" id="star4-footer-{!! $item->id !!}"></span></a>
+                                        <a href="#" class="rate_star"><span class="fa fa-star" id="star5-footer-{!! $item->id !!}"></span></a>
+                                    </div>
                                     <p>{!! number_format($item->final_price, 0, ',', '.') !!} VNĐ</p>
                                 </div>
                             </div>
