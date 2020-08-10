@@ -27,6 +27,9 @@ Route::get('ajax/san-pham/danh-muc.html', 'ProductController@ajaxViewProduct')->
 Route::get('san-pham.html', 'ProductController@index')->name('guest.product.index');
 Route::get('ajax/san-pham.html', 'ProductController@ajaxIndex')->name('guest.product.ajaxIndex');
 
+// About
+Route::get('gioi-thieu.html', 'AboutController@index');
+
 // Post
 Route::get('bai-viet.html', 'PostController@index');
 Route::get('ajax/bai-viet.html', 'PostController@ajaxIndex')->name('guest.post.ajaxIndex'); 

@@ -70,6 +70,55 @@ class SettingSeeder extends Seeder
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
             ],
+            [
+                'config_key' => 'key_quality',
+                'config_value' => 'Sản phẩm được chọn lọc kỉ lưỡng , thuần khí hậu và  phát triển một cách tự nhiên, luôn được các chủ vườn chăm sóc và nuôi dưỡng trong môi trường nhà kính,, với điều kiện ánh sáng và nhiệt độ phù hợp giúp cây phát triển một cách tốt nhất.',
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'config_key' => 'key_service',
+                'config_value' => 'Sản phẩm được chọn lọc kỉ lưỡng , thuần khí hậu và  phát triển một cách tự nhiên, luôn được các chủ vườn chăm sóc và nuôi dưỡng trong môi trường nhà kính,, với điều kiện ánh sáng và nhiệt độ phù hợp giúp cây phát triển một cách tốt nhất.',
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'config_key' => 'key_nature',
+                'config_value' => 'Chúng tôi cung cấp những sản phẩm tự nhiên, cây cảnh được nuôi dưỡng trong môi trường tự nhiên  không sử dụng các hóa chất gây ảnh hưởng tới cây trồng.',
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'config_key' => 'key_protected',
+                'config_value' => 'Chúng tôi chăm sóc cây cảnh bằng các loại phân bón hữu cơ không ảnh hưởng tới môi trường tự nhiên, diệt các loại nấm sâu bọ bằng các sản phẩm hữu cơ cũng như các loài thiên địch.',
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'config_key' => 'key_soild',
+                'config_value' => 'Giá thể trồng cây phải thoáng và thoát nước tốt, định kì bón phân tan chậm để cung cấp dinh dưỡng cho cây trồng.',
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'config_key' => 'key_water',
+                'config_value' => 'Chỉ nên tưới cây khi đất thật sự khô, không nên tưới vào những thời điểm nhiệt độ môi trường quá nóng.',
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
+            [
+                'config_key' => 'key_cut',
+                'config_value' => 'Nên cắt tỉa bỏ những lá giá dưới cùng và thay chậu cho cây 6 tháng 1 lần.',
+                'status' => 1,
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now(),
+            ],
         ]);
     }
 }
