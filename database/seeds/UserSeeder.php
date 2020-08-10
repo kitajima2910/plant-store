@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
                 'address' => 'TP. Quy Nhơn',
                 'level' => 1,
                 'status' => 1,
-                'created_at' => Carbon::now(),
+                'created_at' => '2020-02-19 15:49:30',
                 'updated_at' => Carbon::now(),
             ],
             [
@@ -33,7 +33,7 @@ class UserSeeder extends Seeder
                 'address' => 'TP. Quảng Trị',
                 'level' => 0,
                 'status' => 1,
-                'created_at' => Carbon::now(),
+                'created_at' => '2020-12-19 15:49:30',
                 'updated_at' => Carbon::now(),
             ],
             [
@@ -44,7 +44,7 @@ class UserSeeder extends Seeder
                 'address' => 'TP. Hồ Chí Minh',
                 'level' => 1,
                 'status' => 1,
-                'created_at' => Carbon::now(),
+                'created_at' => '2020-02-19 15:49:30',
                 'updated_at' => Carbon::now(),
             ],
             [
@@ -55,7 +55,7 @@ class UserSeeder extends Seeder
                 'address' => 'TP. Quy Nhơn',
                 'level' => 0,
                 'status' => 1,
-                'created_at' => Carbon::now(),
+                'created_at' => '2020-01-19 15:49:30',
                 'updated_at' => Carbon::now(),
             ],
             [
@@ -77,7 +77,7 @@ class UserSeeder extends Seeder
                 'address' => 'Xã Đảo',
                 'level' => 0,
                 'status' => 1,
-                'created_at' => Carbon::now(),
+                'created_at' => '2020-12-19 15:49:30',
                 'updated_at' => Carbon::now(),
             ],
         ]);

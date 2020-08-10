@@ -50,7 +50,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '1',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-01-19 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -86,7 +86,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '1',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-02-09 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -132,7 +132,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '1',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-03-03 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -166,7 +166,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '1',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-04-04 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -196,7 +196,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '1',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-05-05 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -226,7 +226,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '1',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-06-06 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -258,7 +258,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '1',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-07-07 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -304,7 +304,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '1',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-08-09 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -342,7 +342,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '1',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-09-19 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -389,7 +389,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '1',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-12-29 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
 
@@ -431,7 +431,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '2',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-02-09 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -469,7 +469,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '2',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-03-23 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -589,7 +589,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '2',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-01-09 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -1244,7 +1244,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '4',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-09-19 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -1288,7 +1288,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '4',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-02-19 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -1336,7 +1336,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '4',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-07-19 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -1376,7 +1376,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '4',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-06-19 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -1457,7 +1457,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '4',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-05-19 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -1491,7 +1491,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '4',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-05-19 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -1525,7 +1525,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '4',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-02-19 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -1563,7 +1563,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '4',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-11-29 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
 
@@ -1633,7 +1633,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '5',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-12-19 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -1663,7 +1663,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '5',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-12-19 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -1755,7 +1755,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '5',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-09-19 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -1791,7 +1791,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '5',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-10-19 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -1819,7 +1819,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '5',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-11-19 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -1869,7 +1869,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '5',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-12-09 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
             [ 
@@ -1911,7 +1911,7 @@ class ProductSeeder extends Seeder
                'user_id' => '3',
                'category_id' => '5',
                'status' => '1',
-               'created_at' => Carbon::now(),
+               'created_at' => '2020-12-19 15:49:30',
                'updated_at' => Carbon::now(),   
             ],
         ]);
