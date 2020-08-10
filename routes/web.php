@@ -30,6 +30,10 @@ Route::get('ajax/san-pham.html', 'ProductController@ajaxIndex')->name('guest.pro
 // About
 Route::get('gioi-thieu.html', 'AboutController@index');
 
+// Contact
+Route::get('lien-he.html','ContactController@index')->name('guest.contact.index');
+Route::post('lien-he.html','ContactController@email')->name('guest.contact.email');
+
 // Post
 Route::get('bai-viet.html', 'PostController@index');
 Route::get('ajax/bai-viet.html', 'PostController@ajaxIndex')->name('guest.post.ajaxIndex'); 
