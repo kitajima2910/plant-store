@@ -7,6 +7,7 @@ use App\Menu;
 use App\OrderDetail;
 use App\Post;
 use App\Product;
+use App\Rating;
 use App\Setting;
 use App\Wishlist;
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -47,6 +48,19 @@ class AppServiceProvider extends ServiceProvider
             }
             // Products
             $productsShare = Product::where('status', 1)->orderBy('id', 'desc')->take(2)->get();
+
+            // Ratings
+            $productOfCategoryRatingShare = [];
+            foreach($productsShare as $item) {
+                $ratingSumTmp = Rating::where('product_id', $item['id'])->sum('rating');
+                $ratingCountTmp = Rating::where('product_id', $item['id'])->count();
+                $ratingAverageTmp = rand(1, 5);
+                if($ratingCountTmp > 0) {
+                    $ratingAverageTmp = $ratingSumTmp / $ratingCountTmp;
+                }
+                $productOfCategoryRatingShare[$item['id']] = $ratingCountTmp . '*' . $ratingAverageTmp . '*' . $item['id'];
+            }
+
             // Menus
             $menusShare  = Menu::where('status', 1)->where('parent_id', 0)->get();
             // Posts
@@ -54,7 +68,16 @@ class AppServiceProvider extends ServiceProvider
 
             // Best Sellers
             $bestSellerShare = DB::table('order_details')->join('products','order_details.product_id','=','products.id')->inRandomOrder()->take(3)->get();
-
+            
+            foreach($bestSellerShare as $item) {
+                $ratingSumTmp = Rating::where('product_id', $item->id)->sum('rating');
+                $ratingCountTmp = Rating::where('product_id', $item->id)->count();
+                $ratingAverageTmp = rand(1, 5);
+                if($ratingCountTmp > 0) {
+                    $ratingAverageTmp = $ratingSumTmp / $ratingCountTmp;
+                }
+                $productOfCategoryRatingShare[$item->id] = $ratingCountTmp . '*' . $ratingAverageTmp . '*' . $item->id;
+            }
 
             if(Auth::guard('customers')->check()) {
                 $wishlistQuantityShare = Wishlist::where('user_id', Auth::guard('customers')->user()->id)->count();
@@ -70,6 +93,7 @@ class AppServiceProvider extends ServiceProvider
                 'postShare' => $postShare,
                 'wishlistQuantityShare' => $wishlistQuantityShare,
                 'bestSellerShare' => $bestSellerShare,
+                'productOfCategoryRatingShare' => $productOfCategoryRatingShare,
             ]);
         });
     }

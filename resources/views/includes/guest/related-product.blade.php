@@ -15,7 +15,7 @@
             @else
                 <input type="hidden" class="wishlist_id" value="" />
             @endif
-            
+            <div class="rating-related" style="display: none;">{!! json_encode($productOfCategoryRating) !!}</div>
             @foreach($productOfCategory as $item)
                 <!-- Single Product Area -->
                 <div class="col-12 col-sm-6 col-lg-3">
@@ -40,7 +40,13 @@
                             <a href="{!! route('guest.viewProductDetails', $item['slug']) !!}">
                                 <p>{!! $item['name'] !!}</p>
                             </a>
-                            
+                            <div id="rating-data-related">
+                                <a href="#" class="rate_star"><span class="fa fa-star " id="star1-{!! $item['id'] !!}"></span></a>
+                                <a href="#" class="rate_star"><span class="fa fa-star " id="star2-{!! $item['id'] !!}"></span></a>
+                                <a href="#" class="rate_star"><span class="fa fa-star " id="star3-{!! $item['id'] !!}"></span></a>
+                                <a href="#" class="rate_star"><span class="fa fa-star" id="star4-{!! $item['id'] !!}"></span></a>
+                                <a href="#" class="rate_star"><span class="fa fa-star" id="star5-{!! $item['id'] !!}"></span></a>
+                            </div>
                             @if ($item['sale_price'] > 0)
                                 <s>{!! number_format($item['price'], 0, ',', '.') !!} VNĐ</s>
                                 <h6>{!! number_format($item['final_price'], 0, ',', '.') !!} VNĐ</h6>

@@ -32,10 +32,33 @@ class ProductController extends Controller
                 $products = $this->product->where('status', 1)->where('name', 'like', '%' . $sort . '%')->paginate(6);
                 Session::put('sort-product', $sort);
                 Session::forget('search');
-                return view('pages.guest.shop', compact('products', 'categories'));
+                // Ratings
+                $productOfCategoryRating = [];
+                foreach($products as $item) {
+                    $ratingSumTmp = $this->rating->where('product_id', $item['id'])->sum('rating');
+                    $ratingCountTmp = $this->rating->where('product_id', $item['id'])->count();
+                    $ratingAverageTmp = rand(1, 5);
+                    if($ratingCountTmp > 0) {
+                        $ratingAverageTmp = $ratingSumTmp / $ratingCountTmp;
+                    }
+                    $productOfCategoryRating[$item['id']] = $ratingCountTmp . '*' . $ratingAverageTmp . '*' . $item['id'];
+                }
+                return view('pages.guest.shop', compact('products', 'categories', 'productOfCategoryRating'));
             }
             $products = $this->product->where('status', 1)->orderBy('id')->paginate(6);
-            return view('pages.guest.shop', compact('products', 'categories'));         
+
+            // Ratings
+            $productOfCategoryRating = [];
+            foreach($products as $item) {
+                $ratingSumTmp = $this->rating->where('product_id', $item['id'])->sum('rating');
+                $ratingCountTmp = $this->rating->where('product_id', $item['id'])->count();
+                $ratingAverageTmp = rand(1, 5);
+                if($ratingCountTmp > 0) {
+                    $ratingAverageTmp = $ratingSumTmp / $ratingCountTmp;
+                }
+                $productOfCategoryRating[$item['id']] = $ratingCountTmp . '*' . $ratingAverageTmp . '*' . $item['id'];
+            }
+            return view('pages.guest.shop', compact('products', 'categories', 'productOfCategoryRating'));         
     }
 
     public function ajaxIndex(Request $request) {
@@ -55,9 +78,21 @@ class ProductController extends Controller
             } else { // Search ajax
                 $products = $this->product->where('status', 1)->where('name', 'like', '%' . $sort . '%')->paginate(6);
             }
+
+            // Ratings
+            $productOfCategoryRating = [];
+            foreach($products as $item) {
+                $ratingSumTmp = $this->rating->where('product_id', $item['id'])->sum('rating');
+                $ratingCountTmp = $this->rating->where('product_id', $item['id'])->count();
+                $ratingAverageTmp = rand(1, 5);
+                if($ratingCountTmp > 0) {
+                    $ratingAverageTmp = $ratingSumTmp / $ratingCountTmp;
+                }
+                $productOfCategoryRating[$item['id']] = $ratingCountTmp . '*' . $ratingAverageTmp . '*' . $item['id'];
+            }
         
             Session::put('sort-product', $sort);
-            $productData = view('ajax.guest.product-data', compact('products'))->render();         
+            $productData = view('ajax.guest.product-data', compact('products', 'productOfCategoryRating'))->render();         
             return response()->json(['productData' => $productData, 'code' => 200], 200);
         }
         
@@ -86,8 +121,18 @@ class ProductController extends Controller
                 $ratingAverage = $ratingSum / $ratingCount;
             }
             
+            $productOfCategoryRating = [];
+            foreach($productOfCategory as $item) {
+                $ratingSumTmp = $this->rating->where('product_id', $item['id'])->sum('rating');
+                $ratingCountTmp = $this->rating->where('product_id', $item['id'])->count();
+                $ratingAverageTmp = rand(1, 5);
+                if($ratingCountTmp > 0) {
+                    $ratingAverageTmp = $ratingSumTmp / $ratingCountTmp;
+                }
+                $productOfCategoryRating[$item['id']] = $ratingCountTmp . '*' . $ratingAverageTmp . '*' . $item['id'];
+            }
 
-            return view('pages.guest.shop-details', compact('product', 'productImages', 'productCategory', 'tagsStr', 'productOfCategory', 'ratingAverage', 'ratingCount'));
+            return view('pages.guest.shop-details', compact('product', 'productImages', 'productCategory', 'tagsStr', 'productOfCategory', 'ratingAverage', 'ratingCount', 'productOfCategoryRating'));
         } catch (\Throwable $th) {
             return redirect()->route('guest.home');
         }
@@ -102,7 +147,19 @@ class ProductController extends Controller
             // $categories = $this->category->where('status', 1)->where('parent_id', 0)->get();
             $products = $this->category->where('slug', $slug)->first()->products()->paginate(6);
             // return view('pages.guest.shop', compact('products', 'categories'));
-            $productData = view('ajax.guest.product-data', compact('products'))->render();         
+
+            // Ratings
+            $productOfCategoryRating = [];
+            foreach($products as $item) {
+                $ratingSumTmp = $this->rating->where('product_id', $item['id'])->sum('rating');
+                $ratingCountTmp = $this->rating->where('product_id', $item['id'])->count();
+                $ratingAverageTmp = rand(1, 5);
+                if($ratingCountTmp > 0) {
+                    $ratingAverageTmp = $ratingSumTmp / $ratingCountTmp;
+                }
+                $productOfCategoryRating[$item['id']] = $ratingCountTmp . '*' . $ratingAverageTmp . '*' . $item['id'];
+            }
+            $productData = view('ajax.guest.product-data', compact('products', 'productOfCategoryRating'))->render();         
             return response()->json(['productData' => $productData, 'code' => 200], 200);
         }
         
@@ -118,7 +175,19 @@ class ProductController extends Controller
             }
             Session::put('category-slug', $slug);
             $products = $this->category->where('slug', $slug)->first()->products()->paginate(6);
-            $productData = view('ajax.guest.product-data', compact('products'))->render();         
+
+            // Ratings
+            $productOfCategoryRating = [];
+            foreach($products as $item) {
+                $ratingSumTmp = $this->rating->where('product_id', $item['id'])->sum('rating');
+                $ratingCountTmp = $this->rating->where('product_id', $item['id'])->count();
+                $ratingAverageTmp = rand(1, 5);
+                if($ratingCountTmp > 0) {
+                    $ratingAverageTmp = $ratingSumTmp / $ratingCountTmp;
+                }
+                $productOfCategoryRating[$item['id']] = $ratingCountTmp . '*' . $ratingAverageTmp . '*' . $item['id'];
+            }
+            $productData = view('ajax.guest.product-data', compact('products', 'productOfCategoryRating'))->render();         
             return response()->json(['productData' => $productData, 'code' => 200], 200);
         }
     }

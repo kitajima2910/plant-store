@@ -151,7 +151,7 @@
                 <div class="single-team-member text-center mb-100">
                     <!-- Team Member Thumb -->
                     <div class="team-member-thumb" id='img-thumb'>
-                        <img src="{{asset('public/frontend/img/core-img/pxh.jpg')}}" alt="">
+                        <img src="{{asset('public/frontend/img/core-img/pxh.jpg')}}" alt="" style="height:317.59px">
                         <!-- Social Info -->
                         <div class="team-member-social-info">
                             <a href="https://www.facebook.com/ts2styles" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>

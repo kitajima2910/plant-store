@@ -323,6 +323,17 @@ $(function() {
     }
 });
 
+$(document).ready(function() {
+    let ratingRelated = $('.rating-related').text();
+    let ratingRelatedObject = JSON.parse(ratingRelated);
+    for (var item in ratingRelatedObject) {
+        let average = +ratingRelatedObject[item].split('*')[1];
+        for(var i = 1; i <= average; i++){
+            $("#star" + i + '-' + item).addClass("checked");
+        }
+    }
+});
+
 // Ratings for products
 $(document).on('click', '#sendRating', function() {
     let route = '{!! route("guest.product.ajaxRating") !!}';
