@@ -22,6 +22,8 @@
                     <th data-breakpoints="xs">ID</th>
                     <th>Họ và tên</th>
                     <th>Địa chỉ email</th>
+                    <th>Địa chỉ</th>
+                    <th>Số điện thoại</th>
                     <th>Vai trò</th>
                     <th>Trạng thái</th>
                     <th>Ngày tạo</th>
@@ -34,6 +36,8 @@
                             <td>{{ $user->id }}</td>
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
+                            <td>{{ $user->address }}</td>
+                            <td>{{ $user->phone }}</td>
                             <td>
                                 <label class="{{ $user->level == 1 ? 'label label-danger' : 'label label-success'}}">{{ $user->level == 1 ? 'Quản trị' : 'Thành viên' }}</label>
                             </td>

@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
-   
     public function index() {
         // $users = User::all();
         $emails =Auth::user()->email ;
@@ -20,7 +19,7 @@ class UserController extends Controller
     }
 
     public function create() {
-       return view('pages.admin.users.create');
+        return view('pages.admin.users.create');
     }
 
     public function store(AdminFormUser $request) {
@@ -28,7 +27,9 @@ class UserController extends Controller
         $user = new User([
             'name' => $request->get('name'),
             'email' => $request->get('email'),
-            'password' => bcrypt($request->get('password')),
+            'address' => $request->get('address'),
+            'phone' => $request->get('phone'),
+            'password' => bcrypt(trim($request->get('password'))),
             'level' => $request->get('level'),
             'status' => $request->get('status')
         ]);
@@ -47,7 +48,9 @@ class UserController extends Controller
 
         $user = User::find($id);
         $user->name = $request->get('name');
-        $user->password =   $request->get('password');
+        $user->address = $request->get('address');
+        $user->phone = $request->get('phone');
+        // $user->password =   $request->get('password');
         $user->level = $request->get('level');
         $user->status = $request->get('status');
         $user->save();

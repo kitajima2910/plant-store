@@ -26,7 +26,10 @@ class AdminFormUser extends FormRequest
         return [
             'name' => 'required',
             'email' => 'required|regex:/^[\w]{2,}@[\w]{2,}(\.[\w]{2,}){1,2}$/|'. Rule::unique('users')->ignore($this->id),
-            'password' => 'required|' . Rule::unique('users')->ignore($this->id)
+            'password' => 'required|' . Rule::unique('users')->ignore($this->id),
+            'phone' => 'required|regex:/^0[1-9]{1}[0-9]{8}$/',
+            'address' => 'required',
+
         ];
     }
 
@@ -38,12 +41,14 @@ class AdminFormUser extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'Name chưa được nhập',
+            'name.required' => 'Tên chưa được nhập',
             'email.required' => 'Email chưa được nhập',
             'email.regex' => 'Email không đúng định dạng',
             'email.unique' => 'Email đã tồn tại',
             'password.required' => 'Mật khẩu chưa được nhập',
-            
+            'address.required' => 'Địa chỉ chưa được nhập',
+            'phone.required' => 'Số điện thoại chưa được nhập',
+            'phone.regex' => 'Số điện thoại không hợp lệ',
         ];
     }
 }
