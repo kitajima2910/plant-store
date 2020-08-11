@@ -42,6 +42,7 @@
                     </td>
                     <td>{{ $order->created_at }}</td>
                     <td>
+                        <a href="{!! route('admin.order.printOrder', $order->id) !!}" target="_blank" class="btn btn-xs btn-default"><i class="fa fa-file-pdf-o"></i> Xuất</a>
                         <a href="#" data-toggle="modal" data-id="{!! $order->id !!}" data-target="#deleteModal" class="btn btn-xs btn-danger delete"><i class="fa fa-trash"></i> Xoá</a>
                         <a class="btn btn-xs btn-primary btn-view" data-order="{{ $order }}" data-toggle="modal" data-target="#viewModal" href="#" role="button"><i class="fa fa-eye"></i> Xem</a>
                     </td>
