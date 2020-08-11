@@ -42,12 +42,12 @@
                         </div>
                         <!-- Contact Information -->
                         <div class="contact-information">
-                            <p><span>Email:</span>{{$settingsArrShare['key_email']}}</p>
-                            <p><span>Điện thoại:</span>{{$settingsArrShare['key_phone']}}</p>
-                            <p><span>Địa chỉ:</span>{{$settingsArrShare['key_address']}}</p>
-                            <p><span>Giờ mở của:</span>{{$settingsArrShare['key_open_hours']}}</p>
-                            <p><span>Giờ happy:</span>{{$settingsArrShare['key_happy_hours']}}</p>
-                            <p><span>Facebook:</span>{{$settingsArrShare['key_facebook']}}</p>
+                            <p><span>Email:</span> {{$settingsArrShare['key_email']}}</p>
+                            <p><span>Điện thoại:</span> {{$settingsArrShare['key_phone']}}</p>
+                            <p><span>Địa chỉ:</span> {{$settingsArrShare['key_address']}}</p>
+                            <p><span>Giờ mở của:</span> {{$settingsArrShare['key_open_hours']}}</p>
+                            <p><span>Giờ happy:</span> {{$settingsArrShare['key_happy_hours']}}</p>
+                            <p><span>Facebook:</span> {{$settingsArrShare['key_facebook']}}</p>
                         </div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-6">
                                         <div class="form-group">
-                                            <input type="text"  class="form-control" name="name" placeholder="Nhập họ và tên">
+                                            <input type="text"  class="form-control" name="name" placeholder="Nhập họ và tên" value="{{old('name')}}">
                                             @error('name')
                                                 <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
                                             @enderror
@@ -81,7 +81,7 @@
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <div class="form-group">
-                                            <input type="email"  class="form-control" name="email" placeholder="Email">
+                                            <input type="email"  class="form-control" name="email" placeholder="Email" value="{{old('email')}}">
                                         </div>
                                         @error('email')
                                                 <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
@@ -89,7 +89,7 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <input type="text"   class="form-control" name="title" placeholder="Tiêu đề">
+                                            <input type="text"   class="form-control" name="title" placeholder="Tiêu đề" value="{{old('title')}}">
                                             @error('title')
                                                 <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
                                             @enderror
@@ -97,7 +97,7 @@
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
-                                            <textarea class="form-control"  name="content" cols="30" rows="10" placeholder="Nội dung"></textarea>
+                                            <textarea class="form-control"  name="content" cols="30" rows="10" placeholder="Nội dung">{{old('content')}}</textarea>
                                         </div>
                                         @error('content')
                                                 <span class="text-danger" style="font-style: italic;">{{ $message }}</span>

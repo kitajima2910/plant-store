@@ -93,6 +93,18 @@ return [
         ]
     ],
     [
+        'name' => 'Bình Luận',
+        'icon' => 'fa fa-commenting-o',
+        'active' => 'comments',
+        'items' => [
+            [
+                'name' => 'Danh sách bình luận',
+                'route' => 'comments.index',
+                'active' => 'comments'
+            ],
+        ]
+    ],
+    [
         'name' => 'Đơn Hàng',
         'icon' => 'fa fa-shopping-cart',
         'active' => 'orders',
