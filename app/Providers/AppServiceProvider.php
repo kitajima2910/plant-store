@@ -54,7 +54,7 @@ class AppServiceProvider extends ServiceProvider
             foreach($productsShare as $item) {
                 $ratingSumTmp = Rating::where('product_id', $item['id'])->sum('rating');
                 $ratingCountTmp = Rating::where('product_id', $item['id'])->count();
-                $ratingAverageTmp = rand(1, 5);
+                $ratingAverageTmp = rand(4, 5);
                 if($ratingCountTmp > 0) {
                     $ratingAverageTmp = $ratingSumTmp / $ratingCountTmp;
                 }
@@ -72,7 +72,7 @@ class AppServiceProvider extends ServiceProvider
             foreach($bestSellerShare as $item) {
                 $ratingSumTmp = Rating::where('product_id', $item->id)->sum('rating');
                 $ratingCountTmp = Rating::where('product_id', $item->id)->count();
-                $ratingAverageTmp = rand(1, 5);
+                $ratingAverageTmp = rand(4, 5);
                 if($ratingCountTmp > 0) {
                     $ratingAverageTmp = $ratingSumTmp / $ratingCountTmp;
                 }

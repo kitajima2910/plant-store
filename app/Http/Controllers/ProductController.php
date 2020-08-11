@@ -37,7 +37,7 @@ class ProductController extends Controller
                 foreach($products as $item) {
                     $ratingSumTmp = $this->rating->where('product_id', $item['id'])->sum('rating');
                     $ratingCountTmp = $this->rating->where('product_id', $item['id'])->count();
-                    $ratingAverageTmp = rand(1, 5);
+                    $ratingAverageTmp = rand(4, 5);
                     if($ratingCountTmp > 0) {
                         $ratingAverageTmp = $ratingSumTmp / $ratingCountTmp;
                     }
@@ -52,7 +52,7 @@ class ProductController extends Controller
             foreach($products as $item) {
                 $ratingSumTmp = $this->rating->where('product_id', $item['id'])->sum('rating');
                 $ratingCountTmp = $this->rating->where('product_id', $item['id'])->count();
-                $ratingAverageTmp = rand(1, 5);
+                $ratingAverageTmp = rand(4, 5);
                 if($ratingCountTmp > 0) {
                     $ratingAverageTmp = $ratingSumTmp / $ratingCountTmp;
                 }
@@ -84,7 +84,7 @@ class ProductController extends Controller
             foreach($products as $item) {
                 $ratingSumTmp = $this->rating->where('product_id', $item['id'])->sum('rating');
                 $ratingCountTmp = $this->rating->where('product_id', $item['id'])->count();
-                $ratingAverageTmp = rand(1, 5);
+                $ratingAverageTmp = rand(4, 5);
                 if($ratingCountTmp > 0) {
                     $ratingAverageTmp = $ratingSumTmp / $ratingCountTmp;
                 }
@@ -125,7 +125,7 @@ class ProductController extends Controller
             foreach($productOfCategory as $item) {
                 $ratingSumTmp = $this->rating->where('product_id', $item['id'])->sum('rating');
                 $ratingCountTmp = $this->rating->where('product_id', $item['id'])->count();
-                $ratingAverageTmp = rand(1, 5);
+                $ratingAverageTmp = rand(4, 5);
                 if($ratingCountTmp > 0) {
                     $ratingAverageTmp = $ratingSumTmp / $ratingCountTmp;
                 }
@@ -153,7 +153,7 @@ class ProductController extends Controller
             foreach($products as $item) {
                 $ratingSumTmp = $this->rating->where('product_id', $item['id'])->sum('rating');
                 $ratingCountTmp = $this->rating->where('product_id', $item['id'])->count();
-                $ratingAverageTmp = rand(1, 5);
+                $ratingAverageTmp = rand(4, 5);
                 if($ratingCountTmp > 0) {
                     $ratingAverageTmp = $ratingSumTmp / $ratingCountTmp;
                 }
@@ -181,7 +181,7 @@ class ProductController extends Controller
             foreach($products as $item) {
                 $ratingSumTmp = $this->rating->where('product_id', $item['id'])->sum('rating');
                 $ratingCountTmp = $this->rating->where('product_id', $item['id'])->count();
-                $ratingAverageTmp = rand(1, 5);
+                $ratingAverageTmp = rand(4, 5);
                 if($ratingCountTmp > 0) {
                     $ratingAverageTmp = $ratingSumTmp / $ratingCountTmp;
                 }

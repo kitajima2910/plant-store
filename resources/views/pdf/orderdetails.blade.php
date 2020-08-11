@@ -39,6 +39,7 @@
 </head>
 
 <body>
+    <img src="{{ asset('public/frontend/img/core-img/logo.png') }}" width="70px" height="50px" style="position: absolute;">
     <h3>Plant Store từ FPT Aptech Group01</h3>
     <h4>Độc lập - Tự do - Hạnh phúc</h4>
     <p>Mã đơn hàng: {!! $order->id !!}</p>
