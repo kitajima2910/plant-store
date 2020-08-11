@@ -26,6 +26,20 @@
                                     <input type="text" class="form-control" name="email" value="{{ $user->email }}" readonly>
                                 </div>
                                 <div class="form-group">
+                                    <label>Địa chỉ</label>
+                                    <input type="text" class="form-control" name="address" value="{{ $user->address }}">
+                                    @error('address')
+                                        <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label>Số điện thoại</label>
+                                    <input type="text" class="form-control" name="phone" value="{{ $user->phone }}">
+                                    @error('phone')
+                                        <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
                                     <label>Mật khẩu</label>
                                     <input type="password" class="form-control" name="password" value="{{ $user->password }}" readonly>
                                     @error('password')

@@ -20,9 +20,23 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label>Đại chỉ email</label>
+                                <label>Địa chỉ email</label>
                                 <input type="text" class="form-control" name="email" value="{{ old('email') }}">
                                 @error('email')
+                                    <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label>Địa chỉ</label>
+                                <input type="text" class="form-control" name="address" value="{{ old('address') }}">
+                                @error('address')
+                                    <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label>Số điện thoại</label>
+                                <input type="text" class="form-control" name="phone" value="{{ old('phone') }}">
+                                @error('phone')
                                     <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
                                 @enderror
                             </div>
