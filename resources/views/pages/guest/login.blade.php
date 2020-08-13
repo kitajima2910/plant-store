@@ -25,7 +25,7 @@
                     <form class="form-signin" action="{!! route('guest.user.login') !!}" method="POST">
                         @csrf
                         <div class="form-label-group">
-                            <input type="text" id="inputEmail" name="email" class="form-control" placeholder="Nhập địa chỉ email" autofocus>
+                            <input type="text" id="inputEmail" name="email" class="form-control" placeholder="Nhập địa chỉ email" autofocus value="{!! old('email') !!}">
                             <label for="inputEmail">Nhập địa chỉ email</label>
                             @error('email')
                                 <span class="text-danger font-italic">{{ $message }}</span>

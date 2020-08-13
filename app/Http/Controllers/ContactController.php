@@ -31,6 +31,7 @@ class ContactController extends Controller
             $message->to('ts2styles@gmail.com', 'Plant-Store');
             $message->subject('[Plant-Store] KHACH HANG LIEN HE');
         });
-        return redirect()->route('guest.contact.index')->with('message', 'Gửi email thành công');
+        // return redirect()->route('guest.contact.index')->with('message', 'Gửi email thành công');
+        return redirect()->back()->with('message', 'Đã gửi thông tin liên hệ tới admin, cảm ơn bạn!');
 }
 }

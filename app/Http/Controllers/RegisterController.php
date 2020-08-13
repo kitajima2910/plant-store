@@ -20,7 +20,7 @@ class RegisterController extends Controller
             'email' => trim($request->get('email')),
             'phone' => trim($request->get('phone')),
             'address' => trim($request->get('address')),
-            'password' => bcrypt(trim($request->get('password'))),
+            'password' => bcrypt($request->get('password')),
             'level' => 0,
             'status'=> '1',
         ]);
