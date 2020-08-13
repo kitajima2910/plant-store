@@ -1,7 +1,7 @@
 <ul>
     @foreach ($childs as $child)
         <li>
-            <a href="javascript:void(0);" class="click-slug" data-slug="{!! $child->slug !!}">
+            <a href="javascript:void(0);" class="cate-slug" data-slug="{!! $child->slug !!}">
                 {{$sub . ' ' . $child->name}}
             </a>
             @if(count($child->childs))

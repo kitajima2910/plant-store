@@ -24,7 +24,7 @@ class AdminFormUser extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
+            'name' => 'required|regex:/^[a-zA-z ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$/',
             'email' => 'required|regex:/^[\w]{2,}@[\w]{2,}(\.[\w]{2,}){1,2}$/|'. Rule::unique('users')->ignore($this->id),
             'password' => 'required|' . Rule::unique('users')->ignore($this->id),
             'phone' => 'required|regex:/^0[1-9]{1}[0-9]{8}$/',
@@ -42,6 +42,7 @@ class AdminFormUser extends FormRequest
     {
         return [
             'name.required' => 'Tên chưa được nhập',
+            'name.regex' => 'Tên không đúng định dạng',
             'email.required' => 'Email chưa được nhập',
             'email.regex' => 'Email không đúng định dạng',
             'email.unique' => 'Email đã tồn tại',

@@ -29,7 +29,7 @@ class UserController extends Controller
             'email' => $request->get('email'),
             'address' => $request->get('address'),
             'phone' => $request->get('phone'),
-            'password' => bcrypt(trim($request->get('password'))),
+            'password' => bcrypt($request->get('password')),
             'level' => $request->get('level'),
             'status' => $request->get('status')
         ]);

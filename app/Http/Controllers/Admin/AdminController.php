@@ -15,7 +15,7 @@ class AdminController extends Controller
 
     public function login(AdminFormLogin $request) {
 
-        $email = $request->get('email');
+        $email = trim($request->get('email'));
         $password = $request->get('password');
         $remember = $request->has('remember');
 
