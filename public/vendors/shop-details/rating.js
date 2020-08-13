@@ -26,7 +26,7 @@ function rating(route) {
         return;
     }
 
-    if(comment === '') {
+    if(comment.trim() === '') {
         setTimeout(function() {
             alertify.set('notifier', 'position', 'bottom-left');
             var delay = alertify.get('notifier','delay');

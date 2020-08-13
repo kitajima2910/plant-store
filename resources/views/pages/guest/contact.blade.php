@@ -20,12 +20,16 @@
     @include('includes.guest.breadcrumb-area', ['currentPage' => 'Liên hệ'])
         <!-- ##### Contact Area Info Start ##### -->
         <div class="contact-area-info section-padding-0-100">
-            @if ($message = Session::get('message'))
-                <div class="alert alert-success">
-                    <p>{{ $message }}</p>
-                </div>
-            @endif
             <div class="container">
+                @if ($message = Session::get('message'))
+                    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        {{ $message }}
+                    </div>
+                @endif
                 <div class="row align-items-center justify-content-between">
                     <!-- Contact Thumbnail -->
                     <div class="col-12 col-md-6">
@@ -36,7 +40,7 @@
     
                     <div class="col-12 col-md-6" style="margin-bottom: 85px;padding-left: 93px;">
                         <!-- Section Heading -->
-                        <div class="col-12 col-md-7">
+                        <div class="col-12 col-md-12">
                             <div class="section-heading">
                             <h2>Liên hệ</h2>
                         </div>
@@ -82,10 +86,10 @@
                                     <div class="col-12 col-md-6">
                                         <div class="form-group">
                                             <input type="email"  class="form-control" name="email" placeholder="Email" value="{{old('email')}}">
-                                        </div>
-                                        @error('email')
+                                            @error('email')
                                                 <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
-                                        @enderror
+                                            @enderror   
+                                        </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-group">
@@ -98,10 +102,10 @@
                                     <div class="col-12">
                                         <div class="form-group">
                                             <textarea class="form-control"  name="content" cols="30" rows="10" placeholder="Nội dung">{{old('content')}}</textarea>
-                                        </div>
-                                        @error('content')
+                                            @error('content')
                                                 <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
-                                        @enderror
+                                            @enderror
+                                        </div>
                                     </div>
                                     <div class="col-12">
                                         <button type="buttion" class="btn alazea-btn mt-15" >Gửi tin nhắn</button>

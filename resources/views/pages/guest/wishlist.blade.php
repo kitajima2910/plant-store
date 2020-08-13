@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="cart-table clearfix">
-                        <table class="table table-responsive">
+                        <table class="table table-responsive" {!! count($wishlists) > 1 ? 'style="height: 450px; overflow-y: auto;"' : '' !!}>
                             <thead>
                                 <tr>
                                     <th>SẢN PHẨM</th>
