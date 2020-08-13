@@ -128,7 +128,8 @@ table, th, td {
                             @foreach ($bestSellerShare as $item)
                             <div class="single-best-seller-product d-flex align-items-center">
                                 <div class="product-thumbnail">
-                                    <img src="{{asset($item->feature_image_path)}}" alt="{!! route('guest.viewPostDetails', $item->slug) !!}">
+                                    <a href="{!! route('guest.viewProductDetails', $item->slug) !!}"><img
+                                        src="{{ asset($item->feature_image_path) }}" alt=""></a>
                                 </div>
                                 <div class="product-info">
                                     <a href="{!! route('guest.viewProductDetails', $item->slug) !!}">

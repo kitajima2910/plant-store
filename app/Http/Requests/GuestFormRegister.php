@@ -27,8 +27,8 @@ class GuestFormRegister extends FormRequest
         return [
             'name' => 'required|regex:/^[a-zA-z ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ]+$/',
             'email' => 'required|regex:/^[\w]{2,}@[\w]{2,}(\.[\w]{2,}){1,2}$/|'. Rule::unique('users')->ignore($this->id),
-            'password' => 'required|' . Rule::unique('users')->ignore($this->id),
-            'phone' => 'required',
+            'password' => 'required',
+            'phone' => 'required|regex:/^0[1-9]{1}[0-9]{8}$/',
             'address' => 'required',
         ];
     }
@@ -43,6 +43,7 @@ class GuestFormRegister extends FormRequest
             'email.unique' => 'Địa chỉ email đã tồn tại',
             'password.required' => 'Mật khẩu chưa được nhập',
             'phone.required' => 'Số điện thoại chưa được nhập',
+            'phone.regex' => 'Số điện thoại chưa đúng định dạng',
             'address.required' => 'Địa chỉ chưa được nhập'
         ];
     }

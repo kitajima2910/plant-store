@@ -27,7 +27,7 @@ class LoginController extends Controller
 
     public function login(GuestFormLogin $request) {
 
-        $email = $request->get('email');
+        $email = trim($request->get('email'));
         $password = $request->get('password');
         $remember =$request->has('remember');
 

@@ -37,7 +37,7 @@ class GuestFormContact extends FormRequest
             'name.required' => 'Tên chưa được nhập',
             'name.regex' => 'Tên không hợp lệ',
             'email.required' => 'Địa chỉ email chưa được nhập',
-            'email.regex' => 'Địa chỉ email không đúng định dạng',
+            'email.regex' => 'Email không đúng định dạng',
             'title.required' => 'Tiêu đề chưa được nhập',
             'content.required' => 'Nội dung chưa được nhập'
         ];

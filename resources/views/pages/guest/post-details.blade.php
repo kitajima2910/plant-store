@@ -122,7 +122,8 @@
                             <!-- Single Latest Posts -->
                             <div class="single-latest-post d-flex align-items-center">
                                 <div class="post-thumb">
-                                    <img src="{{asset($item->feature_image_path)}}" alt="{!! route('guest.viewPostDetails', $item->slug) !!}">
+                                    <a href="{!! route('guest.viewPostDetails', $item->slug) !!}"><img
+                                        src="{{ asset($item->feature_image_path) }}" alt=""></a>
                                 </div>
                                 <div class="post-content">
                                     <a href="{!! route('guest.viewPostDetails', $item->slug) !!}" class="post-title">
@@ -136,6 +137,7 @@
                         
                         </div>
 
+                        <div class="rating-post-details" style="display: none;">{!! json_encode($productOfCategoryRatingShare) !!}</div>
                         <!-- ##### Single Widget Area ##### -->
                         <div class="single-widget-area">
                             <!-- Title -->
@@ -147,20 +149,21 @@
                             @foreach ($bestSellerShare as $item)
                             <div class="single-best-seller-product d-flex align-items-center">
                                 <div class="product-thumbnail">
-                                    <img src="{{asset($item->feature_image_path)}}" alt="{!! route('guest.viewPostDetails', $item->slug) !!}">
+                                    <a href="{!! route('guest.viewProductDetails', $item->slug) !!}"><img
+                                        src="{{ asset($item->feature_image_path) }}" alt=""></a>
                                 </div>
                                 <div class="product-info">
                                     <a href="{!! route('guest.viewProductDetails', $item->slug) !!}">
                                         <h6>{{$item->name}}</h6>
                                     </a> 
+                                    <div id="rating-post-details" style="display: flex;">
+                                        <a href="#" class="rate_star"><span class="fa fa-star " id="star1-{!! $item->id !!}"></span></a>
+                                        <a href="#" class="rate_star"><span class="fa fa-star " id="star2-{!! $item->id !!}"></span></a>
+                                        <a href="#" class="rate_star"><span class="fa fa-star " id="star3-{!! $item->id !!}"></span></a>
+                                        <a href="#" class="rate_star"><span class="fa fa-star" id="star4-{!! $item->id !!}"></span></a>
+                                        <a href="#" class="rate_star"><span class="fa fa-star" id="star5-{!! $item->id !!}"></span></a>
+                                    </div>
                                     <p>{!! number_format($item->final_price, 0, ',', '.') !!} VNĐ</p>
-                                    {{-- <div class="ratings">
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                        <i class="fa fa-star"></i>
-                                    </div> --}}
                                 </div>
                             </div>
                             @endforeach
@@ -174,6 +177,18 @@
 @endsection
 @section('script')
     <script>
+        $(function() {
+            // Ratings
+            let ratingRelated = $('.rating-post-details').text();
+            let ratingRelatedObject = JSON.parse(ratingRelated);
+            for (var item in ratingRelatedObject) {
+                let average = +ratingRelatedObject[item].split('*')[1];
+                for(var i = 1; i <= average; i++) {
+                    $("#star" + i + '-' + item).addClass("checked");
+                }
+            }
+        });
+
         $(document).on('click', '.reply', function() {
             $('html, body').animate({
                 scrollTop: $('#rely-comment').offset().top - 300

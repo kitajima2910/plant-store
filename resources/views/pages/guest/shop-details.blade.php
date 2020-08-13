@@ -193,7 +193,7 @@ label.star:before {
                                     <span class="qty-minus"
                                         onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty ) &amp;&amp; qty &gt; 1 ) effect.value--;return false;"><i
                                             class="fa fa-minus" aria-hidden="true"></i></span>
-                                    <input type="number" class="qty-text" id="qty" step="1" min="1" max="12"
+                                    <input type="number" class="qty-text" id="qty" step="1" min="1" max="100"
                                         name="quantity" value="1">
                                     <span class="qty-plus"
                                         onclick="var effect = document.getElementById('qty'); var qty = effect.value; if( !isNaN( qty )) effect.value++;return false;"><i
@@ -205,7 +205,10 @@ label.star:before {
                             <div class="wishlist-compare d-flex flex-wrap align-items-center">
                                 <a href="javascript:void(0);" class="wishlist-btn ml-15 wishlist-add" data-id="{!! $product->id !!}"><i class="icon_heart_alt"></i></a>
                                 <a href="javascript:void(0);" data-prod="{{$product}}" class="compare-btn ml-15"><i class="arrow_left-right_alt"></i></a>
-                            </div>
+                            </div> <br>
+                            @error('quantity')
+                                <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
+                            @enderror
                         </div>
 
                         <div class="products--meta">

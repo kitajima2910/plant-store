@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="cart-table clearfix">
-                        <table class="table table-responsive">
+                        <table class="table table-responsive" {!! count($cartContents) > 1 ? 'style="height: 450px; overflow-y: auto;"' : '' !!}>
                             <thead>
                                 <tr>
                                     <th>SẢN PHẨM</th>
@@ -75,7 +75,7 @@
                     <div class="cart-totals-area mt-70">
                         <div class="total d-flex justify-content-between">
                             <h5>Tổng tiền</h5>
-                            <h5>{!! number_format($totalCart) !!} VNĐ</h5>
+                            <h5>{!! number_format($totalCart, 0, ',', '.') !!} VNĐ</h5>
                         </div>
                         <div class="checkout-btn">
                             @if ($totalCart > 0)

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\GuestFormShop;
 use App\Product;
 use App\Wishlist;
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -25,7 +26,7 @@ class CartController extends Controller
         return view('pages.guest.cart');
     }
 
-    public function add(Request $request)
+    public function add(GuestFormShop $request)
     {
         
         $quantity = $request->get('quantity');

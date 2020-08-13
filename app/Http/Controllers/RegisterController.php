@@ -16,11 +16,11 @@ class RegisterController extends Controller
 
     public function store(GuestFormRegister $request){
         $user = new User([
-            'name' => $request->get('name'),
-            'email' => $request->get('email'),
-            'phone' => $request->get('phone'),
-            'address' => $request->get('address'),
-            'password' => bcrypt($request->get('password')),
+            'name' => trim($request->get('name')),
+            'email' => trim($request->get('email')),
+            'phone' => trim($request->get('phone')),
+            'address' => trim($request->get('address')),
+            'password' => bcrypt(trim($request->get('password'))),
             'level' => 0,
             'status'=> '1',
         ]);

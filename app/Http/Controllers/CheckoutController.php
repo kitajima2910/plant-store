@@ -49,10 +49,10 @@ class CheckoutController extends Controller
             $order = $this->order->create([
                 'user_id' => $request->get('user_id'),
                 'name' => trim($request->get('name')),
-                'email' => $request->get('email'),
-                'phone' => $request->get('phone'),
-                'address' => $request->get('address'),
-                'notes' => $request->get('notes'),
+                'email' => trim($request->get('email')),
+                'phone' => trim($request->get('phone')),
+                'address' => trim($request->get('address')),
+                'notes' => trim($request->get('notes')),
                 'status' => $request->get('status'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
@@ -69,8 +69,8 @@ class CheckoutController extends Controller
                 ]);
             }
 
-            $email = $request->get('email');
-            $name = $request->get('name');
+            $email = trim($request->get('email'));
+            $name = trim($request->get('name'));
             $totalCart = $request->get('totalCart');
 
             Mail::send('pages.guest.email-order', [
