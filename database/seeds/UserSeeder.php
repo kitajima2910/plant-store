@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
                 'password' => bcrypt('123456'),
                 'phone' => '0933691822',
                 'address' => 'TP. Quy Nhơn',
-                'level' => 1,
+                'level' => 0,
                 'status' => 1,
                 'created_at' => '2020-02-19 15:49:30',
                 'updated_at' => Carbon::now(),
