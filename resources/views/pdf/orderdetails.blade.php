@@ -26,14 +26,17 @@
             margin: 0 auto;
         }
         table, th, td {
-            border: 1px solid black;
+            border: 1px solid #fff;
             font-style: 9px !important;
         }
         span {
             font-weight: 500;
         }
-        td {
-            text-align: center;
+        th {
+            text-align: left;
+        }
+        table > tr > th {
+            
         }
     </style>
 </head>
@@ -45,54 +48,46 @@
     <p>Mã đơn hàng: {!! $order->id !!}</p>
     <p>Thời gian đặt hàng: {!! $order->created_at !!}</p>
     <table >
-        <thead>
-            <tr>
-                <th colspan="3">TÊN KHÁCH ĐẶT</th>
-            </tr>
-            <tr>
-                <th>Tên khách đặt</th>
-                <th>Điện thoại</th>
-                <th>Đại chỉ email</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td scope="row">{!! $order->user->name !!}</td>
-                <td>{!! $order->user->phone !!}</td>
-                <td>{!! $order->user->email !!}</td>
-            </tr>
-        </tbody>
+        <tr>
+            <th style="width: 170px;">Tên khách đặt</th>
+            <td>{!! $order->user->name !!}</td>
+        </tr>
+        <tr>
+            <th>Điện thoại</th>
+            <td>{!! $order->user->phone !!}</td>
+            
+        </tr>
+        <tr>
+            <th>Đại chỉ email</th>
+            <td>{!! $order->user->email !!}</td>
+        </tr>
+    </table>
+    <hr>
+    <table >
+        <tr>
+            <th style="width: 170px;">Tên khách nhận</th>
+            <td>{!! $order->name !!}</td>
+        </tr>
+        <tr>
+            <th>Địa chỉ</th>
+            <td>{!! $order->address !!}</td>
+        </tr>
+        <tr>
+            <th>Điện thoại</th>
+            <td>{!! $order->phone !!}</td>
+        </tr>
+        <tr>
+            <th>Đại chỉ email</th>
+            <td>{!! $order->email !!}</td>
+        </tr>
+        <tr>
+            <th>Ghi chú</th>
+            <td>{!! $order->notes !!}</td>
+        </tr>
     </table>
     <hr>
     <table >
         <thead>
-            <tr>
-                <th colspan="5">THÔNG TIN VẬN CHUYỂN</th>
-            </tr>
-            <tr>
-                <th>Tên khách nhận</th>
-                <th>Địa chỉ</th>
-                <th>Điện thoại</th>
-                <th>Đại chỉ email</th>
-                <th>Ghi chú</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td scope="row">{!! $order->name !!}</td>
-                <td>{!! $order->address !!}</td>
-                <td>{!! $order->phone !!}</td>
-                <td>{!! $order->email !!}</td>
-                <td>{!! $order->notes !!}</td>
-            </tr>
-        </tbody>
-    </table>
-    <hr>
-    <table >
-        <thead>
-            <tr>
-                <th colspan="7">CHI TIẾT ĐƠN HÀNG</th>
-            </tr>
             <tr>
                 <th>Mã</th>
                 <th>Tên</th>
