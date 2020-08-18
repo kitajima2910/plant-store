@@ -24,7 +24,7 @@
     <div class="buttons-con">
         <div class="action-link-wrap">
         <a onclick="history.back(-1)" class="link-button link-back-button">Quay Lại</a>
-        @if(auth()->guard('web')->check())
+        @if(str_contains(Request::path(), 'admin'))
             <a href="{{ route('admin.dashboard') }}" class="link-button">Quay lại trang chủ</a>
         @else
             <a href="{{ route('guest.home') }}" class="link-button">Quay lại trang chủ</a> 
