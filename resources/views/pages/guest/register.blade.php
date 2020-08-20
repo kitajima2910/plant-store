@@ -52,6 +52,14 @@
                                     @enderror
                                 </div>
                                 <div class="form-label-group">
+                                    <input type="password" id="inputPassword" name="password_confirmation" class="form-control"
+                                        placeholder="Nhập mật khẩu" value="{{ old('password_confirmation') }}">
+                                    <label for="inputPassword">Nhập mật khẩu xác nhận *</label>
+                                    @error('password_confirmation')
+                                        <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                                <div class="form-label-group">
                                     <input type="text" id="inputPhone" name="phone" class="form-control"
                                         placeholder="Nhập số điện thoại *" minlength="9" maxlength="10"
                                         value="{{ old('phone') }}">

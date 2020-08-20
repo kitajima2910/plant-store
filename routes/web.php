@@ -107,6 +107,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::resource('users', 'UserController');
         // admin/products
         Route::resource('products', 'ProductController');
+        Route::get('ajax/orders/details/printOrder/', 'ProductController@print')->name('admin.product.print');
         // admin/sliders
         Route::resource('sliders', 'SliderController');
         // admin/settings

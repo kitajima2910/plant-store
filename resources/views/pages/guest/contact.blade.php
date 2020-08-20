@@ -1,5 +1,5 @@
     @extends('layouts.guest.master')
-    @section('title', 'Bài Viết')
+    @section('title', 'Liên hệ')
     @section('style')
         <style>
             .thumbnail {
@@ -46,12 +46,12 @@
                         </div>
                         <!-- Contact Information -->
                         <div class="contact-information">
-                            <p><span>Email:</span> {{$settingsArrShare['key_email']}}</p>
-                            <p><span>Điện thoại:</span> {{$settingsArrShare['key_phone']}}</p>
-                            <p><span>Địa chỉ:</span> {{$settingsArrShare['key_address']}}</p>
-                            <p><span>Giờ mở của:</span> {{$settingsArrShare['key_open_hours']}}</p>
-                            <p><span>Giờ happy:</span> {{$settingsArrShare['key_happy_hours']}}</p>
-                            <p><span>Facebook:</span> {{$settingsArrShare['key_facebook']}}</p>
+                            <p><span>Email:</span> {!! !empty($settingsArrShare['key_email']) ? $settingsArrShare['key_email'] : '' !!}</p>
+                            <p><span>Điện thoại:</span> {!! !empty($settingsArrShare['key_phone']) ? $settingsArrShare['key_phone'] : '' !!}</p>
+                            <p><span>Địa chỉ:</span> {!! !empty($settingsArrShare['key_address']) ? $settingsArrShare['key_address'] : '' !!}</p>
+                            <p><span>Giờ mở của:</span> {!! !empty($settingsArrShare['key_open_hours']) ? $settingsArrShare['key_open_hours'] : '' !!}</p>
+                            <p><span>Giờ happy:</span> {!! !empty($settingsArrShare['key_happy_hours']) ? $settingsArrShare['key_happy_hours'] : '' !!}</p>
+                            <p><span>Facebook:</span> {!! !empty($settingsArrShare['key_facebook']) ? $settingsArrShare['key_facebook'] : '' !!}</p>
                         </div>
                     </div>
                 </div>

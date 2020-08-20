@@ -13,8 +13,19 @@
 
 <div class="table-agile-info">
     <div class="panel-heading">
-        Danh Sách Sản Phẩm
+        Danh Sách Sản Phẩm<br>
     </div>
+    <br>
+    <form action="{{ route('admin.product.print')}}" method="GET">
+        <select name="category" id="">
+            @foreach ($categories as $item)
+            <option value="{{$item->slug}}">{{$item->name}}</option>
+            @endforeach
+        </select>
+        <button type="submit"><i class="fa fa-file-pdf-o"></i> In danh sách sản phầm</button>
+    </form>
+
+    {{-- <a href="{{ route('admin.product.print')}}" target="" class="btn btn-xs btn-default"><i class="fa fa-file-pdf-o"></i> In danh sách sản phầm</a> --}}
     <div>
         <table id="tableProducts" class="table striped table-border">
             <thead>

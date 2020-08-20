@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
+use PDF;
 
 class ProductController extends Controller
 {
@@ -26,19 +27,32 @@ class ProductController extends Controller
     private $productImage;
     private $tag;
     private $productTag;
+    private $category;
 
-    public function __construct(Product $product, ProductImage $productImage, Tag $tag, ProductTag $productTag)
+    public function __construct(Product $product, ProductImage $productImage, Tag $tag, ProductTag $productTag, Category $category)
     {
+        $this->category = $category;
         $this->product = $product;
         $this->productImage = $productImage;
         $this->tag = $tag;
         $this->productTag = $productTag;
     }
 
+    public function print(Request $request){
+        // $products = Product::all();
+        $slug = $request->get('category');
+        $category = $this->category->where('slug', $slug)->get();
+        $products = $this->category->find($category[0]->id)->products;
+        // dd($products->count());
+        $pdf = PDF::loadView('pdf.product', compact('products'));
+        return $pdf->download('product.pdf');
+    }
+
     public function index()
     {
         $products = $this->product->get();
-        return view('pages.admin.products.index', compact('products'));
+        $categories = $this->category->get();
+        return view('pages.admin.products.index', compact('products','categories'));
     }
 
     public function create()
