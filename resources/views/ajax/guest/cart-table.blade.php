@@ -59,7 +59,7 @@
                     </div>
                     <div class="checkout-btn">
                         @if ($totalCart > 0)
-                            <a href="{!! route('gues.checkout.index') !!}" class="btn alazea-btn w-100">Thanh toán</a>
+                            <a href="{!! route('guest.checkout.index') !!}" class="btn alazea-btn w-100">Thanh toán</a>
                         @else
                             <a href="javascript:void(0);" class="btn alazea-btn w-100 checkout">Thanh toán</a>
                         @endif

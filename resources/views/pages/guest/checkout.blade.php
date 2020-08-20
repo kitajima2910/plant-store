@@ -26,7 +26,7 @@
                 {!! $message !!}
             </div>
         @endif
-        <form action="{!! route('gues.checkout.process') !!}" method="post">
+        <form action="{!! route('guest.checkout.process') !!}" method="post">
             @csrf
             <input type="hidden" name="user_id" value="{!! auth()->guard('customers')->user()->id !!}">
             <input type="hidden" name="status" value="1">
@@ -116,7 +116,11 @@
                         <span><strong>Phí giao dịch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!! number_format($count * 5000, 0, ',',
                             '.') !!} VNĐ</strong></span><br>
                         <span><strong>Tổng thanh toán: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!! number_format($totalCart + ($count * 5000), 0, ',',
-                            '.') !!} VNĐ</strong></span>        
+                            '.') !!} VNĐ</strong></span>
+                        <div class="pay-method mt-3">
+                            <input type="radio" name="payMethod" value="notCodeQR" id="notCodeQR" checked> <label for="notCodeQR">Thanh toán khi nhận hàng</label> <br>
+                            <input type="radio" name="payMethod" value="codeQR" id="codeQR"> <label for="codeQR">Thanh toán bằng mã QR</label>
+                        </div>        
                         <div class="checkout-btn mt-30">
                             <button type="submit" class="btn alazea-btn w-100 loading-checkout">ĐẶT HÀNG</button>
                         </div>
