@@ -46,6 +46,7 @@
     <h3>Plant Store từ FPT Aptech Group01</h3>
     <h4>Độc lập - Tự do - Hạnh phúc</h4>
     <p>Mã đơn hàng: {!! $order->id !!}</p>
+    <p>Phương thức: {!! $order->method !!}</p>
     <p>Thời gian đặt hàng: {!! $order->created_at !!}</p>
     <table >
         <tr>

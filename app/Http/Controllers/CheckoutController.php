@@ -33,7 +33,7 @@ class CheckoutController extends Controller
         foreach ($cartContents as $item) {
             $totalCart += $item->price * $item->qty;
         }
-        if($totalCart === 0) {
+        if ($totalCart === 0) {
             return redirect()->route('guest.home');
         }
         return view('pages.guest.checkout', compact('cartContents', 'totalCart'));
@@ -41,7 +41,6 @@ class CheckoutController extends Controller
 
     public function process(GuestFormCheckout $request)
     {
-
         try {
             DB::beginTransaction();
             $content = Cart::content();
@@ -53,6 +52,7 @@ class CheckoutController extends Controller
                 'phone' => trim($request->get('phone')),
                 'address' => trim($request->get('address')),
                 'notes' => trim($request->get('notes')),
+                'method' => $request->get('payMethod') == 'notCodeQR' ? 'Nhận hàng' : 'Mã QR',
                 'status' => $request->get('status'),
                 'created_at' => Carbon::now(),
                 'updated_at' => Carbon::now(),
@@ -69,32 +69,58 @@ class CheckoutController extends Controller
                 ]);
             }
 
-            $email = trim($request->get('email'));
-            $name = trim($request->get('name'));
-            $totalCart = $request->get('totalCart');
+            
+            if ($request->get('payMethod') == 'notCodeQR') {
+                $email = trim($request->get('email'));
+                $name = trim($request->get('name'));
+                $totalCart = $request->get('totalCart');
 
-            Mail::send('pages.guest.email-order', [
-                'order' => $order,
-                'content' => $content,
-                'totalCart' => $totalCart,
-            ], function ($message) use($email, $name) {
-                $message->from('ts2styles@gmail.com', 'Plant-Store');
-                $message->to($email, $name);
-                $message->subject('[Plant-Store] DON HANG BAN DA DAT');
-            });
+                Mail::send('pages.guest.email-order', [
+                    'order' => $order,
+                    'content' => $content,
+                    'totalCart' => $totalCart,
+                ], function ($message) use ($email, $name) {
+                    $message->from('ts2styles@gmail.com', 'Plant-Store');
+                    $message->to($email, $name);
+                    $message->subject('[Plant-Store] DON HANG BAN DA DAT');
+                });
+            } else if ($request->get('payMethod') == 'codeQR') {
+                $count = 0;
+                foreach($content as $item) {
+                    $count++;
+                }
 
+                $html = '';
+                $html .= 'Họ và tên: ' . trim($request->get('name'));
+                $html .= "\r\n";
+                $html .= 'Địa chỉ email: ' . trim($request->get('email'));
+                $html .= "\r\n";
+                $html .= 'Số điện thoại: ' . trim($request->get('phone'));
+                $html .= "\r\n";
+                $html .= 'Địa chỉ nhận: ' . trim($request->get('address'));
+                $html .= "\r\n";
+                $html .= 'Tổng thanh toán: ' . number_format($request->get('totalCart') + ($count * 5000), 0, ',', '.');
+                $html .= "\r\n";
+                $html .= 'Ghi chú: ' . trim($request->get('notes'));
+                $html .= "\r\n";
+                $html .= 'Ngày tạo: ' . Carbon::now();
+            }
             DB::commit();
 
             Cart::destroy();
-            return redirect()->route('gues.checkout.mail')->with('email', $email);
+            if ($request->get('payMethod') == 'notCodeQR') {
+                return redirect()->route('guest.checkout.mail')->with('email', $email);
+            } else if ($request->get('payMethod') == 'codeQR') {
+                return redirect()->route('guest.qr.index')->with('qrcode', $html);
+            }
         } catch (\Throwable $th) {
             DB::rollBack();
             return redirect()->back()->with('error', 'Đặt hàng thất bại');
         }
-
     }
 
-    public function mail() {
+    public function mail()
+    {
         if (empty(session()->get('email'))) {
             return redirect()->route('guest.home');
         }
