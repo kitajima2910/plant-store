@@ -33,7 +33,14 @@ class SocialController extends Controller
     public function callback($provider)
     {
         $getInfo = Socialite::driver($provider)->user();
-        $user = $this->createUser($getInfo, $provider);
+
+        try {
+            $user = $this->createUser($getInfo, $provider);
+        } catch (\Throwable $th) {
+            return redirect()->route('guest.user.login')->with('errorLoginFB', 'Đăng nhập facebook thất bại (kiểm tra email)...');
+        }
+        
+
         Auth::guard('customers')->login($user);
 
         $userId = Auth::guard('customers')->user()->id;

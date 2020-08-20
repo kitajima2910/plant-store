@@ -19,6 +19,7 @@
             <div class="card card-signin mb-3">
                 <div class="card-body">
                     <h5 class="card-title text-center">ĐĂNG NHẬP</h5>
+                    <center><label class="text-danger font-italic">{{ session()->get('errorLoginFB') }}</label></center>
                     @error('errorLogin')
                         <center><label class="text-danger font-italic">{{ $message }}</label></center>
                     @enderror
