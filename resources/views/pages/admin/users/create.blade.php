@@ -48,6 +48,13 @@
                                 @enderror
                             </div>
                             <div class="form-group">
+                                <label>Mật khẩu xác nhận</label>
+                                <input type="password" class="form-control" name="password_confirmation" value="{{ old('password') }}">
+                                @error('password_confirmation')
+                                    <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
                                 <label >Vai trò</label>
                                 <select class="form-control" name="level">
                                     <option value="0" >Thành Viên</option>
