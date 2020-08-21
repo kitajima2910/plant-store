@@ -135,3 +135,8 @@ Route::get('/clear-cache', function() {
     Artisan::call('cache:clear');
     return "Cache is cleared";
 });
+
+// Version
+Route::get('/phpinfo', function() {
+    return phpinfo();
+});

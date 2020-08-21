@@ -43,15 +43,17 @@
 
                         @php
                             $sum = 0;
+                            $count = 0;
                         @endphp
                         @foreach ($order->orderDetails as $subItem)
                             @if ($order->id === $subItem->order_id)
                                 @php
-                                    $sum += $subItem->price;
+                                    $sum += $subItem->price * $subItem->quantity;
+                                    $count++;
                                 @endphp
                             @endif
                         @endforeach
-                        <td>{{ number_format($sum, 0, ',', '.') }} VNĐ</td>
+                        <td>{{ number_format($sum + ($count * 5000), 0, ',', '.') }} VNĐ</td>
                         <td>{{ $order->method }}</td>
                         <td>
                             <label style="cursor: pointer; width: 55.38px; height: 20.8px; display: flex; justify-content: center; align-items: center;" id="order-status" data-id="{!! $order->id !!}" class="{{ $order->status == 1 ? 'label label-default' : 'label label-info'}}">{{ $order->status == 1 ? 'Chờ xử lý' : 'Đã xử lý' }}</label>
