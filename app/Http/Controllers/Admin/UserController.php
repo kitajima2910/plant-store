@@ -30,6 +30,7 @@ class UserController extends Controller
             'address' => $request->get('address'),
             'phone' => $request->get('phone'),
             'password' => bcrypt($request->get('password')),
+            'QRpassword' => bcrypt('PlantStore:' . trim($request->get('email'))),
             'level' => $request->get('level'),
             'status' => $request->get('status')
         ]);

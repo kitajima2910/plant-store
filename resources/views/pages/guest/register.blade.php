@@ -44,17 +44,17 @@
                                     @enderror
                                 </div>
                                 <div class="form-label-group">
-                                    <input type="password" id="inputPassword" name="password" class="form-control"
+                                    <input type="password" id="inputPassword1" name="password" class="form-control"
                                         placeholder="Nhập mật khẩu" value="{{ old('password') }}">
-                                    <label for="inputPassword">Nhập mật khẩu *</label>
+                                    <label for="inputPassword1">Nhập mật khẩu *</label>
                                     @error('password')
                                         <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
                                     @enderror
                                 </div>
                                 <div class="form-label-group">
-                                    <input type="password" id="inputPassword" name="password_confirmation" class="form-control"
+                                    <input type="password" id="inputPassword2" name="password_confirmation" class="form-control"
                                         placeholder="Nhập mật khẩu" value="{{ old('password_confirmation') }}">
-                                    <label for="inputPassword">Nhập mật khẩu xác nhận *</label>
+                                    <label for="inputPassword2">Nhập mật khẩu xác nhận *</label>
                                     @error('password_confirmation')
                                         <span class="text-danger" style="font-style: italic;">{{ $message }}</span>
                                     @enderror

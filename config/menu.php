@@ -151,6 +151,12 @@ return [
         ]
     ],
     [
+        'name' => 'Mã QR của tôi',
+        'icon' => 'fa fa-qrcode',
+        'route' => 'admin.qrcode',
+        'active' => 'qrcode'
+    ],
+    [
         'name' => 'Quản Lý Tệp',
         'icon' => 'fa fa-picture-o',
         'route' => 'admin.filemanager',

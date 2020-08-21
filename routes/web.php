@@ -89,6 +89,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         // admin
         Route::get('/', 'AdminController@index')->name('admin.index');
         Route::post('/', 'AdminController@login')->name('admin.login');
+        Route::post('/', 'AdminController@checkQRUser')->name('admin.qr.login');
         // admin/login
         Route::get('login', 'AdminController@index')->name('admin.index');
         Route::post('login', 'AdminController@login')->name('admin.login');
@@ -97,6 +98,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::group(['middleware' => ['auth']], function () {
         // admin/dashboard
         Route::get('dashboard', 'HomeController@index')->name('admin.dashboard');
+        // admin/qrcode
+        Route::get('qrcode', 'QRCodeController@index')->name('admin.qrcode');
         // admin/logout
         Route::get('logout', 'AdminController@logout')->name('admin.logout');
         // admin/filemanager

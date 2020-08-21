@@ -21,6 +21,7 @@ class RegisterController extends Controller
             'phone' => trim($request->get('phone')),
             'address' => trim($request->get('address')),
             'password' => bcrypt($request->get('password')),
+            'QRpassword' => bcrypt('PlantStore:' . trim($request->get('email'))),
             'level' => 0,
             'status'=> '1',
         ]);
