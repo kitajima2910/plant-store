@@ -45,7 +45,8 @@
     <img src="{{ asset('public/frontend/img/core-img/logo.png') }}" width="70px" height="50px" style="position: absolute;">
     <h3>Plant Store từ FPT Aptech Group01</h3>
     <h4>Độc lập - Tự do - Hạnh phúc</h4>
-    <p>Mã đơn hàng: {!! $order->id !!}</p>
+    {{-- <p>Mã đơn hàng: {!! $order->id !!}</p> --}}
+    <p>Mã đơn hàng: {!! QrCode::size(250)->backgroundColor(204, 213, 161)->color(0, 158, 108)->generate($qrcodeHTML); !!}</p>
     <p>Phương thức: {!! $order->method !!}</p>
     <p>Thời gian đặt hàng: {!! $order->created_at !!}</p>
     <table >

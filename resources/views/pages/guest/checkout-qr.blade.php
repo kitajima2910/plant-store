@@ -12,13 +12,39 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 mb-5">
-            <div class="visible-print" style="display: table; margin: 0 auto; text-align: center;">
-                {!! QrCode::size(250)->encoding('UTF-8')->generate($html); !!}
+            <div class="visible-print" style="display: table; margin: 0 auto; text-align: center;" style="display: table; margin: 0 auto; text-align: center;">
+                <br>
+                <div style="display: none;">{!! QrCode::size(250)->encoding('UTF-8')->backgroundColor(204, 213, 161)->color(0, 158, 108)->generate($html); !!}</div>
+                <canvas style="display: none;" id="canvas" width="250" height="250"></canvas>
+                <div id="png-containerbill"></div>
                 <br>
                 <p><strong>BẠN HÃY QUÉT MÃ QR ĐỂ KIỂM TRA THÔNG TIN</strong></p>
+                <a class="btn btn-danger" id="downloadPNGBill" download="QRCodeBill" href="javascript:void(0);" role="button">TẢI VỀ MÁY CỦA BẠN</a>
             </div>
         </div>
     </div>
 </div>
 
+@endsection
+@section('script')
+<script>
+
+var svgString = new XMLSerializer().serializeToString(document.querySelector('svg'));
+
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var DOMURL = self.URL || self.webkitURL || self;
+var img = new Image();
+var svg = new Blob([svgString], {type: "image/svg+xml;charset=utf-8"});
+var url = DOMURL.createObjectURL(svg);
+img.onload = function() {
+    ctx.drawImage(img, 0, 0);
+    var png = canvas.toDataURL("image/png");
+    document.querySelector('#png-containerbill').innerHTML = '<img src="'+png+'"/>';
+    $('#downloadPNGBill').attr('href', png);
+    DOMURL.revokeObjectURL(png);
+};
+img.src = url;
+
+</script>
 @endsection
