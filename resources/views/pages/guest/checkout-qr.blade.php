@@ -14,7 +14,7 @@
         <div class="col-md-12 mb-5">
             <div class="visible-print" style="display: table; margin: 0 auto; text-align: center;" style="display: table; margin: 0 auto; text-align: center;">
                 <br>
-                <div style="display: none;">{!! QrCode::size(250)->encoding('UTF-8')->backgroundColor(204, 213, 161)->color(0, 158, 108)->generate($html); !!}</div>
+                <div style="display: none;">{!! QrCode::size(250)->encoding('UTF-8')->margin(5)->generate($html); !!}</div>
                 <canvas style="display: none;" id="canvas" width="250" height="250"></canvas>
                 <div id="png-containerbill"></div>
                 <br>

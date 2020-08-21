@@ -199,7 +199,13 @@
                     }
                 }).catch(function(e){
                     console.error(e);
-                    alert(e);
+                    setTimeout(function() {
+                        alertify.set('notifier', 'position', 'top-right');
+                        var delay = alertify.get('notifier','delay');
+                        alertify.set('notifier','delay', 2);
+                        alertify.error('Lỗi đăng nhập với mã QR');
+                        alertify.set('notifier','delay', delay);
+                    }, 300);
                 });
 
             } else {

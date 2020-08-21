@@ -7,7 +7,7 @@
         <div class="col-md-12">
             <div class="qrcode mt-5" style="display: table; margin: 0 auto; text-align: center;">
                 <br>
-                <div style="display: none;">{!! QrCode::size(250)->backgroundColor(204, 213, 161)->color(0, 158, 108)->generate($qrcodeHTML); !!}</div>
+                <div style="display: none;">{!! QrCode::size(250)->margin(2)->generate($qrcodeHTML); !!}</div>
                 <canvas style="display: none;" id="canvas" width="250" height="250"></canvas>
                 <div id="png-container"></div>
                 <br>

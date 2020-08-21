@@ -45,50 +45,57 @@
     <img src="{{ asset('public/frontend/img/core-img/logo.png') }}" width="70px" height="50px" style="position: absolute;">
     <h3>Plant Store từ FPT Aptech Group01</h3>
     <h4>Độc lập - Tự do - Hạnh phúc</h4>
-    {{-- <p>Mã đơn hàng: {!! $order->id !!}</p> --}}
-    <p>Mã đơn hàng: {!! QrCode::size(250)->backgroundColor(204, 213, 161)->color(0, 158, 108)->generate($qrcodeHTML); !!}</p>
+    <p>Mã đơn hàng: {!! $order->id !!}</p>
     <p>Phương thức: {!! $order->method !!}</p>
     <p>Thời gian đặt hàng: {!! $order->created_at !!}</p>
-    <table >
-        <tr>
-            <th style="width: 170px;">Tên khách đặt</th>
-            <td>{!! $order->user->name !!}</td>
-        </tr>
-        <tr>
-            <th>Điện thoại</th>
-            <td>{!! $order->user->phone !!}</td>
-            
-        </tr>
-        <tr>
-            <th>Đại chỉ email</th>
-            <td>{!! $order->user->email !!}</td>
-        </tr>
-    </table>
+    @if ($order->method === 'Nhận hàng')
+        <table >
+            <tr>
+                <th style="width: 170px;">Tên khách đặt</th>
+                <td>{!! $order->user->name !!}</td>
+            </tr>
+            <tr>
+                <th>Điện thoại</th>
+                <td>{!! $order->user->phone !!}</td>
+
+            </tr>
+            <tr>
+                <th>Đại chỉ email</th>
+                <td>{!! $order->user->email !!}</td>
+            </tr>
+        </table>
+        <hr>
+        <table >
+            <tr>
+                <th style="width: 170px;">Tên khách nhận</th>
+                <td>{!! $order->name !!}</td>
+            </tr>
+            <tr>
+                <th>Địa chỉ</th>
+                <td>{!! $order->address !!}</td>
+            </tr>
+            <tr>
+                <th>Điện thoại</th>
+                <td>{!! $order->phone !!}</td>
+            </tr>
+            <tr>
+                <th>Đại chỉ email</th>
+                <td>{!! $order->email !!}</td>
+            </tr>
+            <tr>
+                <th>Ghi chú</th>
+                <td>{!! $order->notes !!}</td>
+            </tr>
+        </table>
+    @else
+        <hr>
+        <div style="display: table; text-align: center;">
+            <p><img src="data:image/png;base64, {!! $qrcode !!}"></p><br>
+            <p><strong>BẠN HÃY QUÉT MÃ QR ĐỂ KIỂM TRA THÔNG TIN</strong></p>
+        </div>
+    @endif
     <hr>
-    <table >
-        <tr>
-            <th style="width: 170px;">Tên khách nhận</th>
-            <td>{!! $order->name !!}</td>
-        </tr>
-        <tr>
-            <th>Địa chỉ</th>
-            <td>{!! $order->address !!}</td>
-        </tr>
-        <tr>
-            <th>Điện thoại</th>
-            <td>{!! $order->phone !!}</td>
-        </tr>
-        <tr>
-            <th>Đại chỉ email</th>
-            <td>{!! $order->email !!}</td>
-        </tr>
-        <tr>
-            <th>Ghi chú</th>
-            <td>{!! $order->notes !!}</td>
-        </tr>
-    </table>
-    <hr>
-    <table >
+    <table>
         <thead>
             <tr>
                 <th>Mã</th>
