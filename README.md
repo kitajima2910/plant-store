@@ -12,3 +12,13 @@ Lưu ý: bỏ ở thư mục htdocs(xampp) hoặc www(wampserver)
 7. php artisan db:seed (thêm dữ liệu vào database)
 8. composer dump-autoload
 7. Clear: url: /clear-cache, php artisan cache:clear, php artisan route:clear, php artisan config:clear, php artisan view:clear
+
+-- FIX LỖI ImageMagick --
+1. Download and install ImageMagick for Windows
+-- https://www.imagemagick.org/script/download.php#windows
+2. Download Imagick for PHP
+-- https://pecl.php.net/package/imagick
+3. Download required Imagick binaries
+-- https://windows.php.net/downloads/pecl/deps/
+-- Tham khảo tại đây: 
+-- https://ourcodeworld.com/articles/read/349/how-to-install-and-enable-the-imagick-extension-in-xampp-for-windows
