@@ -31,7 +31,7 @@
                             <div class="single-benefits-area">
                                 <img src="{{asset('public/frontend/img/core-img/b1.png')}}" alt="">
                                 <h5>Sản phẩm chất lượng</h5>
-                                <p>{{$settingsArrShare['key_quality']}}</p>
+                                <p>{!! !empty($settingsArrShare['key_quality']) ? $settingsArrShare['key_quality'] : '' !!}</p>
                             </div>
                         </div>
                         <!-- Single Benefits Area -->
@@ -39,7 +39,7 @@
                             <div class="single-benefits-area">
                                 <img src="{{asset('public/frontend/img/core-img/b2.png')}}" alt="">
                                 <h5>Dịch vụ hoàn hảo</h5>
-                                <p>{{$settingsArrShare['key_service']}}</p>
+                                <p>{!! !empty($settingsArrShare['key_service']) ? $settingsArrShare['key_service'] : '' !!}</p>
                             </div>
                         </div>
                         <!-- Single Benefits Area -->
@@ -47,7 +47,7 @@
                             <div class="single-benefits-area">
                                 <img src="{{asset('public/frontend/img/core-img/b3.png')}}" alt="">
                                 <h5>100% Tự nhiên</h5>
-                                <p>{{$settingsArrShare['key_nature']}}</p>
+                                <p>{!! !empty($settingsArrShare['key_nature']) ? $settingsArrShare['key_nature'] : '' !!}</p>
                             </div>
                         </div>
                         <!-- Single Benefits Area -->
@@ -55,7 +55,7 @@
                             <div class="single-benefits-area">
                                 <img src="{{asset('public/frontend/img/core-img/b4.png')}}" alt="">
                                 <h5>Thân thiện với môi trường</h5>
-                                <p>{{$settingsArrShare['key_protected']}}</p>
+                                <p>{!! !empty($settingsArrShare['key_protected']) ? $settingsArrShare['key_protected'] : '' !!}</p>
                             </div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                         <!-- Content -->
                         <div class="service-content">
                             <h5>Đất trồng</h5>
-                            <p>{{$settingsArrShare['key_soild']}}</p>
+                            <p>{!! !empty($settingsArrShare['key_solid']) ? $settingsArrShare['key_solid'] : '' !!}</p>
                         </div>
                     </div>
                     <!-- Single Service Area -->
@@ -108,7 +108,7 @@
                         <!-- Content -->
                         <div class="service-content">
                             <h5>Liều lượng nước</h5>
-                            <p>{{$settingsArrShare['key_water']}}</p>
+                            <p>{!! !empty($settingsArrShare['key_water']) ? $settingsArrShare['key_water'] : '' !!}</p>
                         </div>
                     </div>
                     <!-- Single Service Area -->
@@ -120,7 +120,7 @@
                         <!-- Content -->
                         <div class="service-content">
                             <h5>Cắt tỉa</h5>
-                            <p>{{$settingsArrShare['key_cut']}}</p>
+                            <p>{!! !empty($settingsArrShare['key_cut']) ? $settingsArrShare['key_cut'] : '' !!}</p>
                         </div>
                     </div>
                 </div>
