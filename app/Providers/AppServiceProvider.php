@@ -87,7 +87,7 @@ class AppServiceProvider extends ServiceProvider
             
             $view->with([
                 'cartQuantityShare' => $cartQuantityShare,
-                'settingsArrShare' => $settingsArrShare,
+                'settingsArrShare' => !empty($settingsArrShare) ? $settingsArrShare : [],
                 'productsShare' => $productsShare,
                 'menusShare' => $menusShare,
                 'postShare' => $postShare,
