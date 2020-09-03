@@ -12,6 +12,7 @@
         pointer-events: none;
         background-color: #999;
         border-color: #999;
+        cursor: pointer;
     }
 
 </style>
