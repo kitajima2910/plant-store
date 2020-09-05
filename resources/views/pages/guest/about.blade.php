@@ -173,7 +173,7 @@
                         <img src="{{asset('public/frontend/img/core-img/pqh.jpg')}}" style="height:317.59px" alt="">
                         <!-- Social Info -->
                         <div class="team-member-social-info">
-                            <a href="https://www.facebook.com/quanghuy.pham.12720" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/tachi.pham.98/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                             <a href="mailto:toilahuy098@gmail.com" ><i class="fa fa-google-plus" aria-hidden="true"></i></a>
                             <a href="https://www.linkedin.com/in/huy-ph%E1%BA%A1m-b3a562192/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </div>
