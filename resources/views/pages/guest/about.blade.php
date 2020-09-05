@@ -96,7 +96,7 @@
                         <!-- Content -->
                         <div class="service-content">
                             <h5>Đất trồng</h5>
-                            <p>{!! !empty($settingsArrShare['key_solid']) ? $settingsArrShare['key_solid'] : '' !!}</p>
+                            <p>{!! !empty($settingsArrShare['key_soild']) ? $settingsArrShare['key_soild'] : '' !!}</p>
                         </div>
                     </div>
                     <!-- Single Service Area -->
