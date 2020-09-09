@@ -20,8 +20,8 @@ Lưu ý: bỏ ở thư mục htdocs(xampp) hoặc www(wampserver)
 -- https://pecl.php.net/package/imagick
 3. Download required Imagick binaries
 -- https://windows.php.net/downloads/pecl/deps/
--- Tham khảo tại đây: 
+4. Tham khảo tại đây: 
 -- https://ourcodeworld.com/articles/read/349/how-to-install-and-enable-the-imagick-extension-in-xampp-for-windows
-
+-- Settings email thanh toán tại file .evn
 Link report: https://github.com/tachi098/PlantStore-Reports
 Link video: https://www.youtube.com/watch?v=VbacO5M36aI

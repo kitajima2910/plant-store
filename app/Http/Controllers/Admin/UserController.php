@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\User;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminFormUser;
+use App\Http\Requests\AdminFormUserEdit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -44,9 +45,8 @@ class UserController extends Controller
     }
 
 
-    public function update(AdminFormUser $request, $id)
+    public function update(AdminFormUserEdit $request, $id)
     {
-
         $user = User::find($id);
         $user->name = $request->get('name');
         $user->address = $request->get('address');
