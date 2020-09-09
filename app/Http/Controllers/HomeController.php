@@ -32,7 +32,7 @@ class HomeController extends Controller
         $productsSale = $this->product->where('status',1)->where('sale_price','>','0')->inRandomOrder()->take(8)->get();
 
         // Sliders
-        $sliders = $this->slider->where('status',1)->take(3)->get();
+        $sliders = $this->slider->where('status',1)->get();
         
         //User
         $users = User::all();
